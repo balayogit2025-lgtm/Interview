@@ -1,4 +1,4 @@
-package com.sterna.ams.utils;
+package utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

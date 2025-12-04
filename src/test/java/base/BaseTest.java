@@ -1,8 +1,8 @@
-package com.sterna.ams.base;
+package base;
 
-import com.sterna.ams.config.ConfigReader;
-import com.sterna.ams.driver.DriverManager;
-import com.sterna.ams.utils.ScreenshotUtils;
+import config.ConfigReader;
+import driver.DriverManager;
+import utils.ScreenshotUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;

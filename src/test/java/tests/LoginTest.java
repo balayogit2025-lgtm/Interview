@@ -1,8 +1,8 @@
-package com.sterna.ams.tests;
+package tests;
 
-import com.sterna.ams.base.BaseTest;
-import com.sterna.ams.pages.DashboardPage;
-import com.sterna.ams.pages.LoginPage;
+import base.BaseTest;
+import pages.DashboardPage;
+import pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;

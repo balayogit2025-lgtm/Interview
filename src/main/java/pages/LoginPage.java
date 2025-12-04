@@ -1,6 +1,6 @@
-package com.sterna.ams.pages;
+package pages;
 
-import com.sterna.ams.pages.locators.LoginPageLocators;
+import locators.LoginPageLocators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
