@@ -1,6 +1,6 @@
-package com.sterna.ams.pages;
+package pages;
 
-import com.sterna.ams.pages.locators.DashboardPageLocators;
+import locators.DashboardPageLocators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

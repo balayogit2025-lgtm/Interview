@@ -1,4 +1,4 @@
-package com.sterna.ams.pages.locators;
+package locators;
 
 import org.openqa.selenium.By;
 

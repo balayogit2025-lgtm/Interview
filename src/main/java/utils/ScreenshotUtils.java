@@ -1,6 +1,6 @@
-package com.sterna.ams.utils;
+package utils;
 
-import com.sterna.ams.config.ConfigReader;
+import config.ConfigReader;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

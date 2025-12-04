@@ -1,7 +1,7 @@
-package com.sterna.ams.pages;
+package pages;
 
-import com.sterna.ams.utils.ElementUtils;
-import com.sterna.ams.utils.WaitUtils;
+import utils.ElementUtils;
+import utils.WaitUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;

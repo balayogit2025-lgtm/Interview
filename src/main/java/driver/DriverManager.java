@@ -1,6 +1,6 @@
-package com.sterna.ams.driver;
+package driver;
 
-import com.sterna.ams.config.ConfigReader;
+import config.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
