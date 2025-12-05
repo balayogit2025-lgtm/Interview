@@ -83,7 +83,7 @@ public class ConfigReader {
         return Integer.parseInt(getProperty("page.load.timeout", "30"));
     }
 
-    // Test Data
+    // Test Data - Valid Credentials
     public String getValidUsername() {
         return getProperty("valid.username");
     }
@@ -92,12 +92,52 @@ public class ConfigReader {
         return getProperty("valid.password");
     }
 
+    // Test Data - Invalid Credentials
     public String getInvalidUsername() {
         return getProperty("invalid.username");
     }
 
     public String getInvalidPassword() {
         return getProperty("invalid.password");
+    }
+
+    // Test Data - Invalid Credential Scenarios
+    public String getInvalidEmailFormat() {
+        return getProperty("test.invalid.email.format", "notanemail");
+    }
+
+    public String getShortPassword() {
+        return getProperty("test.short.password", "short");
+    }
+
+    public String getWrongEmail() {
+        return getProperty("test.wrong.email", "wrong@email.com");
+    }
+
+    public String getWrongPassword() {
+        return getProperty("test.wrong.password", "wrongpassword");
+    }
+
+    // Test Data - SQL Injection Payloads
+    public String getSqlInjectionEmail1() {
+        return getProperty("test.sql.injection.email1", "admin'--");
+    }
+
+    public String getSqlInjectionEmail2() {
+        return getProperty("test.sql.injection.email2", "' OR '1'='1");
+    }
+
+    public String getSqlInjectionEmail3() {
+        return getProperty("test.sql.injection.email3", "'; DROP TABLE users; --");
+    }
+
+    public String getSqlInjectionPassword() {
+        return getProperty("test.sql.injection.password", "' OR '1'='1");
+    }
+
+    // Test Data - Special Characters
+    public String getSpecialCharsPassword() {
+        return getProperty("test.special.chars.password", "!@#$%^&*()_+");
     }
 
     // Environment
