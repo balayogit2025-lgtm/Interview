@@ -5,12 +5,12 @@ import pages.DashboardPage;
 import pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
  * Login Test class containing all test scenarios for the Sterna AMS Login functionality.
  * Tests include positive, negative, and edge case scenarios.
+ * Test data is loaded from config.properties file.
  */
 public class LoginTest extends BaseTest {
 
@@ -99,7 +99,6 @@ public class LoginTest extends BaseTest {
 
         loginPage.loginExpectingFailure(invalidEmail, validPassword);
 
-        // Should remain on login page or show error
         Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
                 "Should remain on login page or show error for invalid email");
     }
@@ -113,7 +112,6 @@ public class LoginTest extends BaseTest {
 
         loginPage.loginExpectingFailure(validEmail, invalidPassword);
 
-        // Should remain on login page or show error
         Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
                 "Should remain on login page or show error for invalid password");
     }
@@ -127,7 +125,6 @@ public class LoginTest extends BaseTest {
 
         loginPage.loginExpectingFailure(invalidEmail, invalidPassword);
 
-        // Should remain on login page or show error
         Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
                 "Should remain on login page or show error for invalid credentials");
     }
@@ -143,7 +140,6 @@ public class LoginTest extends BaseTest {
         loginPage.enterPassword(validPassword);
         loginPage.clickLoginButton();
 
-        // Should remain on login page
         Assert.assertTrue(loginPage.isOnLoginPage(),
                 "Should remain on login page when email is empty");
     }
@@ -157,7 +153,6 @@ public class LoginTest extends BaseTest {
         loginPage.enterEmail(validEmail);
         loginPage.clickLoginButton();
 
-        // Should remain on login page
         Assert.assertTrue(loginPage.isOnLoginPage(),
                 "Should remain on login page when password is empty");
     }
@@ -168,23 +163,21 @@ public class LoginTest extends BaseTest {
 
         loginPage.clickLoginButton();
 
-        // Should remain on login page
         Assert.assertTrue(loginPage.isOnLoginPage(),
                 "Should remain on login page when both fields are empty");
     }
 
     // ==================== Input Validation Tests ====================
 
-    @Test(priority = 13, description = "Verify login fails with invalid email format")
+    @Test(priority = 13, description = "Verify login fails with invalid email format from config")
     public void testLoginWithInvalidEmailFormat() {
         logger.info("Test: Verify login fails with invalid email format");
 
-        String invalidEmailFormat = "invalidemail";
+        String invalidEmailFormat = config.getInvalidEmailFormat();
         String validPassword = config.getValidPassword();
 
         loginPage.loginExpectingFailure(invalidEmailFormat, validPassword);
 
-        // Should remain on login page or show validation error
         Assert.assertTrue(loginPage.isOnLoginPage(),
                 "Should remain on login page for invalid email format");
     }
@@ -198,20 +191,18 @@ public class LoginTest extends BaseTest {
 
         loginPage.loginExpectingFailure(emailWithSpaces, validPassword);
 
-        // Behavior depends on application - it might trim or fail
         logger.info("Login attempted with whitespace-padded email");
     }
 
-    @Test(priority = 15, description = "Verify login with special characters in password")
+    @Test(priority = 15, description = "Verify login with special characters in password from config")
     public void testLoginWithSpecialCharactersPassword() {
         logger.info("Test: Verify login with special characters in password");
 
         String validEmail = config.getValidUsername();
-        String specialPassword = "!@#$%^&*()_+";
+        String specialPassword = config.getSpecialCharsPassword();
 
         loginPage.loginExpectingFailure(validEmail, specialPassword);
 
-        // Should fail with incorrect password
         Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
                 "Should remain on login page for incorrect password");
     }
@@ -227,8 +218,6 @@ public class LoginTest extends BaseTest {
 
         DashboardPage dashboardPage = loginPage.login(upperCaseEmail, validPassword);
 
-        // Email should typically be case-insensitive
-        // The result depends on application implementation
         logger.info("Login attempted with uppercase email: {}", upperCaseEmail);
     }
 
@@ -239,11 +228,9 @@ public class LoginTest extends BaseTest {
         String validEmail = config.getValidUsername();
         String wrongCasePassword = config.getValidPassword().toLowerCase();
 
-        // Only run if password has uppercase letters
         if (!config.getValidPassword().equals(wrongCasePassword)) {
             loginPage.loginExpectingFailure(validEmail, wrongCasePassword);
 
-            // Should fail as passwords are typically case-sensitive
             Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
                     "Should fail login with wrong case password");
         } else {
@@ -272,7 +259,6 @@ public class LoginTest extends BaseTest {
         String testPassword = "TestPassword123";
         loginPage.enterPassword(testPassword);
 
-        // Password field should have value but we can't see the masked text directly
         String passwordValue = loginPage.getPasswordFieldValue();
         Assert.assertNotNull(passwordValue, "Password field should have a value");
     }
@@ -300,7 +286,6 @@ public class LoginTest extends BaseTest {
     public void testLogoutAfterLogin() {
         logger.info("Test: Verify user can logout after login");
 
-        // First login
         String validEmail = config.getValidUsername();
         String validPassword = config.getValidPassword();
 
@@ -309,75 +294,113 @@ public class LoginTest extends BaseTest {
 
         Assert.assertTrue(dashboardPage.isUserLoggedIn(), "User should be logged in");
 
-        // Then logout
         LoginPage loginPageAfterLogout = dashboardPage.logout();
 
         Assert.assertTrue(loginPageAfterLogout.isOnLoginPage(),
                 "Should be redirected to login page after logout");
     }
 
-    // ==================== Data-Driven Tests ====================
+    // ==================== Additional Invalid Credential Tests (from config) ====================
 
-    @DataProvider(name = "invalidCredentials")
-    public Object[][] getInvalidCredentials() {
-        return new Object[][]{
-                {"", "password123", "Empty email"},
-                {"test@test.com", "", "Empty password"},
-                {"", "", "Both empty"},
-                {"notanemail", "password123", "Invalid email format"},
-                {"test@test.com", "short", "Short password"},
-                {"admin@gmail.com", "wrongpassword", "Wrong password"},
-                {"wrong@email.com", "Sterna@123", "Wrong email"}
-        };
+    @Test(priority = 22, description = "Verify login fails with short password from config")
+    public void testLoginWithShortPassword() {
+        logger.info("Test: Verify login fails with short password from config");
+
+        String validEmail = config.getValidUsername();
+        String shortPassword = config.getShortPassword();
+
+        loginPage.loginExpectingFailure(validEmail, shortPassword);
+
+        Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
+                "Should remain on login page for short password");
     }
 
-    @Test(priority = 22, dataProvider = "invalidCredentials",
-            description = "Verify login fails with various invalid credentials")
-    public void testLoginWithVariousInvalidCredentials(String email, String password, String scenario) {
-        logger.info("Test: {} - Email: '{}', Password: '{}'", scenario, email, password.isEmpty() ? "[empty]" : "[hidden]");
+    @Test(priority = 23, description = "Verify login fails with wrong email from config")
+    public void testLoginWithWrongEmail() {
+        logger.info("Test: Verify login fails with wrong email from config");
 
-        if (!email.isEmpty()) {
-            loginPage.enterEmail(email);
-        }
-        if (!password.isEmpty()) {
-            loginPage.enterPassword(password);
-        }
-        loginPage.clickLoginButton();
+        String wrongEmail = config.getWrongEmail();
+        String validPassword = config.getValidPassword();
 
-        // Should remain on login page for all invalid scenarios
+        loginPage.loginExpectingFailure(wrongEmail, validPassword);
+
+        Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
+                "Should remain on login page for wrong email");
+    }
+
+    @Test(priority = 24, description = "Verify login fails with wrong password from config")
+    public void testLoginWithWrongPassword() {
+        logger.info("Test: Verify login fails with wrong password from config");
+
+        String validEmail = config.getValidUsername();
+        String wrongPassword = config.getWrongPassword();
+
+        loginPage.loginExpectingFailure(validEmail, wrongPassword);
+
+        Assert.assertTrue(loginPage.isOnLoginPage() || loginPage.isErrorMessageDisplayed(),
+                "Should remain on login page for wrong password");
+    }
+
+    // ==================== SQL Injection Protection Tests ====================
+
+    @Test(priority = 25, description = "Verify login is protected against SQL injection - admin'--")
+    public void testSqlInjectionProtection1() {
+        logger.info("Test: SQL Injection protection test - admin'--");
+
+        String sqlInjectionEmail = config.getSqlInjectionEmail1();
+        String password = config.getValidPassword();
+
+        loginPage.loginExpectingFailure(sqlInjectionEmail, password);
+
         Assert.assertTrue(loginPage.isOnLoginPage(),
-                "Should remain on login page for scenario: " + scenario);
+                "Login should be protected against SQL injection (admin'--)");
     }
 
-    @DataProvider(name = "sqlInjectionAttempts")
-    public Object[][] getSqlInjectionAttempts() {
-        return new Object[][]{
-                {"admin'--", "password"},
-                {"' OR '1'='1", "password"},
-                {"admin@gmail.com", "' OR '1'='1"},
-                {"'; DROP TABLE users; --", "password"}
-        };
-    }
+    @Test(priority = 26, description = "Verify login is protected against SQL injection - OR 1=1")
+    public void testSqlInjectionProtection2() {
+        logger.info("Test: SQL Injection protection test - OR 1=1");
 
-    @Test(priority = 23, dataProvider = "sqlInjectionAttempts",
-            description = "Verify login is protected against SQL injection")
-    public void testSqlInjectionProtection(String email, String password) {
-        logger.info("Test: SQL Injection protection test");
+        String sqlInjectionEmail = config.getSqlInjectionEmail2();
+        String password = config.getValidPassword();
 
-        loginPage.loginExpectingFailure(email, password);
+        loginPage.loginExpectingFailure(sqlInjectionEmail, password);
 
-        // Should remain on login page - SQL injection should not work
         Assert.assertTrue(loginPage.isOnLoginPage(),
-                "Login should be protected against SQL injection");
+                "Login should be protected against SQL injection (OR 1=1)");
+    }
+
+    @Test(priority = 27, description = "Verify login is protected against SQL injection - DROP TABLE")
+    public void testSqlInjectionProtection3() {
+        logger.info("Test: SQL Injection protection test - DROP TABLE");
+
+        String sqlInjectionEmail = config.getSqlInjectionEmail3();
+        String password = config.getValidPassword();
+
+        loginPage.loginExpectingFailure(sqlInjectionEmail, password);
+
+        Assert.assertTrue(loginPage.isOnLoginPage(),
+                "Login should be protected against SQL injection (DROP TABLE)");
+    }
+
+    @Test(priority = 28, description = "Verify login is protected against SQL injection in password")
+    public void testSqlInjectionProtectionInPassword() {
+        logger.info("Test: SQL Injection protection test in password field");
+
+        String validEmail = config.getValidUsername();
+        String sqlInjectionPassword = config.getSqlInjectionPassword();
+
+        loginPage.loginExpectingFailure(validEmail, sqlInjectionPassword);
+
+        Assert.assertTrue(loginPage.isOnLoginPage(),
+                "Login should be protected against SQL injection in password");
     }
 
     // ==================== Session Tests ====================
 
-    @Test(priority = 24, description = "Verify session persistence after login")
+    @Test(priority = 29, description = "Verify session persistence after login")
     public void testSessionPersistenceAfterRefresh() {
         logger.info("Test: Verify session persistence after page refresh");
 
-        // Login first
         String validEmail = config.getValidUsername();
         String validPassword = config.getValidPassword();
 
@@ -386,30 +409,24 @@ public class LoginTest extends BaseTest {
 
         Assert.assertTrue(dashboardPage.isUserLoggedIn(), "User should be logged in");
 
-        // Refresh page
         dashboardPage.refreshPage();
 
-        // Should still be logged in
         Assert.assertTrue(dashboardPage.isUserLoggedIn(),
                 "User should remain logged in after page refresh");
     }
 
-    @Test(priority = 25, description = "Verify accessing login page after login redirects to dashboard")
+    @Test(priority = 30, description = "Verify accessing login page after login redirects to dashboard")
     public void testLoginPageAccessAfterLogin() {
         logger.info("Test: Verify accessing login page after login");
 
-        // Login first
         String validEmail = config.getValidUsername();
         String validPassword = config.getValidPassword();
 
         DashboardPage dashboardPage = loginPage.login(validEmail, validPassword);
         dashboardPage.waitForDashboardLoad();
 
-        // Try to navigate back to login page
         dashboardPage.navigateTo(config.getAppUrl());
 
-        // Application may redirect to dashboard if already logged in
-        // or may allow access to login page
         logger.info("Current URL after navigating to login: {}", dashboardPage.getCurrentUrl());
     }
 }
