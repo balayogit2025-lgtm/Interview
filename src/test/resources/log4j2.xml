@@ -1,85 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
-    <Properties>
-        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Property>
-        <Property name="LOG_PATH">./test-output/logs</Property>
-    </Properties>
-
     <Appenders>
-        <!-- Console Appender -->
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-
-        <!-- Rolling File Appender for all logs -->
-        <RollingFile name="FileAppender"
-                     fileName="${LOG_PATH}/ams-automation.log"
-                     filePattern="${LOG_PATH}/ams-automation-%d{yyyy-MM-dd}-%i.log.gz">
-            <PatternLayout pattern="${LOG_PATTERN}"/>
-            <Policies>
-                <SizeBasedTriggeringPolicy size="10MB"/>
-                <TimeBasedTriggeringPolicy interval="1"/>
-            </Policies>
-            <DefaultRolloverStrategy max="10"/>
-        </RollingFile>
-
-        <!-- Separate appender for error logs -->
-        <RollingFile name="ErrorFileAppender"
-                     fileName="${LOG_PATH}/ams-automation-errors.log"
-                     filePattern="${LOG_PATH}/ams-automation-errors-%d{yyyy-MM-dd}-%i.log.gz">
-            <PatternLayout pattern="${LOG_PATTERN}"/>
-            <LevelRangeFilter minLevel="ERROR" maxLevel="FATAL" onMatch="ACCEPT" onMismatch="DENY"/>
-            <Policies>
-                <SizeBasedTriggeringPolicy size="10MB"/>
-                <TimeBasedTriggeringPolicy interval="1"/>
-            </Policies>
-            <DefaultRolloverStrategy max="5"/>
-        </RollingFile>
-
-        <!-- Test execution specific logs -->
-        <RollingFile name="TestExecutionAppender"
-                     fileName="${LOG_PATH}/test-execution.log"
-                     filePattern="${LOG_PATH}/test-execution-%d{yyyy-MM-dd}-%i.log.gz">
-            <PatternLayout pattern="${LOG_PATTERN}"/>
-            <Policies>
-                <SizeBasedTriggeringPolicy size="10MB"/>
-                <TimeBasedTriggeringPolicy interval="1"/>
-            </Policies>
-            <DefaultRolloverStrategy max="10"/>
-        </RollingFile>
+        <File name="File" fileName="test-output/logs/automation.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
     </Appenders>
-
     <Loggers>
-        <!-- Application specific logger -->
-        <Logger name="com.sterna.ams" level="DEBUG" additivity="false">
+        <Root level="info">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="FileAppender"/>
-            <AppenderRef ref="ErrorFileAppender"/>
-            <AppenderRef ref="TestExecutionAppender"/>
-        </Logger>
-
-        <!-- Selenium WebDriver logger (reduce verbosity) -->
-        <Logger name="org.openqa.selenium" level="WARN" additivity="false">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
-
-        <!-- WebDriverManager logger -->
-        <Logger name="io.github.bonigarcia" level="INFO" additivity="false">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
-
-        <!-- TestNG logger -->
-        <Logger name="org.testng" level="INFO" additivity="false">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
-
-        <!-- Root logger -->
-        <Root level="INFO">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="File"/>
         </Root>
     </Loggers>
 </Configuration>
