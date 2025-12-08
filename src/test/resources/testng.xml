@@ -2,10 +2,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Sterna AMS Automation Suite" verbose="2" parallel="none" thread-count="1">
 
-    <listeners>
-        <listener class-name="com.sterna.ams.listeners.TestListener"/>
-    </listeners>
-
     <!-- Test parameters -->
     <parameter name="browser" value="chrome"/>
     <parameter name="environment" value="qa"/>
@@ -13,35 +9,14 @@
     <!-- Login Module Tests -->
     <test name="Login Module Tests">
         <classes>
-            <class name="com.sterna.ams.tests.LoginTest">
-                <methods>
-                    <include name="testLoginPageLoads"/>
-                    <include name="testLoginPageElementsDisplayed"/>
-                    <include name="testLoginButtonEnabled"/>
-                    <include name="testPageTitle"/>
-                    <include name="testSuccessfulLogin"/>
-                    <include name="testLoginNavigatesToDashboard"/>
-                    <include name="testLoginWithInvalidEmail"/>
-                    <include name="testLoginWithInvalidPassword"/>
-                    <include name="testLoginWithInvalidCredentials"/>
-                    <include name="testLoginWithEmptyEmail"/>
-                    <include name="testLoginWithEmptyPassword"/>
-                    <include name="testLoginWithEmptyCredentials"/>
-                    <include name="testLoginWithInvalidEmailFormat"/>
-                    <include name="testLoginWithWhitespaceEmail"/>
-                    <include name="testLoginWithSpecialCharactersPassword"/>
-                    <include name="testEmailCaseInsensitivity"/>
-                    <include name="testPasswordCaseSensitivity"/>
-                    <include name="testEmailFieldAcceptsInput"/>
-                    <include name="testPasswordFieldMasksInput"/>
-                    <include name="testClearFields"/>
-                    <include name="testLogoutAfterLogin"/>
-                    <include name="testLoginWithVariousInvalidCredentials"/>
-                    <include name="testSqlInjectionProtection"/>
-                    <include name="testSessionPersistenceAfterRefresh"/>
-                    <include name="testLoginPageAccessAfterLogin"/>
-                </methods>
-            </class>
+            <class name="TestRun.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- Dashboard Module Tests -->
+    <test name="Dashboard Module Tests">
+        <classes>
+            <class name="TestRun.DashboardTest"/>
         </classes>
     </test>
 
