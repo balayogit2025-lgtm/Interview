@@ -1081,3 +1081,1221 @@ Session ID: 581574ac15c1a4826d2738949797ded6
 2025-12-08 10:23:36.472 [main] INFO  Base.BaseTest - Tearing down test: verifyLoginPageTitle
 2025-12-08 10:23:37.407 [main] INFO  Base.BaseTest - WebDriver closed successfully
 2025-12-08 10:23:38.040 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-08 14:52:57.803 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:52:57.831 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 14:52:57.834 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:52:57.853 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 14:52:57.854 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 14:52:57.854 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 14:52:57.865 [main] ERROR Pages.LoginPage - Failed to enter email: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+2025-12-08 14:55:10.684 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:55:10.690 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 14:55:10.701 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:55:10.710 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 14:55:10.710 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 14:55:10.711 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 14:55:10.715 [main] ERROR Pages.LoginPage - Failed to enter email: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+2025-12-08 14:56:03.723 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-08 14:56:03.758 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 14:56:04.199 [main] INFO  Base.BaseTest - Starting test: verifyLoginPageElements
+2025-12-08 14:56:04.206 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 14:56:18.423 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 14:56:18.425 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 14:56:21.423 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:56:21.428 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:56:23.490 [main] INFO  Pages.LoginPage - Email field displayed: true
+2025-12-08 14:56:23.538 [main] INFO  Pages.LoginPage - Password field displayed: true
+2025-12-08 14:56:23.585 [main] INFO  Pages.LoginPage - Login button displayed: true
+2025-12-08 14:56:23.608 [main] INFO  Pages.LoginPage - Login button enabled: true
+2025-12-08 14:56:23.611 [main] INFO  Base.BaseTest - Tearing down test: verifyLoginPageElements
+2025-12-08 14:56:24.208 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 14:56:24.212 [main] INFO  Base.BaseTest - Starting test: verifySuccessfulLogin
+2025-12-08 14:56:24.213 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 14:56:28.269 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 14:56:28.270 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 14:56:30.390 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:56:30.390 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:56:30.391 [main] INFO  Pages.LoginPage - Performing login with email: sandhiyar@sternadevices.in
+2025-12-08 14:56:30.646 [main] INFO  Pages.LoginPage - Entered email: sandhiyar@sternadevices.in
+2025-12-08 14:56:30.950 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 14:56:31.059 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 14:56:31.059 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 14:56:31.613 [main] INFO  Pages.LoginPage - Success message displayed: true
+2025-12-08 14:56:31.644 [main] INFO  Pages.LoginPage - Success message text: Login successful
+2025-12-08 14:56:31.648 [main] INFO  Base.BaseTest - Tearing down test: verifySuccessfulLogin
+2025-12-08 14:56:31.907 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 14:56:31.910 [main] INFO  Base.BaseTest - Starting test: verifyLoginPageTitle
+2025-12-08 14:56:31.911 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 14:56:35.270 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 14:56:35.272 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 14:56:37.935 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:56:37.936 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:56:37.945 [main] INFO  Pages.LoginPage - Page title: AMS
+2025-12-08 14:56:37.947 [main] INFO  Base.BaseTest - Tearing down test: verifyLoginPageTitle
+2025-12-08 14:56:38.170 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 14:56:38.171 [main] INFO  Base.BaseTest - Starting test: verifyLoginPageUrl
+2025-12-08 14:56:38.172 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 14:56:41.833 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 14:56:41.836 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 14:56:43.422 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:56:43.422 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:56:44.100 [main] INFO  Pages.LoginPage - Current URL: https://ams.sternaemlock.com/login
+2025-12-08 14:56:44.101 [main] INFO  Base.BaseTest - Tearing down test: verifyLoginPageUrl
+2025-12-08 14:56:44.348 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 14:56:44.350 [main] INFO  Base.BaseTest - Starting test: verifyEmailFieldAcceptsInput
+2025-12-08 14:56:44.352 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 14:56:48.078 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 14:56:48.079 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 14:56:49.778 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:56:49.779 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:56:50.716 [main] INFO  Pages.LoginPage - Entered email: test@example.com
+2025-12-08 14:56:50.783 [main] INFO  Pages.LoginPage - Email field displayed: true
+2025-12-08 14:56:50.787 [main] INFO  Base.BaseTest - Tearing down test: verifyEmailFieldAcceptsInput
+2025-12-08 14:56:50.927 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 14:56:50.930 [main] INFO  Base.BaseTest - Starting test: verifyPasswordFieldMasksInput
+2025-12-08 14:56:50.932 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 14:56:54.214 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 14:56:54.215 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 14:56:56.507 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:56:56.508 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:56:56.954 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 14:56:56.980 [main] INFO  Pages.LoginPage - Password field type: password
+2025-12-08 14:56:56.985 [main] INFO  Base.BaseTest - Tearing down test: verifyPasswordFieldMasksInput
+2025-12-08 14:56:57.355 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 14:56:57.364 [main] INFO  Base.BaseTest - Starting test: verifyFieldClearFunctionality
+2025-12-08 14:56:57.368 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 14:57:14.387 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 14:57:14.393 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 14:57:14.404 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 14:57:14.413 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 14:57:14.414 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 14:57:14.414 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 14:57:14.418 [main] ERROR Pages.LoginPage - Failed to enter email: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+2025-12-08 15:03:57.021 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:03:57.029 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:03:57.040 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:03:57.053 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:03:57.053 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:03:57.054 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:03:57.058 [main] ERROR Pages.LoginPage - Failed to enter email: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+2025-12-08 15:05:18.074 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:05:18.081 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:05:18.093 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:05:18.102 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:05:18.102 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:05:18.102 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:05:18.107 [main] ERROR Pages.LoginPage - Failed to enter email: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+2025-12-08 15:09:44.029 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:09:44.035 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:09:44.046 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:09:44.057 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:09:44.057 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:09:44.058 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:09:44.062 [main] ERROR Pages.LoginPage - Failed to enter email: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "driver" is null
+2025-12-08 15:12:43.263 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-08 15:12:43.278 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:12:43.691 [main] INFO  Base.BaseTest - Starting test: NavigateToRolePager
+2025-12-08 15:12:43.696 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:12:49.034 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:12:49.036 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:12:51.441 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:12:51.447 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:12:51.463 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:12:51.463 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:13:04.560 [main] ERROR Pages.RolePage - Failed to click role: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Role']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [55d36304b06e23e1645425caa9e81821, findElement {using=xpath, value=//span[text()='Role']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50766}, goog:processID: 6008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50766/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 55d36304b06e23e1645425caa9e81821
+2025-12-08 15:13:04.577 [main] INFO  Base.BaseTest - Tearing down test: NavigateToRolePager
+2025-12-08 15:13:05.000 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/NavigateToRolePager_20251208_151304.png
+2025-12-08 15:13:05.220 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:13:05.226 [main] INFO  Base.BaseTest - Starting test: addNewKeySafeRole
+2025-12-08 15:13:05.229 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:13:09.376 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:13:09.378 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:13:11.612 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:13:11.612 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:13:11.613 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:13:11.613 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:16:18.094 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-08 15:16:18.108 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:16:18.575 [main] INFO  Base.BaseTest - Starting test: NavigateToRolePager
+2025-12-08 15:16:18.581 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:16:23.292 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:16:23.295 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:16:26.546 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:16:26.553 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:16:26.568 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:16:26.569 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:16:26.569 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:16:26.969 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:16:27.505 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:16:27.663 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:16:27.663 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:16:30.789 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:16:30.859 [main] INFO  Base.BaseTest - Tearing down test: NavigateToRolePager
+2025-12-08 15:16:31.188 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:16:31.200 [main] INFO  Base.BaseTest - Starting test: addNewKeySafeRole
+2025-12-08 15:16:31.203 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:16:33.387 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:16:33.391 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:16:35.522 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:16:35.522 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:16:35.524 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:16:35.524 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:16:35.524 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:16:35.749 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:16:35.991 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:16:36.093 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:16:36.093 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:16:39.201 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:16:39.374 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:16:39.552 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:16:39.649 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:16:39.728 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:16:39.732 [main] INFO  Base.BaseTest - Tearing down test: addNewKeySafeRole
+2025-12-08 15:16:40.967 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:16:40.969 [main] INFO  Base.BaseTest - Starting test: addNewWebUserRole
+2025-12-08 15:16:40.970 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:16:42.608 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:16:42.608 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:16:45.242 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:16:45.242 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:16:45.243 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:16:45.243 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:16:45.244 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:16:45.566 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:16:45.756 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:16:45.860 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:16:45.860 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:16:48.951 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:16:49.119 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:16:49.266 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-08 15:16:49.363 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:16:52.483 [main] INFO  Pages.RolePage - Clicked the All pages checkbox
+2025-12-08 15:16:52.570 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:16:52.574 [main] INFO  Base.BaseTest - Tearing down test: addNewWebUserRole
+2025-12-08 15:16:52.859 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:16:52.861 [main] INFO  Base.BaseTest - Starting test: addNewRolewithybothusertype
+2025-12-08 15:16:52.862 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:16:54.500 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:16:54.515 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:16:56.920 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:16:56.921 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:16:56.923 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:16:56.923 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:16:56.924 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:16:57.173 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:16:57.363 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:16:57.477 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:16:57.477 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:17:00.592 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:17:00.783 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:17:00.899 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-08 15:17:01.063 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:17:01.122 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:17:04.208 [main] INFO  Pages.RolePage - Clicked the All pages checkbox
+2025-12-08 15:17:04.277 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:17:04.279 [main] INFO  Base.BaseTest - Tearing down test: addNewRolewithybothusertype
+2025-12-08 15:17:04.523 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:17:04.525 [main] INFO  Base.BaseTest - Starting test: editRole
+2025-12-08 15:17:04.526 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:17:06.265 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:17:06.268 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:17:08.875 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:17:08.875 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:17:08.876 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:17:08.876 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:17:08.876 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:17:09.111 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:17:09.300 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:17:09.412 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:17:09.413 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:17:12.523 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:17:12.889 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:17:13.020 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-08 15:17:13.138 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:17:13.141 [main] INFO  Base.BaseTest - Tearing down test: editRole
+2025-12-08 15:17:13.394 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:17:13.398 [main] INFO  Base.BaseTest - Starting test: deleteRole
+2025-12-08 15:17:13.400 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:17:15.058 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:17:15.059 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:17:16.938 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:17:16.938 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:17:16.941 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:17:16.941 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:17:16.942 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:17:17.874 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:17:18.096 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:17:18.212 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:17:18.212 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:17:21.298 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:17:21.656 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:17:21.757 [main] INFO  Pages.RolePage - Clicked the delete button
+2025-12-08 15:17:21.846 [main] INFO  Pages.RolePage - Clicked the delete confirm button
+2025-12-08 15:17:21.847 [main] INFO  Base.BaseTest - Tearing down test: deleteRole
+2025-12-08 15:17:22.137 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:17:22.141 [main] INFO  Base.BaseTest - Starting test: addRoleWithEmptyName
+2025-12-08 15:17:22.144 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:17:23.812 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:17:23.813 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:17:26.806 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:17:26.806 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:17:26.807 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:17:26.807 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:17:26.807 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:17:27.049 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:17:27.303 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:17:27.434 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:17:27.434 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:17:40.467 [main] ERROR Pages.RolePage - Failed to click role: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Role']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2421ea3b88ab5dc850938324ffab381f, findElement {value=//span[text()='Role'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51041}, goog:processID: 10160, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51041/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2421ea3b88ab5dc850938324ffab381f
+2025-12-08 15:17:40.478 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithEmptyName
+2025-12-08 15:17:40.766 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithEmptyName_20251208_151740.png
+2025-12-08 15:17:41.069 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:17:41.072 [main] INFO  Base.BaseTest - Starting test: addRoleWithoutUserType
+2025-12-08 15:17:41.074 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:17:43.258 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:17:43.259 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:17:45.661 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:17:45.661 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:17:45.662 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:17:45.662 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:17:45.662 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:17:45.893 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:17:46.120 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:17:46.225 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:17:46.225 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:17:49.329 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:17:49.578 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:17:49.795 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:17:49.858 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:17:49.877 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithoutUserType
+2025-12-08 15:17:50.150 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:17:50.152 [main] INFO  Base.BaseTest - Starting test: addRoleWithoutSelectingPages
+2025-12-08 15:17:50.154 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:17:52.143 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:17:52.143 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:17:54.422 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:17:54.422 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:17:54.424 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:17:54.424 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:17:54.424 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:17:54.681 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:17:54.906 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:17:55.004 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:17:55.004 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:17:58.111 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:17:58.279 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:17:58.430 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:17:58.511 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-08 15:17:58.574 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:17:58.593 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithoutSelectingPages
+2025-12-08 15:17:58.806 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:17:58.808 [main] INFO  Base.BaseTest - Starting test: cancelAddRoleForm
+2025-12-08 15:17:58.809 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:18:00.477 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:18:00.478 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:18:01.826 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:18:01.826 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:18:01.828 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:18:01.828 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:18:01.828 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:18:02.741 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:18:02.960 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:18:03.064 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:18:03.064 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:18:06.169 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:18:06.415 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:18:06.508 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:18:16.560 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [16e773cd7b0ad7100abd2f430940987c, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51133}, goog:processID: 11956, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51133/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e773cd7b0ad7100abd2f430940987c
+2025-12-08 15:18:16.565 [main] INFO  Base.BaseTest - Tearing down test: cancelAddRoleForm
+2025-12-08 15:18:16.691 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/cancelAddRoleForm_20251208_151816.png
+2025-12-08 15:18:16.975 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:18:16.978 [main] INFO  Base.BaseTest - Starting test: cancelDeleteRole
+2025-12-08 15:18:16.980 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:18:19.900 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:18:19.901 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:18:22.066 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:18:22.066 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:18:22.066 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:18:22.066 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:18:22.066 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:18:22.299 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:18:22.546 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:18:22.645 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:18:22.646 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:18:25.747 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:18:26.172 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:18:26.281 [main] INFO  Pages.RolePage - Clicked the delete button
+2025-12-08 15:18:26.374 [main] INFO  Pages.RolePage - Clicked the delete cancel button (No)
+2025-12-08 15:18:26.412 [main] INFO  Base.BaseTest - Tearing down test: cancelDeleteRole
+2025-12-08 15:18:26.785 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:18:26.788 [main] INFO  Base.BaseTest - Starting test: searchRoleWithValidName
+2025-12-08 15:18:26.789 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:18:28.970 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:18:28.971 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:18:31.242 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:18:31.242 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:18:31.242 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:18:31.242 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:18:31.242 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:18:31.529 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:18:31.732 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:18:31.829 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:18:31.829 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:18:34.922 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:18:35.044 [main] INFO  Pages.RolePage - Clicked the search icon
+2025-12-08 15:18:38.112 [main] INFO  Pages.RolePage - Entered the search value
+2025-12-08 15:18:41.129 [main] INFO  Base.BaseTest - Tearing down test: searchRoleWithValidName
+2025-12-08 15:18:41.411 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:18:41.412 [main] INFO  Base.BaseTest - Starting test: searchRoleWithNonExistentName
+2025-12-08 15:18:41.413 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:18:43.090 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:18:43.091 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:18:45.558 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:18:45.558 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:18:45.558 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:18:45.558 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:18:45.558 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:18:45.782 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:18:45.999 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:18:46.108 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:18:46.108 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:18:49.211 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:18:49.355 [main] INFO  Pages.RolePage - Clicked the search icon
+2025-12-08 15:18:49.522 [main] INFO  Pages.RolePage - Entered the search value
+2025-12-08 15:18:49.524 [main] INFO  Base.BaseTest - Tearing down test: searchRoleWithNonExistentName
+2025-12-08 15:18:49.781 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:18:49.783 [main] INFO  Base.BaseTest - Starting test: addRoleWithSpecialCharacters
+2025-12-08 15:18:49.784 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:18:51.503 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:18:51.504 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:18:53.581 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:18:53.581 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:18:53.582 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:18:53.582 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:18:53.582 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:18:53.798 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:18:54.007 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:18:54.120 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:18:54.120 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:18:57.224 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:18:57.476 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:18:57.606 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:19:07.675 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da2da63eb799a005fe47f5a1bdc426fe, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51270}, goog:processID: 4872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51270/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da2da63eb799a005fe47f5a1bdc426fe
+2025-12-08 15:19:07.679 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithSpecialCharacters
+2025-12-08 15:19:07.815 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithSpecialCharacters_20251208_151907.png
+2025-12-08 15:19:08.104 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:19:08.107 [main] INFO  Base.BaseTest - Starting test: addRoleWithLongName
+2025-12-08 15:19:08.109 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:19:10.351 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:19:10.352 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:19:12.801 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:19:12.801 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:19:12.801 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:19:12.801 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:19:12.801 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:19:13.025 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:19:13.241 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:19:13.348 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:19:13.348 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:19:16.457 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:19:16.685 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:19:17.027 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:19:27.075 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [986da1ed296ae7832b375737569cc4e5, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51306}, goog:processID: 9740, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51306/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986da1ed296ae7832b375737569cc4e5
+2025-12-08 15:19:27.076 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLongName
+2025-12-08 15:19:27.194 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithLongName_20251208_151927.png
+2025-12-08 15:19:27.458 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:19:27.462 [main] INFO  Base.BaseTest - Starting test: verifyRoleTableDisplayed
+2025-12-08 15:19:27.463 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:19:30.506 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:19:30.508 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:19:33.045 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:19:33.045 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:19:33.046 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:19:33.046 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:19:33.046 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:19:33.265 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:19:33.469 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:19:33.584 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:19:33.584 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:19:36.693 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:19:36.769 [main] INFO  Base.BaseTest - Tearing down test: verifyRoleTableDisplayed
+2025-12-08 15:19:37.041 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:19:37.044 [main] INFO  Base.BaseTest - Starting test: verifyAddRoleFormElements
+2025-12-08 15:19:37.046 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:19:38.576 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:19:38.576 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:19:40.383 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:19:40.383 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:19:40.383 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:19:40.383 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:19:40.383 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:19:41.302 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:19:41.512 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:19:41.613 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:19:41.613 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:19:44.722 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:19:44.962 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:19:44.991 [main] INFO  Base.BaseTest - Tearing down test: verifyAddRoleFormElements
+2025-12-08 15:19:45.329 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:19:45.331 [main] INFO  Base.BaseTest - Starting test: editRoleWithEmptyName
+2025-12-08 15:19:45.332 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:19:47.110 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:19:47.111 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:19:49.429 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:19:49.429 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:19:49.429 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:19:49.429 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:19:49.429 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:19:49.662 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:19:49.820 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:19:49.948 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:19:49.948 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:19:53.034 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:19:53.390 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:19:53.508 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-08 15:19:53.670 [main] INFO  Pages.RolePage - Cleared the role name field
+2025-12-08 15:19:56.749 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:19:56.773 [main] INFO  Base.BaseTest - Tearing down test: editRoleWithEmptyName
+2025-12-08 15:19:57.037 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:19:57.039 [main] INFO  Base.BaseTest - Starting test: cancelEditRoleForm
+2025-12-08 15:19:57.040 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:19:58.715 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:19:58.716 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:20:01.086 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:20:01.086 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:20:01.086 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:20:01.086 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:20:01.086 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:20:01.339 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:20:01.557 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:20:01.660 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:20:01.660 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:20:04.756 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:20:05.282 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:20:05.403 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-08 15:20:05.506 [main] INFO  Pages.RolePage - Clicked the cancel button
+2025-12-08 15:20:05.548 [main] INFO  Base.BaseTest - Tearing down test: cancelEditRoleForm
+2025-12-08 15:20:05.845 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:20:05.848 [main] INFO  Base.BaseTest - Starting test: addRoleWithNumericName
+2025-12-08 15:20:05.849 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:20:07.503 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:20:07.503 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:20:09.823 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:20:09.823 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:20:09.823 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:20:09.823 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:20:09.824 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:20:10.059 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:20:10.272 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:20:10.372 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:20:10.372 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:20:13.487 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:20:13.690 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:20:13.794 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:20:23.879 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ff2b6c946bb19f018223cd51f76d1b07, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51467}, goog:processID: 11312, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51467/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ff2b6c946bb19f018223cd51f76d1b07
+2025-12-08 15:20:23.883 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithNumericName
+2025-12-08 15:20:23.988 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithNumericName_20251208_152023.png
+2025-12-08 15:20:24.272 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:20:24.274 [main] INFO  Base.BaseTest - Starting test: addRoleWithLeadingTrailingSpaces
+2025-12-08 15:20:24.275 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:20:26.450 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:20:26.459 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:20:29.054 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:20:29.054 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:20:29.054 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:20:29.055 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:20:29.055 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:20:29.269 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:20:29.453 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:20:29.571 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:20:29.571 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:20:32.671 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:20:32.934 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:20:33.141 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:20:43.158 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bee12a1acdc551871b2ff48ec8453b56, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51505}, goog:processID: 9304, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51505/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bee12a1acdc551871b2ff48ec8453b56
+2025-12-08 15:20:43.163 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLeadingTrailingSpaces
+2025-12-08 15:20:43.302 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithLeadingTrailingSpaces_20251208_152043.png
+2025-12-08 15:20:43.555 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:20:43.557 [main] INFO  Base.BaseTest - Starting test: verifycolumnheadernames
+2025-12-08 15:20:43.559 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:20:46.231 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:20:46.232 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:20:49.070 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:20:49.070 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:20:49.071 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:20:49.072 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:20:49.072 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:20:49.290 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:20:49.512 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:20:49.616 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:20:49.616 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:20:52.725 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:20:57.818 [main] INFO  Base.BaseTest - Tearing down test: verifycolumnheadernames
+2025-12-08 15:20:58.207 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:20:58.836 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-08 15:25:35.960 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-08 15:25:35.975 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:25:36.347 [main] INFO  Base.BaseTest - Starting test: addRoleWithEmptyName
+2025-12-08 15:25:36.352 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:25:39.271 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:25:39.273 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:25:41.746 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:25:41.750 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:25:41.781 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:25:41.781 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:25:41.782 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:25:42.183 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:25:42.333 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:25:42.472 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:25:42.473 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:25:45.593 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:25:45.804 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:25:55.878 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [789bca7dcf79849a06c20d5b74d47376, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51632}, goog:processID: 13572, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51632/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 789bca7dcf79849a06c20d5b74d47376
+2025-12-08 15:25:55.892 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithEmptyName
+2025-12-08 15:25:56.016 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithEmptyName_20251208_152555.png
+2025-12-08 15:25:56.338 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:25:56.355 [main] INFO  Base.BaseTest - Starting test: cancelAddRoleForm
+2025-12-08 15:25:56.358 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:25:59.144 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:25:59.145 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:26:01.399 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:26:01.399 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:26:01.400 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:26:01.400 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:26:01.400 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:26:01.643 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:26:01.807 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:26:01.960 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:26:01.960 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:26:05.074 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:26:05.302 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:26:05.400 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:26:15.449 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [46226241d15489c5aa4e76d24a25e41c, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51668}, goog:processID: 8352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51668/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 46226241d15489c5aa4e76d24a25e41c
+2025-12-08 15:26:15.458 [main] INFO  Base.BaseTest - Tearing down test: cancelAddRoleForm
+2025-12-08 15:26:15.591 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/cancelAddRoleForm_20251208_152615.png
+2025-12-08 15:26:15.876 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:26:15.879 [main] INFO  Base.BaseTest - Starting test: addRoleWithSpecialCharacters
+2025-12-08 15:26:15.880 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:26:18.890 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:26:18.891 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:26:21.241 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:26:21.241 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:26:21.244 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:26:21.245 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:26:21.245 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:26:21.531 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:26:21.715 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:26:21.821 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:26:21.821 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:26:24.940 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:26:25.103 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:26:25.214 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:26:35.269 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a9e27b93a55eda38b9f19ac546211cbf, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51705}, goog:processID: 13404, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51705/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9e27b93a55eda38b9f19ac546211cbf
+2025-12-08 15:26:35.273 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithSpecialCharacters
+2025-12-08 15:26:35.422 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithSpecialCharacters_20251208_152635.png
+2025-12-08 15:26:36.556 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:26:36.558 [main] INFO  Base.BaseTest - Starting test: addRoleWithLongName
+2025-12-08 15:26:36.560 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:26:39.588 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:26:39.589 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:26:42.013 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:26:42.014 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:26:42.014 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:26:42.015 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:26:42.015 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:26:42.245 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:26:42.510 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:26:42.616 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:26:42.616 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:26:45.715 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:26:45.906 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:26:46.353 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:26:56.397 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [721dd0f8372d7e3f7d66b64c9f05f5e9, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51747}, goog:processID: 12492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51747/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 721dd0f8372d7e3f7d66b64c9f05f5e9
+2025-12-08 15:26:56.407 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLongName
+2025-12-08 15:26:56.533 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithLongName_20251208_152656.png
+2025-12-08 15:26:56.923 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:26:56.933 [main] INFO  Base.BaseTest - Starting test: addRoleWithNumericName
+2025-12-08 15:26:56.934 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:26:59.885 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:26:59.887 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:27:02.016 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:27:02.016 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:27:02.017 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:27:02.018 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:27:02.018 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:27:02.255 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:27:02.480 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:27:02.585 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:27:02.585 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:27:05.710 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:27:05.890 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:27:05.992 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:27:16.009 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21a6be6f26f13ffa2af18bc644b5c69f, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51781}, goog:processID: 13764, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51781/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21a6be6f26f13ffa2af18bc644b5c69f
+2025-12-08 15:27:16.019 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithNumericName
+2025-12-08 15:27:16.134 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithNumericName_20251208_152716.png
+2025-12-08 15:27:16.401 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:27:16.405 [main] INFO  Base.BaseTest - Starting test: addRoleWithLeadingTrailingSpaces
+2025-12-08 15:27:16.407 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:27:19.425 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:27:19.426 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:27:21.679 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:27:21.680 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:27:21.680 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:27:21.680 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:27:21.681 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:27:21.924 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:27:22.139 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:27:22.244 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:27:22.244 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:27:25.350 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:27:25.566 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:27:25.762 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:27:35.834 [main] ERROR Pages.RolePage - Failed to select the Keysafe user type: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Key Safe User']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [477bfa9093e142a8e40d588a33682427, findElement {value=//label[text()='Key Safe User'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.40 (c23ff452476d..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51817}, goog:processID: 13300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51817/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 477bfa9093e142a8e40d588a33682427
+2025-12-08 15:27:35.841 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLeadingTrailingSpaces
+2025-12-08 15:27:35.963 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithLeadingTrailingSpaces_20251208_152735.png
+2025-12-08 15:27:36.225 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:27:37.656 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-08 15:51:34.863 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-08 15:51:34.898 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:51:35.346 [main] INFO  Base.BaseTest - Starting test: NavigateToRolePager
+2025-12-08 15:51:35.352 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:51:47.098 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:51:47.100 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:51:48.828 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:51:48.861 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:51:48.879 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:51:48.879 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:51:48.880 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:51:49.839 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:51:49.982 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:51:50.185 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:51:50.185 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:51:53.294 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:51:53.382 [main] INFO  Base.BaseTest - Tearing down test: NavigateToRolePager
+2025-12-08 15:51:54.075 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:51:54.105 [main] INFO  Base.BaseTest - Starting test: addNewKeySafeRole
+2025-12-08 15:51:54.110 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:51:57.206 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:51:57.208 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:52:00.404 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:52:00.404 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:52:00.406 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:52:00.407 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:52:00.408 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:52:00.650 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:52:00.865 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:52:00.969 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:52:00.969 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:52:04.090 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:52:04.307 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:52:04.467 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:52:04.541 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:52:04.607 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:52:04.609 [main] INFO  Base.BaseTest - Tearing down test: addNewKeySafeRole
+2025-12-08 15:52:04.837 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:52:04.842 [main] INFO  Base.BaseTest - Starting test: addNewWebUserRole
+2025-12-08 15:52:04.845 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:52:06.554 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:52:06.555 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:52:09.508 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:52:09.508 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:52:09.509 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:52:09.509 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:52:09.510 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:52:09.801 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:52:10.001 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:52:10.105 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:52:10.105 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:52:13.214 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:52:13.427 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:52:13.579 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-08 15:52:13.673 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:52:16.767 [main] INFO  Pages.RolePage - Clicked the All pages checkbox
+2025-12-08 15:52:16.841 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:52:16.843 [main] INFO  Base.BaseTest - Tearing down test: addNewWebUserRole
+2025-12-08 15:52:17.072 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:52:17.077 [main] INFO  Base.BaseTest - Starting test: addNewRolewithybothusertype
+2025-12-08 15:52:17.079 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:52:18.936 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:52:18.937 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:52:21.651 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:52:21.651 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:52:21.652 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:52:21.652 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:52:21.652 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:52:21.919 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:52:22.118 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:52:22.218 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:52:22.218 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:52:25.330 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:52:25.524 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:52:25.669 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-08 15:52:25.810 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:52:25.868 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:52:28.959 [main] INFO  Pages.RolePage - Clicked the All pages checkbox
+2025-12-08 15:52:29.031 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:52:29.033 [main] INFO  Base.BaseTest - Tearing down test: addNewRolewithybothusertype
+2025-12-08 15:52:29.266 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:52:29.269 [main] INFO  Base.BaseTest - Starting test: editRole
+2025-12-08 15:52:29.271 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:52:31.100 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:52:31.101 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:52:33.698 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:52:33.699 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:52:33.699 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:52:33.699 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:52:33.700 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:52:33.931 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:52:34.138 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:52:34.245 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:52:34.245 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:52:37.356 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:52:37.701 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:52:37.830 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-08 15:52:37.932 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:52:37.933 [main] INFO  Base.BaseTest - Tearing down test: editRole
+2025-12-08 15:52:38.247 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:52:38.252 [main] INFO  Base.BaseTest - Starting test: deleteRole
+2025-12-08 15:52:38.255 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:52:39.928 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:52:39.929 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:52:41.944 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:52:41.944 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:52:41.945 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:52:41.945 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:52:41.945 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:52:42.172 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:52:42.392 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:52:42.502 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:52:42.502 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:52:45.614 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:52:45.970 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:52:46.076 [main] INFO  Pages.RolePage - Clicked the delete button
+2025-12-08 15:52:46.165 [main] INFO  Pages.RolePage - Clicked the delete confirm button
+2025-12-08 15:52:46.166 [main] INFO  Base.BaseTest - Tearing down test: deleteRole
+2025-12-08 15:52:46.531 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:52:46.536 [main] INFO  Base.BaseTest - Starting test: addRoleWithEmptyName
+2025-12-08 15:52:46.538 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:52:48.086 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:52:48.087 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:52:50.295 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:52:50.295 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:52:50.296 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:52:50.296 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:52:50.296 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:52:50.563 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:52:50.793 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:52:50.903 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:52:50.904 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:52:54.051 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:52:54.277 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:52:54.372 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:52:54.449 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:52:54.471 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithEmptyName
+2025-12-08 15:52:54.731 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:52:54.734 [main] INFO  Base.BaseTest - Starting test: addRoleWithoutUserType
+2025-12-08 15:52:54.736 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:52:56.805 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:52:56.806 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:52:59.610 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:52:59.610 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:52:59.611 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:52:59.611 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:52:59.612 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:52:59.840 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:53:00.044 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:53:00.154 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:53:00.154 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:53:03.248 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:53:03.424 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:53:03.580 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:53:03.652 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:53:03.672 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithoutUserType
+2025-12-08 15:53:03.947 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:53:03.950 [main] INFO  Base.BaseTest - Starting test: addRoleWithoutSelectingPages
+2025-12-08 15:53:03.951 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:53:05.633 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:53:05.634 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:53:07.896 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:53:07.896 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:53:07.896 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:53:07.896 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:53:07.896 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:53:08.143 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:53:08.391 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:53:08.492 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:53:08.493 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:53:11.609 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:53:11.872 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:53:12.028 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:53:12.098 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-08 15:53:12.162 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:53:12.179 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithoutSelectingPages
+2025-12-08 15:53:12.481 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:53:12.483 [main] INFO  Base.BaseTest - Starting test: cancelAddRoleForm
+2025-12-08 15:53:12.484 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:53:14.105 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:53:14.106 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:53:16.243 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:53:16.243 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:53:16.244 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:53:16.244 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:53:16.244 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:53:16.472 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:53:16.680 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:53:16.788 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:53:16.788 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:53:19.881 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:53:20.095 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:53:20.200 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:53:20.268 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:53:20.334 [main] INFO  Pages.RolePage - Clicked the cancel button
+2025-12-08 15:53:20.375 [main] INFO  Base.BaseTest - Tearing down test: cancelAddRoleForm
+2025-12-08 15:53:20.778 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:53:20.781 [main] INFO  Base.BaseTest - Starting test: cancelDeleteRole
+2025-12-08 15:53:20.783 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:53:22.434 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:53:22.434 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:53:24.632 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:53:24.632 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:53:24.633 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:53:24.633 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:53:24.633 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:53:24.877 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:53:25.089 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:53:25.191 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:53:25.191 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:53:28.306 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:53:28.643 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:53:28.758 [main] INFO  Pages.RolePage - Clicked the delete button
+2025-12-08 15:53:28.853 [main] INFO  Pages.RolePage - Clicked the delete cancel button (No)
+2025-12-08 15:53:28.932 [main] INFO  Base.BaseTest - Tearing down test: cancelDeleteRole
+2025-12-08 15:53:29.270 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:53:29.273 [main] INFO  Base.BaseTest - Starting test: searchRoleWithValidName
+2025-12-08 15:53:29.274 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:53:30.881 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:53:30.882 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:53:33.351 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:53:33.351 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:53:33.352 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:53:33.352 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:53:33.352 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:53:33.589 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:53:33.822 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:53:33.928 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:53:33.928 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:53:37.027 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:53:37.174 [main] INFO  Pages.RolePage - Clicked the search icon
+2025-12-08 15:53:40.232 [main] INFO  Pages.RolePage - Entered the search value
+2025-12-08 15:53:43.239 [main] INFO  Base.BaseTest - Tearing down test: searchRoleWithValidName
+2025-12-08 15:53:43.609 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:53:43.615 [main] INFO  Base.BaseTest - Starting test: searchRoleWithNonExistentName
+2025-12-08 15:53:43.617 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:53:45.328 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:53:45.329 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:53:48.725 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:53:48.725 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:53:48.726 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:53:48.726 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:53:48.726 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:53:48.950 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:53:49.192 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:53:49.294 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:53:49.294 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:53:52.397 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:53:52.503 [main] INFO  Pages.RolePage - Clicked the search icon
+2025-12-08 15:53:52.645 [main] INFO  Pages.RolePage - Entered the search value
+2025-12-08 15:53:52.647 [main] INFO  Base.BaseTest - Tearing down test: searchRoleWithNonExistentName
+2025-12-08 15:53:52.876 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:53:52.879 [main] INFO  Base.BaseTest - Starting test: addRoleWithSpecialCharacters
+2025-12-08 15:53:52.881 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:53:54.585 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:53:54.586 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:53:57.025 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:53:57.025 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:53:57.025 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:53:57.025 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:53:57.025 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:53:57.253 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:53:57.442 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:53:57.558 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:53:57.558 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:54:00.653 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:54:00.856 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:54:00.958 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:54:01.062 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:54:01.128 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:54:04.176 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithSpecialCharacters
+2025-12-08 15:54:04.397 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:54:04.400 [main] INFO  Base.BaseTest - Starting test: addRoleWithLongName
+2025-12-08 15:54:04.402 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:54:06.123 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:54:06.123 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:54:09.131 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:54:09.132 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:54:09.132 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:54:09.132 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:54:09.132 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:54:09.360 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:54:09.562 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:54:09.673 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:54:09.673 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:54:12.784 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:54:12.978 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:54:13.482 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:54:13.541 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:54:13.603 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:54:13.605 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLongName
+2025-12-08 15:54:13.880 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:54:13.883 [main] INFO  Base.BaseTest - Starting test: verifyRoleTableDisplayed
+2025-12-08 15:54:13.885 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:54:15.529 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:54:15.531 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:54:18.983 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:54:18.983 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:54:18.984 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:54:18.984 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:54:18.984 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:54:19.187 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:54:19.380 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:54:19.500 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:54:19.500 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:54:22.595 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:54:22.665 [main] INFO  Base.BaseTest - Tearing down test: verifyRoleTableDisplayed
+2025-12-08 15:54:22.895 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:54:22.897 [main] INFO  Base.BaseTest - Starting test: verifyAddRoleFormElements
+2025-12-08 15:54:22.898 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:54:24.791 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:54:24.792 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:54:27.176 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:54:27.176 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:54:27.176 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:54:27.176 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:54:27.176 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:54:27.399 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:54:27.616 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:54:27.724 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:54:27.725 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:54:30.824 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:54:31.020 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:54:31.055 [main] INFO  Base.BaseTest - Tearing down test: verifyAddRoleFormElements
+2025-12-08 15:54:31.343 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:54:31.346 [main] INFO  Base.BaseTest - Starting test: editRoleWithEmptyName
+2025-12-08 15:54:31.348 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:54:33.038 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:54:33.039 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:54:34.314 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:54:34.316 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:54:34.320 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:54:34.320 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:54:34.321 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:54:35.223 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:54:35.426 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:54:35.528 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:54:35.528 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:54:38.659 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:54:38.926 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:54:39.040 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-08 15:54:39.212 [main] INFO  Pages.RolePage - Cleared the role name field
+2025-12-08 15:54:42.306 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:54:42.330 [main] INFO  Base.BaseTest - Tearing down test: editRoleWithEmptyName
+2025-12-08 15:54:42.613 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:54:42.615 [main] INFO  Base.BaseTest - Starting test: cancelEditRoleForm
+2025-12-08 15:54:42.617 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:54:44.359 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:54:44.360 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:54:47.991 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:54:47.992 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:54:47.992 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:54:47.992 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:54:47.992 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:54:48.226 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:54:48.385 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:54:48.526 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:54:48.526 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:54:51.622 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:54:51.983 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-08 15:54:52.119 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-08 15:54:52.271 [main] INFO  Pages.RolePage - Clicked the cancel button
+2025-12-08 15:54:52.319 [main] INFO  Base.BaseTest - Tearing down test: cancelEditRoleForm
+2025-12-08 15:54:52.640 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:54:52.642 [main] INFO  Base.BaseTest - Starting test: addRoleWithNumericName
+2025-12-08 15:54:52.644 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:54:55.357 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:54:55.358 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:54:58.400 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:54:58.400 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:54:58.400 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:54:58.400 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:54:58.400 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:54:58.606 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:54:58.797 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:54:58.925 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:54:58.925 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:55:02.010 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:55:02.188 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:55:02.354 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:55:02.440 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:55:02.515 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:55:02.516 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithNumericName
+2025-12-08 15:55:02.774 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:55:02.776 [main] INFO  Base.BaseTest - Starting test: addRoleWithLeadingTrailingSpaces
+2025-12-08 15:55:02.778 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:55:04.356 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:55:04.357 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:55:08.126 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:55:08.126 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:55:08.126 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:55:08.126 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:55:08.126 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:55:08.327 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:55:08.552 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:55:08.674 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:55:08.674 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:55:11.784 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:55:11.937 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-08 15:55:12.102 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-08 15:55:12.183 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-08 15:55:12.244 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-08 15:55:12.264 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLeadingTrailingSpaces
+2025-12-08 15:55:12.640 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:55:12.645 [main] INFO  Base.BaseTest - Starting test: verifycolumnheadernames
+2025-12-08 15:55:12.648 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:55:14.956 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:55:14.958 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:55:17.173 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:55:17.173 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:55:17.179 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:55:17.179 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:55:17.179 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:55:18.004 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:55:18.238 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:55:18.338 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:55:18.338 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:55:21.416 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:55:26.534 [main] INFO  Base.BaseTest - Tearing down test: verifycolumnheadernames
+2025-12-08 15:55:26.822 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:55:27.509 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-08 15:56:56.808 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-08 15:56:56.824 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-08 15:56:57.198 [main] INFO  Base.BaseTest - Starting test: verifycolumnheadernames
+2025-12-08 15:56:57.204 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-08 15:57:00.508 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-08 15:57:00.512 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-08 15:57:05.950 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-08 15:57:05.955 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-08 15:57:05.967 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-08 15:57:05.969 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-08 15:57:05.970 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-08 15:57:06.365 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-08 15:57:06.493 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-08 15:57:06.599 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-08 15:57:06.600 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-08 15:57:09.706 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-08 15:57:14.799 [main] INFO  Base.BaseTest - Tearing down test: verifycolumnheadernames
+2025-12-08 15:57:15.129 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-08 15:57:15.562 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
