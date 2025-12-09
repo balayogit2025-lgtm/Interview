@@ -149,7 +149,7 @@ public class LoginPage {
         return this;
     }
 
-    /**
+    /***
      * Click remember me checkbox
      * @return LoginPage for method chaining
      */

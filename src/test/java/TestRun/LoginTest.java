@@ -443,7 +443,7 @@ public class LoginTest extends BaseTest {
         }
     }
 
-    /**
+    /***
      * TC_LOGIN_018: Verify login with XSS attack attempt
      */
     @Test(priority = 18, description = "Verify login handles XSS attack")
