@@ -54,7 +54,7 @@ public class LoginPageElements {
      * Error/Alert message container
      * Locator Strategy: Class names commonly used for error messages
      */
-    @FindBy(xpath = "//ol/li/div/div/div/div")
+    @FindBy(xpath = "//ol/li/div/div[contains(@class, 'toast')]")
     protected WebElement errorMessage;
 
     /**
@@ -187,7 +187,6 @@ public class LoginPageElements {
 
     @FindBy(xpath = "//div[.='Login successful']")
     private WebElement successMessage;
-
 
     @FindBy(xpath = "//p[contains(text(), 'email')]")
     private WebElement emailErrorMessage;
@@ -414,4 +413,6 @@ public class LoginPageElements {
         return passwordErrorMessage;
     }
 
+
 }
+
