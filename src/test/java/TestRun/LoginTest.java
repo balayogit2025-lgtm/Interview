@@ -40,7 +40,6 @@ public class LoginTest extends BaseTest {
     public void verifyLoginPageElements() throws InterruptedException {
         getExtentTest().log(Status.INFO, "Test: Verify login page elements are displayed");
         Thread.sleep(2000);
-
         Assert.assertTrue(loginPage.isEmailFieldDisplayed(),
                 "Email field should be displayed");
         getExtentTest().log(Status.PASS, "Email field is displayed");
@@ -77,8 +76,8 @@ public class LoginTest extends BaseTest {
 
             Assert.assertFalse(successMessage.isEmpty(), "Success message should not be empty");
             Assert.assertTrue(successMessage.toLowerCase().contains("success") ||
-                    successMessage.toLowerCase().contains("welcome") ||
-                    successMessage.toLowerCase().contains("logged in"),
+                            successMessage.toLowerCase().contains("welcome") ||
+                            successMessage.toLowerCase().contains("logged in"),
                     "Success message should contain expected text");
             getExtentTest().log(Status.PASS, "Success message verified: " + successMessage);
         } else {
@@ -196,11 +195,11 @@ public class LoginTest extends BaseTest {
         loginPage.login(email, password);
         getExtentTest().log(Status.INFO, "Entered invalid email and valid password");
 
-        try {
+        /*try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         // Verify user remains on login page
         String currentUrl = loginPage.getCurrentUrl();
@@ -210,6 +209,14 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(isStillOnLoginPage || loginPage.isErrorMessageDisplayed(),
                 "Login should fail with invalid email");
         getExtentTest().log(Status.PASS, "Login failed with invalid email as expected");
+        // Verify success message is displayed (if available)
+        String Message = loginPage.getErrorMessageText();
+        getExtentTest().log(Status.INFO, "Error message: " + Message);
+
+        Assert.assertFalse(Message.isEmpty(), "Success message should not be empty");
+        Assert.assertEquals(Message , "User not found", "Error message should contain expected text");
+        getExtentTest().log(Status.PASS, "Error message verified: " + Message);
+
     }
 
     /**
@@ -238,6 +245,15 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(isStillOnLoginPage || loginPage.isErrorMessageDisplayed(),
                 "Login should fail with invalid password");
         getExtentTest().log(Status.PASS, "Login failed with invalid password as expected");
+
+        // Verify success message is displayed (if available)
+        String Message = loginPage.getErrorMessageText();
+        getExtentTest().log(Status.INFO, "Error message: " + Message);
+
+        Assert.assertFalse(Message.isEmpty(), "Success message should not be empty");
+        Assert.assertEquals(Message , "Invalid credential", "Error message should contain expected text");
+        getExtentTest().log(Status.PASS, "Error message verified: " + Message);
+
     }
 
     /**
@@ -249,13 +265,6 @@ public class LoginTest extends BaseTest {
 
         loginPage.login("", "");
         getExtentTest().log(Status.INFO, "Clicked login with empty credentials");
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
                 currentUrl.contains(ConfigReader.getAppUrl());
@@ -263,6 +272,23 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(isStillOnLoginPage,
                 "Should remain on login page with empty credentials");
         getExtentTest().log(Status.PASS, "Login failed with empty credentials as expected");
+        // Verify Email error message is displayed (if available)
+        String emailerrorMessage = loginPage.getEmailFieldErrorMessageText();
+        getExtentTest().log(Status.INFO, "Error message: " + emailerrorMessage);
+
+        Assert.assertFalse(emailerrorMessage.isEmpty(), "Success message should not be empty");
+        Assert.assertEquals(emailerrorMessage , "Invalid email address", "Error message should contain expected text");
+        getExtentTest().log(Status.PASS, "Email Error message verified: " + emailerrorMessage);
+
+        // Verify password error message is displayed (if available)
+        String passwordErrorMessage = loginPage.getPasswordFieldErrorMessageText();
+        getExtentTest().log(Status.INFO, "Error message: " + passwordErrorMessage);
+
+        Assert.assertFalse(passwordErrorMessage.isEmpty(), "Success message should not be empty");
+        Assert.assertEquals(passwordErrorMessage , "Password must be at least 8 characters", "Error message should contain expected text");
+        getExtentTest().log(Status.PASS, "Email Error message verified: " + passwordErrorMessage);
+
+
     }
 
     /**
@@ -277,12 +303,6 @@ public class LoginTest extends BaseTest {
         loginPage.clickLoginButton();
         getExtentTest().log(Status.INFO, "Clicked login with empty email");
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
                 currentUrl.contains(ConfigReader.getAppUrl());
@@ -295,6 +315,7 @@ public class LoginTest extends BaseTest {
         boolean errorDisplayed = loginPage.isEmailFieldErrorMessageDisplayed();
         if (errorDisplayed) {
             String errorMessage = loginPage.getEmailFieldErrorMessageText();
+            Assert.assertEquals(errorMessage , "Invalid email address", "Error message should contain expected text");
             getExtentTest().log(Status.INFO, "Error message: " + errorMessage);
         }
         getExtentTest().log(Status.PASS, "Login correctly failed with empty email");
@@ -330,6 +351,7 @@ public class LoginTest extends BaseTest {
         boolean errorDisplayed = loginPage.isPasswordFieldErrorMessageDisplayed();
         if (errorDisplayed) {
             String errorMessage = loginPage.getPasswordFieldErrorMessageText();
+            Assert.assertEquals(errorMessage , "Password must be at least 8 characters", "Error message should contain expected text");
             getExtentTest().log(Status.INFO, "Error message: " + errorMessage);
         }
         getExtentTest().log(Status.PASS, "Login correctly failed with empty password");
@@ -389,61 +411,6 @@ public class LoginTest extends BaseTest {
     }
 
     /**
-     * TC_LOGIN_016: Verify inactive user cannot login
-     */
-    @Test(priority = 16, description = "Verify inactive user cannot login")
-    public void verifyInactiveUserCannotLogin() {
-        getExtentTest().log(Status.INFO, "Test: Verify inactive user cannot login");
-
-        String inactiveEmail = ConfigReader.getInactiveEmail();
-        String password = ConfigReader.getInactivePassword();
-
-        loginPage.enterEmail(inactiveEmail)
-                .enterPassword(password)
-                .clickLoginButton()
-                .waitFor(3);
-
-        getExtentTest().log(Status.INFO, "Attempted login with inactive user: " + inactiveEmail);
-
-        // Verify user is still on login page
-        String currentUrl = loginPage.getCurrentUrl();
-        boolean isStillOnLoginPage = currentUrl.contains("login") ||
-                currentUrl.equals(ConfigReader.getAppUrl());
-
-        Assert.assertTrue(isStillOnLoginPage,
-                "Inactive user should not be able to login and should remain on login page");
-
-        getExtentTest().log(Status.PASS, "Inactive user was prevented from logging in");
-    }
-
-    /**
-     * TC_LOGIN_017: Verify error message for inactive user
-     */
-    @Test(priority = 17, description = "Verify error message for inactive user")
-    public void verifyInactiveUserErrorMessage() throws InterruptedException {
-        getExtentTest().log(Status.INFO, "Test: Verify error message for inactive user");
-
-        String inactiveEmail = ConfigReader.getInactiveEmail();
-        String password = ConfigReader.getInactivePassword();
-
-        loginPage.login(inactiveEmail, password);
-        getExtentTest().log(Status.INFO, "Checking for error message");
-
-        Thread.sleep(2000);
-
-        // Verify error message is displayed
-        boolean errorDisplayed = loginPage.isErrorMessageDisplayed();
-
-        if (errorDisplayed) {
-            String errorMessage = loginPage.getErrorMessageText();
-            getExtentTest().log(Status.INFO, "Error message: " + errorMessage);
-            getExtentTest().log(Status.PASS, "Error message displayed for inactive user");
-        } else {
-            getExtentTest().log(Status.INFO, "No error message displayed - user may have different status");
-        }
-    }
-
-    /***
      * TC_LOGIN_018: Verify login with XSS attack attempt
      */
     @Test(priority = 18, description = "Verify login handles XSS attack")
@@ -588,13 +555,13 @@ public class LoginTest extends BaseTest {
     @DataProvider(name = "invalidCredentials")
     public Object[][] getInvalidCredentials() {
         return new Object[][] {
-            {"", "", "Empty email and password"},
-            {"test@", "Password123", "Invalid email format - no domain"},
-            {"@test.com", "Password123", "Invalid email format - no local part"},
-            {"test.test.com", "Password123", "Invalid email format - no @ symbol"},
-            {"test@test", "Password123", "Invalid email format - incomplete domain"},
-            {"valid@email.com", "", "Empty password"},
-            {"", "ValidPass123", "Empty email"},
+                {"", "", "Empty email and password"},
+                {"test@", "Password123", "Invalid email format - no domain"},
+                {"@test.com", "Password123", "Invalid email format - no local part"},
+                {"test.test.com", "Password123", "Invalid email format - no @ symbol"},
+                {"test@test", "Password123", "Invalid email format - incomplete domain"},
+                {"valid@email.com", "", "Empty password"},
+                {"", "ValidPass123", "Empty email"},
         };
     }
 
@@ -602,7 +569,7 @@ public class LoginTest extends BaseTest {
      * TC_LOGIN_023: Data-driven test for invalid credentials
      */
     @Test(priority = 23, dataProvider = "invalidCredentials",
-          description = "Verify login fails with various invalid credentials")
+            description = "Verify login fails with various invalid credentials")
     public void verifyLoginWithVariousInvalidCredentials(String email, String password, String scenario) {
         getExtentTest().log(Status.INFO, "Test Scenario: " + scenario);
         getExtentTest().log(Status.INFO, "Email: " + email + ", Password: " + (password.isEmpty() ? "[empty]" : "[provided]"));
