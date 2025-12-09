@@ -188,6 +188,7 @@ public class LoginPageElements {
     @FindBy(xpath = "//div[.='Login successful']")
     private WebElement successMessage;
 
+
     @FindBy(xpath = "//p[contains(text(), 'email')]")
     private WebElement emailErrorMessage;
 
