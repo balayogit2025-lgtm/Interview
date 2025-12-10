@@ -262,7 +262,7 @@ public class RolePage {
 
     public int getRoleTableRowCount() {
         try {
-            //     return elements.getRoleTableRows().size();
+              return elements.getRoleTableRows().size();
         } catch (Exception e) {
             logger.debug("Unable to get role table rows: " + e.getMessage());
         }
