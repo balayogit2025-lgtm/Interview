@@ -1,6 +1,8 @@
 package Pages;
 
 import Elements.RolePageElements;
+import Utils.CommonUtil;
+import Utils.TestLogger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
@@ -14,11 +16,13 @@ public class RolePage {
 
     private WebDriver driver;
     private RolePageElements elements;
+    private CommonUtil commonUtil;
     private static final Logger logger =  LogManager.getLogger(RolePage.class);
 
     public RolePage(WebDriver driver) {
         this.driver = driver;
         this.elements = new RolePageElements(driver);
+        this.commonUtil = new CommonUtil(driver);
         logger.info("RolePage initialized");
     }
 
@@ -443,6 +447,16 @@ public class RolePage {
             logger.debug("Unable to check web user type selection: " + e.getMessage());
             return false;
         }
+    }
+
+    public String totalRoleCount() throws InterruptedException {
+        TestLogger.info("Getting total activity count");
+        navigatetorolepage();
+        commonUtil.clickLastPageButton();
+        Thread.sleep(1000);
+        String count = commonUtil.getLastRowFirstColumnValue();
+        return count;
+
     }
 
 }

@@ -185,6 +185,13 @@ public class LoginPageElements {
      */
     protected By passwordFieldByName = By.name("password");
 
+
+    public By getLoginButtonCSS() {
+        return loginButtonCSS;
+    }
+
+    public By activityPage = By.xpath("//span[text()='Activity']");
+
     @FindBy(xpath = "//div[.='Login successful']")
     private WebElement successMessage;
 
