@@ -3,6 +3,8 @@ package TestRun;
 import Base.BaseTest;
 import Pages.LoginPage;
 import Pages.RolePage;
+import Utils.TestLogger;
+import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -144,16 +146,14 @@ public class RoleTest extends BaseTest {
     @Test(priority = 15, description = "Verify role creation with very long role name")
     public void addRoleWithLongName() {
         rolePage.addRoleWithLongName();
-        // Should either truncate, accept, or show validation error
-        // This tests the maximum length boundary
     }
 
-  /*  @Test(priority = 16, description = "Verify duplicate role creation is prevented")
+   /* @Test(priority = 16, description = "Verify duplicate role creation is prevented")
     public void addDuplicateRole() {
 
-        rolePage.Addnewkeysafeusertype();
+        rolePage.addDuplicateRole();
 
-        Assert.assertTrue(rolePage.,
+        Assert.assertTrue(rolePage,
                 "Should show error or prevent duplicate role creation");
     } */
 
@@ -218,5 +218,15 @@ public class RoleTest extends BaseTest {
         List<String> actualHeaders = rolePage.getHeaderTexts();
         Assert.assertEquals(actualHeaders, expectedHeaders, "Table headers do not match!");
     }
-
+    @Test(priority = 24, description = "Verify the Total role count")
+    public void verifyTotalRoleCount() throws InterruptedException {
+        logger.info("Starting verifyRoleCount");
+        getExtentTest().log(Status.INFO, "Verifying the total role count");
+        String Expectedcount = "25";
+        String Actualcount = rolePage.totalRoleCount();
+        Assert.assertEquals(Actualcount,Expectedcount,"The count is mismatched");
+        getExtentTest().log(Status.PASS, "Expected & Actual role count is matched");
+        TestLogger.success("role count verification passed");
+        logger.info("role count verification PASSED" );
+    }
 }

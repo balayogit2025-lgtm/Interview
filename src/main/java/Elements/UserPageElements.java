@@ -140,6 +140,9 @@ public class UserPageElements {
     @FindBy(xpath = "//h2[text()='Add User']")
     protected WebElement Adduserlabel;
 
+    @FindBy(xpath = "(//span[@class='text-xl']) [4]")
+    protected WebElement Lastpagebutton;
+
     public UserPageElements(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -288,9 +291,10 @@ public class UserPageElements {
         return Errormsgofinvalidpin;
     }
 
-    public WebElement getAdduserlabel() {
-        return Adduserlabel;
-    }
+    public WebElement getAdduserlabel() {return Adduserlabel;}
+
+    public WebElement getLastpagebutton() {return Lastpagebutton;}
+
 
 }
 

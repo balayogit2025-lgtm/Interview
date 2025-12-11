@@ -7916,3 +7916,180 @@ Session ID: 02d29019c9503c28925d4ec83e29a767
 2025-12-10 18:24:36.523 [main] INFO  Base.BaseTest - Tearing down test: VerifyTheErrorMessageofInvalidPin
 2025-12-10 18:24:36.749 [main] INFO  Base.BaseTest - WebDriver closed successfully
 2025-12-10 18:24:37.249 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:01:01.867 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:01:01.935 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:01:02.768 [main] INFO  Base.BaseTest - Starting test: verifyDashboardActivityCount
+2025-12-11 15:01:02.772 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:01:15.303 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:01:15.305 [main] INFO  TestRun.DashboardTest - === Starting Test Setup ===
+2025-12-11 15:01:15.305 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:01:16.344 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:01:16.662 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:01:16.917 [main] INFO  Pages.DashboardPage - Dashboard initialized
+2025-12-11 15:01:16.919 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:01:16.919 [main] INFO  Pages.ActivityPage - Activity page initialized
+2025-12-11 15:01:16.927 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 15:01:16.927 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 15:01:16.928 [main] INFO  Pages.LoginPage - Performing login with email: sandhiyar@sternadevices.in
+2025-12-11 15:01:18.857 [main] INFO  Pages.LoginPage - Entered email: sandhiyar@sternadevices.in
+2025-12-11 15:01:19.071 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:01:19.180 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:01:19.180 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:01:19.181 [main] INFO  TestRun.DashboardTest - WebDriver initialized and navigated to dashboard successfully
+2025-12-11 15:01:19.182 [main] INFO  TestRun.DashboardTest - Starting verifyDashboardActivityCount
+2025-12-11 15:01:21.383 [main] INFO  Base.BaseTest - Tearing down test: verifyDashboardActivityCount
+2025-12-11 15:01:21.737 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyDashboardActivityCount_20251211_150121.png
+2025-12-11 15:01:22.373 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:01:23.654 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:02:32.877 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:02:32.892 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:02:33.271 [main] INFO  Base.BaseTest - Starting test: verifyDashboardRoleCount
+2025-12-11 15:02:33.277 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:02:38.781 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:02:38.782 [main] INFO  TestRun.DashboardTest - === Starting Test Setup ===
+2025-12-11 15:02:38.783 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:02:41.020 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:02:41.035 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:02:41.061 [main] INFO  Pages.DashboardPage - Dashboard initialized
+2025-12-11 15:02:41.064 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:02:41.064 [main] INFO  Pages.ActivityPage - Activity page initialized
+2025-12-11 15:02:41.151 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 15:02:41.151 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 15:02:41.152 [main] INFO  Pages.LoginPage - Performing login with email: sandhiyar@sternadevices.in
+2025-12-11 15:02:41.541 [main] INFO  Pages.LoginPage - Entered email: sandhiyar@sternadevices.in
+2025-12-11 15:02:41.670 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:02:41.770 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:02:41.771 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:02:41.793 [main] INFO  TestRun.DashboardTest - WebDriver initialized and navigated to dashboard successfully
+2025-12-11 15:02:41.796 [main] INFO  TestRun.DashboardTest - Starting verifyDashboardRoleCount
+2025-12-11 15:02:45.520 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 15:02:47.894 [main] INFO  Base.BaseTest - Tearing down test: verifyDashboardRoleCount
+2025-12-11 15:02:48.110 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyDashboardRoleCount_20251211_150247.png
+2025-12-11 15:02:48.422 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:02:49.626 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:13:22.798 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:13:22.814 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:13:23.170 [main] INFO  Base.BaseTest - Starting test: verifyTotalUsersCount
+2025-12-11 15:13:23.186 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:13:29.234 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:13:29.234 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:13:31.216 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:13:31.221 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:13:31.277 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 15:13:31.277 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 15:13:31.277 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 15:13:31.620 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 15:13:31.768 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:13:31.865 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:13:31.865 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:13:31.865 [main] INFO  Base.BaseTest - Starting verifyUsersCount
+2025-12-11 15:13:32.461 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 15:13:35.070 [main] INFO  Base.BaseTest - User count verification PASSED
+2025-12-11 15:13:35.070 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalUsersCount
+2025-12-11 15:13:35.324 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:13:35.694 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:14:13.139 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:14:13.155 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:14:13.520 [main] INFO  Base.BaseTest - Starting test: verifyTotalUsersCount
+2025-12-11 15:14:13.520 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:14:18.421 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:14:18.421 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:14:19.962 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:14:19.966 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:14:19.973 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 15:14:19.974 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 15:14:19.975 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 15:14:20.836 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 15:14:20.998 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:14:21.105 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:14:21.105 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:14:21.105 [main] INFO  Base.BaseTest - Starting verifyUsersCount
+2025-12-11 15:14:21.682 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 15:14:24.095 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalUsersCount
+2025-12-11 15:14:24.311 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyTotalUsersCount_20251211_151424.png
+2025-12-11 15:14:24.563 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:14:25.526 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:16:28.905 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:16:28.925 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:16:29.279 [main] INFO  Base.BaseTest - Starting test: verifyTotalUsersCount
+2025-12-11 15:16:29.294 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:16:33.824 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:16:33.824 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:16:35.857 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:16:35.862 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:16:35.872 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 15:16:35.873 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 15:16:35.873 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 15:16:36.344 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 15:16:36.492 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:16:36.588 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:16:36.588 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:16:36.591 [main] INFO  Base.BaseTest - Starting verifyUsersCount
+2025-12-11 15:16:37.075 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 15:16:43.533 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalUsersCount
+2025-12-11 15:16:43.747 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyTotalUsersCount_20251211_151643.png
+2025-12-11 15:16:44.047 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:16:45.023 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:20:23.615 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:20:23.630 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:20:23.978 [main] INFO  Base.BaseTest - Starting test: verifyTotalUsersCount
+2025-12-11 15:20:23.993 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:20:28.995 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:20:28.995 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:20:31.103 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:20:31.106 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:20:31.116 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 15:20:31.120 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 15:20:31.120 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 15:20:31.458 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 15:20:31.691 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:20:31.813 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:20:31.813 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:20:31.813 [main] INFO  Base.BaseTest - Starting verifyUsersCount
+2025-12-11 15:20:32.531 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 15:20:38.994 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalUsersCount
+2025-12-11 15:20:39.240 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyTotalUsersCount_20251211_152038.png
+2025-12-11 15:20:39.616 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:20:40.580 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:27:52.214 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:27:52.230 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:27:52.593 [main] INFO  Base.BaseTest - Starting test: verifyTotalRoleCount
+2025-12-11 15:27:52.593 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:27:58.304 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:27:58.306 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:28:00.363 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:28:00.372 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:28:00.394 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 15:28:00.410 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 15:28:00.411 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 15:28:00.847 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 15:28:00.984 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:28:01.079 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:28:01.079 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:28:01.079 [main] INFO  Base.BaseTest - Starting verifyRoleCount
+2025-12-11 15:28:04.230 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 15:28:06.734 [main] INFO  Base.BaseTest - role count verification PASSED
+2025-12-11 15:28:06.734 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalRoleCount
+2025-12-11 15:28:06.999 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:28:07.435 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 15:28:32.460 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 15:28:32.476 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 15:28:32.830 [main] INFO  Base.BaseTest - Starting test: verifyTotalRoleCount
+2025-12-11 15:28:32.845 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 15:28:37.736 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 15:28:37.736 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 15:28:39.680 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 15:28:39.687 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 15:28:39.706 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 15:28:39.708 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 15:28:39.708 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 15:28:40.119 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 15:28:40.255 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 15:28:40.352 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 15:28:40.352 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 15:28:40.352 [main] INFO  Base.BaseTest - Starting verifyRoleCount
+2025-12-11 15:28:43.481 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 15:28:46.026 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalRoleCount
+2025-12-11 15:28:46.194 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyTotalRoleCount_20251211_152846.png
+2025-12-11 15:28:46.441 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 15:28:47.283 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
