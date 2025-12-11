@@ -121,7 +121,7 @@ public class RoleTest extends BaseTest {
         rolePage.searchavalidvalue();
         int rowCount = rolePage.getRoleTableRowCount();
         // Search results should be filtered
-        Assert.assertTrue(rowCount >= 0, "Search should return results or empty table");
+        Assert.assertTrue(rowCount > 0, "Search should return results or empty table");
     }
 
     @Test(priority = 13, description = "Verify search functionality with non-existent role name")
@@ -215,11 +215,7 @@ public class RoleTest extends BaseTest {
         } catch (InterruptedException e) {
         }
         List<String> expectedHeaders = Arrays.asList("S.NO", "NAME", "CREATED BY", "UPDATED BY","ACTION");
-
-        // Get actual headers from page
         List<String> actualHeaders = rolePage.getHeaderTexts();
-
-        // Assertion
         Assert.assertEquals(actualHeaders, expectedHeaders, "Table headers do not match!");
     }
 

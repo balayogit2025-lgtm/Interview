@@ -83,6 +83,9 @@ public class RolePageElements {
     @FindBy(xpath = "//th[@class='border border-primary-50 whitespace-nowrap bg-primary/80 px-4 py-1.5 uppercase text-primary-foreground text-xs+ lg:px-5']")
     protected List<WebElement> listOfheaders;
 
+    @FindBy(xpath = "//tr[@class='border-y border-transparent border-b-slate-100 ']")
+    private List<WebElement> RoleTableRows;
+
     public RolePageElements(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -171,5 +174,6 @@ public class RolePageElements {
 
     public List<WebElement> getListOfheaders() {return listOfheaders;}
 
+    public List<WebElement> getRoleTableRows() {return RoleTableRows;}
 
 }
