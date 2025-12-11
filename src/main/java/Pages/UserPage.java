@@ -1,13 +1,15 @@
 package Pages;
 
-
+import Utils.CommonUtil;
 import Elements.UserPageElements;
+import Utils.CommonUtil;
+import Utils.TestLogger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +18,13 @@ public class UserPage {
 
     private WebDriver driver;
     private UserPageElements elements;
+    private CommonUtil commonUtil;
     private static final Logger logger =  LogManager.getLogger(UserPage.class);
 
     public UserPage(WebDriver driver) {
         this.driver = driver;
         this.elements = new UserPageElements(driver);
+        this.commonUtil = new CommonUtil(driver);
         logger.info("UserPage initialized");
     }
 
@@ -617,6 +621,31 @@ public class UserPage {
             logger.debug("Add User label is not displayed: " + e.getMessage());
             return false;
         }
+    }
+
+    public UserPage clicklastpagebutton() {
+        try {
+            WebElement lastpagebutton = elements.getLastpagebutton();
+            lastpagebutton.click();
+            logger.info("clicked the lastpage button");
+        } catch (Exception e) {
+            logger.error("Failed to click the lastpage button: " + e.getMessage());
+            throw new RuntimeException("Unable to click the lastpage button: ", e);
+        }
+        return this;
+    }
+
+    public String TotalUserCount() throws InterruptedException {
+        TestLogger.info("Getting total activity count");
+        navigatetouserpage();
+        commonUtil.clickLastPageButton();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+        }
+        String actualcount = commonUtil.getLastRowFirstColumnValue();
+        return actualcount;
+
     }
 
     }

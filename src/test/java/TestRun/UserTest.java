@@ -3,6 +3,8 @@ package TestRun;
 import Base.BaseTest;
 import Pages.LoginPage;
 import Pages.UserPage;
+import Utils.TestLogger;
+import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -203,5 +205,15 @@ public class UserTest extends BaseTest {
         boolean errormsgofinvalidpin = userPage.isErrormsgofInvalidpindisplayed();
         Assert.assertTrue(errormsgofinvalidpin, "Error message of invalid pin is not displayed");
     }
-
+    @Test(priority = 24, description = "Verify the Total users count")
+    public void verifyTotalUsersCount() throws InterruptedException {
+        logger.info("Starting verifyUsersCount");
+        getExtentTest().log(Status.INFO, "Verifying the total users count");
+        String Expectedcount = "22";
+        String Actualcount = userPage.TotalUserCount();
+        Assert.assertEquals(Actualcount,Expectedcount,"The count is mismatched");
+        getExtentTest().log(Status.PASS, "Expected & Actual user count is matched");
+        TestLogger.success("User count verification passed");
+        logger.info("User count verification PASSED" );
+    }
     }
