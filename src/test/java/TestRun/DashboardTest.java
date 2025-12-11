@@ -1,8 +1,10 @@
 package TestRun;
 
 import Base.BaseTest;
+import Pages.ActivityPage;
 import Pages.DashboardPage;
 import Pages.LoginPage;
+import Pages.RolePage;
 import Utils.ConfigReader;
 import Utils.TestLogger;
 import com.aventstack.extentreports.Status;
@@ -18,6 +20,8 @@ public class DashboardTest extends BaseTest {
     private WebDriver driver;
     private DashboardPage dashboardPage;
     private LoginPage loginPage;
+    private ActivityPage activityPage;
+    private RolePage rolePage;
 
 
     @BeforeMethod
@@ -28,6 +32,8 @@ public class DashboardTest extends BaseTest {
             navigateToApp();
             loginPage = new LoginPage(getDriver());
             dashboardPage = new DashboardPage(getDriver());
+            activityPage = new ActivityPage(getDriver());
+            rolePage = new RolePage(getDriver());
             String email = ConfigReader.getValidEmail();
             String password = ConfigReader.getValidPassword();
             loginPage.login(email, password);
@@ -215,25 +221,41 @@ public class DashboardTest extends BaseTest {
         logger.info("Complete dashboard verification PASSED");
     }
 
-    @Test(description = "Verify web user count is a valid number",
-            priority = 9, groups = {"regression"})
-    public void verifyWebUserCount() {
-        logger.info("Starting verifyWebUserCount");
-        getExtentTest().log(Status.INFO, "Verifying web user count");
+    @Test(description = "Verify dashboard activity card count with activity page total",
+            priority = 10, groups = {"regression"})
+    public void verifyDashboardActivityCount() throws InterruptedException {
+        logger.info("Starting verifyDashboardActivityCount");
+        getExtentTest().log(Status.INFO, "Verifying dashboard activity card count with activity page total");
 
-        String webUserCountStr = dashboardPage.getWebUserCount();
-        Assert.assertNotNull(webUserCountStr, "Web user count string should not be null");
+        String dashboardActivityCountStr = dashboardPage.getActivityCardCount();
+        Assert.assertNotNull(dashboardActivityCountStr, "Dashboard activity count string should not be null");
 
-        try {
-            int webUserCount = Integer.parseInt(webUserCountStr);
-            Assert.assertTrue(webUserCount >= 0, "Web user count should be a non-negative number.");
-            getExtentTest().log(Status.PASS, "Web user count is a valid number: " + webUserCount);
-            TestLogger.success("Web user count verification passed: " + webUserCount);
-            logger.info("Web user count verification PASSED: " + webUserCount);
-        } catch (NumberFormatException e) {
-            logger.error("Web user count is not a valid number: " + webUserCountStr, e);
-            getExtentTest().log(Status.FAIL, "Web user count is not a valid number: " + webUserCountStr);
-            Assert.fail("Web user count is not a valid number: " + webUserCountStr);
-        }
+        String activityPageTotalCountStr = activityPage.totalActivityCount();
+        Assert.assertNotNull(activityPageTotalCountStr, "Activity page total count string should not be null");
+
+        Assert.assertEquals(dashboardActivityCountStr, activityPageTotalCountStr, "Dashboard activity count does not match the total on the activity page.");
+
+        getExtentTest().log(Status.PASS, "Dashboard activity count matches activity page total: " + dashboardActivityCountStr);
+        TestLogger.success("Dashboard activity count verification passed: " + dashboardActivityCountStr);
+        logger.info("Dashboard activity count verification PASSED: " + dashboardActivityCountStr);
+    }
+
+    @Test(description = "Verify dashboard role card count with role page total",
+            priority = 11, groups = {"regression"})
+    public void verifyDashboardRoleCount() throws InterruptedException {
+        logger.info("Starting verifyDashboardRoleCount");
+        getExtentTest().log(Status.INFO, "Verifying dashboard role card count with role page total");
+
+        String dashboardRoleCountStr = dashboardPage.getRolesCardCount();
+        Assert.assertNotNull(dashboardRoleCountStr, "Dashboard role count string should not be null");
+
+        String rolePageTotalCountStr = rolePage.totalRoleCount();
+        Assert.assertNotNull(rolePageTotalCountStr, "Role page total count string should not be null");
+
+        Assert.assertEquals(dashboardRoleCountStr, rolePageTotalCountStr, "Dashboard role count does not match the total on the role page.");
+
+        getExtentTest().log(Status.PASS, "Dashboard role count matches role page total: " + dashboardRoleCountStr);
+        TestLogger.success("Dashboard role count verification passed: " + dashboardRoleCountStr);
+        logger.info("Dashboard role count verification PASSED: " + dashboardRoleCountStr);
     }
 }

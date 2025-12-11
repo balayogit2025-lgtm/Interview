@@ -106,6 +106,14 @@ private CommonUtil commonUtil;
         return titleText;
     }
 
+    public String getActivityCardCount() {
+        TestLogger.info("Getting activity card count");
+        WebElement activityCardCount = waitHelper.waitForElementVisible(elements.cardActivityCount);
+        String count = activityCardCount.getText();
+        TestLogger.success("Activity card count: " + count);
+        return count;
+    }
+
     public Boolean isRolesCardDisplayed() {
         TestLogger.info("Roles card displayed or not");
         WebElement rolesCard = waitHelper.waitForElementVisible((By) elements.cardTotalRolesTitle);
@@ -119,6 +127,14 @@ private CommonUtil commonUtil;
         String titleText = commonUtil.getTitleText((By) elements.cardTotalRolesTitle,"Total Roles") ;
         TestLogger.success("role card title is displayed: " + titleText);
         return titleText;
+    }
+
+    public String getRolesCardCount() {
+        TestLogger.info("Getting roles card count");
+        WebElement rolesCardCount = waitHelper.waitForElementVisible(elements.cardTotalRolesCount);
+        String count = rolesCardCount.getText();
+        TestLogger.success("Roles card count: " + count);
+        return count;
     }
 
     public Boolean isTotalUserCardDisplayed() {
