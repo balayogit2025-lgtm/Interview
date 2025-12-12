@@ -244,7 +244,7 @@ public class RoleTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify the Total role count");
         logger.info("Starting verifyRoleCount");
         getExtentTest().log(Status.INFO, "Verifying the total role count");
-        String Expectedcount = "25";
+        String Expectedcount = "26";
         String Actualcount = rolePage.totalRoleCount();
         Assert.assertEquals(Actualcount,Expectedcount,"The count is mismatched");
         getExtentTest().log(Status.PASS, "Expected & Actual role count is matched");
