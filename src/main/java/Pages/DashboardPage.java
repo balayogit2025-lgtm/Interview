@@ -152,6 +152,14 @@ private CommonUtil commonUtil;
         return titleText;
     }
 
+    public String getTotalUsersCardCount() {
+        TestLogger.info("Getting total users card count");
+        WebElement totalUsersCardCount = waitHelper.waitForElementVisible(elements.cardTotalUsersCount);
+        String count = totalUsersCardCount.getText();
+        TestLogger.success("Total users card count: " + count);
+        return count;
+    }
+
     public Boolean isWebUserCardDisplayed() {
         TestLogger.info("Web User card displayed or not");
         WebElement webUserCard = waitHelper.waitForElementVisible((By) elements.cardWebUsersTitle);

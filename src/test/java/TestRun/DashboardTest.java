@@ -5,6 +5,7 @@ import Pages.ActivityPage;
 import Pages.DashboardPage;
 import Pages.LoginPage;
 import Pages.RolePage;
+import Pages.UserPage;
 import Utils.ConfigReader;
 import Utils.TestLogger;
 import com.aventstack.extentreports.Status;
@@ -22,6 +23,7 @@ public class DashboardTest extends BaseTest {
     private LoginPage loginPage;
     private ActivityPage activityPage;
     private RolePage rolePage;
+    private UserPage userPage;
 
 
     @BeforeMethod
@@ -34,6 +36,7 @@ public class DashboardTest extends BaseTest {
             dashboardPage = new DashboardPage(getDriver());
             activityPage = new ActivityPage(getDriver());
             rolePage = new RolePage(getDriver());
+            userPage = new UserPage(getDriver());
             String email = ConfigReader.getValidEmail();
             String password = ConfigReader.getValidPassword();
             loginPage.login(email, password);
@@ -106,6 +109,8 @@ public class DashboardTest extends BaseTest {
         Assert.assertEquals(dashboardPage.getActivityCardTitle(), "Activity", "Activity card title mismatch");
         Assert.assertEquals(dashboardPage.getRolesCardTitle(), "Total Roles", "Roles card title mismatch");
         Assert.assertEquals(dashboardPage.getTotalUserCardTitle(), "Total Users", "Total Users card title mismatch");
+        Assert.assertEquals(dashboardPage.getWebUserCardTitle(), "Web Users", "Web Users card title mismatch");
+        Assert.assertEquals(dashboardPage.getTotalKeySafeCardTitle(), "Key Safe Users", "Key Safe Users card title mismatch");
 
         getExtentTest().log(Status.PASS, "All cards verified successfully");
         TestLogger.success("All cards display and title verification passed");
@@ -215,6 +220,10 @@ public class DashboardTest extends BaseTest {
         Assert.assertTrue(dashboardPage.isTotalRolesCardCountDisplayed());
         Assert.assertTrue(dashboardPage.isTotalUserCardDisplayed());
         Assert.assertTrue(dashboardPage.isTotalUsersCardCountDisplayed());
+        Assert.assertTrue(dashboardPage.isWebUserCardDisplayed());
+        Assert.assertTrue(dashboardPage.isWebUsersCardCountDisplayed());
+        Assert.assertTrue(dashboardPage.isKeySafeUserCardDisplayed());
+        Assert.assertTrue(dashboardPage.isKeySafeUsersCardCountDisplayed());
 
         getExtentTest().log(Status.PASS, "Complete dashboard verification PASSED");
         TestLogger.success("Complete dashboard verification passed");
@@ -222,7 +231,7 @@ public class DashboardTest extends BaseTest {
     }
 
     @Test(description = "Verify dashboard activity card count with activity page total",
-            priority = 10, groups = {"regression"})
+            priority = 9, groups = {"regression"})
     public void verifyDashboardActivityCount() throws InterruptedException {
         logger.info("Starting verifyDashboardActivityCount");
         getExtentTest().log(Status.INFO, "Verifying dashboard activity card count with activity page total");
@@ -241,7 +250,7 @@ public class DashboardTest extends BaseTest {
     }
 
     @Test(description = "Verify dashboard role card count with role page total",
-            priority = 11, groups = {"regression"})
+            priority = 10, groups = {"regression"})
     public void verifyDashboardRoleCount() throws InterruptedException {
         logger.info("Starting verifyDashboardRoleCount");
         getExtentTest().log(Status.INFO, "Verifying dashboard role card count with role page total");
@@ -257,5 +266,62 @@ public class DashboardTest extends BaseTest {
         getExtentTest().log(Status.PASS, "Dashboard role count matches role page total: " + dashboardRoleCountStr);
         TestLogger.success("Dashboard role count verification passed: " + dashboardRoleCountStr);
         logger.info("Dashboard role count verification PASSED: " + dashboardRoleCountStr);
+    }
+
+    @Test(description = "Verify dashboard total user card count with user page total",
+            priority = 11, groups = {"regression"})
+    public void verifyDashboardTotalUserCount() throws InterruptedException {
+        logger.info("Starting verifyDashboardTotalUserCount");
+        getExtentTest().log(Status.INFO, "Verifying dashboard total user card count with user page total");
+
+        String dashboardTotalUserCountStr = dashboardPage.getTotalUsersCardCount();
+        Assert.assertNotNull(dashboardTotalUserCountStr, "Dashboard total user count string should not be null");
+
+        String userPageTotalCountStr = userPage.TotalUserCount();
+        Assert.assertNotNull(userPageTotalCountStr, "User page total count string should not be null");
+
+        Assert.assertEquals(dashboardTotalUserCountStr, userPageTotalCountStr, "Dashboard total user count does not match the total on the user page.");
+
+        getExtentTest().log(Status.PASS, "Dashboard total user count matches user page total: " + dashboardTotalUserCountStr);
+        TestLogger.success("Dashboard total user count verification passed: " + dashboardTotalUserCountStr);
+        logger.info("Dashboard total user count verification PASSED: " + dashboardTotalUserCountStr);
+    }
+
+    @Test(description = "Verify dashboard web user count with actual web user count from user page",
+            priority = 12, groups = {"regression"})
+    public void verifyDashboardWebUserCount() {
+        logger.info("Starting verifyDashboardWebUserCount");
+        getExtentTest().log(Status.INFO, "Verifying dashboard web user count with actual web user count from user page");
+
+        String dashboardWebUserCountStr = dashboardPage.getWebUserCount();
+        Assert.assertNotNull(dashboardWebUserCountStr, "Dashboard web user count string should not be null");
+
+        String actualWebUserCountStr = userPage.getWebUsersCount();
+        Assert.assertNotNull(actualWebUserCountStr, "Actual web user count string should not be null");
+
+        Assert.assertEquals(dashboardWebUserCountStr, actualWebUserCountStr, "Dashboard web user count does not match the actual web user count from the user page.");
+
+        getExtentTest().log(Status.PASS, "Dashboard web user count matches actual web user count: " + dashboardWebUserCountStr);
+        TestLogger.success("Dashboard web user count verification passed: " + dashboardWebUserCountStr);
+        logger.info("Dashboard web user count verification PASSED: " + dashboardWebUserCountStr);
+    }
+
+    @Test(description = "Verify dashboard key safe user count with actual key safe user count from user page",
+            priority = 13, groups = {"regression"})
+    public void verifyDashboardKeySafeUserCount() {
+        logger.info("Starting verifyDashboardKeySafeUserCount");
+        getExtentTest().log(Status.INFO, "Verifying dashboard key safe user count with actual key safe user count from user page");
+
+        String dashboardKeySafeUserCountStr = dashboardPage.getTotalUsersCardCount();
+        Assert.assertNotNull(dashboardKeySafeUserCountStr, "Dashboard key safe user count string should not be null");
+
+        String actualKeySafeUserCountStr = userPage.getKeySafeUsersCount();
+        Assert.assertNotNull(actualKeySafeUserCountStr, "Actual key safe user count string should not be null");
+
+        Assert.assertEquals(dashboardKeySafeUserCountStr, actualKeySafeUserCountStr, "Dashboard key safe user count does not match the actual key safe user count from the user page.");
+
+        getExtentTest().log(Status.PASS, "Dashboard key safe user count matches actual key safe user count: " + dashboardKeySafeUserCountStr);
+        TestLogger.success("Dashboard key safe user count verification passed: " + dashboardKeySafeUserCountStr);
+        logger.info("Dashboard key safe user count verification PASSED: " + dashboardKeySafeUserCountStr);
     }
 }

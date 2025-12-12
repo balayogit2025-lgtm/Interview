@@ -186,7 +186,7 @@ public class LoginTest extends BaseTest {
      * TC_LOGIN_009: Verify login fails with invalid email
      */
     @Test(priority = 9, description = "Verify login fails with invalid email")
-    public void verifyLoginWithInvalidEmail() {
+    public void verifyLoginWithInvalidEmail() throws InterruptedException {
         getExtentTest().log(Status.INFO, "Test: Verify login fails with invalid email");
 
         String email = ConfigReader.getInvalidEmail();
@@ -195,12 +195,12 @@ public class LoginTest extends BaseTest {
         loginPage.login(email, password);
         getExtentTest().log(Status.INFO, "Entered invalid email and valid password");
 
-        /*try {
-            Thread.sleep(2000);
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
-
+        }
+        String Message = loginPage.getErrorMessageText();
         // Verify user remains on login page
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
@@ -210,11 +210,11 @@ public class LoginTest extends BaseTest {
                 "Login should fail with invalid email");
         getExtentTest().log(Status.PASS, "Login failed with invalid email as expected");
         // Verify success message is displayed (if available)
-        String Message = loginPage.getErrorMessageText();
-        getExtentTest().log(Status.INFO, "Error message: " + Message);
+       //Thread.sleep(300);
 
+        getExtentTest().log(Status.INFO, "Error message: " + Message);
         Assert.assertFalse(Message.isEmpty(), "Success message should not be empty");
-        Assert.assertEquals(Message , "User not found", "Error message should contain expected text");
+        Assert.assertEquals(Message , "user not found", "Error message should contain expected text");
         getExtentTest().log(Status.PASS, "Error message verified: " + Message);
 
     }

@@ -664,7 +664,7 @@ public class UserPage {
         clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@234").clicksubmitbutton();
         return this;
     }
-
+/*
     public UserPage clicklastpagebutton() {
         try {
             WebElement lastpagebutton = elements.getLastpagebutton();
@@ -675,19 +675,9 @@ public class UserPage {
             throw new RuntimeException("Unable to click the lastpage button: ", e);
         }
         return this;
-    }
+    }*/
 
-    public String TotalUserCount() throws InterruptedException {
-        TestLogger.info("Getting total user count");
-        navigatetouserpage();
-        commonUtil.clickLastPageButton();
-        try {
-            Thread.sleep(1000); // Wait for table to update
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-        return commonUtil.getLastRowFirstColumnValue();
-    }
+
 
     private int countUsersByType(String userType) {
         TestLogger.info("Counting users of type: " + userType);
