@@ -11,6 +11,9 @@
     <test name="Login Tests" preserve-order="true">
         <classes>
             <class name="TestRun.LoginTest"/>
+            <class name="TestRun.DashboardTest"/>
+            <class name="TestRun.RoleTest"/>
+            <class name="TestRun.UserTest"/>
         </classes>
     </test>
 

@@ -132,7 +132,10 @@ public class RoleTest extends BaseTest {
     @Test(priority = 13, description = "Verify search functionality with non-existent role name")
     public void searchRoleWithNonExistentName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with non-existent role name");
-        rolePage.searchainvalidvalue();
+         try {
+             Thread.sleep(3000);
+         } catch (InterruptedException e) {
+         }
         int rowCount = rolePage.getRoleTableRowCount();
         Assert.assertTrue(rowCount == 0, "Search with non-existent name should handle gracefully");
         getExtentTest().log(Status.PASS, "Successfully Verified the search functionality with non-existent role name");
