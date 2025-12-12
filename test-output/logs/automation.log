@@ -8093,3 +8093,1956 @@ Session ID: 02d29019c9503c28925d4ec83e29a767
 2025-12-11 15:28:46.194 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyTotalRoleCount_20251211_152846.png
 2025-12-11 15:28:46.441 [main] INFO  Base.BaseTest - WebDriver closed successfully
 2025-12-11 15:28:47.283 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 16:29:32.745 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 16:29:32.814 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 16:29:33.273 [main] INFO  Base.BaseTest - Starting test: NavigateToUserPager
+2025-12-11 16:29:33.289 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:29:44.545 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:29:44.545 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:29:46.580 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:29:46.594 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:29:46.634 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:29:46.649 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:29:46.649 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:29:46.942 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:29:47.099 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:29:47.224 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:29:47.224 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:29:47.849 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:29:50.908 [main] INFO  Base.BaseTest - Tearing down test: NavigateToUserPager
+2025-12-11 16:29:51.512 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:29:51.527 [main] INFO  Base.BaseTest - Starting test: CreateaNewwebUser
+2025-12-11 16:29:51.527 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:29:55.763 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:29:55.765 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:29:57.205 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:29:57.205 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:29:57.221 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:29:57.221 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:29:57.221 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:29:58.087 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:29:58.307 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:29:58.425 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:29:58.426 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:29:59.007 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:29:59.293 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:29:59.457 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:29:59.558 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:29:59.669 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:29:59.768 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:29:59.914 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:30:00.084 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:30:00.656 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:30:00.731 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:30:00.802 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:30:10.857 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1f84688bbd905d7088fc0768290b48b4, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55855}, goog:processID: 6912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55855/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1f84688bbd905d7088fc0768290b48b4
+2025-12-11 16:30:10.857 [main] INFO  Base.BaseTest - Tearing down test: CreateaNewwebUser
+2025-12-11 16:30:11.072 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/CreateaNewwebUser_20251211_163010.png
+2025-12-11 16:30:11.443 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:30:11.443 [main] INFO  Base.BaseTest - Starting test: CreateaNewkeyboxUser
+2025-12-11 16:30:11.443 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:30:16.902 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:30:16.903 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:30:19.179 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:30:19.179 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:30:19.180 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:30:19.180 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:30:19.180 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:30:19.414 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:30:19.682 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:30:19.793 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:30:19.793 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:30:20.478 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:30:20.840 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:30:21.594 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:30:22.170 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:30:22.504 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:30:22.881 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:30:23.348 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:30:23.489 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:30:23.791 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:30:23.888 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:30:23.974 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:30:33.996 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad934161b5173ddc4e958f78c4879b39, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55892}, goog:processID: 18876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55892/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad934161b5173ddc4e958f78c4879b39
+2025-12-11 16:30:33.996 [main] INFO  Base.BaseTest - Tearing down test: CreateaNewkeyboxUser
+2025-12-11 16:30:34.150 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/CreateaNewkeyboxUser_20251211_163033.png
+2025-12-11 16:30:34.694 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:30:34.694 [main] INFO  Base.BaseTest - Starting test: CreateaUserofbothusertype
+2025-12-11 16:30:34.704 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:30:39.387 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:30:39.387 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:30:40.971 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:30:40.972 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:30:40.975 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:30:40.975 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:30:40.975 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:30:42.024 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:30:42.255 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:30:42.353 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:30:42.353 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:30:42.897 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:30:43.172 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:30:43.317 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:30:43.406 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:30:43.524 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:30:43.631 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:30:43.777 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:30:43.880 [main] INFO  Pages.UserPage - Selected the both user type role
+2025-12-11 16:30:44.251 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:30:44.340 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:30:44.475 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:30:54.503 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a96982b761a46bfddd587b65e8d5c984, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55931}, goog:processID: 17380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55931/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a96982b761a46bfddd587b65e8d5c984
+2025-12-11 16:30:54.503 [main] INFO  Base.BaseTest - Tearing down test: CreateaUserofbothusertype
+2025-12-11 16:30:54.656 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/CreateaUserofbothusertype_20251211_163054.png
+2025-12-11 16:30:55.147 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:30:55.161 [main] INFO  Base.BaseTest - Starting test: EditUser
+2025-12-11 16:30:55.161 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:31:00.477 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:31:00.477 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:31:01.951 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:31:01.951 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:31:01.951 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:31:01.968 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:31:01.969 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:31:02.780 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:31:02.968 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:31:03.088 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:31:03.088 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:31:03.658 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:31:04.068 [main] INFO  Pages.UserPage - clicked the manage button
+2025-12-11 16:31:04.184 [main] INFO  Pages.UserPage - clicked the edit button
+2025-12-11 16:31:04.310 [main] INFO  Pages.UserPage - cleared the first name in edit screen
+2025-12-11 16:31:04.382 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:31:06.499 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:31:06.534 [main] INFO  Base.BaseTest - Tearing down test: EditUser
+2025-12-11 16:31:06.863 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:31:06.863 [main] INFO  Base.BaseTest - Starting test: DeleteUser
+2025-12-11 16:31:06.863 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:31:10.300 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:31:10.300 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:31:13.047 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:31:13.047 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:31:13.048 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:31:13.048 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:31:13.049 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:31:13.266 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:31:13.480 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:31:13.602 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:31:13.602 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:31:14.195 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:31:14.585 [main] INFO  Pages.UserPage - clicked the manage button
+2025-12-11 16:31:14.686 [main] INFO  Pages.UserPage - clicked the Delete button
+2025-12-11 16:31:14.754 [main] INFO  Pages.UserPage - clicked the Delete confirm button
+2025-12-11 16:31:14.774 [main] INFO  Base.BaseTest - Tearing down test: DeleteUser
+2025-12-11 16:31:15.075 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:31:15.075 [main] INFO  Base.BaseTest - Starting test: cancelButtonInAddUser
+2025-12-11 16:31:15.075 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:31:18.120 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:31:18.120 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:31:20.398 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:31:20.398 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:31:20.398 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:31:20.398 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:31:20.398 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:31:21.358 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:31:21.593 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:31:21.705 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:31:21.705 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:31:22.197 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:31:22.428 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:31:22.560 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:31:22.715 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:31:22.814 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:31:22.898 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:31:23.011 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:31:23.129 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:31:23.334 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:31:23.455 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:31:23.525 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:31:33.557 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c5100fc6fa8708d03d231323d6c6256, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56027}, goog:processID: 6480, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56027/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c5100fc6fa8708d03d231323d6c6256
+2025-12-11 16:31:33.557 [main] INFO  Base.BaseTest - Tearing down test: cancelButtonInAddUser
+2025-12-11 16:31:33.676 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/cancelButtonInAddUser_20251211_163133.png
+2025-12-11 16:31:33.986 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:31:33.986 [main] INFO  Base.BaseTest - Starting test: cancelButtonInEditUser
+2025-12-11 16:31:33.986 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:31:38.653 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:31:38.653 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:31:40.657 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:31:40.657 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:31:40.659 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:31:40.659 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:31:40.659 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:31:40.851 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:31:41.042 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:31:41.153 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:31:41.153 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:31:41.742 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:31:42.059 [main] INFO  Pages.UserPage - clicked the manage button
+2025-12-11 16:31:42.175 [main] INFO  Pages.UserPage - clicked the edit button
+2025-12-11 16:31:42.260 [main] INFO  Pages.UserPage - cleared the first name in edit screen
+2025-12-11 16:31:42.345 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:31:44.454 [main] INFO  Pages.UserPage - clicked the Cancel button
+2025-12-11 16:31:44.502 [main] INFO  Base.BaseTest - Tearing down test: cancelButtonInEditUser
+2025-12-11 16:31:44.864 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:31:44.864 [main] INFO  Base.BaseTest - Starting test: cancelButtonInDeleteUser
+2025-12-11 16:31:44.864 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:31:48.675 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:31:48.675 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:31:51.107 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:31:51.107 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:31:51.108 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:31:51.108 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:31:51.108 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:31:51.512 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:31:51.642 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:31:51.747 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:31:51.747 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:31:52.251 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:31:52.586 [main] INFO  Pages.UserPage - clicked the manage button
+2025-12-11 16:31:52.673 [main] INFO  Pages.UserPage - clicked the Delete button
+2025-12-11 16:31:52.739 [main] INFO  Pages.UserPage - clicked the cancel Delete button
+2025-12-11 16:31:52.775 [main] INFO  Base.BaseTest - Tearing down test: cancelButtonInDeleteUser
+2025-12-11 16:31:53.055 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:31:53.055 [main] INFO  Base.BaseTest - Starting test: ViewUserDetails
+2025-12-11 16:31:53.055 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:31:56.336 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:31:56.337 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:31:58.893 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:31:58.893 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:31:58.894 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:31:58.894 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:31:58.894 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:31:59.183 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:31:59.337 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:31:59.454 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:31:59.454 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:32:00.100 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:32:00.478 [main] INFO  Pages.UserPage - clicked the manage button
+2025-12-11 16:32:00.600 [main] INFO  Pages.UserPage - clicked the view button
+2025-12-11 16:32:03.653 [main] INFO  Base.BaseTest - Tearing down test: ViewUserDetails
+2025-12-11 16:32:03.956 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:32:03.956 [main] INFO  Base.BaseTest - Starting test: searchUserWithValidName
+2025-12-11 16:32:03.956 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:32:07.179 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:32:07.179 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:32:08.995 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:32:08.995 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:32:08.996 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:32:08.996 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:32:08.996 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:32:09.263 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:32:09.427 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:32:09.546 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:32:09.546 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:32:10.065 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:32:10.259 [main] INFO  Pages.UserPage - clicked the search icon
+2025-12-11 16:32:10.331 [main] INFO  Pages.UserPage - Entered a value in search box
+2025-12-11 16:32:10.347 [main] INFO  Base.BaseTest - Tearing down test: searchUserWithValidName
+2025-12-11 16:32:10.685 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:32:10.685 [main] INFO  Base.BaseTest - Starting test: searchUserWithNonExistentName
+2025-12-11 16:32:10.685 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:32:14.262 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:32:14.263 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:32:15.927 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:32:15.927 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:32:15.929 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:32:15.929 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:32:15.929 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:32:16.994 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:32:17.186 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:32:17.342 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:32:17.342 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:32:17.874 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:32:18.032 [main] INFO  Pages.UserPage - clicked the search icon
+2025-12-11 16:32:18.107 [main] INFO  Pages.UserPage - Entered a value in search box
+2025-12-11 16:32:31.167 [main] INFO  Base.BaseTest - Tearing down test: searchUserWithNonExistentName
+2025-12-11 16:32:31.508 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:32:31.508 [main] INFO  Base.BaseTest - Starting test: adduserwithemptyfields
+2025-12-11 16:32:31.508 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:32:34.361 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:32:34.363 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:32:36.659 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:32:36.660 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:32:36.660 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:32:36.660 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:32:36.660 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:32:36.895 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:32:37.142 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:32:37.247 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:32:37.247 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:32:37.915 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:32:38.148 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:32:38.274 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:32:41.317 [main] INFO  Base.BaseTest - Tearing down test: adduserwithemptyfields
+2025-12-11 16:32:41.602 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:32:41.602 [main] INFO  Base.BaseTest - Starting test: adduserWithLeadingTrailingSpaces
+2025-12-11 16:32:41.602 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:32:44.989 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:32:44.989 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:32:46.755 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:32:46.756 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:32:46.757 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:32:46.757 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:32:46.757 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:32:47.041 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:32:47.188 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:32:47.298 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:32:47.298 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:32:47.856 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:32:48.106 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:32:48.209 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:32:48.338 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:32:51.382 [main] INFO  Base.BaseTest - Tearing down test: adduserWithLeadingTrailingSpaces
+2025-12-11 16:32:51.697 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:32:51.697 [main] INFO  Base.BaseTest - Starting test: addDuplicateuser
+2025-12-11 16:32:51.697 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:32:54.657 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:32:54.657 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:32:57.143 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:32:57.143 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:32:57.145 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:32:57.145 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:32:57.145 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:32:58.052 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:32:58.253 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:32:58.386 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:32:58.386 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:32:59.131 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:32:59.370 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:32:59.474 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:32:59.541 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:32:59.639 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:32:59.724 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:32:59.908 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:32:59.991 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:33:00.209 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:33:00.366 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:33:00.458 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:33:10.505 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57ad626e227a797c24a3078bfc0a55d4, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56281}, goog:processID: 4392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56281/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 57ad626e227a797c24a3078bfc0a55d4
+2025-12-11 16:33:10.512 [main] INFO  Base.BaseTest - Tearing down test: addDuplicateuser
+2025-12-11 16:33:10.628 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addDuplicateuser_20251211_163310.png
+2025-12-11 16:33:10.910 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:33:10.910 [main] INFO  Base.BaseTest - Starting test: verifyUserTableDisplayed
+2025-12-11 16:33:10.910 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:33:15.709 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:33:15.711 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:33:17.581 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:33:17.581 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:33:17.596 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:33:17.596 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:33:17.597 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:33:18.525 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:33:18.760 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:33:18.859 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:33:18.859 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:33:19.561 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:33:22.599 [main] INFO  Base.BaseTest - Tearing down test: verifyUserTableDisplayed
+2025-12-11 16:33:22.875 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:33:22.875 [main] INFO  Base.BaseTest - Starting test: verifycolumnheadernames
+2025-12-11 16:33:22.875 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:33:25.977 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:33:25.977 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:33:29.069 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:33:29.069 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:33:29.070 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:33:29.070 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:33:29.070 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:33:29.415 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:33:29.647 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:33:29.909 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:33:29.909 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:33:30.496 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:33:35.600 [main] INFO  Base.BaseTest - Tearing down test: verifycolumnheadernames
+2025-12-11 16:33:35.870 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:33:35.870 [main] INFO  Base.BaseTest - Starting test: addUserWithSpecialCharacters
+2025-12-11 16:33:35.885 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:33:39.202 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:33:39.202 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:33:41.539 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:33:41.539 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:33:41.539 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:33:41.539 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:33:41.539 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:33:41.730 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:33:41.962 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:33:42.080 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:33:42.080 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:33:42.629 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:33:42.880 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:33:42.980 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:33:43.118 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:33:43.217 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:33:43.296 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:33:43.418 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:33:43.538 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:33:43.767 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:33:43.885 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:33:43.965 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:33:54.016 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e90abbda03f1286bfc1014764726479f, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56377}, goog:processID: 16316, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56377/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e90abbda03f1286bfc1014764726479f
+2025-12-11 16:33:54.016 [main] INFO  Base.BaseTest - Tearing down test: addUserWithSpecialCharacters
+2025-12-11 16:33:54.152 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addUserWithSpecialCharacters_20251211_163354.png
+2025-12-11 16:33:54.755 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:33:54.757 [main] INFO  Base.BaseTest - Starting test: verifyThePresenceOfWebuserSection
+2025-12-11 16:33:54.758 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:34:00.262 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:34:00.262 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:34:02.250 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:34:02.250 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:34:02.254 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:34:02.254 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:34:02.254 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:34:03.116 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:34:03.347 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:34:03.435 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:34:03.435 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:34:03.911 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:34:04.216 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:34:04.316 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:34:04.416 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:34:04.525 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:34:04.599 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:34:04.726 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:34:04.884 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:34:04.972 [main] INFO  Base.BaseTest - Tearing down test: verifyThePresenceOfWebuserSection
+2025-12-11 16:34:05.242 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:34:05.242 [main] INFO  Base.BaseTest - Starting test: VerifyThePresenceOfKeysafeuserSection
+2025-12-11 16:34:05.242 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:34:08.542 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:34:08.542 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:34:10.904 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:34:10.904 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:34:10.904 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:34:10.904 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:34:10.904 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:34:11.108 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:34:11.380 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:34:11.488 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:34:11.488 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:34:12.055 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:34:12.309 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:34:12.409 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:34:12.462 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:34:12.609 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:34:12.694 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:34:12.794 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:34:12.892 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:34:13.024 [main] INFO  Base.BaseTest - Tearing down test: VerifyThePresenceOfKeysafeuserSection
+2025-12-11 16:34:13.294 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:34:13.296 [main] INFO  Base.BaseTest - Starting test: VerifyThePresenceOfBothUsersSection
+2025-12-11 16:34:13.296 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:34:16.716 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:34:16.716 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:34:19.458 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:34:19.459 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:34:19.460 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:34:19.461 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:34:19.461 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:34:19.707 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:34:19.921 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:34:20.025 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:34:20.025 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:34:20.564 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:34:20.806 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:34:20.946 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:34:21.006 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:34:21.139 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:34:21.591 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:34:21.783 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:34:21.914 [main] INFO  Pages.UserPage - Selected the both user type role
+2025-12-11 16:34:22.099 [main] INFO  Base.BaseTest - Tearing down test: VerifyThePresenceOfBothUsersSection
+2025-12-11 16:34:22.341 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:34:22.344 [main] INFO  Base.BaseTest - Starting test: VerifyTheErrorMessageofInvalidUserCode
+2025-12-11 16:34:22.344 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:34:25.528 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:34:25.529 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:34:27.793 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:34:27.794 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:34:27.794 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:34:27.794 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:34:27.794 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:34:28.012 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:34:28.255 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:34:28.390 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:34:28.390 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:34:28.922 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:34:29.260 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:34:29.360 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:34:29.461 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:34:29.561 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:34:29.661 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:34:29.761 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:34:29.896 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:34:30.092 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:34:30.223 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:34:30.308 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:34:40.367 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ff582b137d73efae39ed894654ee5d92, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56503}, goog:processID: 8660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56503/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ff582b137d73efae39ed894654ee5d92
+2025-12-11 16:34:40.367 [main] INFO  Base.BaseTest - Tearing down test: VerifyTheErrorMessageofInvalidUserCode
+2025-12-11 16:34:40.499 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/VerifyTheErrorMessageofInvalidUserCode_20251211_163440.png
+2025-12-11 16:34:40.852 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:34:40.917 [main] INFO  Base.BaseTest - Starting test: VerifyTheErrorMessageofInvalidPin
+2025-12-11 16:34:40.933 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:34:45.224 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:34:45.224 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:34:47.935 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:34:47.935 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:34:47.936 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:34:47.936 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:34:47.936 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:34:48.194 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:34:48.395 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:34:48.497 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:34:48.497 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:34:49.018 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:34:49.240 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:34:49.386 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:34:49.473 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:34:49.675 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:34:49.811 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:34:49.936 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:34:50.076 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:34:50.259 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:34:50.441 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:34:50.570 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:35:00.627 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Location A']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4dd94ad1a95ed4b793345827db2f3342, findElement {using=xpath, value=//span[text()='Location A']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56542}, goog:processID: 18972, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56542/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4dd94ad1a95ed4b793345827db2f3342
+2025-12-11 16:35:00.627 [main] INFO  Base.BaseTest - Tearing down test: VerifyTheErrorMessageofInvalidPin
+2025-12-11 16:35:00.754 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/VerifyTheErrorMessageofInvalidPin_20251211_163500.png
+2025-12-11 16:35:01.090 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:35:01.093 [main] INFO  Base.BaseTest - Starting test: verifyTotalUsersCount
+2025-12-11 16:35:01.095 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:35:05.426 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:35:05.426 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:35:07.580 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:35:07.580 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:35:07.581 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:35:07.581 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:35:07.581 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:35:07.792 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:35:08.024 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:35:08.128 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:35:08.128 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:35:08.129 [main] INFO  Base.BaseTest - Starting verifyUsersCount
+2025-12-11 16:35:08.564 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:35:15.050 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalUsersCount
+2025-12-11 16:35:15.378 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyTotalUsersCount_20251211_163515.png
+2025-12-11 16:35:15.782 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:35:17.158 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 16:37:27.855 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 16:37:27.871 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 16:37:28.268 [main] INFO  Base.BaseTest - Starting test: CreateaNewwebUser
+2025-12-11 16:37:28.268 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:37:33.165 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:37:33.165 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:37:35.453 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:37:35.453 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:37:35.526 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:37:35.537 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:37:35.537 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:37:35.882 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:37:36.001 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:37:36.111 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:37:36.111 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:37:36.689 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:37:36.925 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:37:37.079 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:37:37.179 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:37:37.286 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:37:37.379 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:37:37.952 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:37:38.101 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:37:38.304 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:37:38.389 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:37:38.473 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:37:48.535 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1d009a3d3124b7254c69481a9e916de, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56673}, goog:processID: 12472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56673/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1d009a3d3124b7254c69481a9e916de
+2025-12-11 16:37:48.551 [main] INFO  Base.BaseTest - Tearing down test: CreateaNewwebUser
+2025-12-11 16:37:48.704 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/CreateaNewwebUser_20251211_163748.png
+2025-12-11 16:37:48.976 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:37:48.976 [main] INFO  Base.BaseTest - Starting test: CreateaNewkeyboxUser
+2025-12-11 16:37:48.976 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:37:53.606 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:37:53.611 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:37:55.703 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:37:55.703 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:37:55.704 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:37:55.704 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:37:55.705 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:37:55.979 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:37:56.289 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:37:56.389 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:37:56.389 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:37:56.963 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:37:57.207 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:37:57.361 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:37:57.471 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:37:57.599 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:37:57.703 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:37:57.816 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:37:57.899 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:37:58.105 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:37:58.258 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:37:58.380 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:38:08.449 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67a16e45cfd2da50dc8bd14f323bd8e3, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56719}, goog:processID: 18620, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56719/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67a16e45cfd2da50dc8bd14f323bd8e3
+2025-12-11 16:38:08.452 [main] INFO  Base.BaseTest - Tearing down test: CreateaNewkeyboxUser
+2025-12-11 16:38:08.605 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/CreateaNewkeyboxUser_20251211_163808.png
+2025-12-11 16:38:08.905 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:38:08.905 [main] INFO  Base.BaseTest - Starting test: CreateaUserofbothusertype
+2025-12-11 16:38:08.905 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:38:14.014 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:38:14.014 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:38:16.240 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:38:16.241 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:38:16.243 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:38:16.243 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:38:16.243 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:38:16.475 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:38:16.706 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:38:16.816 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:38:16.816 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:38:17.346 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:38:17.566 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:38:17.753 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:38:17.820 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:38:17.929 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:38:18.010 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:38:18.126 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:38:18.235 [main] INFO  Pages.UserPage - Selected the both user type role
+2025-12-11 16:38:18.430 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:38:18.561 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:38:18.707 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:38:28.778 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24dce14c9d14ff050e2eae2e8d812a0e, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56765}, goog:processID: 4676, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56765/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 24dce14c9d14ff050e2eae2e8d812a0e
+2025-12-11 16:38:28.778 [main] INFO  Base.BaseTest - Tearing down test: CreateaUserofbothusertype
+2025-12-11 16:38:28.906 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/CreateaUserofbothusertype_20251211_163828.png
+2025-12-11 16:38:29.192 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:38:29.192 [main] INFO  Base.BaseTest - Starting test: cancelButtonInAddUser
+2025-12-11 16:38:29.192 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:38:33.572 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:38:33.572 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:38:35.892 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:38:35.893 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:38:35.894 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:38:35.894 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:38:35.894 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:38:36.106 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:38:36.338 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:38:36.443 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:38:36.443 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:38:36.914 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:38:37.144 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:38:37.275 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:38:37.388 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:38:37.479 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:38:37.575 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:38:37.691 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:38:37.791 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:38:38.381 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:38:38.518 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:38:38.615 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:38:48.663 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ec6b8b81e318d93e0f2d4586e194ab94, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56808}, goog:processID: 11380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56808/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ec6b8b81e318d93e0f2d4586e194ab94
+2025-12-11 16:38:48.663 [main] INFO  Base.BaseTest - Tearing down test: cancelButtonInAddUser
+2025-12-11 16:38:48.803 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/cancelButtonInAddUser_20251211_163848.png
+2025-12-11 16:38:49.213 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:38:49.213 [main] INFO  Base.BaseTest - Starting test: addDuplicateuser
+2025-12-11 16:38:49.229 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:38:53.591 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:38:53.594 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:38:55.866 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:38:55.866 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:38:55.867 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:38:55.867 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:38:55.867 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:38:56.077 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:38:56.281 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:38:56.398 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:38:56.398 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:38:56.973 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:38:57.286 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:38:57.497 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:38:57.608 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:38:57.737 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:38:57.835 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:38:57.930 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:38:58.091 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:38:58.357 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:38:58.440 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:38:58.504 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:39:08.539 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0ddf1d77d963c7a8e1e38ad0818a6408, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56859}, goog:processID: 9232, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56859/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ddf1d77d963c7a8e1e38ad0818a6408
+2025-12-11 16:39:08.539 [main] INFO  Base.BaseTest - Tearing down test: addDuplicateuser
+2025-12-11 16:39:08.675 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addDuplicateuser_20251211_163908.png
+2025-12-11 16:39:08.965 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:39:08.981 [main] INFO  Base.BaseTest - Starting test: addUserWithSpecialCharacters
+2025-12-11 16:39:08.981 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:39:13.258 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:39:13.259 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:39:15.733 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:39:15.733 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:39:15.734 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:39:15.734 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:39:15.734 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:39:15.948 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:39:16.163 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:39:16.275 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:39:16.275 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:39:16.838 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:39:17.149 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:39:17.296 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:39:17.380 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:39:17.496 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:39:17.593 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:39:17.713 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:39:17.891 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:39:18.117 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:39:18.235 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:39:18.292 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:39:28.311 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [974bff808440269cc09a2eb45eb6eac0, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56901}, goog:processID: 19032, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56901/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 974bff808440269cc09a2eb45eb6eac0
+2025-12-11 16:39:28.311 [main] INFO  Base.BaseTest - Tearing down test: addUserWithSpecialCharacters
+2025-12-11 16:39:28.444 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addUserWithSpecialCharacters_20251211_163928.png
+2025-12-11 16:39:28.743 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:39:28.743 [main] INFO  Base.BaseTest - Starting test: VerifyTheErrorMessageofInvalidUserCode
+2025-12-11 16:39:28.743 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:39:33.034 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:39:33.034 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:39:35.116 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:39:35.117 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:39:35.117 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:39:35.118 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:39:35.118 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:39:35.346 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:39:35.562 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:39:35.666 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:39:35.666 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:39:36.166 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:39:36.379 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:39:36.479 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:39:36.610 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:39:36.735 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:39:36.798 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:39:36.914 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:39:37.013 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:39:37.229 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:39:37.357 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:39:37.436 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:39:47.458 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1377bc1ee740947d8a0d46c3267373b2, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56945}, goog:processID: 14156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56945/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1377bc1ee740947d8a0d46c3267373b2
+2025-12-11 16:39:47.473 [main] INFO  Base.BaseTest - Tearing down test: VerifyTheErrorMessageofInvalidUserCode
+2025-12-11 16:39:47.627 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/VerifyTheErrorMessageofInvalidUserCode_20251211_163947.png
+2025-12-11 16:39:47.952 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:39:47.959 [main] INFO  Base.BaseTest - Starting test: VerifyTheErrorMessageofInvalidPin
+2025-12-11 16:39:47.963 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:39:52.032 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:39:52.032 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:39:54.449 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:39:54.451 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:39:54.452 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:39:54.453 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:39:54.453 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:39:54.754 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:39:54.946 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:39:55.054 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:39:55.054 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:39:55.521 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:39:55.850 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:39:55.950 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:39:56.032 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:39:56.154 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:39:56.250 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:39:56.352 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:39:56.497 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:39:56.838 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:39:57.127 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:39:57.231 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:40:07.280 [main] ERROR Pages.UserPage - Failed to select the locatiion value: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='AP Location']"}
+  (Session info: chrome=143.0.7499.40)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8dd90087a547f979a7f0d1c8213dd549, findElement {value=//span[text()='AP Location'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.40, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\balayogi\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56991}, goog:processID: 18604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56991/devtoo..., se:cdpVersion: 143.0.7499.40, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8dd90087a547f979a7f0d1c8213dd549
+2025-12-11 16:40:07.296 [main] INFO  Base.BaseTest - Tearing down test: VerifyTheErrorMessageofInvalidPin
+2025-12-11 16:40:07.428 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/VerifyTheErrorMessageofInvalidPin_20251211_164007.png
+2025-12-11 16:40:07.824 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:40:07.824 [main] INFO  Base.BaseTest - Starting test: verifyTotalUsersCount
+2025-12-11 16:40:07.824 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:40:11.926 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:40:11.928 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:40:14.192 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:40:14.192 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:40:14.193 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:40:14.193 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:40:14.193 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:40:14.410 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:40:14.647 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:40:14.765 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:40:14.765 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:40:14.765 [main] INFO  Base.BaseTest - Starting verifyUsersCount
+2025-12-11 16:40:15.256 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:40:21.865 [main] INFO  Base.BaseTest - User count verification PASSED
+2025-12-11 16:40:21.865 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalUsersCount
+2025-12-11 16:40:22.897 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:40:23.435 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 16:41:27.408 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 16:41:27.424 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 16:41:27.824 [main] INFO  Base.BaseTest - Starting test: CreateaNewwebUser
+2025-12-11 16:41:27.824 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:41:32.369 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:41:32.369 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:41:34.489 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:41:34.492 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:41:34.513 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:41:34.514 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:41:34.515 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:41:34.957 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:41:35.095 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:41:35.191 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:41:35.191 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:41:35.730 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:41:35.952 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:41:36.105 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:41:36.201 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:41:36.305 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:41:36.413 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:41:36.521 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:41:36.605 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:41:37.354 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:41:37.481 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:41:37.596 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:41:37.746 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:41:37.836 [main] INFO  Pages.UserPage - Entered the password
+2025-12-11 16:41:37.925 [main] INFO  Pages.UserPage - Entered the confirmpassword
+2025-12-11 16:41:38.002 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:41:38.031 [main] INFO  Base.BaseTest - Tearing down test: CreateaNewwebUser
+2025-12-11 16:41:38.710 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:41:38.710 [main] INFO  Base.BaseTest - Starting test: CreateaNewkeyboxUser
+2025-12-11 16:41:38.710 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:41:43.277 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:41:43.278 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:41:45.232 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:41:45.233 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:41:45.239 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:41:45.239 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:41:45.239 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:41:46.036 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:41:46.257 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:41:46.373 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:41:46.373 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:41:46.883 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:41:47.114 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:41:47.262 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:41:47.356 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:41:47.469 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:41:47.552 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:41:47.686 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:41:47.785 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:41:48.013 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:41:48.127 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:41:48.206 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:41:48.349 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:41:48.424 [main] INFO  Pages.UserPage - Entered the Display name
+2025-12-11 16:41:48.484 [main] INFO  Pages.UserPage - Entered the usercode
+2025-12-11 16:41:48.548 [main] INFO  Pages.UserPage - Clicked the card number checkbox
+2025-12-11 16:41:48.610 [main] INFO  Pages.UserPage - Entered the cardnumber
+2025-12-11 16:41:48.673 [main] INFO  Pages.UserPage - Entered the pin
+2025-12-11 16:41:48.761 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:41:48.786 [main] INFO  Base.BaseTest - Tearing down test: CreateaNewkeyboxUser
+2025-12-11 16:41:49.030 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:41:49.030 [main] INFO  Base.BaseTest - Starting test: CreateaUserofbothusertype
+2025-12-11 16:41:49.030 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:41:52.251 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:41:52.251 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:41:54.419 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:41:54.419 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:41:54.419 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:41:54.419 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:41:54.419 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:41:54.632 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:41:54.847 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:41:54.957 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:41:54.958 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:41:55.391 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:41:55.733 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:41:55.853 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:41:55.939 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:41:56.074 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:41:56.154 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:41:56.301 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:41:56.409 [main] INFO  Pages.UserPage - Selected the both user type role
+2025-12-11 16:41:56.596 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:41:56.673 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:41:56.771 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:41:56.884 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:41:56.950 [main] INFO  Pages.UserPage - Entered the Display name
+2025-12-11 16:41:57.025 [main] INFO  Pages.UserPage - Entered the usercode
+2025-12-11 16:41:57.086 [main] INFO  Pages.UserPage - Clicked the card number checkbox
+2025-12-11 16:41:57.154 [main] INFO  Pages.UserPage - Entered the cardnumber
+2025-12-11 16:41:57.222 [main] INFO  Pages.UserPage - Entered the pin
+2025-12-11 16:41:57.303 [main] INFO  Pages.UserPage - clicked the webusericon
+2025-12-11 16:41:57.393 [main] INFO  Pages.UserPage - Entered the password
+2025-12-11 16:41:57.473 [main] INFO  Pages.UserPage - Entered the confirmpassword
+2025-12-11 16:41:57.552 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:41:57.586 [main] INFO  Base.BaseTest - Tearing down test: CreateaUserofbothusertype
+2025-12-11 16:41:57.840 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:41:57.842 [main] INFO  Base.BaseTest - Starting test: cancelButtonInAddUser
+2025-12-11 16:41:57.844 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:42:01.248 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:42:01.248 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:42:03.059 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:42:03.060 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:42:03.073 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:42:03.074 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:42:03.074 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:42:03.975 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:42:04.225 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:42:04.342 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:42:04.342 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:42:04.838 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:42:05.161 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:42:05.272 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:42:05.361 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:42:05.473 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:42:05.549 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:42:05.662 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:42:05.908 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:42:06.083 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:42:06.174 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:42:06.245 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:42:06.400 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:42:06.484 [main] INFO  Pages.UserPage - Entered the password
+2025-12-11 16:42:06.564 [main] INFO  Pages.UserPage - Entered the confirmpassword
+2025-12-11 16:42:06.644 [main] INFO  Pages.UserPage - clicked the Cancel button
+2025-12-11 16:42:06.690 [main] INFO  Base.BaseTest - Tearing down test: cancelButtonInAddUser
+2025-12-11 16:42:06.935 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:42:06.935 [main] INFO  Base.BaseTest - Starting test: addDuplicateuser
+2025-12-11 16:42:06.935 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:42:10.574 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:42:10.584 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:42:12.888 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:42:12.889 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:42:12.890 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:42:12.890 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:42:12.890 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:42:13.154 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:42:13.360 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:42:13.466 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:42:13.466 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:42:13.931 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:42:14.242 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:42:14.354 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:42:14.443 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:42:14.558 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:42:14.683 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:42:14.775 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:42:14.924 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:42:15.124 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:42:15.216 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:42:15.276 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:42:15.396 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:42:15.485 [main] INFO  Pages.UserPage - Entered the password
+2025-12-11 16:42:15.564 [main] INFO  Pages.UserPage - Entered the confirmpassword
+2025-12-11 16:42:15.647 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:42:15.669 [main] INFO  Base.BaseTest - Tearing down test: addDuplicateuser
+2025-12-11 16:42:16.239 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:42:16.239 [main] INFO  Base.BaseTest - Starting test: addUserWithSpecialCharacters
+2025-12-11 16:42:16.239 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:42:20.185 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:42:20.185 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:42:23.502 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:42:23.503 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:42:23.503 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:42:23.504 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:42:23.504 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:42:23.732 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:42:23.947 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:42:24.051 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:42:24.051 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:42:24.575 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:42:24.892 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:42:25.012 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:42:25.116 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:42:25.242 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:42:25.347 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:42:25.460 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:42:25.612 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-11 16:42:25.756 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:42:25.893 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:42:25.976 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:42:26.073 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:42:26.170 [main] INFO  Pages.UserPage - Entered the password
+2025-12-11 16:42:26.253 [main] INFO  Pages.UserPage - Entered the confirmpassword
+2025-12-11 16:42:26.323 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:42:26.360 [main] INFO  Base.BaseTest - Tearing down test: addUserWithSpecialCharacters
+2025-12-11 16:42:26.618 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:42:26.620 [main] INFO  Base.BaseTest - Starting test: VerifyTheErrorMessageofInvalidUserCode
+2025-12-11 16:42:26.623 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:42:30.325 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:42:30.327 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:42:32.606 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:42:32.606 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:42:32.607 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:42:32.607 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:42:32.607 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:42:32.819 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:42:33.038 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:42:33.162 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:42:33.162 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:42:33.653 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:42:33.987 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:42:34.089 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:42:34.181 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:42:34.293 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:42:34.386 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:42:34.489 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:42:34.638 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:42:34.822 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:42:34.926 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:42:35.003 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:42:35.109 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:42:35.182 [main] INFO  Pages.UserPage - Entered the Display name
+2025-12-11 16:42:35.246 [main] INFO  Pages.UserPage - Entered the usercode
+2025-12-11 16:42:35.308 [main] INFO  Pages.UserPage - Clicked the card number checkbox
+2025-12-11 16:42:35.365 [main] INFO  Pages.UserPage - Entered the cardnumber
+2025-12-11 16:42:35.439 [main] INFO  Pages.UserPage - Entered the pin
+2025-12-11 16:42:35.514 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:42:35.538 [main] INFO  Base.BaseTest - Tearing down test: VerifyTheErrorMessageofInvalidUserCode
+2025-12-11 16:42:35.793 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:42:35.796 [main] INFO  Base.BaseTest - Starting test: VerifyTheErrorMessageofInvalidPin
+2025-12-11 16:42:35.798 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 16:42:39.348 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 16:42:39.349 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 16:42:41.451 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 16:42:41.451 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 16:42:41.454 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-11 16:42:41.454 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-11 16:42:41.455 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 16:42:41.667 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 16:42:41.914 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 16:42:42.017 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 16:42:42.017 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 16:42:42.453 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-11 16:42:42.769 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-11 16:42:42.869 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-11 16:42:42.969 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-11 16:42:43.069 [main] INFO  Pages.UserPage - Entered the email
+2025-12-11 16:42:43.166 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-11 16:42:43.269 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-11 16:42:43.407 [main] INFO  Pages.UserPage - Selected the key box user Role
+2025-12-11 16:42:43.612 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-11 16:42:43.694 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-11 16:42:43.769 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-11 16:42:44.261 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-11 16:42:44.346 [main] INFO  Pages.UserPage - Entered the Display name
+2025-12-11 16:42:44.403 [main] INFO  Pages.UserPage - Entered the usercode
+2025-12-11 16:42:44.471 [main] INFO  Pages.UserPage - Clicked the card number checkbox
+2025-12-11 16:42:44.530 [main] INFO  Pages.UserPage - Entered the cardnumber
+2025-12-11 16:42:44.589 [main] INFO  Pages.UserPage - Entered the pin
+2025-12-11 16:42:44.655 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-11 16:42:44.683 [main] INFO  Base.BaseTest - Tearing down test: VerifyTheErrorMessageofInvalidPin
+2025-12-11 16:42:44.938 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 16:42:45.284 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 17:22:00.458 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 17:22:00.470 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 17:22:00.845 [main] INFO  Base.BaseTest - Starting test: NavigateToRolePager
+2025-12-11 17:22:00.845 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:22:06.386 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:22:06.388 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:22:08.354 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:22:08.359 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:22:08.371 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:22:08.374 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:22:08.374 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:22:08.787 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:22:08.919 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:22:09.018 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:22:09.018 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:22:12.138 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:22:12.232 [main] INFO  Base.BaseTest - Tearing down test: NavigateToRolePager
+2025-12-11 17:22:14.213 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:22:14.213 [main] INFO  Base.BaseTest - Starting test: addNewKeyBoxRole
+2025-12-11 17:22:14.213 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:22:17.938 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:22:17.942 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:22:20.187 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:22:20.187 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:22:20.188 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:22:20.188 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:22:20.188 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:22:20.399 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:22:20.648 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:22:20.754 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:22:20.754 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:22:23.858 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:22:24.074 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:22:24.248 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:22:24.324 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:22:24.399 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:22:24.399 [main] INFO  Base.BaseTest - Tearing down test: addNewKeyBoxRole
+2025-12-11 17:22:24.737 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:22:24.738 [main] INFO  Base.BaseTest - Starting test: addNewWebUserRole
+2025-12-11 17:22:24.738 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:22:28.242 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:22:28.262 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:22:30.136 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:22:30.136 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:22:30.137 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:22:30.137 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:22:30.137 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:22:30.418 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:22:30.647 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:22:30.754 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:22:30.754 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:22:33.848 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:22:34.025 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:22:34.144 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 17:22:34.271 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:22:37.369 [main] INFO  Pages.RolePage - Clicked the All pages checkbox
+2025-12-11 17:22:37.441 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:22:37.441 [main] INFO  Base.BaseTest - Tearing down test: addNewWebUserRole
+2025-12-11 17:22:37.703 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:22:37.703 [main] INFO  Base.BaseTest - Starting test: addNewRolewithybothusertype
+2025-12-11 17:22:37.703 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:22:40.919 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:22:40.921 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:22:42.860 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:22:42.860 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:22:42.861 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:22:42.862 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:22:42.862 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:22:43.113 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:22:43.338 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:22:43.444 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:22:43.444 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:22:46.565 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:22:46.802 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:22:46.947 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 17:22:47.037 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:22:47.094 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:22:50.199 [main] INFO  Pages.RolePage - Clicked the All pages checkbox
+2025-12-11 17:22:50.271 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:22:50.271 [main] INFO  Base.BaseTest - Tearing down test: addNewRolewithybothusertype
+2025-12-11 17:22:51.382 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:22:51.382 [main] INFO  Base.BaseTest - Starting test: editRole
+2025-12-11 17:22:51.382 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:22:54.669 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:22:54.669 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:22:56.800 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:22:56.801 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:22:56.801 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:22:56.802 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:22:56.802 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:22:57.028 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:22:57.214 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:22:57.331 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:22:57.331 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:23:00.445 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:23:00.786 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-11 17:23:00.907 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-11 17:23:00.999 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:23:00.999 [main] INFO  Base.BaseTest - Tearing down test: editRole
+2025-12-11 17:23:01.284 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:23:01.284 [main] INFO  Base.BaseTest - Starting test: deleteRole
+2025-12-11 17:23:01.284 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:23:04.825 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:23:04.825 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:23:06.874 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:23:06.875 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:23:06.875 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:23:06.876 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:23:06.876 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:23:07.158 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:23:07.374 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:23:07.509 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:23:07.509 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:23:10.595 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:23:10.969 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-11 17:23:11.071 [main] INFO  Pages.RolePage - Clicked the delete button
+2025-12-11 17:23:11.152 [main] INFO  Pages.RolePage - Clicked the delete confirm button
+2025-12-11 17:23:11.152 [main] INFO  Base.BaseTest - Tearing down test: deleteRole
+2025-12-11 17:23:11.453 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:23:11.453 [main] INFO  Base.BaseTest - Starting test: addRoleWithEmptyName
+2025-12-11 17:23:11.469 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:23:14.710 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:23:14.710 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:23:16.405 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:23:16.405 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:23:16.405 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:23:16.405 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:23:16.405 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:23:17.447 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:23:17.593 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:23:17.684 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:23:17.684 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:23:20.800 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:23:21.025 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:23:21.171 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:23:21.256 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:23:21.273 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithEmptyName
+2025-12-11 17:23:21.575 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:23:21.575 [main] INFO  Base.BaseTest - Starting test: addRoleWithoutUserType
+2025-12-11 17:23:21.575 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:23:24.857 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:23:24.857 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:23:26.370 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:23:26.371 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:23:26.373 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:23:26.373 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:23:26.373 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:23:27.280 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:23:27.500 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:23:27.608 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:23:27.608 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:23:30.735 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:23:30.972 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:23:31.091 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:23:31.166 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:23:41.243 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithoutUserType
+2025-12-11 17:23:41.391 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/addRoleWithoutUserType_20251211_172341.png
+2025-12-11 17:23:41.655 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:23:41.655 [main] INFO  Base.BaseTest - Starting test: addRoleWithoutSelectingPages
+2025-12-11 17:23:41.655 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:23:46.154 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:23:46.154 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:23:48.420 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:23:48.420 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:23:48.421 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:23:48.421 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:23:48.421 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:23:48.666 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:23:48.882 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:23:48.983 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:23:48.983 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:23:52.083 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:23:52.250 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:23:52.390 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:23:52.483 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 17:23:52.546 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:23:52.566 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithoutSelectingPages
+2025-12-11 17:23:52.857 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:23:52.857 [main] INFO  Base.BaseTest - Starting test: cancelAddRoleForm
+2025-12-11 17:23:52.857 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:23:56.780 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:23:56.781 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:23:58.594 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:23:58.594 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:23:58.595 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:23:58.595 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:23:58.595 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:23:58.794 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:23:59.005 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:23:59.130 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:23:59.130 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:24:02.235 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:24:02.401 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:24:02.536 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:24:02.613 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:24:02.676 [main] INFO  Pages.RolePage - Clicked the cancel button
+2025-12-11 17:24:02.710 [main] INFO  Base.BaseTest - Tearing down test: cancelAddRoleForm
+2025-12-11 17:24:02.970 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:24:02.970 [main] INFO  Base.BaseTest - Starting test: cancelDeleteRole
+2025-12-11 17:24:02.970 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:24:06.775 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:24:06.775 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:24:08.765 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:24:08.766 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:24:08.766 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:24:08.766 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:24:08.766 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:24:08.955 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:24:09.210 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:24:09.330 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:24:09.330 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:24:12.438 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:24:12.720 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-11 17:24:12.830 [main] INFO  Pages.RolePage - Clicked the delete button
+2025-12-11 17:24:12.903 [main] INFO  Pages.RolePage - Clicked the delete cancel button (No)
+2025-12-11 17:24:12.969 [main] INFO  Base.BaseTest - Tearing down test: cancelDeleteRole
+2025-12-11 17:24:14.888 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:24:14.888 [main] INFO  Base.BaseTest - Starting test: searchRoleWithValidName
+2025-12-11 17:24:14.888 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:24:18.383 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:24:18.383 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:24:20.417 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:24:20.417 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:24:20.417 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:24:20.418 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:24:20.418 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:24:20.623 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:24:20.876 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:24:20.980 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:24:20.980 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:24:24.101 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:24:24.216 [main] INFO  Pages.RolePage - Clicked the search icon
+2025-12-11 17:24:27.307 [main] INFO  Pages.RolePage - Entered the search value
+2025-12-11 17:24:30.336 [main] INFO  Base.BaseTest - Tearing down test: searchRoleWithValidName
+2025-12-11 17:24:30.648 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:24:30.648 [main] INFO  Base.BaseTest - Starting test: searchRoleWithNonExistentName
+2025-12-11 17:24:30.648 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:24:34.644 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:24:34.644 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:24:37.167 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:24:37.167 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:24:37.168 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:24:37.168 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:24:37.168 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:24:37.362 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:24:37.613 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:24:37.742 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:24:37.742 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:24:40.880 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:24:40.981 [main] INFO  Pages.RolePage - Clicked the search icon
+2025-12-11 17:24:41.123 [main] INFO  Pages.RolePage - Entered the search value
+2025-12-11 17:24:41.153 [main] INFO  Base.BaseTest - Tearing down test: searchRoleWithNonExistentName
+2025-12-11 17:24:41.496 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:24:41.496 [main] INFO  Base.BaseTest - Starting test: addRoleWithSpecialCharacters
+2025-12-11 17:24:41.496 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:24:45.020 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:24:45.022 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:24:46.797 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:24:46.797 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:24:46.797 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:24:46.797 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:24:46.797 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:24:47.144 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:24:47.293 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:24:47.386 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:24:47.386 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:24:50.473 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:24:50.669 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:24:50.760 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:24:50.833 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:24:50.900 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:24:53.938 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithSpecialCharacters
+2025-12-11 17:24:54.190 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:24:54.190 [main] INFO  Base.BaseTest - Starting test: addRoleWithLongName
+2025-12-11 17:24:54.190 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:24:57.497 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:24:57.497 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:24:59.506 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:24:59.507 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:24:59.507 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:24:59.507 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:24:59.507 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:24:59.731 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:24:59.931 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:25:00.061 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:25:00.061 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:25:03.168 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:25:03.428 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:25:03.882 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:25:03.940 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:25:04.002 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:25:04.002 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLongName
+2025-12-11 17:25:04.267 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:25:04.267 [main] INFO  Base.BaseTest - Starting test: addDuplicateRole
+2025-12-11 17:25:04.267 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:25:07.512 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:25:07.512 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:25:09.784 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:25:09.784 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:25:09.785 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:25:09.785 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:25:09.785 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:25:09.988 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:25:10.219 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:25:10.318 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:25:10.318 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:25:13.427 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:25:13.681 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:25:13.801 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:25:13.867 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:25:13.943 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:25:13.968 [main] INFO  Base.BaseTest - Tearing down test: addDuplicateRole
+2025-12-11 17:25:14.290 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:25:14.290 [main] INFO  Base.BaseTest - Starting test: verifyRoleTableDisplayed
+2025-12-11 17:25:14.306 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:25:17.267 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:25:17.267 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:25:19.737 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:25:19.737 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:25:19.739 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:25:19.739 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:25:19.740 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:25:19.936 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:25:20.150 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:25:20.261 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:25:20.261 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:25:23.353 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:25:23.413 [main] INFO  Base.BaseTest - Tearing down test: verifyRoleTableDisplayed
+2025-12-11 17:25:23.793 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:25:23.793 [main] INFO  Base.BaseTest - Starting test: verifyAddRoleFormElements
+2025-12-11 17:25:23.793 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:25:26.750 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:25:26.758 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:25:29.156 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:25:29.195 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:25:29.196 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:25:29.197 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:25:29.197 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:25:29.493 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:25:29.722 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:25:29.814 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:25:29.814 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:25:32.902 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:25:33.108 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:25:33.166 [main] INFO  Base.BaseTest - Tearing down test: verifyAddRoleFormElements
+2025-12-11 17:25:33.516 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:25:33.516 [main] INFO  Base.BaseTest - Starting test: editRoleWithEmptyName
+2025-12-11 17:25:33.516 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:25:36.818 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:25:36.818 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:25:38.239 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:25:38.240 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:25:38.241 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:25:38.242 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:25:38.242 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:25:39.203 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:25:39.411 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:25:39.503 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:25:39.504 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:25:42.598 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:25:42.956 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-11 17:25:43.076 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-11 17:25:43.266 [main] INFO  Pages.RolePage - Cleared the role name field
+2025-12-11 17:25:46.350 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:25:46.374 [main] INFO  Base.BaseTest - Tearing down test: editRoleWithEmptyName
+2025-12-11 17:25:46.627 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:25:46.627 [main] INFO  Base.BaseTest - Starting test: cancelEditRoleForm
+2025-12-11 17:25:46.627 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:25:49.958 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:25:49.958 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:25:53.937 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:25:53.937 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:25:53.937 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:25:53.937 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:25:53.937 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:25:54.182 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:25:54.360 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:25:54.486 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:25:54.486 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:25:57.618 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:25:57.951 [main] INFO  Pages.RolePage - Clicked the manage button
+2025-12-11 17:25:58.110 [main] INFO  Pages.RolePage - Clicked the edit button
+2025-12-11 17:25:58.218 [main] INFO  Pages.RolePage - Clicked the cancel button
+2025-12-11 17:25:58.263 [main] INFO  Base.BaseTest - Tearing down test: cancelEditRoleForm
+2025-12-11 17:25:58.502 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:25:58.502 [main] INFO  Base.BaseTest - Starting test: addRoleWithNumericName
+2025-12-11 17:25:58.502 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:26:01.957 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:26:01.957 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:26:04.318 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:26:04.318 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:26:04.318 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:26:04.318 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:26:04.318 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:26:04.521 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:26:04.726 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:26:04.858 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:26:04.858 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:26:07.969 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:26:08.129 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:26:08.275 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:26:08.341 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:26:08.418 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:26:08.418 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithNumericName
+2025-12-11 17:26:08.790 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:26:08.792 [main] INFO  Base.BaseTest - Starting test: addRoleWithLeadingTrailingSpaces
+2025-12-11 17:26:08.792 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:26:12.306 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:26:12.306 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:26:13.965 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:26:13.965 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:26:13.967 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:26:13.967 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:26:13.968 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:26:14.873 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:26:15.094 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:26:15.194 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:26:15.194 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:26:18.329 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:26:18.560 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:26:18.669 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:26:18.764 [main] INFO  Pages.RolePage - Selected the Keysafe user type
+2025-12-11 17:26:18.827 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:26:18.846 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithLeadingTrailingSpaces
+2025-12-11 17:26:19.175 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:26:19.175 [main] INFO  Base.BaseTest - Starting test: verifycolumnheadernames
+2025-12-11 17:26:19.175 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:26:22.500 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:26:22.505 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:26:25.143 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:26:25.143 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:26:25.143 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:26:25.143 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:26:25.143 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:26:25.382 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:26:25.554 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:26:25.676 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:26:25.676 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:26:28.784 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:26:33.865 [main] INFO  Base.BaseTest - Tearing down test: verifycolumnheadernames
+2025-12-11 17:26:35.875 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:26:35.875 [main] INFO  Base.BaseTest - Starting test: verifyTotalRoleCount
+2025-12-11 17:26:35.875 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:26:39.119 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:26:39.119 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:26:41.262 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:26:41.263 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:26:41.263 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:26:41.263 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:26:41.263 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:26:41.495 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:26:41.675 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:26:41.790 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:26:41.790 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:26:41.790 [main] INFO  Base.BaseTest - Starting verifyRoleCount
+2025-12-11 17:26:44.907 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:26:47.271 [main] INFO  Base.BaseTest - role count verification PASSED
+2025-12-11 17:26:47.271 [main] INFO  Base.BaseTest - Tearing down test: verifyTotalRoleCount
+2025-12-11 17:26:47.611 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:26:48.039 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 17:29:37.625 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 17:29:37.640 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 17:29:38.006 [main] INFO  Base.BaseTest - Starting test: addRoleWithoutUserType
+2025-12-11 17:29:38.006 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:29:43.230 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:29:43.230 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:29:45.546 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:29:45.550 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:29:45.583 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:29:45.583 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:29:45.583 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:29:45.921 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:29:46.077 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:29:46.176 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:29:46.176 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:29:49.275 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:29:49.495 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:29:49.681 [main] INFO  Pages.RolePage - Entered the role name
+2025-12-11 17:29:49.770 [main] INFO  Pages.RolePage - Clicked the submit button
+2025-12-11 17:29:49.802 [main] INFO  Base.BaseTest - Tearing down test: addRoleWithoutUserType
+2025-12-11 17:29:50.438 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:29:50.823 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 17:41:27.094 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 17:41:27.104 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 17:41:27.489 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 17:41:27.504 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:41:34.485 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:41:34.485 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:41:37.205 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:41:37.220 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:41:37.244 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:41:37.260 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:41:37.260 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:41:37.659 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:41:37.849 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:41:37.978 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:41:37.978 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:41:41.103 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:41:41.259 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:41:41.421 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 17:41:46.554 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 17:41:46.747 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_174146.png
+2025-12-11 17:41:47.349 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:41:48.467 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 17:50:40.827 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 17:50:40.845 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 17:50:41.203 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 17:50:41.203 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:50:46.236 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:50:46.236 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:50:47.802 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:50:47.806 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:50:47.812 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:50:47.813 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:50:47.814 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:50:48.326 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:50:48.455 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:50:48.556 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:50:48.556 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:50:51.674 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:50:51.861 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:50:51.980 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 17:50:57.088 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 17:50:57.229 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_175057.png
+2025-12-11 17:50:57.494 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:50:58.130 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 17:55:48.174 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 17:55:48.186 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 17:55:48.538 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 17:55:48.546 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 17:55:53.120 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 17:55:53.120 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 17:55:55.147 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 17:55:55.168 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 17:55:55.180 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 17:55:55.180 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 17:55:55.180 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 17:55:55.530 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 17:55:55.670 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 17:55:55.776 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 17:55:55.777 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 17:55:58.923 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 17:55:59.148 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 17:55:59.269 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 17:56:04.369 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 17:56:04.527 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_175604.png
+2025-12-11 17:56:07.253 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 17:56:07.569 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:00:04.286 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:00:04.302 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:00:04.664 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:00:04.671 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:00:09.626 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:00:09.628 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:00:12.592 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:00:12.602 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:00:12.632 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:00:12.632 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:00:12.632 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:00:13.104 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:00:13.223 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:00:13.329 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:00:13.329 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:00:16.412 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:00:16.585 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:00:16.731 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:00:21.823 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:00:21.966 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_180021.png
+2025-12-11 18:00:22.270 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:00:23.436 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:03:34.957 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:03:34.967 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:03:35.306 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:03:35.321 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:03:41.855 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:03:41.872 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:03:44.103 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:03:44.108 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:03:44.127 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:03:44.131 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:03:44.131 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:03:44.414 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:03:44.531 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:03:44.649 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:03:44.649 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:03:47.752 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:03:47.948 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:03:48.101 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:03:56.212 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:03:56.358 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_180356.png
+2025-12-11 18:03:56.915 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:03:57.832 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:07:09.333 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:07:09.349 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:07:09.699 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:07:09.705 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:07:14.368 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:07:14.368 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:07:16.296 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:07:16.300 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:07:16.310 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:07:16.311 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:07:16.311 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:07:16.697 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:07:16.838 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:07:16.943 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:07:16.943 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:07:20.081 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:07:20.340 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:07:20.472 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:07:20.575 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:07:20.711 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_180720.png
+2025-12-11 18:07:21.034 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:07:22.153 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:07:58.839 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:07:58.849 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:07:59.206 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:07:59.206 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:08:03.894 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:08:03.894 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:08:06.241 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:08:06.245 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:08:06.258 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:08:06.259 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:08:06.259 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:08:06.689 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:08:06.840 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:08:06.935 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:08:06.935 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:08:10.043 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:08:10.232 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:08:10.376 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:08:13.416 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:08:13.564 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_180813.png
+2025-12-11 18:08:13.828 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:08:15.442 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:09:23.731 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:09:23.741 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:09:24.113 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:09:24.129 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:09:28.656 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:09:28.664 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:09:30.922 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:09:30.925 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:09:30.941 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:09:30.942 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:09:30.943 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:09:31.310 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:09:31.454 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:09:31.563 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:09:31.566 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:09:34.668 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:09:34.895 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:09:35.008 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:10:07.296 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:10:07.457 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_181007.png
+2025-12-11 18:10:07.783 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:10:08.149 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:11:20.813 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:11:20.825 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:11:21.181 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:11:21.181 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:11:25.952 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:11:25.952 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:11:27.619 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:11:27.627 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:11:27.676 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:11:27.676 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:11:27.676 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:11:28.059 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:11:28.202 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:11:28.312 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:11:28.312 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:11:31.404 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:11:31.571 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:11:31.721 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:12:00.009 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:12:00.164 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_181200.png
+2025-12-11 18:12:00.485 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:12:01.526 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:13:21.808 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:13:21.820 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:13:22.180 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:13:22.180 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:13:26.684 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:13:26.684 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:13:28.854 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:13:28.858 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:13:28.895 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:13:28.896 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:13:28.897 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:13:29.270 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:13:29.407 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:13:29.525 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:13:29.525 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:13:32.662 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:13:32.881 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:13:33.031 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:14:01.267 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:14:01.410 [main] INFO  Base.BaseTest - Screenshot captured: test-output/screenshots/verifyPagenames_20251211_181401.png
+2025-12-11 18:14:01.698 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:14:02.636 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-11 18:14:59.759 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-11 18:14:59.777 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-11 18:15:00.110 [main] INFO  Base.BaseTest - Starting test: verifyPagenames
+2025-12-11 18:15:00.110 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-11 18:15:04.903 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-11 18:15:04.928 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-11 18:15:06.731 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-11 18:15:06.735 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-11 18:15:06.745 [main] INFO  Elements.RolePageElements - RolePageElement initialized
+2025-12-11 18:15:06.746 [main] INFO  Pages.RolePage - RolePage initialized
+2025-12-11 18:15:06.747 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-11 18:15:07.115 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-11 18:15:07.266 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-11 18:15:07.360 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-11 18:15:07.361 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-11 18:15:10.493 [main] INFO  Pages.RolePage - Clicked the role and it is navigated to the role page
+2025-12-11 18:15:10.658 [main] INFO  Pages.RolePage - Clicked add Role
+2025-12-11 18:15:10.875 [main] INFO  Pages.RolePage - Selected the web user type
+2025-12-11 18:15:39.080 [main] INFO  Base.BaseTest - Tearing down test: verifyPagenames
+2025-12-11 18:15:39.443 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-11 18:15:39.812 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-12 10:15:58.174 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-12 10:15:58.243 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-12 10:15:58.797 [main] INFO  Base.BaseTest - Starting test: addUserWithPasswordMismatch
+2025-12-12 10:15:58.813 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-12 10:16:17.451 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-12 10:16:17.451 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-12 10:16:19.838 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-12 10:16:19.850 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-12 10:16:19.891 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-12 10:16:19.911 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-12 10:16:19.911 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-12 10:16:20.796 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-12 10:16:20.938 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-12 10:16:21.399 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-12 10:16:21.399 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-12 10:16:21.955 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-12 10:16:22.163 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-12 10:16:22.294 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-12 10:16:22.377 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-12 10:16:22.569 [main] INFO  Pages.UserPage - Entered the email
+2025-12-12 10:16:22.663 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-12 10:16:22.779 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-12 10:16:22.934 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-12 10:16:23.117 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-12 10:16:23.223 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-12 10:16:23.295 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-12 10:16:23.472 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-12 10:16:23.568 [main] INFO  Pages.UserPage - Entered the password
+2025-12-12 10:16:23.647 [main] INFO  Pages.UserPage - Entered the confirmpassword
+2025-12-12 10:16:23.725 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-12 10:16:23.757 [main] INFO  Base.BaseTest - Tearing down test: addUserWithPasswordMismatch
+2025-12-12 10:16:24.585 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-12 10:16:25.626 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
+2025-12-12 11:26:00.839 [main] INFO  Base.BaseTest - Setting up Extent Reports
+2025-12-12 11:26:00.853 [main] INFO  Utils.ConfigReader - Configuration properties loaded successfully
+2025-12-12 11:26:01.236 [main] INFO  Base.BaseTest - Starting test: addUserWithPasswordMismatch
+2025-12-12 11:26:01.242 [main] INFO  Base.BaseTest - Setting up WebDriver for browser: chrome
+2025-12-12 11:26:12.647 [main] INFO  Base.BaseTest - WebDriver setup completed successfully
+2025-12-12 11:26:12.648 [main] INFO  Base.BaseTest - Navigating to URL: https://ams.sternaemlock.com/login
+2025-12-12 11:26:13.736 [main] INFO  Elements.LoginPageElements - LoginPageElements initialized
+2025-12-12 11:26:13.767 [main] INFO  Pages.LoginPage - LoginPage initialized
+2025-12-12 11:26:13.885 [main] INFO  Elements.UserPageElements - UserPageElement initialized
+2025-12-12 11:26:13.886 [main] INFO  Pages.UserPage - UserPage initialized
+2025-12-12 11:26:13.887 [main] INFO  Pages.LoginPage - Performing login with email: admin@gmail.com
+2025-12-12 11:26:14.239 [main] INFO  Pages.LoginPage - Entered email: admin@gmail.com
+2025-12-12 11:26:14.361 [main] INFO  Pages.LoginPage - Entered password (hidden for security)
+2025-12-12 11:26:14.492 [main] INFO  Pages.LoginPage - Clicked login button
+2025-12-12 11:26:14.493 [main] INFO  Pages.LoginPage - Login action completed
+2025-12-12 11:26:15.441 [main] INFO  Pages.UserPage - Clicked the User and it is navigated to the user page
+2025-12-12 11:26:15.649 [main] INFO  Pages.UserPage - Clicked the Add User button
+2025-12-12 11:26:15.806 [main] INFO  Pages.UserPage - Entered the firstname
+2025-12-12 11:26:15.892 [main] INFO  Pages.UserPage - Entered the lastname
+2025-12-12 11:26:16.007 [main] INFO  Pages.UserPage - Entered the email
+2025-12-12 11:26:16.104 [main] INFO  Pages.UserPage - Entered the mobile
+2025-12-12 11:26:16.214 [main] INFO  Pages.UserPage - Clicked the role dropdown
+2025-12-12 11:26:16.359 [main] INFO  Pages.UserPage - Selected the Web user Role
+2025-12-12 11:26:16.587 [main] INFO  Pages.UserPage - Clicked the Location level dropdown
+2025-12-12 11:26:16.670 [main] INFO  Pages.UserPage - Selected the Location level value
+2025-12-12 11:26:16.741 [main] INFO  Pages.UserPage - Clicked the location dropdown
+2025-12-12 11:26:16.912 [main] INFO  Pages.UserPage - Selected the location value
+2025-12-12 11:26:16.999 [main] INFO  Pages.UserPage - Entered the password
+2025-12-12 11:26:17.078 [main] INFO  Pages.UserPage - Entered the confirmpassword
+2025-12-12 11:26:17.159 [main] INFO  Pages.UserPage - clicked the submitbutton
+2025-12-12 11:26:17.183 [main] INFO  Base.BaseTest - Tearing down test: addUserWithPasswordMismatch
+2025-12-12 11:26:17.588 [main] INFO  Base.BaseTest - WebDriver closed successfully
+2025-12-12 11:26:18.269 [main] INFO  Base.BaseTest - Extent Reports flushed successfully
