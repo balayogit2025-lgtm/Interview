@@ -4,26 +4,28 @@ import Utils.CommonUtil;
 import Elements.UserPageElements;
 import Utils.CommonUtil;
 import Utils.TestLogger;
+import Utils.WaitHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class UserPage {
 
     private WebDriver driver;
     private UserPageElements elements;
+    private WaitHelper waitHelper;
     private CommonUtil commonUtil;
     private static final Logger logger =  LogManager.getLogger(UserPage.class);
 
     public UserPage(WebDriver driver) {
         this.driver = driver;
         this.elements = new UserPageElements(driver);
+        this.waitHelper = new WaitHelper(driver);
         this.commonUtil = new CommonUtil(driver);
         logger.info("UserPage initialized");
     }
@@ -661,5 +663,95 @@ public class UserPage {
                 .clickroledropdown().Selectwebusertype().clicklocationleveldropdown().clicklocationlevelvalue();
         clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@234").clicksubmitbutton();
         return this;
+    }
+
+    public UserPage clicklastpagebutton() {
+        try {
+            WebElement lastpagebutton = elements.getLastpagebutton();
+            lastpagebutton.click();
+            logger.info("clicked the lastpage button");
+        } catch (Exception e) {
+            logger.error("Failed to click the lastpage button: " + e.getMessage());
+            throw new RuntimeException("Unable to click the lastpage button: ", e);
+        }
+        return this;
+    }
+
+    public String TotalUserCount() throws InterruptedException {
+        TestLogger.info("Getting total user count");
+        navigatetouserpage();
+        commonUtil.clickLastPageButton();
+        try {
+            Thread.sleep(1000); // Wait for table to update
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        return commonUtil.getLastRowFirstColumnValue();
+    }
+
+    private int countUsersByType(String userType) {
+        TestLogger.info("Counting users of type: " + userType);
+        navigatetouserpage();
+        int count = 0;
+        boolean hasNextPage = true;
+        while (hasNextPage) {
+            waitHelper.waitForElementVisible(By.xpath("//table/tbody/tr"));
+
+            List<WebElement> rows = elements.getUserTableRows();
+            if (rows.isEmpty()) {
+                logger.info("No users found on the current page.");
+                break;
+            }
+
+            for (WebElement row : rows) {
+                try {
+                    // This XPath finds the cell and then specifically looks for the span with the user type text
+                    List<WebElement> userTypeSpans = row.findElements(By.xpath(".//td[6]//span[text()='" + userType + "']"));
+                    if (!userTypeSpans.isEmpty()) {
+                        logger.info(userTypeSpans.get(0).getText());
+                        count++;
+                    }
+                } catch (Exception e) {
+                    logger.info("Error processing a row: " + e.getMessage());
+                }
+            }
+
+            try {
+
+                WebElement nextButton = driver.findElement(By.xpath("//a[@aria-label='Go to next page']"));
+                boolean enabled = nextButton.isEnabled() && nextButton.getCssValue("pointer-events").equals("auto");
+                //         WebElement nextButton = driver.findElement(By.xpath("//a[@aria-label='Go to next page']"));
+                if (enabled==true) {
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextButton);
+                    Thread.sleep(200); // Brief pause before JS click
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", nextButton);
+                    logger.info("Clicked the Next button");
+                    Thread.sleep(1000);
+                    hasNextPage =true;// CRITICAL: Wait for the next page's content to load
+                } else {
+                    hasNextPage =false;
+                    break; // Exit loop if Next button is disabled
+                }
+            } catch (NoSuchElementException e) {
+                break; // Exit loop if Next button is not found
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
+            }
+        }
+
+        TestLogger.success("Total count for user type '" + userType + "' is: " + count);
+        return count;
+    }
+
+
+    public String getWebUsersCount() {
+        TestLogger.info("Getting total web users count from user page.");
+        return String.valueOf(countUsersByType("Web User"));
+    }
+
+    public String getKeySafeUsersCount() {
+        TestLogger.info("Getting total key safe users count from user page.");
+        return String.valueOf(countUsersByType("Key Safe User"));
     }
     }

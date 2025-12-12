@@ -454,8 +454,8 @@ public class RolePage {
         Thread.sleep(1000);
         String count = commonUtil.getLastRowFirstColumnValue();
         return count;
-
     }
+
     public List<String> getPagescheckboxesTexts() {
         List<String> pagecheckboxtexts = new ArrayList<>();
         for (WebElement checkbox : elements.getPagescheckboxes()) {
