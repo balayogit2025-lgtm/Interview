@@ -377,7 +377,7 @@ public class RolePage {
         return this;
     }
 
-    public RolePage addRoleWithoutUserType(String roleName) {
+    public RolePage addRoleWithoutUserType() {
         navigatetorolepage().clickaddrole().enterrolename("TEST Role 8").clicksubmitbutton();
         return this;
     }
@@ -391,8 +391,6 @@ public class RolePage {
         navigatetorolepage().clickmanagebutton().clickdeletebutton().clickdeletecancelbutton();
         return this;
     }
-
-
 
     public RolePage addRoleWithSpecialCharacters() {
         navigatetorolepage().clickaddrole().enterrolename("#$@!").clickKeyboxusertype().clicksubmitbutton();
@@ -458,5 +456,33 @@ public class RolePage {
         return count;
 
     }
-
+    public List<String> getPagescheckboxesTexts() {
+        List<String> pagecheckboxtexts = new ArrayList<>();
+        for (WebElement checkbox : elements.getPagescheckboxes()) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+            }
+            pagecheckboxtexts.add(checkbox.getText().trim());
+        }
+        return pagecheckboxtexts;
+    }
+    public boolean iserrormsgoflongrolenamedisplayed() {
+        try {
+            WebElement errormsgoflongrolename = elements.getErrormsgoflongrolename();
+            return errormsgoflongrolename.isDisplayed();
+        } catch (Exception e) {
+            logger.debug("Error Message for entering the long role name is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
+    public boolean isaddrolelabeldisplayed() {
+        try {
+            WebElement addrolelabel = elements.getAddrolelabel();
+            return addrolelabel.isDisplayed();
+        } catch (Exception e) {
+            logger.debug("Add Role label is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
 }

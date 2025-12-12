@@ -647,5 +647,19 @@ public class UserPage {
         return actualcount;
 
     }
-
+    public boolean isErrormsgofpasswordmismatchdisplayed() {
+        try {
+            WebElement Errormsofpasswordmismatch = elements.getErrormessageofpasswordmismatch();
+            return  Errormsofpasswordmismatch.isDisplayed();
+        } catch (Exception e) {
+            logger.debug("Error message of password mismatch is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
+    public UserPage addnewwebuserwithpasswordmismatch() {
+        navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 10").enterlastname("10").enteremail("demouser10@gmail.com").entermobile("9999999999")
+                .clickroledropdown().Selectwebusertype().clicklocationleveldropdown().clicklocationlevelvalue();
+        clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@234").clicksubmitbutton();
+        return this;
+    }
     }

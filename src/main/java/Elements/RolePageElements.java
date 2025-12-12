@@ -62,7 +62,7 @@ public class RolePageElements {
     @FindBy(xpath = "//p[text()='name should contain minimum 2 characters']")
     protected WebElement errormsgofemptyrolename;
 
-    @FindBy(xpath = "//p[text()='Please select at least one user type (Key Safe User or Web User)']")
+    @FindBy(xpath = "//p[text()='Please select at least one user type (Key Box User or Web User)']")
     protected WebElement errormsgofemptyusertype;
 
     @FindBy(xpath = "//p[text()='Please select at least one page']")
@@ -85,6 +85,16 @@ public class RolePageElements {
 
     @FindBy(xpath = "//tr[@class='border-y border-transparent border-b-slate-100 ']")
     private List<WebElement> RoleTableRows;
+
+    @FindBy(xpath = "//label[@data-slot='label']")
+    protected List<WebElement> Pagescheckboxes;
+
+    @FindBy(xpath = "//p[text()='name should not contain more than 50 characters']")
+    protected WebElement Errormsgoflongrolename;
+
+    @FindBy(xpath = "//h2[text()='Add Role']")
+    protected WebElement Addrolelabel;
+
 
     public RolePageElements(WebDriver driver) {
         this.driver = driver;
@@ -175,5 +185,12 @@ public class RolePageElements {
     public List<WebElement> getListOfheaders() {return listOfheaders;}
 
     public List<WebElement> getRoleTableRows() {return RoleTableRows;}
+
+    public List<WebElement> getPagescheckboxes() {return Pagescheckboxes;}
+
+    public WebElement getErrormsgoflongrolename() {return Errormsgoflongrolename;}
+
+    public WebElement getAddrolelabel() {return Addrolelabel;}
+
 
 }

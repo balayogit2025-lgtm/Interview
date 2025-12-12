@@ -53,7 +53,7 @@ public class UserPageElements {
     @FindBy(xpath = "(//button[@role='combobox']) [3]")
     protected WebElement Location;
 
-    @FindBy(xpath = "//span[text()='Location A']")
+    @FindBy(xpath = "//span[text()='RO 2']")
     protected WebElement Locationvalue;
 
     @FindBy(xpath = "//input[@placeholder='Enter Password']")
@@ -142,6 +142,9 @@ public class UserPageElements {
 
     @FindBy(xpath = "(//span[@class='text-xl']) [4]")
     protected WebElement Lastpagebutton;
+
+    @FindBy(xpath = "//p[text()='Passwords do not match']")
+    protected WebElement Errormessageofpasswordmismatch;
 
     public UserPageElements(WebDriver driver) {
         this.driver = driver;
@@ -294,6 +297,9 @@ public class UserPageElements {
     public WebElement getAdduserlabel() {return Adduserlabel;}
 
     public WebElement getLastpagebutton() {return Lastpagebutton;}
+
+    public WebElement getErrormessageofpasswordmismatch() {return Errormessageofpasswordmismatch;}
+
 
 
 }
