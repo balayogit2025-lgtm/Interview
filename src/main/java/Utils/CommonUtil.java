@@ -35,9 +35,18 @@ private WaitHelper waitHelper;
 
     public void clickLastPageButton() {
         TestLogger.info("Clicking on the last page button");
+
         WebElement lastPageButton = waitHelper.waitForElementClickable(By.xpath("//a[@aria-label='Go to last page']"));
-        lastPageButton.click();
-        TestLogger.success("Clicked on the last page button successfully");
+        boolean enabled = lastPageButton.isEnabled() && lastPageButton.getCssValue("pointer-events").equals("auto");
+        if(enabled==true){
+            lastPageButton.click();
+            TestLogger.success("Clicked on the last page button successfully");
+        }
+        else {
+            TestLogger.info("Lastpage button is disabled");
+        }
+
+
     }
 
     public String getLastRowFirstColumnValue() throws InterruptedException {
