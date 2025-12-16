@@ -1,27 +1,32 @@
 package Pages;
 
 import Elements.ActivitiyPageElements;
+import Utils.CommonUtil;
 import Utils.TestLogger;
 import Utils.WaitHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 public class ActivityPage {
 
     private final WebDriver driver;
     private final WaitHelper waitHelper;
+    private final CommonUtil commonUtil;
     private final ActivitiyPageElements activityElements;
 
 
     public ActivityPage(WebDriver driver) {
         this.driver = driver;
         this.waitHelper = new WaitHelper(driver);
+        this.commonUtil = new CommonUtil(driver);
         this.activityElements = new ActivitiyPageElements(driver);
         PageFactory.initElements(driver, this);
     }
@@ -31,16 +36,18 @@ public class ActivityPage {
     public void navigateToActivityPage() {
         TestLogger.info("Navigating to Activity page...");
         waitHelper.waitForElementClickable(By.xpath("//a[@href='/activity']")).click();
-        waitHelper.waitForElementVisible((By) activityElements.pageHeader);
+        waitHelper.waitForElementVisible( activityElements.pageHeader);
         TestLogger.success("Successfully navigated to Activity page.");
     }
 
     public boolean isPageHeaderDisplayed() {
-        return activityElements.pageHeader.isDisplayed();
+       WebElement pageHeader =  waitHelper.waitForElementVisible( activityElements.pageHeader);
+        return pageHeader.isDisplayed();
     }
 
     public String getPageHeaderText() {
-        return activityElements.pageHeader.getText();
+        WebElement pageHeader =  waitHelper.waitForElementVisible( activityElements.pageHeader);
+        return pageHeader.getText();
     }
 
     public boolean isActivityTableDisplayed() {
@@ -93,6 +100,36 @@ public class ActivityPage {
             return firstRow.findElements(By.tagName("td")).get(columnIndex).getText();
         }
         return "";
+    }
+
+    public String totalActivityCount() {
+        TestLogger.info("Getting total activity count...");
+        navigateToActivityPage();
+        int totalCount = 0;
+        while (true) {
+            waitHelper.waitForElementVisible(By.xpath("//table/tbody/tr"));
+            totalCount += getTableRowCount();
+
+            try {
+                WebElement nextButton = driver.findElement(By.xpath("//a[@aria-label='Go to next page']"));
+                String buttonClass = nextButton.getAttribute("class");
+
+                if (buttonClass != null && buttonClass.contains("pointer-events-none")) {
+                    break; // Exit loop if Next button is disabled
+                }
+                
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", nextButton);
+                Thread.sleep(1500); // Wait for the next page's content to load
+
+            } catch (NoSuchElementException e) {
+                break; // Exit loop if Next button is not found
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
+            }
+        }
+        TestLogger.success("Total activity count is: " + totalCount);
+        return String.valueOf(totalCount);
     }
 
     // --- Add Activity Workflow ---

@@ -2,6 +2,7 @@ package Elements;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,8 +21,10 @@ public class ActivitiyPageElements {
 
     // --- Main Activity Page Elements ---
 
-    @FindBy(xpath = "//h1[text()='Activity']")
-    public WebElement pageHeader;
+/*    @FindBy(xpath = "//h1[text()='Activity']")
+    public WebElement pageHeader; */
+
+    public By pageHeader = By.xpath("//h1[text()='Activity']");
 
     @FindBy(xpath = "//p[text()='Manage and monitor all scheduled access activities']")
     public WebElement pageSubHeader;
