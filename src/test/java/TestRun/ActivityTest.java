@@ -15,7 +15,7 @@ public class ActivityTest extends BaseTest {
     private ActivityPage activityPage;
 
     @BeforeMethod
-    public void setup() {
+    public void setupActivityPage() {
         navigateToApp();
         loginPage = new LoginPage(getDriver());
         activityPage = new ActivityPage(getDriver());
@@ -46,7 +46,7 @@ public class ActivityTest extends BaseTest {
         // Verify Activity Table
         Assert.assertTrue(activityPage.isActivityTableDisplayed(), "Activity table should be displayed.");
         getExtentTest().log(Status.PASS, "Activity table is displayed.");
-        
         getExtentTest().log(Status.PASS, "All essential elements on the Activity page are displayed correctly.");
     }
+
 }
