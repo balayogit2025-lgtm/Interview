@@ -51,7 +51,16 @@ public class ActivityPage {
     }
 
     public boolean isActivityTableDisplayed() {
+        TestLogger.info("Checking if Activity table is displayed.");
+
         return activityElements.activityTable.isDisplayed();
+    }
+
+    public List<String> getTableHeaders() {
+        TestLogger.info("Getting table headers...");
+        return activityElements.tableHeaders.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
     }
 
     public boolean isAddActivityButtonDisplayed() {
@@ -81,6 +90,17 @@ public class ActivityPage {
         activityElements.addActivityButton.click();
         waitHelper.waitForElementVisible((By) activityElements.activityModal);
         TestLogger.success("'Add Activity' modal is open.");
+    }
+
+    public boolean isActivityModalDisplayed() {
+        TestLogger.info("Checking if 'Add Activity' modal is displayed.");
+        try {
+            WebElement activityModal = waitHelper.waitForElementVisible((By) activityElements.activityModal);
+            return activityModal.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("'Add Activity' modal not found: " + e.getMessage());
+            return false;
+        }
     }
 
     public void searchActivity(String activityName) {
@@ -130,6 +150,32 @@ public class ActivityPage {
         }
         TestLogger.success("Total activity count is: " + totalCount);
         return String.valueOf(totalCount);
+    }
+
+    // --- Pagination Methods ---
+
+    public boolean isPaginationInfoDisplayed() {
+        return activityElements.paginationInfo.isDisplayed();
+    }
+
+    public String getPaginationInfoText() {
+        return activityElements.paginationInfo.getText();
+    }
+
+    public void clickNextPageButton() {
+        activityElements.nextPageButton.click();
+    }
+
+    public void clickPreviousPageButton() {
+        activityElements.previousPageButton.click();
+    }
+
+    public boolean isNextPageButtonEnabled() {
+        return !activityElements.nextPageButton.getAttribute("class").contains("pointer-events-none");
+    }
+
+    public boolean isPreviousPageButtonEnabled() {
+        return !activityElements.previousPageButton.getAttribute("class").contains("pointer-events-none");
     }
 
     // --- Add Activity Workflow ---
@@ -229,7 +275,7 @@ public class ActivityPage {
         return activityElements.activityName.getText();
     }
 
-    public String getViewModalStatus() {
+    public String getView_ModalStatus() {
         return activityElements.activityStatus.getText();
     }
 
