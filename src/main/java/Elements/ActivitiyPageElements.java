@@ -70,8 +70,10 @@ public class ActivitiyPageElements {
 
     // --- Add/Edit Activity Modal Elements ---
 
-    @FindBy(xpath = "//div[@role='dialog']")
-    public WebElement activityModal;
+    //@FindBy(xpath = "//div[@role='dialog']")
+    //public WebElement activityModal;
+
+    public By activityModal = By.xpath("//div[@role='dialog']");
 
     @FindBy(xpath = "//h2[text()='Activity Details']")
     public WebElement modalHeader;
