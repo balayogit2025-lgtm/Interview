@@ -78,6 +78,8 @@ public class ActivitiyPageElements {
     @FindBy(xpath = "//h2[text()='Activity Details']")
     public WebElement modalHeader;
 
+    public By modalHeaderLocator = By.xpath("//h2[text()='Add Activity']");
+
     @FindBy(xpath = "//label[text()='Activity Name']")
     public WebElement activityNameLabel;
 
@@ -97,7 +99,9 @@ public class ActivitiyPageElements {
     public WebElement locationLevelDropdown;
 
     @FindBy(xpath = "//div[contains(@class, 'select-content')]//div[text()='Location']")
-    public WebElement locationLevelOption;
+    public WebElement locationLevelOptionElement;
+
+    public By locationLevelOption = By.xpath("//div[contains(@class, 'select-content')]//div[text()='Location']");
 
     @FindBy(xpath = "//label[text()='Location']")
     public WebElement locationLabel;
