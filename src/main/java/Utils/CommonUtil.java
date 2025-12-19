@@ -53,7 +53,7 @@ private WaitHelper waitHelper;
         TestLogger.info("Getting the first column value of the last row in the grid");
         Thread.sleep(1000);
         WebElement lastRow = waitHelper.waitForElementVisible(By.xpath("//table/tbody/tr[last()]"));
-        WebElement firstColumn = lastRow.findElement(By.xpath("./td[1]"));
+        WebElement firstColumn = lastRow.findElement(By.xpath("//table/tbody/tr[last()]/td[1]"));
         String value = firstColumn.getText();
         TestLogger.success("The first column value of the last row is: " + value);
         return value;
