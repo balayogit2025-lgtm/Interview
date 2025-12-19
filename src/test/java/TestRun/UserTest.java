@@ -253,10 +253,9 @@ public class UserTest extends BaseTest {
     @Test(priority = 24, description = "Verify the Total users count")
     public void verifyTotalUsersCount() throws InterruptedException {
         logger.info("Starting verifyUsersCount");
-        userPage.navigatetouserpage().clicklastpagebutton();
         getExtentTest().log(Status.INFO, "Test: Verify the Total users count");
         getExtentTest().log(Status.INFO, "Verifying the total users count");
-        String Expectedcount = "26";
+        String Expectedcount = userPage.totalresults();
         String Actualcount = userPage.TotalUserCount();
         Assert.assertEquals(Actualcount,Expectedcount,"The count is mismatched");
         getExtentTest().log(Status.PASS, "Expected & Actual user count is matched");

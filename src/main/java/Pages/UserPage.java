@@ -679,7 +679,7 @@ public class UserPage {
 
 
 
-    private int countUsersByType(String userType) {
+   private int countUsersByType(String userType) {
         TestLogger.info("Counting users of type: " + userType);
         navigatetouserpage();
         int count = 0;
@@ -743,5 +743,12 @@ public class UserPage {
     public String getKeySafeUsersCount() {
         TestLogger.info("Getting total key safe users count from user page.");
         return String.valueOf(countUsersByType("Key Safe User"));
+    }
+    public String totalresults()  {
+        TestLogger.info("Getting total user count");
+        navigatetouserpage();
+        String text = driver.findElement(By.xpath("//div[contains(text(), 'Showing From')]")).getText();
+        String value = text.split(" ")[6];
+        return value;
     }
     }

@@ -5,6 +5,7 @@ import Pages.LoginPage;
 import Pages.RolePage;
 import Utils.TestLogger;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -247,7 +248,7 @@ public class RoleTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify the Total role count");
         logger.info("Starting verifyRoleCount");
         getExtentTest().log(Status.INFO, "Verifying the total role count");
-        String Expectedcount = "26";
+        String Expectedcount = rolePage.totalresults();
         String Actualcount = rolePage.totalRoleCount();
         Assert.assertEquals(Actualcount,Expectedcount,"The count is mismatched");
         getExtentTest().log(Status.PASS, "Expected & Actual role count is matched");

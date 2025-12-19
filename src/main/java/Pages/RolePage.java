@@ -5,6 +5,7 @@ import Utils.CommonUtil;
 import Utils.TestLogger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -484,5 +485,12 @@ public class RolePage {
             logger.debug("Add Role label is not displayed: " + e.getMessage());
             return false;
         }
+    }
+    public String totalresults()  {
+        TestLogger.info("Getting total role count");
+        navigatetorolepage();
+        String text = driver.findElement(By.xpath("//div[contains(text(), 'Showing From')]")).getText();
+        String value = text.split(" ")[6];
+        return value;
     }
 }
