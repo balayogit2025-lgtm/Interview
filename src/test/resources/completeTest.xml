@@ -17,4 +17,10 @@
         </classes>
     </test>
 
+    <test name="Keybox Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest"/>
+        </classes>
+    </test>
+
 </suite>
