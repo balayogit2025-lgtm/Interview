@@ -288,4 +288,555 @@ public class ActivityPage {
     public void closeViewModal() {
         activityElements.closeButton.click();
     }
+
+    // --- Additional Methods for Comprehensive Testing ---
+
+    public boolean isPageSubHeaderDisplayed() {
+        TestLogger.info("Checking if page sub-header is displayed.");
+        try {
+            return activityElements.pageSubHeader.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Page sub-header not found: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public String getPageSubHeaderText() {
+        return activityElements.pageSubHeader.getText();
+    }
+
+    public boolean isModalHeaderDisplayed() {
+        TestLogger.info("Checking if modal header is displayed.");
+        try {
+            WebElement modalHeader = waitHelper.waitForElementVisible(activityElements.modalHeaderLocator);
+            return modalHeader.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Modal header not found: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public String getModalHeaderText() {
+        WebElement modalHeader = waitHelper.waitForElementVisible(activityElements.modalHeaderLocator);
+        return modalHeader.getText();
+    }
+
+    public boolean isActivityNameInputDisplayed() {
+        TestLogger.info("Checking if Activity Name input is displayed.");
+        try {
+            return activityElements.activityNameInput.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void enterActivityName(String name) {
+        TestLogger.info("Entering activity name: " + name);
+        activityElements.activityNameInput.clear();
+        activityElements.activityNameInput.sendKeys(name);
+    }
+
+    public void clearActivityName() {
+        TestLogger.info("Clearing activity name field.");
+        activityElements.activityNameInput.clear();
+    }
+
+    public String getActivityNameValue() {
+        return activityElements.activityNameInput.getAttribute("value");
+    }
+
+    public boolean isLocationLevelDropdownDisplayed() {
+        TestLogger.info("Checking if Location Level dropdown is displayed.");
+        try {
+            return activityElements.locationLevelDropdown.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isLocationDropdownDisplayed() {
+        TestLogger.info("Checking if Location dropdown is displayed.");
+        try {
+            return activityElements.locationDropdown.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isSelectAccessRoleButtonDisplayed() {
+        TestLogger.info("Checking if Select Access Role button is displayed.");
+        try {
+            return activityElements.selectAccessRoleButton.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isSelectKeysButtonDisplayed() {
+        TestLogger.info("Checking if Select Keys button is displayed.");
+        try {
+            return activityElements.selectKeysButton.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickCancelButton() {
+        TestLogger.info("Clicking Cancel button...");
+        activityElements.cancelButton.click();
+        TestLogger.success("Clicked Cancel button.");
+    }
+
+    public boolean isSubmitButtonDisplayed() {
+        TestLogger.info("Checking if Submit button is displayed.");
+        try {
+            return activityElements.submitButton.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickSubmitButton() {
+        TestLogger.info("Clicking Submit button...");
+        activityElements.submitButton.click();
+    }
+
+    public boolean isActivityNameErrorDisplayed() {
+        TestLogger.info("Checking if Activity Name error is displayed.");
+        try {
+            WebElement error = driver.findElement(By.xpath("//input[@placeholder='Enter Activity Name']/following-sibling::p[contains(@class,'text-red') or contains(@class,'error')]"));
+            return error.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getActivityNameErrorText() {
+        try {
+            WebElement error = driver.findElement(By.xpath("//input[@placeholder='Enter Activity Name']/following-sibling::p[contains(@class,'text-red') or contains(@class,'error')]"));
+            return error.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public boolean isLocationLevelErrorDisplayed() {
+        TestLogger.info("Checking if Location Level error is displayed.");
+        try {
+            WebElement error = driver.findElement(By.xpath("//label[text()='Location Level']/following::p[contains(@class,'text-red') or contains(@class,'error')][1]"));
+            return error.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isAccessRoleErrorDisplayed() {
+        TestLogger.info("Checking if Access Role error is displayed.");
+        try {
+            WebElement error = driver.findElement(By.xpath("//button[text()='Select Access Role']/following::p[contains(@class,'text-red') or contains(@class,'error')][1]"));
+            return error.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void selectLocationLevel() {
+        TestLogger.info("Selecting Location Level...");
+        activityElements.locationLevelDropdown.click();
+        waitHelper.waitForElementClickable((By) activityElements.locationLevelOption).click();
+        TestLogger.success("Location Level selected.");
+    }
+
+    public void selectLocation(String location) {
+        TestLogger.info("Selecting Location: " + location);
+        activityElements.locationDropdown.click();
+        waitHelper.waitForElementClickable(By.xpath("//div[text()='" + location + "']")).click();
+        TestLogger.success("Location selected: " + location);
+    }
+
+    public void selectAccessRole(String role) {
+        TestLogger.info("Selecting Access Role: " + role);
+        activityElements.selectAccessRoleButton.click();
+        waitHelper.waitForElementClickable(By.xpath("//label[text()='" + role + "']")).click();
+        TestLogger.success("Access Role selected: " + role);
+    }
+
+    public void selectKey(String key) {
+        TestLogger.info("Selecting Key: " + key);
+        activityElements.selectKeysButton.click();
+        waitHelper.waitForElementClickable(By.xpath("//label[text()='" + key + "']")).click();
+        TestLogger.success("Key selected: " + key);
+    }
+
+    public boolean isPreviousButtonDisplayed() {
+        TestLogger.info("Checking if Previous button is displayed.");
+        try {
+            return activityElements.previousButton.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickPreviousButton() {
+        TestLogger.info("Clicking Previous button...");
+        activityElements.previousButton.click();
+        TestLogger.success("Clicked Previous button.");
+    }
+
+    public boolean isBasicInfoStepActive() {
+        TestLogger.info("Checking if Basic Info step is active.");
+        try {
+            String classAttr = activityElements.basicInfoStep.getAttribute("class");
+            return classAttr != null && (classAttr.contains("active") || classAttr.contains("current"));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isScheduleStepDisplayed() {
+        TestLogger.info("Checking if Schedule step is displayed.");
+        try {
+            return activityElements.scheduleStep.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isFrequencyStepDisplayed() {
+        TestLogger.info("Checking if Frequency step is displayed.");
+        try {
+            return activityElements.frequencyStep.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isConfirmationStepDisplayed() {
+        TestLogger.info("Checking if Confirmation step is displayed.");
+        try {
+            return activityElements.confirmationStep.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isFromDateButtonDisplayed() {
+        TestLogger.info("Checking if From Date button is displayed.");
+        try {
+            return activityElements.fromDateButton.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isToDateButtonDisplayed() {
+        TestLogger.info("Checking if To Date button is displayed.");
+        try {
+            return activityElements.toDateButton.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isDurationDropdownDisplayed() {
+        TestLogger.info("Checking if Duration dropdown is displayed.");
+        try {
+            return activityElements.durationDropdown.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean areDayCheckboxesDisplayed() {
+        TestLogger.info("Checking if day checkboxes are displayed.");
+        try {
+            return activityElements.mondayCheckbox.isDisplayed() &&
+                   activityElements.tuesdayCheckbox.isDisplayed() &&
+                   activityElements.wednesdayCheckbox.isDisplayed() &&
+                   activityElements.thursdayCheckbox.isDisplayed() &&
+                   activityElements.fridayCheckbox.isDisplayed() &&
+                   activityElements.saturdayCheckbox.isDisplayed() &&
+                   activityElements.sundayCheckbox.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void selectAllDays() {
+        TestLogger.info("Selecting all days...");
+        activityElements.allDaysCheckbox.click();
+        TestLogger.success("All days selected.");
+    }
+
+    public void selectDay(String day) {
+        TestLogger.info("Selecting day: " + day);
+        switch (day.toLowerCase()) {
+            case "monday": case "mon": activityElements.mondayCheckbox.click(); break;
+            case "tuesday": case "tue": activityElements.tuesdayCheckbox.click(); break;
+            case "wednesday": case "wed": activityElements.wednesdayCheckbox.click(); break;
+            case "thursday": case "thu": activityElements.thursdayCheckbox.click(); break;
+            case "friday": case "fri": activityElements.fridayCheckbox.click(); break;
+            case "saturday": case "sat": activityElements.saturdayCheckbox.click(); break;
+            case "sunday": case "sun": activityElements.sundayCheckbox.click(); break;
+        }
+    }
+
+    public boolean isFrequency1CheckboxDisplayed() {
+        TestLogger.info("Checking if Frequency 1 checkbox is displayed.");
+        try {
+            return activityElements.frequency1Checkbox.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isFrequency2CheckboxDisplayed() {
+        TestLogger.info("Checking if Frequency 2 checkbox is displayed.");
+        try {
+            return activityElements.frequency2Checkbox.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void selectFrequency1() {
+        TestLogger.info("Selecting Frequency 1...");
+        activityElements.frequency1Checkbox.click();
+    }
+
+    public void selectFrequency2() {
+        TestLogger.info("Selecting Frequency 2...");
+        activityElements.frequency2Checkbox.click();
+    }
+
+    public boolean isConfirmationBasicInfoDisplayed() {
+        TestLogger.info("Checking if confirmation basic info is displayed.");
+        try {
+            return activityElements.basicInformationHeader.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isConfirmationScheduleDetailsDisplayed() {
+        TestLogger.info("Checking if confirmation schedule details is displayed.");
+        try {
+            return activityElements.scheduleDetailsHeader.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getConfirmationNameValue() {
+        return activityElements.nameValue.getText();
+    }
+
+    public boolean isFirstPageButtonEnabled() {
+        return !activityElements.firstPageButton.getAttribute("class").contains("pointer-events-none");
+    }
+
+    public boolean isLastPageButtonEnabled() {
+        return !activityElements.lastPageButton.getAttribute("class").contains("pointer-events-none");
+    }
+
+    public void clickFirstPageButton() {
+        TestLogger.info("Clicking first page button...");
+        activityElements.firstPageButton.click();
+    }
+
+    public void clickLastPageButton() {
+        TestLogger.info("Clicking last page button...");
+        activityElements.lastPageButton.click();
+    }
+
+    public boolean isTableHeaderRowDisplayed() {
+        TestLogger.info("Checking if table header row is displayed.");
+        try {
+            return activityElements.tableHeaderRow.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public int getActionButtonsCount() {
+        return activityElements.actionButtons.size();
+    }
+
+    public boolean isViewModalDisplayed() {
+        TestLogger.info("Checking if View modal is displayed.");
+        try {
+            WebElement viewModal = waitHelper.waitForElementVisible((By) activityElements.viewModalContainer);
+            return viewModal.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public List<String> getViewModalAccessKeys() {
+        return activityElements.accessKeys.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getViewModalWeeklyAccessDays() {
+        return activityElements.weeklyAccessDays.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+    }
+
+    public String getViewModalCode() {
+        return activityElements.codeValue.getText();
+    }
+
+    public String getViewModalLocationLevel() {
+        return activityElements.locationLevelValue.getText();
+    }
+
+    public String getViewModalLocation() {
+        return activityElements.locationValue.getText();
+    }
+
+    public String getViewModalDurationLimit() {
+        return activityElements.durationLimitValue.getText();
+    }
+
+    public String getViewModalFromDate() {
+        return activityElements.fromDateValue.getText();
+    }
+
+    public String getViewModalToDate() {
+        return activityElements.toDateValue.getText();
+    }
+
+    public String getViewModalFromTime() {
+        return activityElements.fromTimeValue.getText();
+    }
+
+    public String getViewModalToTime() {
+        return activityElements.toTimeValue.getText();
+    }
+
+    public boolean isDeleteConfirmationDisplayed() {
+        TestLogger.info("Checking if delete confirmation is displayed.");
+        try {
+            WebElement confirmDialog = driver.findElement(By.xpath("//h2[text()='Are you sure?']"));
+            return confirmDialog.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void cancelDeletion() {
+        TestLogger.info("Canceling deletion...");
+        waitHelper.waitForElementClickable(By.xpath("//button[text()='No']")).click();
+        TestLogger.success("Deletion canceled.");
+    }
+
+    public boolean isSuccessMessageDisplayed() {
+        TestLogger.info("Checking if success message is displayed.");
+        try {
+            WebElement successMsg = waitHelper.waitForElementVisible(By.xpath("//div[contains(@class,'toast') or contains(@class,'success')]//div[contains(text(),'success') or contains(text(),'Success') or contains(text(),'created') or contains(text(),'deleted')]"));
+            return successMsg.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getSuccessMessageText() {
+        try {
+            WebElement successMsg = driver.findElement(By.xpath("//div[contains(@class,'toast') or contains(@class,'success')]//div[contains(text(),'success') or contains(text(),'Success') or contains(text(),'created') or contains(text(),'deleted')]"));
+            return successMsg.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public boolean isErrorMessageDisplayed() {
+        TestLogger.info("Checking if error message is displayed.");
+        try {
+            WebElement errorMsg = driver.findElement(By.xpath("//div[contains(@class,'toast') or contains(@class,'error')]//div[contains(text(),'error') or contains(text(),'Error') or contains(text(),'failed') or contains(text(),'Failed')]"));
+            return errorMsg.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void enterDurationLimit(String duration) {
+        TestLogger.info("Entering duration limit: " + duration);
+        activityElements.durationLimitInput.clear();
+        activityElements.durationLimitInput.sendKeys(duration);
+    }
+
+    public boolean isDurationLimitInputDisplayed() {
+        TestLogger.info("Checking if Duration Limit input is displayed.");
+        try {
+            return activityElements.durationLimitInput.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void searchAndSelectRole(String roleName) {
+        TestLogger.info("Searching and selecting role: " + roleName);
+        activityElements.selectAccessRoleButton.click();
+        waitHelper.waitForElementVisible(By.xpath("//div[@role='dialog']//input[@placeholder='Search role...']")).sendKeys(roleName);
+        waitHelper.waitForElementClickable(By.xpath("//label[contains(text(),'" + roleName + "')]")).click();
+    }
+
+    public void searchAndSelectKey(String keyName) {
+        TestLogger.info("Searching and selecting key: " + keyName);
+        activityElements.selectKeysButton.click();
+        waitHelper.waitForElementVisible(By.xpath("//div[@role='dialog']//input[@placeholder='Search key...']")).sendKeys(keyName);
+        waitHelper.waitForElementClickable(By.xpath("//label[contains(text(),'" + keyName + "')]")).click();
+    }
+
+    public boolean isCloseButtonDisplayed() {
+        TestLogger.info("Checking if Close button is displayed.");
+        try {
+            return activityElements.closeButton.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickCloseButton() {
+        TestLogger.info("Clicking Close button...");
+        activityElements.closeButton.click();
+    }
+
+    public boolean isModalClosed() {
+        TestLogger.info("Checking if modal is closed.");
+        try {
+            Thread.sleep(500);
+            List<WebElement> modals = driver.findElements(By.xpath("//div[@role='dialog']"));
+            return modals.isEmpty() || !modals.get(0).isDisplayed();
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
+    public void enterActivityNameWithSpecialCharacters() {
+        String specialName = "Test@Activity#$%^&*()!";
+        enterActivityName(specialName);
+    }
+
+    public void enterActivityNameWithVeryLongText() {
+        StringBuilder longName = new StringBuilder();
+        for (int i = 0; i < 50; i++) {
+            longName.append("ActivityName");
+        }
+        enterActivityName(longName.toString());
+    }
+
+    public void enterActivityNameWithSpacesOnly() {
+        enterActivityName("     ");
+    }
+
+    public void enterActivityNameWithSQLInjection() {
+        enterActivityName("' OR '1'='1'; DROP TABLE activities; --");
+    }
+
+    public void enterActivityNameWithXSS() {
+        enterActivityName("<script>alert('XSS')</script>");
+    }
 }
