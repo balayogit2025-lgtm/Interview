@@ -35,7 +35,7 @@ public class ActivitiyPageElements {
     @FindBy(xpath = "//input[@placeholder='Search...']")
     public WebElement searchInput;
 
-    @FindBy(xpath = "//button[normalize-space()='Add Activity']")
+    @FindBy(xpath = "//button[text()='Add Activity']")
     public WebElement addActivityButton;
 
     @FindBy(xpath = "//table")
@@ -83,8 +83,83 @@ public class ActivitiyPageElements {
     @FindBy(xpath = "//label[text()='Activity Name']")
     public WebElement activityNameLabel;
 
-    @FindBy(xpath = "//input[@placeholder='Enter Activity Name']")
-    public WebElement activityNameInput;
+    @FindBy(xpath = "//input[@placeholder='Enter Access Name']")
+    public WebElement ActivityName;
+
+    @FindBy(xpath = "//input[@placeholder='Enter Code']")
+    public WebElement Activitycode;
+
+    @FindBy(xpath = "(//button[@role='combobox']) [1]")
+    public WebElement Locationlevel;
+
+    @FindBy(xpath = "//span[text()='Country']")
+    public WebElement LocationlevelOption;
+
+    @FindBy(xpath = "(//button[@role='combobox']) [2]")
+    public WebElement Location;
+
+    @FindBy(xpath = "//span[text()='India']")
+    public WebElement LocationOption;
+
+    @FindBy(xpath = "(//button[@role='combobox']) [3]")
+    public WebElement Roles;
+
+    @FindBy(xpath = "//span[text()='Admin']")
+    public WebElement RolesOption;
+
+    @FindBy(xpath = "(//button[@role='combobox']) [4]")
+    public WebElement Keys;
+
+    @FindBy(xpath = "//span[text()='Fill p.tank #1']")
+    public WebElement KeysOption;
+
+    @FindBy(xpath = "//button[text()='Next']")
+    public WebElement NextButton;
+
+    @FindBy(xpath = "//span[text()='Select From Date']")
+    public WebElement FromDateCalendar;
+
+    @FindBy(xpath = "//button [text()='29']")
+    public WebElement FromDate;
+
+    @FindBy(xpath = "//span[text()='Select To Date']")
+    public WebElement ToDateCalendar;
+
+    @FindBy(xpath = "//button [text()='31']")
+    public WebElement ToDate;
+
+    @FindBy(xpath = "//input[@name='fromTime']")
+    public WebElement FromTime;
+
+    @FindBy(xpath = "//input[@name='toTime']")
+    public WebElement ToTime;
+
+    @FindBy(xpath = "//button[@role='combobox']")
+    public WebElement Duration;
+
+    @FindBy(xpath = "//span[text()='3 hours']")
+    public WebElement DurationOption;
+
+    @FindBy(xpath = "(//button[@role='checkbox']) [1]")
+    public WebElement WorkingDaysCheckbox;
+
+    @FindBy(xpath = "(//button[@role='checkbox']) [1]")
+    public WebElement FrequencyCheckbox;
+
+    @FindBy(xpath = "(//button[@role='combobox']) [1]")
+    public WebElement Events;
+
+    @FindBy(xpath = "//span[text()='5']")
+    public WebElement EventsOption;
+
+    @FindBy(xpath = "(//button[@role='combobox']) [2]")
+    public WebElement Period;
+
+    @FindBy(xpath = "//span[text()='Week']")
+    public WebElement PeriodOption;
+
+    @FindBy(xpath = "//button[text()='Submit']")
+    public WebElement Submitbutton;
 
     @FindBy(xpath = "//label[text()='Duration Limit']")
     public WebElement durationLimitLabel;
@@ -183,6 +258,17 @@ public class ActivitiyPageElements {
     @FindBy(xpath = "//button[text()='Cancel']")
     public WebElement cancelButton;
 
+    @FindBy(xpath = "//p[text()='At least one role must be selected']")
+    public WebElement ErrormsgofRole;
+
+    @FindBy(xpath = "//p[text()='Location Level is required']")
+    public WebElement ErrormsgofLocationLevel;
+
+    @FindBy(xpath = "//p[text()='name should contain minimum 2 characters']")
+    public WebElement ErrormsgofInvalidActivityName;
+
+    @FindBy(xpath = "//button[text()='Edit']")
+    public WebElement EditButton;
 
     /*-----view model------------------------*/
 
@@ -191,7 +277,7 @@ public class ActivitiyPageElements {
     public WebElement viewModalContainer;
 
     @FindBy(xpath = "//div[p[text()='Access configuration details']]//h3")
-    public WebElement activityName;
+    public WebElement activityconfigName;
 
     @FindBy(xpath = "//div[p[text()='Access configuration details']]/following-sibling::span")
     public WebElement activityStatus;
@@ -233,10 +319,6 @@ public class ActivitiyPageElements {
     // --- Access Keys Section ---
     @FindBy(xpath = "//div[h3[text()='Access Keys']]//div[contains(@class, 'grid')]//span")
     public List<WebElement> accessKeys;
-
-    @FindBy(xpath = "//button[.//svg[contains(@class, 'lucide-x')]]")
-    public WebElement closeButton;
-
 
     @FindBy(xpath = "//div[@role='dialog' and .//h2[text()='Add Activity']]")
     public WebElement scheduleModal;
@@ -369,5 +451,49 @@ public class ActivitiyPageElements {
     @FindBy(xpath = "//h3[text()='Frequency 2']/following-sibling::div//span[text()='Per:']/following-sibling::span")
     public WebElement frequency2PerValue;
 
+    @FindBy(xpath = "//button[@aria-label='Expand search']")
+    public WebElement Searchicon;
+
+    @FindBy(xpath = "//input[@placeholder='Search Activity...']")
+    public WebElement Searchbox;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/main/div/div/div[2]/div/div/div[1]/div/div/table/tbody/tr[1]/td[8]")
+    public WebElement Actionbutton;
+
+    @FindBy(xpath = "//button[text()='View']")
+    public WebElement ViewButton;
+
+    @FindBy(xpath = "//h2[text()='Activity Details']")
+    public WebElement ActivitydetailsLabel;
+
+    @FindBy(xpath = "//button[@data-slot='dialog-close']")
+    public WebElement Modalclosebutton;
+
+    @FindBy(xpath = "(//div[@class='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow']) [1]")
+    public WebElement BasicInformationSectionInViewModal;
+
+    @FindBy(xpath = "(//div[@class='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow']) [2]")
+    public WebElement ScheduleSectionInViewModal;
+
+    @FindBy(xpath = "(//div[@class='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow']) [3]")
+    public WebElement WeeklyAccessSectionInViewModal;
+
+    @FindBy(xpath = "(//div[@class='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow']) [4]")
+    public WebElement AccessRolesSectionInViewModal;
+
+    @FindBy(xpath = "(//div[@class='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow']) [5]")
+    public WebElement AccessKeysSectionInViewModal;
+
+    @FindBy(xpath = "(//div[@class='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow']) [6]")
+    public WebElement AccessEventsSectionInViewModal;
+
+    @FindBy(xpath = "//p[text()='name should start and end with an alphanumeric character']")
+    public WebElement ErrormsgOfUsingSpecialCharactersInActivitryName;
+
+    @FindBy(xpath = "//p[text()='name should not contain more than 50 characters']")
+    public WebElement ErrormsgOfUsingLongTextInActivitryName;
+
+    @FindBy(xpath = "//p[text()='name should start and end with an alphanumeric character']")
+    public WebElement ErrormsgOfUsingSpacesInActivitryNamae;
 
 }
