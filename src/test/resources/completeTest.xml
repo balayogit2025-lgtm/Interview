@@ -23,4 +23,10 @@
         </classes>
     </test>
 
+    <test name="Device Activity Report Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest"/>
+        </classes>
+    </test>
+
 </suite>
