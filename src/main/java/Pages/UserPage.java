@@ -32,6 +32,7 @@ public class UserPage {
 
     public UserPage navigatetouserpage() {
         try {
+            Thread.sleep(500);
             WebElement user = elements.getUser();
              user.click();
             logger.info("Clicked the User and it is navigated to the user page");
@@ -415,7 +416,7 @@ public class UserPage {
     public UserPage edituser() {
        navigatetouserpage().clickmanagebutton().clickeditbutton().clearfirstname().enterfirstname("Edited User");
        try {
-           Thread.sleep(2000);
+           Thread.sleep(500);
        } catch (InterruptedException e) {
        }
        clicksubmitbutton();
@@ -435,7 +436,7 @@ public class UserPage {
     public UserPage CancelInEditUser() {
         navigatetouserpage().clickmanagebutton().clickeditbutton().clearfirstname().enterfirstname("Edited User");
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         clickcancelbutton();
@@ -642,7 +643,7 @@ public class UserPage {
         navigatetouserpage();
         commonUtil.clickLastPageButton();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         String actualcount = commonUtil.getLastRowFirstColumnValue();
@@ -716,7 +717,7 @@ public class UserPage {
                     Thread.sleep(200); // Brief pause before JS click
                     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", nextButton);
                     logger.info("Clicked the Next button");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     hasNextPage =true;// CRITICAL: Wait for the next page's content to load
                 } else {
                     hasNextPage =false;

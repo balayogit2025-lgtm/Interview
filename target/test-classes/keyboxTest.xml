@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Key Box Test Suite" parallel="tests" thread-count="3" verbose="1">
+
+    <parameter name="browser" value="chrome"/>
+
+    <listeners>
+        <!-- Add TestNG listeners here if needed -->
+    </listeners>
+
+    <!-- UI Verification Tests - Page Elements -->
+    <test name="Key Box UI Tests - Page Elements" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifyPageHeaderDisplayed"/>
+                    <include name="verifyPageSubHeaderDisplayed"/>
+                    <include name="verifySearchButtonDisplayed"/>
+                    <include name="verifyFilterButtonDisplayed"/>
+                    <include name="verifyKeyboxTableDisplayed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- UI Verification Tests - Statistics Cards -->
+    <test name="Key Box UI Tests - Statistics Cards" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifyTotalKeyBoxCardDisplayed"/>
+                    <include name="verifyRegisteredCardDisplayed"/>
+                    <include name="verifyUnregisteredCardDisplayed"/>
+                    <include name="verifyStatisticsSum"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- UI Verification Tests - Table Headers -->
+    <test name="Key Box UI Tests - Table Headers" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifyTableHeaderRowDisplayed"/>
+                    <include name="verifyTableHeaders"/>
+                    <include name="verifySnoHeaderDisplayed"/>
+                    <include name="verifySerialNumberHeaderDisplayed"/>
+                    <include name="verifyLocationHeaderDisplayed"/>
+                    <include name="verifyRoTypeHeaderDisplayed"/>
+                    <include name="verifyLastCommunicatedHeaderDisplayed"/>
+                    <include name="verifyRegisteredByHeaderDisplayed"/>
+                    <include name="verifyUpdatedByHeaderDisplayed"/>
+                    <include name="verifyStatusHeaderDisplayed"/>
+                    <include name="verifyActionHeaderDisplayed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Positive Workflow Tests -->
+    <test name="Key Box Positive Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifySearchButtonClickable"/>
+                    <include name="verifySearchFunctionality"/>
+                    <include name="verifyFilterButtonClickable"/>
+                    <include name="verifyActionButtonsPresent"/>
+                    <include name="verifyViewKeyboxDetails"/>
+                    <include name="verifyEditKeyboxOpensModal"/>
+                    <include name="verifyDeleteConfirmationAppears"/>
+                    <include name="verifyCancelDeleteKeepsKeybox"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Negative Workflow Tests -->
+    <test name="Key Box Negative Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifySearchWithNonExistentSerialNumber"/>
+                    <include name="verifySearchWithSpecialCharacters"/>
+                    <include name="verifySearchWithSQLInjection"/>
+                    <include name="verifySearchWithXSSAttack"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Empty State and Modal Tests -->
+    <test name="Key Box Empty State and Modal Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifyEmptyStateMessage"/>
+                    <include name="verifyFilterModalCloseButton"/>
+                    <include name="verifyViewModalDisplaysDetails"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Pagination Tests -->
+    <test name="Key Box Pagination Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifyPaginationDisplayed"/>
+                    <include name="verifyPaginationNavigation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Data Verification Tests -->
+    <test name="Key Box Data Verification Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifyTableDataStructure"/>
+                    <include name="verifyStatisticsCountConsistency"/>
+                    <include name="verifyTotalKeyBoxCountMatchesTableRecords"/>
+                    <include name="verifyRegisteredCountMatchesTableStatus"/>
+                    <include name="verifyUnregisteredCountMatchesTableStatus"/>
+                    <include name="verifyPageLoadsWithoutErrors"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Filter Functionality Tests -->
+    <test name="Key Box Filter Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest">
+                <methods>
+                    <include name="verifyFilterDialogOpens"/>
+                    <include name="verifyFilterDialogTitle"/>
+                    <include name="verifyFilterDialogDescription"/>
+                    <include name="verifyStatusFilterLabelDisplayed"/>
+                    <include name="verifyStatusFilterDropdownDisplayed"/>
+                    <include name="verifyStatusFilterDefaultValue"/>
+                    <include name="verifyTypeFilterLabelDisplayed"/>
+                    <include name="verifyTypeFilterDropdownDisplayed"/>
+                    <include name="verifyTypeFilterDefaultValue"/>
+                    <include name="verifyClearFilterButtonDisplayed"/>
+                    <include name="verifyApplyFilterButtonDisplayed"/>
+                    <include name="verifyFilterDialogCloseButtonDisplayed"/>
+                    <include name="verifyFilterDialogClosesOnCloseButton"/>
+                    <include name="verifyFilterDialogClosesOnClearFilter"/>
+                    <include name="verifyStatusFilterDropdownClickable"/>
+                    <include name="verifyTypeFilterDropdownClickable"/>
+                    <include name="verifyApplyFilterButtonClickable"/>
+                    <include name="verifyAllFilterDialogElements"/>
+                    <include name="verifyFilterPersistsAfterApplying"/>
+                    <include name="verifyTableRefreshesAfterFilter"/>
+                    <include name="verifyClearFilterResetsValues"/>
+                    <include name="verifyFilterDialogReopensAfterClose"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Complete Key Box Tests (All Tests) - Uncomment to run all -->
+    <!--
+    <test name="All Key Box Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyboxTest"/>
+        </classes>
+    </test>
+    -->
+
+</suite>

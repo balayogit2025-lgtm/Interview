@@ -3,6 +3,7 @@ package TestRun;
 import Base.BaseTest;
 import Pages.LoginPage;
 import Pages.RolePage;
+import Utils.ConfigReader;
 import Utils.TestLogger;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
@@ -26,7 +27,9 @@ public class RoleTest extends BaseTest {
         navigateToApp();
         loginPage = new LoginPage(getDriver());
         rolePage = new RolePage(getDriver());
-        loginPage.login("admin@gmail.com","Sterna@123");
+        String email = ConfigReader.getRoleValidEmail();
+        String password = ConfigReader.getValidPassword();
+        loginPage.login(email,password);
         getExtentTest().log(Status.INFO, "Navigated to Login Page");
     }
 
@@ -134,7 +137,7 @@ public class RoleTest extends BaseTest {
     public void searchRoleWithNonExistentName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with non-existent role name");
          try {
-             Thread.sleep(3000);
+             Thread.sleep(300);
          } catch (InterruptedException e) {
          }
         int rowCount = rolePage.getRoleTableRowCount();
@@ -193,7 +196,7 @@ public class RoleTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify editing role with empty name is prevented");
         rolePage.navigatetorolepage().clickmanagebutton().clickeditbutton().clearrolename();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(300);
         } catch (InterruptedException e) {
         }
         rolePage.clicksubmitbutton();
@@ -235,7 +238,7 @@ public class RoleTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify the column header names in list screen");
         rolePage.navigatetorolepage();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         List<String> expectedHeaders = Arrays.asList("S.NO", "NAME", "CREATED BY", "UPDATED BY","ACTION");
@@ -263,7 +266,7 @@ public class RoleTest extends BaseTest {
 
         List<String> expected = Arrays.asList("All", "Dashboard", "Levels", "Role","User","KeySafe","Activity","Reports","Settings");
         try {
-            Thread.sleep(1000);
+            Thread.sleep(300);
         } catch (InterruptedException e) {
         }
         List<String> actual = rolePage.getPagescheckboxesTexts();

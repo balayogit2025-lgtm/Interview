@@ -1,10 +1,7 @@
 Utils\WaitHelper.class
 Utils\ScreenshotUtil.class
-Base\DriverManager.class
-Utils\CommonMethod.class
 Utils\ConfigReader.class
 Pages\DashboardPage.class
 Elements\LoginPageElements.class
 Pages\LoginPage.class
 Elements\DashboardPageElements.class
-Pages\BasePage.class

@@ -37,7 +37,7 @@ public class DashboardTest extends BaseTest {
             activityPage = new ActivityPage(getDriver());
             rolePage = new RolePage(getDriver());
             userPage = new UserPage(getDriver());
-            String email = ConfigReader.getValidEmail();
+            String email = ConfigReader.getDashboardValidEmail();
             String password = ConfigReader.getValidPassword();
             loginPage.login(email, password);
             TestLogger.info("Test setup completed - Navigated to Dashboard");

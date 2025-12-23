@@ -610,5 +610,6 @@ public class LevelTest extends BaseTest {
         boolean submitbuttonDisplayed = levelPage.isSubmitbuttonDisplayed();
         Assert.assertTrue(submitbuttonDisplayed, "Duplicate location Created Successfully");
         getExtentTest().log(Status.PASS, "Duplicate  location Creation is restricted");
+
     }
 }
