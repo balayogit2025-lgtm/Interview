@@ -4,11 +4,9 @@ import Elements.ActivitiyPageElements;
 import Utils.CommonUtil;
 import Utils.TestLogger;
 import Utils.WaitHelper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.List;
@@ -33,11 +31,12 @@ public class ActivityPage {
 
     // --- Page Navigation & Verification ---
 
-    public void navigateToActivityPage() {
+    public ActivityPage navigateToActivityPage() {
         TestLogger.info("Navigating to Activity page...");
         waitHelper.waitForElementClickable(By.xpath("//a[@href='/activity']")).click();
         waitHelper.waitForElementVisible( activityElements.pageHeader);
         TestLogger.success("Successfully navigated to Activity page.");
+        return this;
     }
 
     public boolean isPageHeaderDisplayed() {
@@ -85,11 +84,12 @@ public class ActivityPage {
 
     // --- Main Page Actions ---
 
-    public void clickAddActivityButton() {
+    public ActivityPage clickAddActivityButton() {
         TestLogger.info("Clicking 'Add Activity' button...");
         activityElements.addActivityButton.click();
         waitHelper.waitForElementVisible((By) activityElements.activityModal);
         TestLogger.success("'Add Activity' modal is open.");
+        return this;
     }
 
     public boolean isActivityModalDisplayed() {
@@ -102,14 +102,39 @@ public class ActivityPage {
             return false;
         }
     }
-
-    public void searchActivity(String activityName) {
-        TestLogger.info("Searching for activity: " + activityName);
-        activityElements.searchButton.click();
-        waitHelper.waitForElementVisible((By) activityElements.searchInput).sendKeys(activityName);
-        TestLogger.info("Search initiated for: " + activityName);
+    public ActivityPage clicksearchicon() {
+        activityElements.Searchicon.click();
+        TestLogger.info("Clicked the search icon");
+        return this;
     }
 
+    public ActivityPage enterActivitynameinsearchgbox(String activityName) {
+        activityElements.Searchbox.sendKeys(activityName);
+        TestLogger.info("Entered the activity name in the search box: " + activityName);
+        return this;
+    }
+    public ActivityPage clickactionbutton() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+        }
+        activityElements.Actionbutton.click();
+        TestLogger.info("Clicked the action button");
+        return this;
+    }
+    public ActivityPage clickviewbutton() {
+        activityElements.ViewButton.click();
+        TestLogger.info("Clicked the view button");
+        return this;
+    }
+    public boolean isActivitydetailsLabelDisplayed() {
+        try {
+            return activityElements.ActivitydetailsLabel.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Activity details label not found: " + e.getMessage());
+            return false;
+        }
+    }
     public int getTableRowCount() {
         return activityElements.tableRows.size();
     }
@@ -162,12 +187,14 @@ public class ActivityPage {
         return activityElements.paginationInfo.getText();
     }
 
-    public void clickNextPageButton() {
+    public ActivityPage clickNextPageButton() {
         activityElements.nextPageButton.click();
+        return this;
     }
 
-    public void clickPreviousPageButton() {
+    public ActivityPage clickPreviousPageButton() {
         activityElements.previousPageButton.click();
+        return this;
     }
 
     public boolean isNextPageButtonEnabled() {
@@ -180,10 +207,8 @@ public class ActivityPage {
 
     // --- Add Activity Workflow ---
 
-    public void fillBasicInfoStep(String name, String location, String role, String key) {
+    public ActivityPage fillBasicInfoStep(String name, String location, String role, String key) {
         TestLogger.info("Filling out Basic Info step...");
-        waitHelper.waitForElementVisible((By) activityElements.activityNameInput).sendKeys(name);
-        
         activityElements.locationLevelDropdown.click();
         waitHelper.waitForElementClickable((By) activityElements.locationLevelOption).click();
 
@@ -196,101 +221,62 @@ public class ActivityPage {
         activityElements.selectKeysButton.click();
         waitHelper.waitForElementClickable(By.xpath("//label[text()='" + key + "']")).click();
 
-        clickNextButton();
+        clicknextbutton();
         TestLogger.success("Completed Basic Info step.");
+        return this;
     }
 
-    public void fillScheduleStep(String fromTime, String toTime) {
+    public ActivityPage fillScheduleStep(String fromTime, String toTime) {
         TestLogger.info("Filling out Schedule step...");
         waitHelper.waitForElementVisible((By) activityElements.scheduleModal);
         activityElements.fromTimeInput.sendKeys(fromTime);
         activityElements.toTimeInput.sendKeys(toTime);
         activityElements.mondayCheckbox.click();
-        clickNextButton();
+        clicknextbutton();
         TestLogger.success("Completed Schedule step.");
+        return this;
     }
 
-    public void fillFrequencyStep() {
+    public ActivityPage fillFrequencyStep() {
         TestLogger.info("Filling out Frequency step...");
         waitHelper.waitForElementVisible((By) activityElements.frequencyModal);
         activityElements.frequency1Checkbox.click();
-        clickNextButton();
+        clicknextbutton();
         TestLogger.success("Completed Frequency step.");
+        return this;
     }
 
-    public void completeConfirmationStep() {
+    public ActivityPage completeConfirmationStep() {
         TestLogger.info("Confirming and submitting the new activity...");
         waitHelper.waitForElementVisible((By) activityElements.confirmationModal);
         activityElements.submitButton.click();
         TestLogger.success("New activity submitted.");
+        return this;
     }
-
-    public void clickNextButton() {
-        TestLogger.info("Clicking 'Next' button...");
-        try {
-            WebElement nextButton = waitHelper.waitForElementClickable(By.xpath("//div[@data-slot='dialog-footer']//button[text()='Next']"));
-            nextButton.click();
-            TestLogger.success("Clicked 'Next' button successfully.");
-        } catch (Exception e) {
-            TestLogger.error("Failed to click 'Next' button: " + e.getMessage());
-            throw new RuntimeException("Could not click the 'Next' button.", e);
-        }
-    }
-
-    // --- Action Menu Methods ---
-
-    public void clickActionMenuForRow(int rowIndex) {
-        TestLogger.info("Clicking action menu for row " + rowIndex);
-        activityElements.actionButtons.get(rowIndex).click();
-        waitHelper.waitForElementVisible(By.xpath("//div[text()='Actions']"));
-    }
-
-    public void selectViewFromActionMenu() {
-        TestLogger.info("Selecting 'View' from action menu...");
-        driver.findElement(By.xpath("//button[text()='View']")).click();
-        waitHelper.waitForElementVisible((By) activityElements.viewModalContainer);
-    }
-
-    public void selectEditFromActionMenu() {
+    public ActivityPage selectEditFromActionMenu() {
         TestLogger.info("Selecting 'Edit' from action menu...");
         driver.findElement(By.xpath("//button[text()='Edit']")).click();
         waitHelper.waitForElementVisible((By) activityElements.activityModal);
+        return this;
     }
 
-    public void selectDeleteFromActionMenu() {
+    public ActivityPage selectDeleteFromActionMenu() {
         TestLogger.info("Selecting 'Delete' from action menu...");
         driver.findElement(By.xpath("//button[text()='Delete']")).click();
         waitHelper.waitForElementVisible(By.xpath("//h2[text()='Are you sure?']"));
+        return this;
     }
 
-    public void confirmDeletion() {
-        TestLogger.info("Confirming deletion...");
-        waitHelper.waitForElementClickable(By.xpath("//button[text()='Yes']")).click();
-        TestLogger.success("Deletion confirmed.");
+    public ActivityPage clickEditButton() {
+        TestLogger.info("CLICK EDIT BUTTON");
+        activityElements.EditButton.click();
+        TestLogger.success("Clicked edit button");
+        return this;
     }
-
-    // --- View Modal Methods ---
-
-    public String getViewModalActivityName() {
-        return activityElements.activityName.getText();
+    public ActivityPage closeViewModal() {
+        activityElements.Modalclosebutton.click();
+        return this;
     }
-
-    public String getView_ModalStatus() {
-        return activityElements.activityStatus.getText();
-    }
-
-    public List<String> getViewModalAccessRoles() {
-        return activityElements.accessRoles.stream()
-                .map(WebElement::getText)
-                .collect(Collectors.toList());
-    }
-
-    public void closeViewModal() {
-        activityElements.closeButton.click();
-    }
-
-    // --- Additional Methods for Comprehensive Testing ---
-
     public boolean isPageSubHeaderDisplayed() {
         TestLogger.info("Checking if page sub-header is displayed.");
         try {
@@ -324,31 +310,27 @@ public class ActivityPage {
     public boolean isActivityNameInputDisplayed() {
         TestLogger.info("Checking if Activity Name input is displayed.");
         try {
-            return activityElements.activityNameInput.isDisplayed();
+            return activityElements.ActivityName.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    public void enterActivityName(String name) {
-        TestLogger.info("Entering activity name: " + name);
-        activityElements.activityNameInput.clear();
-        activityElements.activityNameInput.sendKeys(name);
-    }
-
-    public void clearActivityName() {
+    public ActivityPage clearActivityName() {
         TestLogger.info("Clearing activity name field.");
-        activityElements.activityNameInput.clear();
+        activityElements.ActivityName.sendKeys(Keys.CONTROL+"a");
+        activityElements.ActivityName.sendKeys(Keys.DELETE);
+        return this;
     }
 
     public String getActivityNameValue() {
-        return activityElements.activityNameInput.getAttribute("value");
+        return activityElements.ActivityName.getAttribute("value");
     }
 
     public boolean isLocationLevelDropdownDisplayed() {
         TestLogger.info("Checking if Location Level dropdown is displayed.");
         try {
-            return activityElements.locationLevelDropdown.isDisplayed();
+            return activityElements.Locationlevel.isDisplayed();
         } catch (Exception e) {
             return false;
         }
@@ -363,28 +345,29 @@ public class ActivityPage {
         }
     }
 
-    public boolean isSelectAccessRoleButtonDisplayed() {
+    public boolean isRoleDropdownDisplayed() {
         TestLogger.info("Checking if Select Access Role button is displayed.");
         try {
-            return activityElements.selectAccessRoleButton.isDisplayed();
+            return activityElements.Roles.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    public boolean isSelectKeysButtonDisplayed() {
+    public boolean isKeyDropdownDisplayed() {
         TestLogger.info("Checking if Select Keys button is displayed.");
         try {
-            return activityElements.selectKeysButton.isDisplayed();
+            return activityElements.Keys.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    public void clickCancelButton() {
+    public ActivityPage clickCancelButton() {
         TestLogger.info("Clicking Cancel button...");
         activityElements.cancelButton.click();
         TestLogger.success("Clicked Cancel button.");
+        return this;
     }
 
     public boolean isSubmitButtonDisplayed() {
@@ -396,9 +379,10 @@ public class ActivityPage {
         }
     }
 
-    public void clickSubmitButton() {
+    public ActivityPage clickSubmitButton() {
         TestLogger.info("Clicking Submit button...");
         activityElements.submitButton.click();
+        return this;
     }
 
     public boolean isActivityNameErrorDisplayed() {
@@ -420,54 +404,32 @@ public class ActivityPage {
         }
     }
 
-    public boolean isLocationLevelErrorDisplayed() {
-        TestLogger.info("Checking if Location Level error is displayed.");
-        try {
-            WebElement error = driver.findElement(By.xpath("//label[text()='Location Level']/following::p[contains(@class,'text-red') or contains(@class,'error')][1]"));
-            return error.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
 
-    public boolean isAccessRoleErrorDisplayed() {
+    public boolean isErrorMessageOfRoleDisplayed() {
         TestLogger.info("Checking if Access Role error is displayed.");
         try {
-            WebElement error = driver.findElement(By.xpath("//button[text()='Select Access Role']/following::p[contains(@class,'text-red') or contains(@class,'error')][1]"));
-            return error.isDisplayed();
+            return activityElements.ErrormsgofRole.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    public void selectLocationLevel() {
-        TestLogger.info("Selecting Location Level...");
-        activityElements.locationLevelDropdown.click();
-        waitHelper.waitForElementClickable((By) activityElements.locationLevelOption).click();
-        TestLogger.success("Location Level selected.");
+    public boolean isErrorMessageOfLocationLevelDisplayed() {
+        TestLogger.info("Checking if location level error is displayed.");
+        try {
+            return activityElements.ErrormsgofLocationLevel.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
-
-    public void selectLocation(String location) {
-        TestLogger.info("Selecting Location: " + location);
-        activityElements.locationDropdown.click();
-        waitHelper.waitForElementClickable(By.xpath("//div[text()='" + location + "']")).click();
-        TestLogger.success("Location selected: " + location);
+    public boolean isErrorMessageOfInvalidActivityNameDisplayed() {
+        TestLogger.info("Checking if Error message of Invalid Activity Name  is displayed.");
+        try {
+            return activityElements.ErrormsgofInvalidActivityName.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
-
-    public void selectAccessRole(String role) {
-        TestLogger.info("Selecting Access Role: " + role);
-        activityElements.selectAccessRoleButton.click();
-        waitHelper.waitForElementClickable(By.xpath("//label[text()='" + role + "']")).click();
-        TestLogger.success("Access Role selected: " + role);
-    }
-
-    public void selectKey(String key) {
-        TestLogger.info("Selecting Key: " + key);
-        activityElements.selectKeysButton.click();
-        waitHelper.waitForElementClickable(By.xpath("//label[text()='" + key + "']")).click();
-        TestLogger.success("Key selected: " + key);
-    }
-
     public boolean isPreviousButtonDisplayed() {
         TestLogger.info("Checking if Previous button is displayed.");
         try {
@@ -477,10 +439,11 @@ public class ActivityPage {
         }
     }
 
-    public void clickPreviousButton() {
+    public ActivityPage clickPreviousButton() {
         TestLogger.info("Clicking Previous button...");
         activityElements.previousButton.click();
         TestLogger.success("Clicked Previous button.");
+        return this;
     }
 
     public boolean isBasicInfoStepActive() {
@@ -488,6 +451,14 @@ public class ActivityPage {
         try {
             String classAttr = activityElements.basicInfoStep.getAttribute("class");
             return classAttr != null && (classAttr.contains("active") || classAttr.contains("current"));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean isasicinfoStepDisplayed() {
+        TestLogger.info("Checking if Basic Info step is displayed.");
+        try {
+            return activityElements.basicInfoStep.isDisplayed();
         } catch (Exception e) {
             return false;
         }
@@ -562,13 +533,14 @@ public class ActivityPage {
         }
     }
 
-    public void selectAllDays() {
+    public ActivityPage selectAllDays() {
         TestLogger.info("Selecting all days...");
         activityElements.allDaysCheckbox.click();
         TestLogger.success("All days selected.");
+        return this;
     }
 
-    public void selectDay(String day) {
+    public ActivityPage selectDay(String day) {
         TestLogger.info("Selecting day: " + day);
         switch (day.toLowerCase()) {
             case "monday": case "mon": activityElements.mondayCheckbox.click(); break;
@@ -579,6 +551,7 @@ public class ActivityPage {
             case "saturday": case "sat": activityElements.saturdayCheckbox.click(); break;
             case "sunday": case "sun": activityElements.sundayCheckbox.click(); break;
         }
+        return this;
     }
 
     public boolean isFrequency1CheckboxDisplayed() {
@@ -599,14 +572,16 @@ public class ActivityPage {
         }
     }
 
-    public void selectFrequency1() {
+    public ActivityPage selectFrequency1() {
         TestLogger.info("Selecting Frequency 1...");
         activityElements.frequency1Checkbox.click();
+        return this;
     }
 
-    public void selectFrequency2() {
+    public ActivityPage selectFrequency2() {
         TestLogger.info("Selecting Frequency 2...");
         activityElements.frequency2Checkbox.click();
+        return this;
     }
 
     public boolean isConfirmationBasicInfoDisplayed() {
@@ -639,14 +614,16 @@ public class ActivityPage {
         return !activityElements.lastPageButton.getAttribute("class").contains("pointer-events-none");
     }
 
-    public void clickFirstPageButton() {
+    public ActivityPage clickFirstPageButton() {
         TestLogger.info("Clicking first page button...");
         activityElements.firstPageButton.click();
+        return this;
     }
 
-    public void clickLastPageButton() {
+    public ActivityPage clickLastPageButton() {
         TestLogger.info("Clicking last page button...");
         activityElements.lastPageButton.click();
+        return this;
     }
 
     public boolean isTableHeaderRowDisplayed() {
@@ -726,10 +703,11 @@ public class ActivityPage {
         }
     }
 
-    public void cancelDeletion() {
+    public ActivityPage cancelDeletion() {
         TestLogger.info("Canceling deletion...");
         waitHelper.waitForElementClickable(By.xpath("//button[text()='No']")).click();
         TestLogger.success("Deletion canceled.");
+        return this;
     }
 
     public boolean isSuccessMessageDisplayed() {
@@ -761,10 +739,11 @@ public class ActivityPage {
         }
     }
 
-    public void enterDurationLimit(String duration) {
+    public ActivityPage enterDurationLimit(String duration) {
         TestLogger.info("Entering duration limit: " + duration);
         activityElements.durationLimitInput.clear();
         activityElements.durationLimitInput.sendKeys(duration);
+        return this;
     }
 
     public boolean isDurationLimitInputDisplayed() {
@@ -776,67 +755,285 @@ public class ActivityPage {
         }
     }
 
-    public void searchAndSelectRole(String roleName) {
+    public ActivityPage searchAndSelectRole(String roleName) {
         TestLogger.info("Searching and selecting role: " + roleName);
         activityElements.selectAccessRoleButton.click();
         waitHelper.waitForElementVisible(By.xpath("//div[@role='dialog']//input[@placeholder='Search role...']")).sendKeys(roleName);
         waitHelper.waitForElementClickable(By.xpath("//label[contains(text(),'" + roleName + "')]")).click();
+        return this;
     }
 
-    public void searchAndSelectKey(String keyName) {
+    public ActivityPage searchAndSelectKey(String keyName) {
         TestLogger.info("Searching and selecting key: " + keyName);
         activityElements.selectKeysButton.click();
         waitHelper.waitForElementVisible(By.xpath("//div[@role='dialog']//input[@placeholder='Search key...']")).sendKeys(keyName);
         waitHelper.waitForElementClickable(By.xpath("//label[contains(text(),'" + keyName + "')]")).click();
+        return this;
     }
 
     public boolean isCloseButtonDisplayed() {
         TestLogger.info("Checking if Close button is displayed.");
         try {
-            return activityElements.closeButton.isDisplayed();
+            return activityElements.Modalclosebutton.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
-
-    public void clickCloseButton() {
-        TestLogger.info("Clicking Close button...");
-        activityElements.closeButton.click();
-    }
-
-    public boolean isModalClosed() {
-        TestLogger.info("Checking if modal is closed.");
+    public boolean isErrorMessageOfUsingSpecialCharactersInActivitynameDisplayed() {
+        TestLogger.info("Checking the error message of activity name is displayed");
         try {
-            Thread.sleep(500);
-            List<WebElement> modals = driver.findElements(By.xpath("//div[@role='dialog']"));
-            return modals.isEmpty() || !modals.get(0).isDisplayed();
+            return activityElements.ErrormsgOfUsingSpecialCharactersInActivitryName.isDisplayed();
         } catch (Exception e) {
-            return true;
+            return false;
         }
     }
-
-    public void enterActivityNameWithSpecialCharacters() {
-        String specialName = "Test@Activity#$%^&*()!";
-        enterActivityName(specialName);
+    public boolean isErrorMessageOfUsingLongTextInActivitynameDisplayed() {
+        TestLogger.info("Checking the error message of activity name is displayed");
+        try {
+            return activityElements.ErrormsgOfUsingLongTextInActivitryName.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean isErrorMessageOfUsingSpacesInActivitryNamaeDisplayed() {
+        TestLogger.info("Checking the Error message Of Using Spaces In Activitry Namae is displayed");
+        try {
+            return activityElements.ErrormsgOfUsingSpacesInActivitryNamae.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public ActivityPage clickCloseButton() {
+        TestLogger.info("Clicking Close button");
+        activityElements.Modalclosebutton.click();
+        return this;
     }
 
-    public void enterActivityNameWithVeryLongText() {
+    public ActivityPage enterActivityNameWithSpecialCharacters() {
+        String specialName = "Test@Activity#$%^&*()!";
+        enterActivityName(specialName);
+        return this;
+    }
+
+    public ActivityPage enterActivityNameWithVeryLongText() {
         StringBuilder longName = new StringBuilder();
         for (int i = 0; i < 50; i++) {
             longName.append("ActivityName");
         }
         enterActivityName(longName.toString());
+        return this;
     }
 
-    public void enterActivityNameWithSpacesOnly() {
-        enterActivityName("     ");
+    public ActivityPage enterActivityNameWithSpacesOnly() {
+        enterActivityName("  ACTIVITY   ");
+        return this;
     }
 
-    public void enterActivityNameWithSQLInjection() {
+    public ActivityPage enterActivityNameWithSQLInjection() {
         enterActivityName("' OR '1'='1'; DROP TABLE activities; --");
+        return this;
     }
 
-    public void enterActivityNameWithXSS() {
+    public ActivityPage enterActivityNameWithXSS() {
         enterActivityName("<script>alert('XSS')</script>");
+        return this;
+    }
+    public ActivityPage enterActivityName(String activityName) {
+        TestLogger.info("Entering the code");
+        activityElements.ActivityName.sendKeys(activityName);
+        return this;
+    }
+    public ActivityPage entercode(String code) {
+        TestLogger.info("Entering the code");
+        activityElements.Activitycode.sendKeys(code);
+        return this;
+    }
+    public ActivityPage clicklocationleveldropdown() {
+        TestLogger.info("Clicking location level dropdown");
+        activityElements.Locationlevel.click();
+        return this;
+    }
+    public ActivityPage clicklocationlevelOption() {
+        TestLogger.info("Clicking location level option");
+        activityElements.LocationlevelOption.click();
+        return this;
+    }
+    public ActivityPage clicklocation() {
+        TestLogger.info("Clicking location");
+        activityElements.Location.click();
+        return this;
+    }
+    public ActivityPage clicklocationOption() {
+        TestLogger.info("Clicking location option");
+        activityElements.LocationOption.click();
+        return this;
+    }
+    public ActivityPage clickRoles() {
+        TestLogger.info("Clicking Roles dropdown");
+        activityElements.Roles.click();
+        return this;
+    }
+    public ActivityPage ClickRolesoption() {
+        TestLogger.info("Clicking Roles option");
+        activityElements.RolesOption.click();
+        return this;
+    }
+    public ActivityPage clickKeys() {
+        TestLogger.info("Clicking Keys dropdown");
+        activityElements.Keys.click();
+        return this;
+    }
+    public ActivityPage clickkeysoption() {
+        TestLogger.info("Clicking keys option");
+        activityElements.KeysOption.click();
+        return this;
+    }
+    public ActivityPage clicknextbutton() {
+        TestLogger.info("Clicking next button");
+        activityElements.NextButton.click();
+        return this;
+    }
+    public ActivityPage clickfromdatecalendar() {
+        TestLogger.info("Clicking from date calendar");
+        activityElements.FromDateCalendar.click();
+        return this;
+    }
+    public ActivityPage clickfromdate() {
+        TestLogger.info("Clicking from date");
+        activityElements.FromDate.click();
+        return this;
+    }
+    public ActivityPage clicktodatecalendar() {
+        TestLogger.info("Clicking to date calendar");
+        activityElements.ToDateCalendar.click();
+        return this;
+    }
+    public ActivityPage clicktodate() {
+        TestLogger.info("Clicking to date");
+        activityElements.ToDate.click();
+        return this;
+    }
+    public ActivityPage enterfromtime(String fromtime) {
+        TestLogger.info("enter from time");
+        activityElements.FromTime.sendKeys(fromtime);
+        return this;
+    }
+    public ActivityPage entertotime(String totime) {
+        TestLogger.info("enter to time");
+        activityElements.ToTime.sendKeys(totime);
+        return this;
+    }
+    public ActivityPage clickduration() {
+        TestLogger.info("Clicking Duration dropdown");
+        activityElements.Duration.click();
+        return this;
+    }
+    public ActivityPage clickdurationoption() {
+        TestLogger.info("Clicking Duration option");
+        activityElements.DurationOption.click();
+        return this;
+    }
+    public ActivityPage clickworkingdayscheckbox() {
+        TestLogger.info("Clicking working days checkbox");
+        activityElements.WorkingDaysCheckbox.click();
+        return this;
+    }
+    public ActivityPage clickfrequencycheckbox() {
+        TestLogger.info("Clicking frequency checkbox");
+        activityElements.FrequencyCheckbox.click();
+        return this;
+    }
+    public ActivityPage clickevent() {
+        TestLogger.info("Clicking event dropdown");
+        activityElements.Events.click();
+        return this;
+    }
+    public ActivityPage clickeventoption() {
+        TestLogger.info("Clicking event option");
+        activityElements.EventsOption.click();
+        return this;
+    }
+    public ActivityPage clickperiod() {
+        TestLogger.info("Clicking periiod dropdown");
+        activityElements.Period.click();
+        return this;
+    }
+    public ActivityPage clickperiodoption() {
+        TestLogger.info("Clicking Period option");
+        activityElements.PeriodOption.click();
+        return this;
+    }
+    public ActivityPage clicksubmitbutton() {
+        TestLogger.info("Clicking submit button");
+        activityElements.Submitbutton.click();
+        return this;
+    }
+    public ActivityPage addnewactivity() {
+        TestLogger.info("Clicking submit button");
+
+        navigateToActivityPage(). clickAddActivityButton().enterActivityName("New Activity").entercode("541").clicklocationleveldropdown().clicklocationlevelOption();
+        clicklocation().clicklocationOption().clickRoles().ClickRolesoption().clickKeys().clickkeysoption().clickKeys().clicknextbutton().clickfromdatecalendar().
+        clickfromdate().clicktodatecalendar();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        }
+        clicktodate().enterfromtime("0900AM").entertotime("1800PM").clickduration().clickdurationoption().
+          clickworkingdayscheckbox().clicknextbutton().clickfrequencycheckbox().clickevent().clickeventoption().clickperiod().clickperiodoption().clicknextbutton().clicksubmitbutton();
+    return this;
+    }
+    public boolean isBasicInformationSectionInViewModalDisplayed() {
+        TestLogger.info("Checking the Basic Information Section In View Modal is displayed.");
+        try {
+            return activityElements.BasicInformationSectionInViewModal.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Basic Information Section In View Modal is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
+    public boolean isScheduleSectionInViewModalDisplayed() {
+        TestLogger.info("Checking the Schedule Section In View Modal is displayed.");
+        try {
+            return activityElements.ScheduleSectionInViewModal.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Schedule Section In View Modal is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
+    public boolean isWeeklyAccessSectionInViewModalDisplayed() {
+        TestLogger.info("Checking the Weekly Access Section In View Modal is displayed.");
+        try {
+            return activityElements.WeeklyAccessSectionInViewModal.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Weekly Access Section In View Modal is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
+    public boolean isAccessRolesSectionInViewModalDisplayed() {
+        TestLogger.info("Checking the Access Roles Section In View Modal is displayed.");
+        try {
+            return activityElements.AccessRolesSectionInViewModal.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Access Roles Section In View Modal is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
+    public boolean isAccessKeysSectionInViewModalDisplayed() {
+        TestLogger.info("Checking the Access Keys Section In View Modal is displayed.");
+        try {
+            return activityElements.AccessKeysSectionInViewModal.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Access Keys Section In View Modal is not displayed: " + e.getMessage());
+            return false;
+        }
+    }
+    public boolean isAccessEventsSectionInViewModalDisplayed() {
+        TestLogger.info("Checking the Access Events Section In View Modal is displayed.");
+        try {
+            return activityElements.AccessEventsSectionInViewModal.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Access Events Section In View Modal is not displayed: " + e.getMessage());
+            return false;
+        }
     }
 }
