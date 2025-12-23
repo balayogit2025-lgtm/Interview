@@ -3,6 +3,7 @@ package TestRun;
 import Base.BaseTest;
 import Pages.LoginPage;
 import Pages.UserPage;
+import Utils.ConfigReader;
 import Utils.TestLogger;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
@@ -17,13 +18,16 @@ public class UserTest extends BaseTest {
     private LoginPage loginPage;
     private UserPage userPage;
 
+
     @BeforeMethod
     public void setupUserTest() {
 
         navigateToApp();
         loginPage = new LoginPage(getDriver());
         userPage = new UserPage(getDriver());
-        loginPage.login("admin@gmail.com","Sterna@123");
+        String email = ConfigReader.getUserValidEmail();
+        String password = ConfigReader.getValidPassword();
+        loginPage.login(email,password);
         getExtentTest().log(Status.INFO, "Navigated to Login Page");
     }
 
@@ -32,7 +36,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Navigate to User page");
         userPage.navigatetouserpage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         boolean Adduserbuttonenabledanddisplayed = userPage.isadduserbuttonanabledanddisplayed();
@@ -112,7 +116,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: View User Details");
         userPage.Viewuser();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(300);
         } catch (InterruptedException e) {
         }
         boolean  Viewscreendisplayed= userPage.isRoleandLocationdisplayedinView();
@@ -133,7 +137,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with non-existent user name");
         userPage.SearchaInvalidValue();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         int rowCount = userPage.getUserTableRowCount();
@@ -145,7 +149,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify user creation when all the mandatory fields are empty");
         userPage.addnewuserwithemptyfields();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(300);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofemptyfieldsdisplayed = userPage.iserrormsgofemptyfieldsdisplayed();
@@ -157,7 +161,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify user creation with leading/trailing spaces in user name field");
         userPage.addnewuserwithspaces();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(300);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofspacesdisplayed = userPage.iserrormsgofleadingandspacesdisplayed();
@@ -178,7 +182,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify user table is displayed on user page");
         userPage.navigatetouserpage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(300);
         } catch (InterruptedException e) {
         }
         boolean isTableDisplayed = userPage.isUserTableRowsdisplayed();
@@ -191,7 +195,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify the column header names in User list screen");
         userPage.navigatetouserpage();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         List<String> expectedHeaders = Arrays.asList("S.NO", "NAME", "LOCATION", "EMAIL","MOBILE","USER TYPE","CREATED BY","UPDATED BY","ACTION");

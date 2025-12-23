@@ -37,9 +37,8 @@ public class LoginTest extends BaseTest {
      * TC_LOGIN_001: Verify login page elements are displayed
      */
     @Test(priority = 1, description = "Verify login page elements are displayed")
-    public void verifyLoginPageElements() throws InterruptedException {
+    public void verifyLoginPageElements() {
         getExtentTest().log(Status.INFO, "Test: Verify login page elements are displayed");
-        Thread.sleep(2000);
         Assert.assertTrue(loginPage.isEmailFieldDisplayed(),
                 "Email field should be displayed");
         getExtentTest().log(Status.PASS, "Email field is displayed");
@@ -61,7 +60,7 @@ public class LoginTest extends BaseTest {
      * TC_LOGIN_002: Verify successful login with valid credentials
      */
     @Test(priority = 2, description = "Verify successful login with valid credentials")
-    public void verifySuccessfulLogin() throws InterruptedException {
+    public void verifySuccessfulLogin() {
         getExtentTest().log(Status.INFO, "Test: Verify successful login with valid credentials");
 
         String email = ConfigReader.getValidEmail();
@@ -193,14 +192,11 @@ public class LoginTest extends BaseTest {
         String password = ConfigReader.getValidPassword();
 
         loginPage.login(email, password);
+        Thread.sleep(300);
+        String Message = loginPage.getErrorMessageText();
+
         getExtentTest().log(Status.INFO, "Entered invalid email and valid password");
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        String Message = loginPage.getErrorMessageText();
         // Verify user remains on login page
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
@@ -223,7 +219,7 @@ public class LoginTest extends BaseTest {
      * TC_LOGIN_010: Verify login fails with invalid password
      */
     @Test(priority = 10, description = "Verify login fails with invalid password")
-    public void verifyLoginWithInvalidPassword() {
+    public void verifyLoginWithInvalidPassword() throws InterruptedException {
         getExtentTest().log(Status.INFO, "Test: Verify login fails with invalid password");
 
         String email = ConfigReader.getValidEmail();
@@ -231,12 +227,8 @@ public class LoginTest extends BaseTest {
 
         loginPage.login(email, password);
         getExtentTest().log(Status.INFO, "Entered valid email and invalid password");
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(300);
+        String Message = loginPage.getErrorMessageText();
 
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
@@ -246,8 +238,6 @@ public class LoginTest extends BaseTest {
                 "Login should fail with invalid password");
         getExtentTest().log(Status.PASS, "Login failed with invalid password as expected");
 
-        // Verify success message is displayed (if available)
-        String Message = loginPage.getErrorMessageText();
         getExtentTest().log(Status.INFO, "Error message: " + Message);
 
         Assert.assertFalse(Message.isEmpty(), "Success message should not be empty");
@@ -333,12 +323,6 @@ public class LoginTest extends BaseTest {
         loginPage.clickLoginButton();
         getExtentTest().log(Status.INFO, "Clicked login with empty password");
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
                 currentUrl.contains(ConfigReader.getAppUrl());
@@ -347,7 +331,6 @@ public class LoginTest extends BaseTest {
                 "Should remain on login page with empty password");
         getExtentTest().log(Status.PASS, "Login failed with empty password as expected");
 
-        // Check for error message
         boolean errorDisplayed = loginPage.isPasswordFieldErrorMessageDisplayed();
         if (errorDisplayed) {
             String errorMessage = loginPage.getPasswordFieldErrorMessageText();
@@ -369,12 +352,6 @@ public class LoginTest extends BaseTest {
 
         loginPage.login(sqlInjectionEmail, sqlInjectionPassword);
         getExtentTest().log(Status.INFO, "Attempted SQL injection");
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
@@ -398,12 +375,6 @@ public class LoginTest extends BaseTest {
         loginPage.login(specialEmail, password);
         getExtentTest().log(Status.INFO, "Entered email with special characters");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         // Should handle special characters gracefully
         Assert.assertTrue(loginPage.isEmailFieldDisplayed(),
                 "Email field should handle special characters");
@@ -422,12 +393,6 @@ public class LoginTest extends BaseTest {
 
         loginPage.login(xssEmail, xssPassword);
         getExtentTest().log(Status.INFO, "Attempted XSS injection");
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
@@ -455,12 +420,6 @@ public class LoginTest extends BaseTest {
         loginPage.login(longEmail.toString(), ConfigReader.getValidPassword());
         getExtentTest().log(Status.INFO, "Entered very long email");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
                 currentUrl.contains(ConfigReader.getAppUrl());
@@ -482,12 +441,6 @@ public class LoginTest extends BaseTest {
         loginPage.login(invalidFormatEmail, ConfigReader.getValidPassword());
         getExtentTest().log(Status.INFO, "Entered email without @ symbol");
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
                 currentUrl.contains(ConfigReader.getAppUrl());
@@ -506,12 +459,6 @@ public class LoginTest extends BaseTest {
 
         loginPage.login("   ", "   ");
         getExtentTest().log(Status.INFO, "Entered spaces only in email and password fields");
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||
@@ -535,13 +482,6 @@ public class LoginTest extends BaseTest {
         loginPage.login(email, password);
         getExtentTest().log(Status.INFO, "Entered uppercase email: " + email);
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        // Log the result
         String currentUrl = loginPage.getCurrentUrl();
         getExtentTest().log(Status.INFO, "Current URL after login attempt: " + currentUrl);
         getExtentTest().log(Status.PASS, "Uppercase email test completed");
@@ -575,12 +515,6 @@ public class LoginTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Email: " + email + ", Password: " + (password.isEmpty() ? "[empty]" : "[provided]"));
 
         loginPage.login(email, password);
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         String currentUrl = loginPage.getCurrentUrl();
         boolean isStillOnLoginPage = currentUrl.contains("login") ||

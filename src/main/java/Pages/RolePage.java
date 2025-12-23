@@ -31,7 +31,7 @@ public class RolePage {
         try {
             WebElement role = elements.getRole();
             try {
-                Thread.sleep(3000);
+                Thread.sleep(300);
             } catch (InterruptedException e) {
             }
             role.click();
@@ -114,7 +114,7 @@ public class RolePage {
     public RolePage Addnewwebusertype() {
         navigatetorolepage().clickaddrole().clickwebusertype().enterrolename("TEST ROLE 2");
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -128,7 +128,7 @@ public class RolePage {
     public RolePage Addnewrolewithbothusertype() {
         navigatetorolepage().clickaddrole().clickwebusertype().enterrolename("TEST ROLE 3").clickKeyboxusertype();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -237,12 +237,12 @@ public class RolePage {
     public RolePage searchavalidvalue() {
         navigatetorolepage().clicksearchicon();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         entersearchvalue("Demo User");
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
         return this;
@@ -396,7 +396,7 @@ public class RolePage {
     public RolePage addRoleWithSpecialCharacters() {
         navigatetorolepage().clickaddrole().enterrolename("#$@!").clickKeyboxusertype().clicksubmitbutton();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
 
@@ -461,7 +461,7 @@ public class RolePage {
         List<String> pagecheckboxtexts = new ArrayList<>();
         for (WebElement checkbox : elements.getPagescheckboxes()) {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
             }
             pagecheckboxtexts.add(checkbox.getText().trim());

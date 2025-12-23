@@ -86,6 +86,18 @@ public class ConfigReader {
         return getProperty("valid.password");
     }
 
+    public static String getDashboardValidEmail() {
+        return getProperty("dashboardvalid.email");
+    }
+
+    public static String getRoleValidEmail() {
+        return getProperty("rolevalid.email");
+    }
+
+    public static String getUserValidEmail() {
+        return getProperty("uservalid.email");
+    }
+
     /**
      * Get invalid email for testing
      */

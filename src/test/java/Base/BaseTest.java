@@ -64,9 +64,9 @@ public class BaseTest {
     }
 
     /**
-     * Setup WebDriver before each test method
+     * Setup WebDriver once per test class (single browser instance for all methods)
      */
-    @BeforeMethod
+    @BeforeClass
     @Parameters("browser")
     public void setup(@Optional("chrome") String browser) {
         logger.info("Setting up WebDriver for browser: " + browser);
@@ -100,9 +100,11 @@ public class BaseTest {
 
         switch (browser.toLowerCase()) {
             case "chrome":
-                WebDriverManager.chromedriver().clearDriverCache()
-                    .avoidResolutionCache().setup();
+                WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--disable-gpu");
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--disable-dev-shm-usage");
                 if (headless) {
                     chromeOptions.addArguments("--headless");
                 }
@@ -173,11 +175,11 @@ public class BaseTest {
     }
 
     /**
-     * Teardown after each test method
+     * Log test results after each test method (keeps reporting per-method)
      */
     @AfterMethod
-    public void teardown(ITestResult result) {
-        logger.info("Tearing down test: " + result.getMethod().getMethodName());
+    public void logTestResult(ITestResult result) {
+        logger.info("Completed test: " + result.getMethod().getMethodName());
 
         if (result.getStatus() == ITestResult.FAILURE) {
             getExtentTest().log(Status.FAIL, "Test Failed: " + result.getThrowable());
@@ -200,8 +202,14 @@ public class BaseTest {
         } else if (result.getStatus() == ITestResult.SKIP) {
             getExtentTest().log(Status.SKIP, "Test Skipped: " + result.getThrowable());
         }
+    }
 
-        // Quit driver
+    /**
+     * Teardown WebDriver after all tests in the class complete
+     */
+    @AfterClass
+    public void teardown() {
+        logger.info("Tearing down WebDriver for test class");
         if (getDriver() != null) {
             getDriver().quit();
             driver.remove();
