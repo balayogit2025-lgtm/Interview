@@ -3,11 +3,14 @@ package Pages;
 import Elements.DeviceActivityPageElements;
 import Utils.TestLogger;
 import Utils.WaitHelper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
+import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -37,18 +40,36 @@ public class DeviceActivityPage {
     /**
      * Navigate to the Device Activity page from the sidebar
      */
-    public void navigateToDeviceActivityPage() {
+    public void navigateToDeviceActivityPage() throws InterruptedException {
         TestLogger.info("Navigating to Device Activity page...");
-        try {
-            // First click on Reports menu if collapsed
-            waitHelper.waitForElementClickable(elements.reportsMenuButtonLocator).click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+Thread.sleep(2000);
+            // Click on Reports menu using JavaScript Executor
+            //WebElement reportsMenu = elements.reportsMenuButton;//waitHelper.waitForElementVisible(elements.reportsMenuSpanLocator);
+            //js.executeScript("arguments[0].click();", reportsMenu);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement reportsButton = wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        By.xpath("//button[.//span[normalize-space()='Reports']]"))
+                );
+                reportsButton.click();
+        Actions action = new Actions(driver) ;
+        action.sendKeys(Keys.ENTER).perform();
+            TestLogger.info("Clicked Reports menu using JavaScript Executor.");
+
+            // Wait for submenu to expand
             Thread.sleep(500);
-        } catch (Exception e) {
-            // Reports menu might already be expanded
-        }
-        waitHelper.waitForElementClickable(elements.deviceActivityNavLinkLocator).click();
-        waitHelper.waitForElementVisible(elements.pageHeaderLocator);
-        TestLogger.success("Successfully navigated to Device Activity page.");
+
+            // Click on Device Activity link using JavaScript Executor
+            WebElement deviceActivityLink = waitHelper.waitForElementVisible(elements.deviceActivityNavLinkLocator);
+            js.executeScript("arguments[0].click();", deviceActivityLink);
+            TestLogger.info("Clicked Device Activity link using JavaScript Executor.");
+
+            // Wait for page to load
+            waitHelper.waitForElementVisible(elements.pageHeaderLocator);
+            TestLogger.success("Successfully navigated to Device Activity page.");
+
     }
 
     /**
@@ -653,6 +674,266 @@ public class DeviceActivityPage {
         try {
             return elements.applyFilterButton.isDisplayed();
         } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Check if Filter Dialog Title is displayed
+     */
+    public boolean isFilterDialogTitleDisplayed() {
+        try {
+            return elements.filterDialogTitle.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Get Filter Dialog Title text
+     */
+    public String getFilterDialogTitleText() {
+        try {
+            return elements.filterDialogTitle.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /**
+     * Check if Filter Dialog Description is displayed
+     */
+    public boolean isFilterDialogDescriptionDisplayed() {
+        try {
+            return elements.filterDialogDescription.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Get Filter Dialog Description text
+     */
+    public String getFilterDialogDescriptionText() {
+        try {
+            return elements.filterDialogDescription.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /**
+     * Check if Status filter dropdown is displayed
+     */
+    public boolean isStatusFilterDropdownDisplayed() {
+        try {
+            return elements.statusFilterDropdown.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Check if Type filter dropdown is displayed
+     */
+    public boolean isTypeFilterDropdownDisplayed() {
+        try {
+            return elements.typeFilterDropdown.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Check if Status label in filter dialog is displayed
+     */
+    public boolean isFilterStatusLabelDisplayed() {
+        try {
+            return elements.filterStatusLabel.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Check if Type label in filter dialog is displayed
+     */
+    public boolean isFilterTypeLabelDisplayed() {
+        try {
+            return elements.filterTypeLabel.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Click Status filter dropdown
+     */
+    public void clickStatusFilterDropdown() {
+        TestLogger.info("Clicking Status filter dropdown...");
+        elements.statusFilterDropdown.click();
+    }
+
+    /**
+     * Click Type filter dropdown
+     */
+    public void clickTypeFilterDropdown() {
+        TestLogger.info("Clicking Type filter dropdown...");
+        elements.typeFilterDropdown.click();
+    }
+
+    /**
+     * Get current selected value in Status filter dropdown
+     */
+    public String getStatusFilterSelectedValue() {
+        try {
+            return elements.statusFilterSelectedValue.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /**
+     * Get current selected value in Type filter dropdown
+     */
+    public String getTypeFilterSelectedValue() {
+        try {
+            return elements.typeFilterSelectedValue.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /**
+     * Select an option from the filter dropdown
+     */
+    public void selectFilterOption(String optionText) {
+        TestLogger.info("Selecting filter option: " + optionText);
+        try {
+            Thread.sleep(300);
+            WebElement option = waitHelper.waitForElementClickable(elements.filterDropdownOptionLocator(optionText));
+            option.click();
+            Thread.sleep(300);
+            TestLogger.success("Selected option: " + optionText);
+        } catch (Exception e) {
+            TestLogger.error("Could not select option '" + optionText + "': " + e.getMessage());
+        }
+    }
+
+    /**
+     * Select Status filter value
+     */
+    public void selectStatusFilter(String status) {
+        TestLogger.info("Selecting Status filter: " + status);
+        clickStatusFilterDropdown();
+        selectFilterOption(status);
+    }
+
+    /**
+     * Select Type filter value
+     */
+    public void selectTypeFilter(String type) {
+        TestLogger.info("Selecting Type filter: " + type);
+        clickTypeFilterDropdown();
+        selectFilterOption(type);
+    }
+
+    /**
+     * Apply filter with Status value
+     */
+    public void applyStatusFilter(String status) {
+        TestLogger.info("Applying Status filter: " + status);
+        openFilterDialog();
+        selectStatusFilter(status);
+        clickApplyFilterButton();
+        waitForLoadingComplete();
+        TestLogger.success("Status filter applied: " + status);
+    }
+
+    /**
+     * Apply filter with Type value
+     */
+    public void applyTypeFilter(String type) {
+        TestLogger.info("Applying Type filter: " + type);
+        openFilterDialog();
+        selectTypeFilter(type);
+        clickApplyFilterButton();
+        waitForLoadingComplete();
+        TestLogger.success("Type filter applied: " + type);
+    }
+
+    /**
+     * Apply filter with both Status and Type values
+     */
+    public void applyFilter(String status, String type) {
+        TestLogger.info("Applying filter - Status: " + status + ", Type: " + type);
+        openFilterDialog();
+        if (status != null && !status.isEmpty()) {
+            selectStatusFilter(status);
+        }
+        if (type != null && !type.isEmpty()) {
+            selectTypeFilter(type);
+        }
+        clickApplyFilterButton();
+        waitForLoadingComplete();
+        TestLogger.success("Filter applied - Status: " + status + ", Type: " + type);
+    }
+
+    /**
+     * Clear all filters and apply
+     */
+    public void clearFilters() {
+        TestLogger.info("Clearing all filters...");
+        openFilterDialog();
+        clickClearFilterButton();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        TestLogger.success("All filters cleared.");
+    }
+
+    /**
+     * Check if filter is applied (filter badge or indicator visible)
+     */
+    public boolean isFilterApplied() {
+        TestLogger.info("Checking if filter is applied...");
+        try {
+            // Check if the filter button shows any indicator of active filter
+            String buttonText = elements.filterButton.getText();
+            return buttonText.contains("(") || buttonText.contains("Active");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Verify all rows in table match the applied status filter
+     */
+    public boolean verifyAllRowsMatchStatusFilter(String expectedStatus) {
+        TestLogger.info("Verifying all rows match status filter: " + expectedStatus);
+        try {
+            if (getTableRowCount() == 0) {
+                TestLogger.info("No rows to verify.");
+                return true;
+            }
+
+            List<WebElement> rows = elements.tableRows;
+            for (WebElement row : rows) {
+                List<WebElement> cells = row.findElements(By.tagName("td"));
+                if (cells.size() > 5) {
+                    String status = cells.get(5).getText().trim();
+                    if (!status.equalsIgnoreCase(expectedStatus)) {
+                        TestLogger.error("Row found with status '" + status + "' instead of expected '" + expectedStatus + "'");
+                        return false;
+                    }
+                }
+            }
+            TestLogger.success("All rows match status filter: " + expectedStatus);
+            return true;
+        } catch (Exception e) {
+            TestLogger.error("Error verifying status filter: " + e.getMessage());
             return false;
         }
     }
