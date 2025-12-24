@@ -46,10 +46,10 @@ public class DeviceActivityPageElements {
 
     public By searchButtonLocator = By.xpath("//button[@aria-label='Expand search']");
 
-    @FindBy(xpath = "//input[@placeholder='Search...' or @type='search']")
+    @FindBy(xpath = "//input[@placeholder='Search Serial Number...']")
     public WebElement searchInput;
 
-    public By searchInputLocator = By.xpath("//input[@placeholder='Search...' or @type='search']");
+    public By searchInputLocator = By.xpath("//input[@placeholder='Search Serial Number...']");
 
     // ==================== FILTER ELEMENTS ====================
 
@@ -92,10 +92,46 @@ public class DeviceActivityPageElements {
 
     public By statusFilterDropdownLocator = By.xpath("//label[text()='Status']/following-sibling::button[@role='combobox']");
 
+    // Type Filter Dropdown
+    @FindBy(xpath = "//label[text()='Type']/following-sibling::button[@role='combobox']")
+    public WebElement typeFilterDropdown;
+
+    public By typeFilterDropdownLocator = By.xpath("//label[text()='Type']/following-sibling::button[@role='combobox']");
+
+    // Filter Dialog Description
+    @FindBy(xpath = "//p[contains(text(),'Select filter to apply on device activity list')]")
+    public WebElement filterDialogDescription;
+
+    public By filterDialogDescriptionLocator = By.xpath("//p[contains(text(),'Select filter to apply on device activity list')]");
+
+    // Status Label in Filter Dialog
+    @FindBy(xpath = "//div[@role='dialog']//label[text()='Status']")
+    public WebElement filterStatusLabel;
+
+    public By filterStatusLabelLocator = By.xpath("//div[@role='dialog']//label[text()='Status']");
+
+    // Type Label in Filter Dialog
+    @FindBy(xpath = "//div[@role='dialog']//label[text()='Type']")
+    public WebElement filterTypeLabel;
+
+    public By filterTypeLabelLocator = By.xpath("//div[@role='dialog']//label[text()='Type']");
+
     // Filter Dropdown Options
     public By filterDropdownOptionLocator(String optionText) {
         return By.xpath("//div[@role='listbox']//div[@role='option' and contains(text(),'" + optionText + "')]");
     }
+
+    // Status Filter Selected Value
+    @FindBy(xpath = "//label[text()='Status']/following-sibling::button[@role='combobox']//span[@data-slot='select-value']")
+    public WebElement statusFilterSelectedValue;
+
+    public By statusFilterSelectedValueLocator = By.xpath("//label[text()='Status']/following-sibling::button[@role='combobox']//span[@data-slot='select-value']");
+
+    // Type Filter Selected Value
+    @FindBy(xpath = "//label[text()='Type']/following-sibling::button[@role='combobox']//span[@data-slot='select-value']")
+    public WebElement typeFilterSelectedValue;
+
+    public By typeFilterSelectedValueLocator = By.xpath("//label[text()='Type']/following-sibling::button[@role='combobox']//span[@data-slot='select-value']");
 
     // ==================== STATISTICS CARDS ====================
 
@@ -282,10 +318,23 @@ public class DeviceActivityPageElements {
 
     public By deviceActivityNavLinkLocator = By.xpath("//a[@href='/device-activity']");
 
-    @FindBy(xpath = "//span[text()='Reports']")
+    // Reports menu - try multiple locators for the collapsible menu button
+    @FindBy(xpath = "//span[text()='Reports']/ancestor::button | //span[text()='Reports']/parent::* | //button[.//span[text()='Reports']]")
     public WebElement reportsMenuButton;
 
-    public By reportsMenuButtonLocator = By.xpath("//span[text()='Reports']");
+    public By reportsMenuButtonLocator = By.xpath("//span[text()='Reports']/ancestor::button | //span[text()='Reports']/parent::* | //button[.//span[text()='Reports']]");
+
+    // Alternative locator - click on the span or its parent div/li
+    @FindBy(xpath = "//button/span[text()='Reports']")
+    public WebElement reportsMenuSpan;
+
+    public By reportsMenuSpanLocator = By.xpath("//span[text()='Reports']");
+
+    // Reports menu parent clickable element (div or li that contains the menu)
+    @FindBy(xpath = "//span[text()='Reports']/ancestor::div[contains(@class,'cursor-pointer') or contains(@class,'menu') or @role='button'][1] | //span[text()='Reports']/ancestor::li[1] | //span[text()='Reports']/ancestor::a[1]")
+    public WebElement reportsMenuClickable;
+
+    public By reportsMenuClickableLocator = By.xpath("//span[text()='Reports']/ancestor::div[contains(@class,'cursor-pointer') or contains(@class,'menu') or @role='button'][1] | //span[text()='Reports']/ancestor::li[1] | //span[text()='Reports']/ancestor::a[1]");
 
     // ==================== TOAST/NOTIFICATION ELEMENTS ====================
 

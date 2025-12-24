@@ -1036,4 +1036,120 @@ public class ActivityPage {
             return false;
         }
     }
+
+    // --- Missing Methods Required by ActivityTest ---
+
+    public boolean isSelectAccessRoleButtonDisplayed() {
+        TestLogger.info("Checking if Select Access Role button is displayed.");
+        try {
+            return activityElements.selectAccessRoleButton.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Select Access Role button not found: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public boolean isSelectKeysButtonDisplayed() {
+        TestLogger.info("Checking if Select Keys button is displayed.");
+        try {
+            return activityElements.selectKeysButton.isDisplayed();
+        } catch (Exception e) {
+            TestLogger.error("Select Keys button not found: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public ActivityPage selectLocationLevel() {
+        TestLogger.info("Selecting location level...");
+        clicklocationleveldropdown();
+        clicklocationlevelOption();
+        TestLogger.success("Location level selected.");
+        return this;
+    }
+
+    public String getViewModalActivityName() {
+        TestLogger.info("Getting activity name from view modal.");
+        try {
+            return activityElements.activityconfigName.getText();
+        } catch (Exception e) {
+            TestLogger.error("Could not get activity name from view modal: " + e.getMessage());
+            return "";
+        }
+    }
+
+    public String getView_ModalStatus() {
+        TestLogger.info("Getting status from view modal.");
+        try {
+            return activityElements.activityStatus.getText();
+        } catch (Exception e) {
+            TestLogger.error("Could not get status from view modal: " + e.getMessage());
+            return "";
+        }
+    }
+
+    public List<String> getViewModalAccessRoles() {
+        TestLogger.info("Getting access roles from view modal.");
+        return activityElements.accessRoles.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+    }
+
+    public ActivityPage searchActivity(String activityName) {
+        TestLogger.info("Searching for activity: " + activityName);
+        clicksearchicon();
+        enterActivitynameinsearchgbox(activityName);
+        TestLogger.success("Search performed for: " + activityName);
+        return this;
+    }
+
+    public ActivityPage clickActionMenuForRow(int rowIndex) {
+        TestLogger.info("Clicking action menu for row: " + rowIndex);
+        try {
+            if (activityElements.actionButtons.size() > rowIndex) {
+                activityElements.actionButtons.get(rowIndex).click();
+                TestLogger.success("Clicked action menu for row " + rowIndex);
+            } else {
+                TestLogger.error("Row index " + rowIndex + " is out of bounds. Total action buttons: " + activityElements.actionButtons.size());
+            }
+        } catch (Exception e) {
+            TestLogger.error("Could not click action menu for row " + rowIndex + ": " + e.getMessage());
+        }
+        return this;
+    }
+
+    public ActivityPage selectViewFromActionMenu() {
+        TestLogger.info("Selecting 'View' from action menu...");
+        clickviewbutton();
+        waitHelper.waitForElementVisible((By) activityElements.viewModalContainer);
+        return this;
+    }
+
+    public boolean isLocationLevelErrorDisplayed() {
+        TestLogger.info("Checking if Location Level error is displayed.");
+        try {
+            return activityElements.ErrormsgofLocationLevel.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isAccessRoleErrorDisplayed() {
+        TestLogger.info("Checking if Access Role error is displayed.");
+        try {
+            return activityElements.ErrormsgofRole.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isModalClosed() {
+        TestLogger.info("Checking if modal is closed.");
+        try {
+            Thread.sleep(500);
+            driver.findElement((By) activityElements.activityModal);
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
+    }
 }

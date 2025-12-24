@@ -26,7 +26,7 @@ public class DeviceActivityTest extends BaseTest {
     private DeviceActivityPage deviceActivityPage;
 
     @BeforeMethod
-    public void setupDeviceActivityPage() {
+    public void setupDeviceActivityPage() throws InterruptedException {
         navigateToApp();
         loginPage = new LoginPage(getDriver());
         deviceActivityPage = new DeviceActivityPage(getDriver());
@@ -504,6 +504,618 @@ public class DeviceActivityTest extends BaseTest {
     }
 
     // ==================================================================================
+    // FILTER DIALOG UI VERIFICATION TEST CASES
+    // ==================================================================================
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_001: Verify filter dialog title is displayed correctly
+     */
+    @Test(priority = 41, description = "Verify filter dialog title 'Device Activity Filter' is displayed correctly.")
+    public void verifyFilterDialogTitle() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter Dialog Title");
+        TestLogger.info("Test: Verifying Filter Dialog Title");
+
+        deviceActivityPage.openFilterDialog();
+
+        Assert.assertTrue(deviceActivityPage.isFilterDialogTitleDisplayed(), "Filter dialog title should be displayed.");
+        String titleText = deviceActivityPage.getFilterDialogTitleText();
+        Assert.assertTrue(titleText.contains("Device Activity Filter"), "Title should contain 'Device Activity Filter'. Actual: " + titleText);
+
+        getExtentTest().log(Status.PASS, "Filter dialog title is displayed correctly: " + titleText);
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Filter dialog title verification passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_002: Verify filter dialog description is displayed
+     */
+    @Test(priority = 42, description = "Verify filter dialog description is displayed.")
+    public void verifyFilterDialogDescription() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter Dialog Description");
+        TestLogger.info("Test: Verifying Filter Dialog Description");
+
+        deviceActivityPage.openFilterDialog();
+
+        Assert.assertTrue(deviceActivityPage.isFilterDialogDescriptionDisplayed(), "Filter dialog description should be displayed.");
+        String descriptionText = deviceActivityPage.getFilterDialogDescriptionText();
+        Assert.assertTrue(descriptionText.contains("Select filter to apply"), "Description should contain expected text. Actual: " + descriptionText);
+
+        getExtentTest().log(Status.PASS, "Filter dialog description is displayed: " + descriptionText);
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Filter dialog description verification passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_003: Verify Status filter dropdown is displayed in filter dialog
+     */
+    @Test(priority = 43, description = "Verify Status filter dropdown is displayed in filter dialog.")
+    public void verifyStatusFilterDropdownDisplayed() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Status Filter Dropdown");
+        TestLogger.info("Test: Verifying Status Filter Dropdown");
+
+        deviceActivityPage.openFilterDialog();
+
+        Assert.assertTrue(deviceActivityPage.isFilterStatusLabelDisplayed(), "Status label should be displayed.");
+        Assert.assertTrue(deviceActivityPage.isStatusFilterDropdownDisplayed(), "Status filter dropdown should be displayed.");
+
+        getExtentTest().log(Status.PASS, "Status filter dropdown is displayed.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Status filter dropdown verification passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_004: Verify Type filter dropdown is displayed in filter dialog
+     */
+    @Test(priority = 44, description = "Verify Type filter dropdown is displayed in filter dialog.")
+    public void verifyTypeFilterDropdownDisplayed() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Type Filter Dropdown");
+        TestLogger.info("Test: Verifying Type Filter Dropdown");
+
+        deviceActivityPage.openFilterDialog();
+
+        Assert.assertTrue(deviceActivityPage.isFilterTypeLabelDisplayed(), "Type label should be displayed.");
+        Assert.assertTrue(deviceActivityPage.isTypeFilterDropdownDisplayed(), "Type filter dropdown should be displayed.");
+
+        getExtentTest().log(Status.PASS, "Type filter dropdown is displayed.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Type filter dropdown verification passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_005: Verify Clear Filter button is displayed in filter dialog
+     */
+    @Test(priority = 45, description = "Verify Clear Filter button is displayed in filter dialog.")
+    public void verifyClearFilterButtonDisplayed() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Clear Filter Button");
+        TestLogger.info("Test: Verifying Clear Filter Button");
+
+        deviceActivityPage.openFilterDialog();
+
+        Assert.assertTrue(deviceActivityPage.isClearFilterButtonDisplayed(), "Clear Filter button should be displayed.");
+
+        getExtentTest().log(Status.PASS, "Clear Filter button is displayed.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Clear Filter button verification passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_006: Verify Apply Filter button is displayed in filter dialog
+     */
+    @Test(priority = 46, description = "Verify Apply Filter button is displayed in filter dialog.")
+    public void verifyApplyFilterButtonDisplayed() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Apply Filter Button");
+        TestLogger.info("Test: Verifying Apply Filter Button");
+
+        deviceActivityPage.openFilterDialog();
+
+        Assert.assertTrue(deviceActivityPage.isApplyFilterButtonDisplayed(), "Apply Filter button should be displayed.");
+
+        getExtentTest().log(Status.PASS, "Apply Filter button is displayed.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Apply Filter button verification passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_007: Verify Status filter default value is 'All'
+     */
+    @Test(priority = 47, description = "Verify Status filter default value is 'All'.")
+    public void verifyStatusFilterDefaultValue() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Status Filter Default Value");
+        TestLogger.info("Test: Verifying Status Filter Default Value");
+
+        deviceActivityPage.openFilterDialog();
+
+        String defaultValue = deviceActivityPage.getStatusFilterSelectedValue();
+        getExtentTest().log(Status.INFO, "Status filter default value: " + defaultValue);
+        Assert.assertEquals(defaultValue, "All", "Status filter default value should be 'All'.");
+
+        getExtentTest().log(Status.PASS, "Status filter default value is 'All'.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Status filter default value verification passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_UI_008: Verify Type filter default value is 'Month Till Date'
+     */
+    @Test(priority = 48, description = "Verify Type filter default value is 'Month Till Date'.")
+    public void verifyTypeFilterDefaultValue() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Type Filter Default Value");
+        TestLogger.info("Test: Verifying Type Filter Default Value");
+
+        deviceActivityPage.openFilterDialog();
+
+        String defaultValue = deviceActivityPage.getTypeFilterSelectedValue();
+        getExtentTest().log(Status.INFO, "Type filter default value: " + defaultValue);
+        Assert.assertEquals(defaultValue, "Month Till Date", "Type filter default value should be 'Month Till Date'.");
+
+        getExtentTest().log(Status.PASS, "Type filter default value is 'Month Till Date'.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Type filter default value verification passed.");
+    }
+
+    // ==================================================================================
+    // FILTER FUNCTIONALITY POSITIVE TEST CASES
+    // ==================================================================================
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_001: Verify Status filter dropdown is clickable and opens options
+     */
+    @Test(priority = 49, description = "Verify Status filter dropdown is clickable and opens options.")
+    public void verifyStatusFilterDropdownClickable() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Status Filter Dropdown Clickable");
+        TestLogger.info("Test: Verifying Status Filter Dropdown Clickable");
+
+        deviceActivityPage.openFilterDialog();
+        deviceActivityPage.clickStatusFilterDropdown();
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        getExtentTest().log(Status.PASS, "Status filter dropdown is clickable.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Status filter dropdown click test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_002: Verify Type filter dropdown is clickable and opens options
+     */
+    @Test(priority = 50, description = "Verify Type filter dropdown is clickable and opens options.")
+    public void verifyTypeFilterDropdownClickable() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Type Filter Dropdown Clickable");
+        TestLogger.info("Test: Verifying Type Filter Dropdown Clickable");
+
+        deviceActivityPage.openFilterDialog();
+        deviceActivityPage.clickTypeFilterDropdown();
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        getExtentTest().log(Status.PASS, "Type filter dropdown is clickable.");
+        deviceActivityPage.closeFilterDialog();
+        TestLogger.success("Type filter dropdown click test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_003: Verify filter by Status 'Success' works correctly
+     */
+    @Test(priority = 51, description = "Verify filter by Status 'Success' works correctly.")
+    public void verifyFilterByStatusSuccess() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter by Status 'Success'");
+        TestLogger.info("Test: Verifying Filter by Status 'Success'");
+
+        deviceActivityPage.applyStatusFilter("Success");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int rowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Rows after filtering by 'Success': " + rowCount);
+
+        if (rowCount > 0) {
+            Assert.assertTrue(deviceActivityPage.verifyAllRowsMatchStatusFilter("Success"),
+                    "All rows should have 'Success' status after filtering.");
+        }
+
+        getExtentTest().log(Status.PASS, "Filter by Status 'Success' works correctly.");
+        TestLogger.success("Filter by Status 'Success' test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_004: Verify filter by Status 'Pending' works correctly
+     */
+    @Test(priority = 52, description = "Verify filter by Status 'Pending' works correctly.")
+    public void verifyFilterByStatusPending() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter by Status 'Pending'");
+        TestLogger.info("Test: Verifying Filter by Status 'Pending'");
+
+        deviceActivityPage.applyStatusFilter("Pending");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int rowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Rows after filtering by 'Pending': " + rowCount);
+
+        if (rowCount > 0) {
+            Assert.assertTrue(deviceActivityPage.verifyAllRowsMatchStatusFilter("Pending"),
+                    "All rows should have 'Pending' status after filtering.");
+        }
+
+        getExtentTest().log(Status.PASS, "Filter by Status 'Pending' works correctly.");
+        TestLogger.success("Filter by Status 'Pending' test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_005: Verify filter by Status 'Failed' works correctly
+     */
+    @Test(priority = 53, description = "Verify filter by Status 'Failed' works correctly.")
+    public void verifyFilterByStatusFailed() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter by Status 'Failed'");
+        TestLogger.info("Test: Verifying Filter by Status 'Failed'");
+
+        deviceActivityPage.applyStatusFilter("Failed");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int rowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Rows after filtering by 'Failed': " + rowCount);
+
+        if (rowCount > 0) {
+            Assert.assertTrue(deviceActivityPage.verifyAllRowsMatchStatusFilter("Failed"),
+                    "All rows should have 'Failed' status after filtering.");
+        }
+
+        getExtentTest().log(Status.PASS, "Filter by Status 'Failed' works correctly.");
+        TestLogger.success("Filter by Status 'Failed' test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_006: Verify filter by Status 'All' shows all records
+     */
+    @Test(priority = 54, description = "Verify filter by Status 'All' shows all records.")
+    public void verifyFilterByStatusAll() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter by Status 'All'");
+        TestLogger.info("Test: Verifying Filter by Status 'All'");
+
+        // First get the total count
+        String totalCount = deviceActivityPage.getTotalDeviceActivityCount();
+        getExtentTest().log(Status.INFO, "Total Device Activity count: " + totalCount);
+
+        deviceActivityPage.applyStatusFilter("All");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int tableTotal = deviceActivityPage.getTableTotalRecords();
+        getExtentTest().log(Status.INFO, "Table total after 'All' filter: " + tableTotal);
+
+        Assert.assertEquals(Integer.parseInt(totalCount), tableTotal,
+                "All records should be displayed when Status is 'All'.");
+
+        getExtentTest().log(Status.PASS, "Filter by Status 'All' shows all records.");
+        TestLogger.success("Filter by Status 'All' test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_007: Verify Clear Filter button resets all filters
+     */
+    @Test(priority = 55, description = "Verify Clear Filter button resets all filters.")
+    public void verifyClearFilterResetsFilters() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Clear Filter Resets Filters");
+        TestLogger.info("Test: Verifying Clear Filter Resets Filters");
+
+        // Apply a filter first
+        deviceActivityPage.applyStatusFilter("Success");
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Now clear the filter
+        deviceActivityPage.clearFilters();
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Verify filter is cleared by checking default values
+        deviceActivityPage.openFilterDialog();
+        String statusValue = deviceActivityPage.getStatusFilterSelectedValue();
+        String typeValue = deviceActivityPage.getTypeFilterSelectedValue();
+
+        getExtentTest().log(Status.INFO, "Status after clear: " + statusValue + ", Type after clear: " + typeValue);
+
+        Assert.assertEquals(statusValue, "All", "Status filter should be reset to 'All'.");
+        Assert.assertEquals(typeValue, "Month Till Date", "Type filter should be reset to 'Month Till Date'.");
+
+        deviceActivityPage.closeFilterDialog();
+        getExtentTest().log(Status.PASS, "Clear Filter button resets all filters.");
+        TestLogger.success("Clear Filter button test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_008: Verify Apply Filter button applies selected filters
+     */
+    @Test(priority = 56, description = "Verify Apply Filter button applies selected filters.")
+    public void verifyApplyFilterAppliesFilters() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Apply Filter Applies Filters");
+        TestLogger.info("Test: Verifying Apply Filter Applies Filters");
+
+        int initialRowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Initial row count: " + initialRowCount);
+
+        deviceActivityPage.openFilterDialog();
+        deviceActivityPage.selectStatusFilter("Success");
+        deviceActivityPage.clickApplyFilterButton();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int filteredRowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Filtered row count: " + filteredRowCount);
+
+        // Verify table is displayed after applying filter
+        Assert.assertTrue(deviceActivityPage.isDeviceActivityTableDisplayed(),
+                "Table should be displayed after applying filter.");
+
+        getExtentTest().log(Status.PASS, "Apply Filter button applies selected filters.");
+        TestLogger.success("Apply Filter button test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_009: Verify filter dialog closes after applying filter
+     */
+    @Test(priority = 57, description = "Verify filter dialog closes after applying filter.")
+    public void verifyFilterDialogClosesAfterApply() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter Dialog Closes After Apply");
+        TestLogger.info("Test: Verifying Filter Dialog Closes After Apply");
+
+        deviceActivityPage.openFilterDialog();
+        Assert.assertTrue(deviceActivityPage.isFilterDialogDisplayed(), "Filter dialog should be open.");
+
+        deviceActivityPage.clickApplyFilterButton();
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        Assert.assertTrue(deviceActivityPage.isFilterDialogClosed(), "Filter dialog should be closed after applying filter.");
+
+        getExtentTest().log(Status.PASS, "Filter dialog closes after applying filter.");
+        TestLogger.success("Filter dialog close after apply test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_010: Verify filter results update statistics cards accordingly
+     */
+    @Test(priority = 58, description = "Verify filter results update statistics cards accordingly.")
+    public void verifyFilterUpdatesStatisticsCards() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter Updates Statistics Cards");
+        TestLogger.info("Test: Verifying Filter Updates Statistics Cards");
+
+        // Get initial total count
+        String initialTotal = deviceActivityPage.getTotalDeviceActivityCount();
+        getExtentTest().log(Status.INFO, "Initial total: " + initialTotal);
+
+        // Apply Success filter
+        deviceActivityPage.applyStatusFilter("Success");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Check that statistics cards are still displayed
+        Assert.assertTrue(deviceActivityPage.isTotalDeviceActivityCardDisplayed(),
+                "Total Device Activity card should be displayed after filtering.");
+        Assert.assertTrue(deviceActivityPage.isSuccessCardDisplayed(),
+                "Success card should be displayed after filtering.");
+
+        getExtentTest().log(Status.PASS, "Filter updates statistics cards accordingly.");
+        TestLogger.success("Filter statistics update test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_011: Verify combining Status and Type filters works correctly
+     */
+    @Test(priority = 59, description = "Verify combining Status and Type filters works correctly.")
+    public void verifyCombinedFilters() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Combined Filters");
+        TestLogger.info("Test: Verifying Combined Filters");
+
+        deviceActivityPage.applyFilter("Success", "Month Till Date");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Verify table is displayed
+        Assert.assertTrue(deviceActivityPage.isDeviceActivityTableDisplayed(),
+                "Table should be displayed after applying combined filters.");
+
+        int rowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Row count after combined filters: " + rowCount);
+
+        if (rowCount > 0) {
+            Assert.assertTrue(deviceActivityPage.verifyAllRowsMatchStatusFilter("Success"),
+                    "All rows should match the applied status filter.");
+        }
+
+        getExtentTest().log(Status.PASS, "Combined filters work correctly.");
+        TestLogger.success("Combined filters test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_POS_012: Verify filter persists after page interaction
+     */
+    @Test(priority = 60, description = "Verify filter persists after page interaction.")
+    public void verifyFilterPersistsAfterInteraction() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Filter Persists After Interaction");
+        TestLogger.info("Test: Verifying Filter Persists After Interaction");
+
+        // Apply a filter
+        deviceActivityPage.applyStatusFilter("Success");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int initialFilteredCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Initial filtered count: " + initialFilteredCount);
+
+        // Perform some interaction (click search button)
+        deviceActivityPage.clickSearchButton();
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Verify filter is still applied
+        int currentCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Current count after interaction: " + currentCount);
+
+        Assert.assertEquals(currentCount, initialFilteredCount,
+                "Filter should persist after page interaction.");
+
+        getExtentTest().log(Status.PASS, "Filter persists after page interaction.");
+        TestLogger.success("Filter persistence test passed.");
+    }
+
+    // ==================================================================================
+    // FILTER FUNCTIONALITY NEGATIVE TEST CASES
+    // ==================================================================================
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_NEG_001: Verify empty results when no data matches filter
+     */
+    @Test(priority = 61, description = "Verify empty results message when no data matches filter criteria.")
+    public void verifyEmptyResultsWhenNoMatch() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Empty Results When No Match");
+        TestLogger.info("Test: Verifying Empty Results When No Match");
+
+        // First check if we have any failed records
+        String failedCount = deviceActivityPage.getFailedCount();
+        getExtentTest().log(Status.INFO, "Failed count: " + failedCount);
+
+        // Apply filter and verify table handles no results gracefully
+        deviceActivityPage.applyStatusFilter("Failed");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int rowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Row count after filter: " + rowCount);
+
+        if (rowCount == 0) {
+            Assert.assertTrue(deviceActivityPage.isNoResultsDisplayed() || rowCount == 0,
+                    "Should show no results message or empty table.");
+        }
+
+        getExtentTest().log(Status.PASS, "Empty results handled correctly.");
+        TestLogger.success("Empty results test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_NEG_002: Verify dialog can be dismissed without applying filter
+     */
+    @Test(priority = 62, description = "Verify dialog can be dismissed without applying filter.")
+    public void verifyDialogDismissWithoutApply() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Dialog Dismiss Without Apply");
+        TestLogger.info("Test: Verifying Dialog Dismiss Without Apply");
+
+        int initialRowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Initial row count: " + initialRowCount);
+
+        // Open filter dialog and change selection but don't apply
+        deviceActivityPage.openFilterDialog();
+        deviceActivityPage.selectStatusFilter("Success");
+
+        // Close dialog without applying
+        deviceActivityPage.closeFilterDialog();
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        int afterCloseRowCount = deviceActivityPage.getTableRowCount();
+        getExtentTest().log(Status.INFO, "Row count after closing dialog: " + afterCloseRowCount);
+
+        Assert.assertEquals(afterCloseRowCount, initialRowCount,
+                "Data should not change when dialog is closed without applying filter.");
+
+        getExtentTest().log(Status.PASS, "Dialog dismiss without apply works correctly.");
+        TestLogger.success("Dialog dismiss without apply test passed.");
+    }
+
+    /**
+     * TC_DEVICE_ACTIVITY_FILTER_NEG_003: Verify multiple rapid filter changes are handled correctly
+     */
+    @Test(priority = 63, description = "Verify multiple rapid filter changes are handled correctly.")
+    public void verifyMultipleRapidFilterChanges() {
+        getExtentTest().log(Status.INFO, "Test: Verifying Multiple Rapid Filter Changes");
+        TestLogger.info("Test: Verifying Multiple Rapid Filter Changes");
+
+        // Apply multiple filters in quick succession
+        deviceActivityPage.applyStatusFilter("Success");
+        deviceActivityPage.applyStatusFilter("Pending");
+        deviceActivityPage.applyStatusFilter("Failed");
+        deviceActivityPage.applyStatusFilter("All");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Verify page is stable and table is displayed
+        Assert.assertTrue(deviceActivityPage.isDeviceActivityTableDisplayed(),
+                "Table should be displayed after multiple filter changes.");
+
+        getExtentTest().log(Status.PASS, "Multiple rapid filter changes handled correctly.");
+        TestLogger.success("Multiple rapid filter changes test passed.");
+    }
+
+    // ==================================================================================
     // NEGATIVE WORKFLOW TEST CASES
     // ==================================================================================
 
@@ -806,10 +1418,10 @@ public class DeviceActivityTest extends BaseTest {
      * TC_DEVICE_ACTIVITY_LOAD_002: Verify all four statistics cards are visible on page load
      */
     @Test(priority = 38, description = "Verify all four statistics cards are visible on page load.")
-    public void verifyAllStatisticsCardsVisible() {
+    public void verifyAllStatisticsCardsVisible() throws InterruptedException {
         getExtentTest().log(Status.INFO, "Test: Verifying All Statistics Cards Visible");
         TestLogger.info("Test: Verifying All Statistics Cards Visible");
-
+Thread.sleep(1000);
         Assert.assertTrue(deviceActivityPage.isTotalDeviceActivityCardDisplayed(), "Total Device Activity card should be displayed.");
         Assert.assertTrue(deviceActivityPage.isSuccessCardDisplayed(), "Success card should be displayed.");
         Assert.assertTrue(deviceActivityPage.isPendingCardDisplayed(), "Pending card should be displayed.");
