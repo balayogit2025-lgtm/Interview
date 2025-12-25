@@ -274,4 +274,7 @@ public class RoleTest extends BaseTest {
         getExtentTest().log(Status.PASS, "Verified the presence of the page names");
     }
 
+
+//roletest
+
 }
