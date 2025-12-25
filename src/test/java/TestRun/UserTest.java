@@ -275,4 +275,6 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.PASS, "Verified the error message of password mismatch");
     }
 
+  //usertest
+
 }
