@@ -752,4 +752,7 @@ public class UserPage {
         String value = text.split(" ")[6];
         return value;
     }
+
+    //userpage
+
     }
