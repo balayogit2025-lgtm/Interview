@@ -27,7 +27,7 @@ public class ActivityTests extends BaseTest {
         navigateToApp();
         loginPage = new LoginPage(getDriver());
         activityPage = new ActivityPage(getDriver());
-        loginPage.login(ConfigReader.getValidEmail(), ConfigReader.getValidPassword());
+        loginPage.login(ConfigReader.getActivityValidEmail(), ConfigReader.getValidPassword());
         activityPage.navigateToActivityPage();
         getExtentTest().log(Status.INFO, "Setup complete. Navigated to Activity Page.");
     }

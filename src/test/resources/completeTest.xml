@@ -35,18 +35,26 @@
 
         </classes>
     </test>
+    <test name="User Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.ActivityTests"/>
 
-<!--
+        </classes>
+    </test>
+
     <test name="Keybox Tests" preserve-order="true">
         <classes>
-            <class name="TestRun.KeyboxTest"/>
+            <class name="TestRun.LevelTest"/>
         </classes>
     </test>
 
-    <test name="Device Activity Report Tests" preserve-order="true">
-        <classes>
-            <class name="TestRun.DeviceActivityTest"/>
-        </classes>
-    </test>
-    -->
+    <!--
+
+
+            <test name="Device Activity Report Tests" preserve-order="true">
+                <classes>
+                    <class name="TestRun.DeviceActivityTest"/>
+                </classes>
+            </test>
+            -->
 </suite>
