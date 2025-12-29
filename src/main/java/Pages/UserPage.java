@@ -32,7 +32,7 @@ public class UserPage {
 
     public UserPage navigatetouserpage() {
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
             WebElement user = elements.getUser();
              user.click();
             logger.info("Clicked the User and it is navigated to the user page");
@@ -184,6 +184,7 @@ public class UserPage {
     }
     public UserPage clicklocationvalue() {
         try {
+
             elements.getLocationvalue().click();
             logger.info("Selected the location value");
         } catch (Exception e) {
@@ -295,7 +296,12 @@ public class UserPage {
     public UserPage addnewwebuser() {
   navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 10").enterlastname("10").enteremail("demouser10@gmail.com").entermobile("9999999999")
           .clickroledropdown().Selectwebusertype().clicklocationleveldropdown().clicklocationlevelvalue();
-  clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
+  clicklocationdropdown();
+  try {
+      Thread.sleep(1000);
+  } catch (InterruptedException e) {
+  }
+  clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
         return this;
     }
     public UserPage addnewkeyboxuser() {
@@ -305,9 +311,21 @@ public class UserPage {
         return this;
     }
     public UserPage addnewbothusertype() {
-        navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 12").enterlastname("12").enteremail("demouser12@gmail.com").entermobile("9999999997")
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickadduserbutton().enterfirstname("Demo user 12").enterlastname("12").enteremail("demouser12@gmail.com").entermobile("9999999997")
                 .clickroledropdown().Selectbothusertype().clicklocationleveldropdown().clicklocationlevelvalue();
-        clicklocationdropdown().clicklocationvalue().enterdisplayname("2025").enterusercode("2025").clickcardnumbercheckbox().entercardnumber("2025").enterpin("2025").clickwebusericon().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
+        clicklocationdropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicklocationvalue().enterdisplayname("2025").enterusercode("2025").clickcardnumbercheckbox().entercardnumber("2025").enterpin("2025").clickwebusericon().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
         return this;
     }
     public UserPage clickmanagebutton() {
@@ -409,12 +427,23 @@ public class UserPage {
         }
     }
     public UserPage Viewuser() {
-        navigatetouserpage().clickmanagebutton().clickviewbutton();
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickmanagebutton().clickviewbutton();
         return this;
     }
 
     public UserPage edituser() {
-       navigatetouserpage().clickmanagebutton().clickeditbutton().clearfirstname().enterfirstname("Edited User");
+       navigatetouserpage();
+       try {
+           Thread.sleep(1000);
+       } catch (InterruptedException e) {
+       }
+        clickmanagebutton().clickeditbutton().clearfirstname().enterfirstname("Edited User");
        try {
            Thread.sleep(500);
        } catch (InterruptedException e) {
@@ -423,7 +452,12 @@ public class UserPage {
         return this;
     }
     public UserPage deleteuser() {
-        navigatetouserpage().clickmanagebutton().clickdeletebutton().clickdeleteconfirmbutton();
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        clickmanagebutton().clickdeletebutton().clickdeleteconfirmbutton();
         return this;
     }
 
@@ -434,7 +468,13 @@ public class UserPage {
         return this;
     }
     public UserPage CancelInEditUser() {
-        navigatetouserpage().clickmanagebutton().clickeditbutton().clearfirstname().enterfirstname("Edited User");
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickmanagebutton().clickeditbutton().clearfirstname().enterfirstname("Edited User");
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -444,7 +484,13 @@ public class UserPage {
     }
 
     public UserPage Canceldeleteuser() {
-        navigatetouserpage().clickmanagebutton().clickdeletebutton().clickdeletecancelbutton();
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickmanagebutton().clickdeletebutton().clickdeletecancelbutton();
         return this;
     }
     public int getUserTableRowCount() {
@@ -478,11 +524,23 @@ public class UserPage {
         return this;
     }
     public UserPage SearchaValidValue() {
-        navigatetouserpage().clickSearchIcon().entersearchvalue("Demo User");
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickSearchIcon().entersearchvalue("Demo User");
         return this;
     }
     public UserPage SearchaInvalidValue() {
-     navigatetouserpage().clickSearchIcon().entersearchvalue("Rahul");
+     navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+     clickSearchIcon().entersearchvalue("Rahul");
         return this;
     }
     public boolean iserrormsgofemptyfieldsdisplayed() {
@@ -504,7 +562,13 @@ public class UserPage {
         }
     }
     public UserPage addnewuserwithemptyfields() {
-        navigatetouserpage().clickadduserbutton().clicksubmitbutton();
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickadduserbutton().clicksubmitbutton();
         return this;
     }
 
@@ -515,7 +579,14 @@ public class UserPage {
     public UserPage addduplicateuser() {
         navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 10").enterlastname("10").enteremail("demouser10@gmail.com").entermobile("8596321020")
                 .clickroledropdown().Selectwebusertype().clicklocationleveldropdown().clicklocationlevelvalue();
-        clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
+        clicklocationdropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
         return this;
     }
     public boolean isUserTableRowsdisplayed() {
@@ -549,7 +620,13 @@ public class UserPage {
     public UserPage adduserwithspecialcharacters() {
         navigatetouserpage().clickadduserbutton().enterfirstname("Demo user #!123").enterlastname("10").enteremail("demouser10@gmail.com").entermobile("8596321020")
                 .clickroledropdown().Selectwebusertype().clicklocationleveldropdown().clicklocationlevelvalue();
-        clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
+        clicklocationdropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clicksubmitbutton();
         return this;
     }
     public boolean iswebusersectiondisplayed() {
@@ -571,12 +648,30 @@ public class UserPage {
         }
     }
     public UserPage selectthekeyboxuserrole() {
-        navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 11").enterlastname("11").enteremail("demouser11@gmail.com").entermobile("9999999998")
-                .clickroledropdown().Selectkeyboxusertype();
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickadduserbutton().enterfirstname("Demo user 11").enterlastname("11").enteremail("demouser11@gmail.com").entermobile("9999999998")
+                .clickroledropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Selectkeyboxusertype();
         return this;
     }
     public UserPage selectthewebuserrole() {
-        navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 11").enterlastname("11").enteremail("demouser11@gmail.com").entermobile("9999999998")
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickadduserbutton().enterfirstname("Demo user 11").enterlastname("11").enteremail("demouser11@gmail.com").entermobile("9999999998")
                 .clickroledropdown().Selectwebusertype();
         return this;
     }
@@ -604,14 +699,38 @@ public class UserPage {
         }
     }
     public UserPage addkeyboxuserrolewithinvalidusercode() {
-        navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 11").enterlastname("11").enteremail("demouser11@gmail.com").entermobile("9999999998")
-                .clickroledropdown().Selectkeyboxusertype().clicklocationleveldropdown().clicklocationlevelvalue();
-        clicklocationdropdown().clicklocationvalue().enterdisplayname("5286").enterusercode("12").clickcardnumbercheckbox().entercardnumber("5286").enterpin("5286").clicksubmitbutton();
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickadduserbutton().enterfirstname("Demo user 11").enterlastname("11").enteremail("demouser11@gmail.com").entermobile("9999999998")
+                .clickroledropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Selectkeyboxusertype().clicklocationleveldropdown().clicklocationlevelvalue();
+        clicklocationdropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicklocationvalue().enterdisplayname("5286").enterusercode("12").clickcardnumbercheckbox().entercardnumber("5286").enterpin("5286").clicksubmitbutton();
         return this;
     }
     public UserPage addkeyboxuserrolewithinvalidpin() {
         navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 11").enterlastname("11").enteremail("demouser11@gmail.com").entermobile("9999999998")
-                .clickroledropdown().Selectkeyboxusertype().clicklocationleveldropdown().clicklocationlevelvalue();
+                .clickroledropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Selectkeyboxusertype().clicklocationleveldropdown().clicklocationlevelvalue();
         clicklocationdropdown().clicklocationvalue().enterdisplayname("5286").enterusercode("12").clickcardnumbercheckbox().entercardnumber("5286").enterpin("52").clicksubmitbutton();
         return this;
     }
@@ -660,7 +779,13 @@ public class UserPage {
         }
     }
     public UserPage addnewwebuserwithpasswordmismatch() {
-        navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 10").enterlastname("10").enteremail("demouser10@gmail.com").entermobile("9999999999")
+        navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickadduserbutton().enterfirstname("Demo user 10").enterlastname("10").enteremail("demouser10@gmail.com").entermobile("9999999999")
                 .clickroledropdown().Selectwebusertype().clicklocationleveldropdown().clicklocationlevelvalue();
         clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@234").clicksubmitbutton();
         return this;
@@ -748,6 +873,11 @@ public class UserPage {
     public String totalresults()  {
         TestLogger.info("Getting total user count");
         navigatetouserpage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         String text = driver.findElement(By.xpath("//div[contains(text(), 'Showing From')]")).getText();
         String value = text.split(" ")[6];
         return value;

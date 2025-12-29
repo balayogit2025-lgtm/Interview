@@ -31,6 +31,10 @@ public class LevelPage {
     public LevelPage navigateToLevelPage() {
         try {
              WebElement level = elements.getLevel();
+             try {
+                 Thread.sleep(1000);
+             } catch (InterruptedException e) {
+             }
              level.click();
             logger.info("Navigated to Level Page");
         } catch (Exception e) {
@@ -87,7 +91,13 @@ public class LevelPage {
     }
 
     public LevelPage addnewregion() {
-    navigateToLevelPage().clickaddregion().enterregionname("N REG").clicksubmitbutton();
+    navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    clickaddregion().enterregionname("N REG").clicksubmitbutton();
     return this;
 }
     public LevelPage clicknewlycreatedregion() {
@@ -157,7 +167,13 @@ public class LevelPage {
         return this;
     }
     public LevelPage addnewstate() {
-        navigateToLevelPage().clicknewlycreatedregion().clickaddstatebutton().enterstatename("N STA").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clickaddstatebutton().enterstatename("N STA").clicksubmitbutton();
         return this;
     }
     public boolean isAddStateButtonDisplayed() {
@@ -191,7 +207,13 @@ public class LevelPage {
         return this;
     }
     public LevelPage addnewterritory() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clickaddTerritorybutton().enterterritoryname("N TERRI").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clickaddTerritorybutton().enterterritoryname("N TERRI").clicksubmitbutton();
         return this;
     }
     public LevelPage clickaddclusterbutton() {
@@ -217,7 +239,13 @@ public class LevelPage {
         return this;
     }
     public LevelPage addnewcluster() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clickaddclusterbutton().enterclustername("N CLUST").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clickaddclusterbutton().enterclustername("N CLUST").clicksubmitbutton();
         return this;
     }
     public LevelPage clickaddlocationbutton() {
@@ -243,7 +271,13 @@ public class LevelPage {
         return this;
     }
     public LevelPage addnewlocation() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster().clickaddlocationbutton().enterlocationname("N LOC").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster().clickaddlocationbutton().enterlocationname("N LOC").clicksubmitbutton();
         return this;
     }
     public boolean isAddTerritoryButtonDisplayed() {
@@ -282,15 +316,33 @@ public class LevelPage {
         return this;
     }
     public LevelPage Cancelbuttoninaddnewregion() {
-        navigateToLevelPage().clickaddregion().enterregionname("CANCEL REGION").clickCancelbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddregion().enterregionname("CANCEL REGION").clickCancelbutton();
         return this;
     }
     public LevelPage Cancelbuttoninaddnewstate() {
-        navigateToLevelPage().clicknewlycreatedregion().clickaddstatebutton().enterstatename("CANCEL STATE").clickCancelbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clickaddstatebutton().enterstatename("CANCEL STATE").clickCancelbutton();
         return this;
     }
     public LevelPage Cancelbuttoninaddnewterritory() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -299,7 +351,13 @@ public class LevelPage {
         return this;
     }
     public LevelPage Cancelbuttoninaddnewcluster() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -308,7 +366,13 @@ public class LevelPage {
         return this;
     }
     public LevelPage Cancelbuttoninaddnewlocation() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -399,43 +463,151 @@ public class LevelPage {
         return this;
     }
     public LevelPage EditRegion() {
-        navigateToLevelPage().clickManagebutton().clickEditbutton().ClearRegionName().enterregionname("E Region").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearRegionName().enterregionname("E Region").clicksubmitbutton();
         return this;
     }
     public LevelPage Editstate() {
-        navigateToLevelPage().clicknewlycreatedregion().clickManagebutton().clickEditbutton().ClearStateName().enterstatename("E STATE").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearStateName().enterstatename("E STATE").clicksubmitbutton();
         return this;
     }
     public LevelPage Editterritory() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clickManagebutton().clickEditbutton().ClearTerritoryName().enterterritoryname("E TERRITORY").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearTerritoryName().enterterritoryname("E TERRITORY").clicksubmitbutton();
         return this;
     }
     public LevelPage Editcluster() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clickManagebutton().clickEditbutton().ClearClusterName().enterclustername("E CLUSTER").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearClusterName().enterclustername("E CLUSTER").clicksubmitbutton();
         return this;
     }
     public LevelPage Editlocation() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster().clickManagebutton().clickEditbutton().ClearLocationName().enterlocationname("E LOCATION").clicksubmitbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearLocationName().enterlocationname("E LOCATION").clicksubmitbutton();
         return this;
     }
     public LevelPage CancelButtonInEditRegion() {
-        navigateToLevelPage().clickManagebutton().clickEditbutton().ClearRegionName().enterregionname("ER Region").clickCancelbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearRegionName().enterregionname("ER Region").clickCancelbutton();
         return this;
     }
-    public LevelPage    CancelButtonInEditstate() {
-        navigateToLevelPage().clicknewlycreatedregion().clickManagebutton().clickEditbutton().ClearStateName().enterstatename("ER STATE").clickCancelbutton();
+    public LevelPage CancelButtonInEditstate() {
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearStateName().enterstatename("ER STATE").clickCancelbutton();
         return this;
     }
     public LevelPage CancelButtonInEditterritory() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clickManagebutton().clickEditbutton().ClearTerritoryName().enterterritoryname("ER TERRITORY").clickCancelbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearTerritoryName().enterterritoryname("ER TERRITORY").clickCancelbutton();
         return this;
     }
     public LevelPage CancelButtonInEditcluster() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clickManagebutton().clickEditbutton().ClearClusterName().enterclustername("ER CLUSTER").clickCancelbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearClusterName().enterclustername("ER CLUSTER").clickCancelbutton();
         return this;
     }
     public LevelPage CancelButtonInEditlocation() {
-        navigateToLevelPage().clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster().clickManagebutton().clickEditbutton().ClearLocationName().enterlocationname("ER LOCATION").clickCancelbutton();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicknewlycreatedregion().clicknewlycreatedstate().clicknewlycreatedterritory().clicknewlycreatedcluster();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickManagebutton().clickEditbutton().ClearLocationName().enterlocationname("ER LOCATION").clickCancelbutton();
         return this;
     }
     public LevelPage clicksearchicon() {
@@ -513,18 +685,30 @@ public class LevelPage {
         return 0;
     }
     public LevelPage SearchValidRegion() {
-        navigateToLevelPage().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchregion("New Region");
         return this;
     }
     public LevelPage SearchInvalidRegion() {
-        navigateToLevelPage().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchregion("Tamilnadu");
@@ -583,72 +767,126 @@ public class LevelPage {
         return this;
     }
     public LevelPage SearchValidState() {
-        navigateToLevelPage().clickFirstRegion().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchstate("New State");
         return this;
     }
     public LevelPage SearchInvalidState() {
-        navigateToLevelPage().clickFirstRegion().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchstate("cbe");
         return this;
     }
     public LevelPage SearchValidTerritory() {
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchterritory("Coimbatore");
         return this;
     }
     public LevelPage SearchInvalidTerritory() {
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchterritory("Bangalore");
         return this;
     }
     public LevelPage SearchValidCluster() {
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstState().clickFirstTerritory().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchcluster("RS puram");
         return this;
     }
     public LevelPage SearchInvalidCluster() {
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState().clickFirstTerritory().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchcluster("Trichy");
         return this;
     }
     public LevelPage SearchValidLocation() {
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchlocation("RO1");
         return this;
     }
     public LevelPage SearchInvalidLocation() {
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clicksearchicon();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clicksearchicon();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         entersearchlocation("Erode");
@@ -690,9 +928,15 @@ public class LevelPage {
     }
     public String TotalStateResults()  {
         TestLogger.info("Getting total State count");
-        navigateToLevelPage().clickFirstRegion();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         String text = driver.findElement(By.xpath("//div[@class='flex items-center gap-4']")).getText();
@@ -713,9 +957,15 @@ public class LevelPage {
     }
     public String TotalTerritoryResults()  {
         TestLogger.info("Getting total Territory count");
-        navigateToLevelPage().clickFirstRegion().clickFirstState();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         String text = driver.findElement(By.xpath("//div[@class='flex items-center gap-4']")).getText();
@@ -737,7 +987,13 @@ public class LevelPage {
 
     public String TotalClusterResults()  {
         TestLogger.info("Getting total Cluster count");
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory();
+        navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState().clickFirstTerritory();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -760,9 +1016,15 @@ public class LevelPage {
     }
     public String TotalLocationResults()  {
         TestLogger.info("Getting total location count");
-        navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster();
+        navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         String text = driver.findElement(By.xpath("//div[@class='flex items-center gap-4']")).getText();

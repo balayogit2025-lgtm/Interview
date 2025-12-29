@@ -29,6 +29,10 @@ public class LevelTest extends BaseTest {
     public void navigateToLevelPage() {
         getExtentTest().log(Status.INFO, "Navigate to Level page");
         levelPage.navigateToLevelPage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
         Assert.assertTrue(levelPage.isAddRegionButtonDisplayed(), "Add Region button is not displayed");
         getExtentTest().log(Status.PASS, "Successfully Navigated to Level page");
     }
@@ -188,6 +192,11 @@ public class LevelTest extends BaseTest {
     public void searchRegionWithInvalidRegionName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with Invalid Region name");
         levelPage.SearchInvalidRegion();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Assert.assertTrue(levelPage.isErrormsgofNoResultsDisplayed(), "the Error message of No results not displayed");
         getExtentTest().log(Status.PASS, "Verfied the reults of the search functionality with Invalid Region name");
     }
@@ -203,6 +212,11 @@ public class LevelTest extends BaseTest {
     public void searchRegionWithInvalidStateName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with Invalid State name");
         levelPage.SearchInvalidState();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Assert.assertTrue(levelPage.isErrormsgofNoResultsDisplayed(), "the Error message of No results not displayed");
         getExtentTest().log(Status.PASS, "Verfied the reults of the search functionality with Invalid State name");
     }
@@ -218,6 +232,11 @@ public class LevelTest extends BaseTest {
     public void searchRegionWithInvalidTerritoryName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with Invalid Territory name");
         levelPage.SearchInvalidTerritory();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Assert.assertTrue(levelPage.isErrormsgofNoResultsDisplayed(), "the Error message of No results not displayed");
         getExtentTest().log(Status.PASS, "Verfied the reults of the search functionality with Invalid Territory name");
     }
@@ -233,6 +252,11 @@ public class LevelTest extends BaseTest {
     public void searchRegionWithInvalidClusterName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with Invalid Cluster name");
         levelPage.SearchInvalidCluster();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Assert.assertTrue(levelPage.isErrormsgofNoResultsDisplayed(), "the Error message of No results not displayed");
         getExtentTest().log(Status.PASS, "Verfied the reults of the search functionality with Invalid Cluster name");
     }
@@ -248,6 +272,11 @@ public class LevelTest extends BaseTest {
     public void searchRegionWithInvalidLocationName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with Invalid Location name");
         levelPage.SearchInvalidLocation();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Assert.assertTrue(levelPage.isErrormsgofNoResultsDisplayed(), "the Error message of No results not displayed");
         getExtentTest().log(Status.PASS, "Verfied the reults of the search functionality with Invalid Location name");
     }
@@ -322,9 +351,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 38, description = "Verify the column header names in state list screen")
     public void verifyStatecolumnheadernames() {
         getExtentTest().log(Status.INFO, "Test: Verify the column header names in state list screen");
-        levelPage.navigateToLevelPage().clickFirstRegion();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         List<String> stateexpectedHeaders = Arrays.asList("S.NO", "NAME", "PARENT NAME", "CREATED BY","UPDATED BY","ACTION");
@@ -335,9 +370,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 39, description = "Verify the column header names in Territory list screen")
     public void verifyTerritorycolumnheadernames() {
         getExtentTest().log(Status.INFO, "Test: Verify the column header names in Territory list screen");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         List<String> territoryexpectedHeaders = Arrays.asList("S.NO", "NAME", "PARENT NAME", "CREATED BY","UPDATED BY","ACTION");
@@ -348,9 +389,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 40, description = "Verify the column header names in cluster list screen")
     public void verifyClustercolumnheadernames() {
         getExtentTest().log(Status.INFO, "Test: Verify the column header names in cluster list screen");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         List<String> clusterexpectedHeaders = Arrays.asList("S.NO", "NAME","PARENT NAME", "CREATED BY","UPDATED BY","ACTION");
@@ -361,9 +408,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 41, description = "Verify the column header names in location list screen")
     public void verifyLocationcolumnheadernames() {
         getExtentTest().log(Status.INFO, "Test: Verify the column header names in location list screen");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         List<String> locationexpectedHeaders = Arrays.asList("S.NO", "NAME", "PARENT NAME","CREATED BY","UPDATED BY","ACTION");
@@ -386,9 +439,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 43, description = "Verify state table is displayed")
     public void verifyStateTableDisplayed() {
         getExtentTest().log(Status.INFO, "Test: Verify state table is displayed");
-        levelPage.navigateToLevelPage().clickFirstRegion();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean isTableDisplayed = levelPage.isLevelTableDisplayed();
@@ -398,9 +457,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 44, description = "Verify Territory table is displayed")
     public void verifyTerritoryTableDisplayed() {
         getExtentTest().log(Status.INFO, "Test: Verify Territory table is displayed");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean isTableDisplayed = levelPage.isLevelTableDisplayed();
@@ -410,9 +475,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 45, description = "Verify Cluster table is displayed")
     public void verifyClusterTableDisplayed() {
         getExtentTest().log(Status.INFO, "Test: Verify Cluster table is displayed");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean isTableDisplayed = levelPage.isLevelTableDisplayed();
@@ -422,9 +493,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 46, description = "Verify location table is displayed")
     public void verifyLocationTableDisplayed() {
         getExtentTest().log(Status.INFO, "Test: Verify location table is displayed");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean isTableDisplayed = levelPage.isLevelTableDisplayed();
@@ -434,9 +511,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 47, description = "Verify region creation when the region name is empty")
     public void AddRegionwithemptyRegionName() {
         getExtentTest().log(Status.INFO, "Test: Verify region creation when the region name is empty");
-        levelPage.navigateToLevelPage().clickaddregion().clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickaddregion().clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofemptyregionnamefieldsdisplayed = levelPage.isErrorMsgOfEmptyLevelNameDisplayed();
@@ -446,9 +529,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 48, description = "Verify state creation when the state name is empty")
     public void AddStatewithemptyStateName() {
         getExtentTest().log(Status.INFO, "Test: Verify state creation when the state name is empty");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickaddstatebutton().clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickaddstatebutton().clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofemptystatenamefieldsdisplayed = levelPage.isErrorMsgOfEmptyLevelNameDisplayed();
@@ -458,9 +547,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 49, description = "Verify Territory creation when the Territory name is empty")
     public void AddTerritoryWithemptyTerritoryName() {
         getExtentTest().log(Status.INFO, "Test: Verify Territory creation when the Territory name is empty");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickaddTerritorybutton().clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickaddTerritorybutton().clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofemptyterritorynamefieldsdisplayed = levelPage.isErrorMsgOfEmptyLevelNameDisplayed();
@@ -470,9 +565,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 50, description = "Verify Cluster creation when the Cluster name is empty")
     public void AddClusterWithemptyClusterName() {
         getExtentTest().log(Status.INFO, "Test: Verify Cluster creation when the Cluster name is empty");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickaddclusterbutton().clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickaddclusterbutton().clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofemptyclusternamefieldsdisplayed = levelPage.isErrorMsgOfEmptyLevelNameDisplayed();
@@ -482,9 +583,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 51, description = "Verify location creation when the location name is empty")
     public void AddLocationWithemptyLocationName() {
         getExtentTest().log(Status.INFO, "Test: Verify location creation when the location name is empty");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clickaddlocationbutton().clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clickaddlocationbutton().clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofemptylocationnamefieldsdisplayed = levelPage.isErrorMsgOfEmptyLevelNameDisplayed();
@@ -494,9 +601,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 52, description = "Verify region creation when the region name created using spaces")
     public void AddRegionwithSpacesInRegionName() {
         getExtentTest().log(Status.INFO, "Test: Verify region creation when the region name is created using spaces");
-        levelPage.navigateToLevelPage().clickaddregion().enterregionname(" Region ").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickaddregion().enterregionname(" Region ").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofusingspacesinregionnamefieldsdisplayed = levelPage.isErrorMsgOfUsingSpacesInLevelNameDisplayed();
@@ -506,9 +619,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 53, description = "Verify state creation when the State is created using spaces")
     public void AddStateWithSpacesInStateName() {
         getExtentTest().log(Status.INFO, "Test: Verify state creation when the state name is created using spaces");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickaddstatebutton().enterstatename(" State ").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickaddstatebutton().enterstatename(" State ").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofusingspacesinstatenamefieldsdisplayed = levelPage.isErrorMsgOfUsingSpacesInLevelNameDisplayed();
@@ -518,9 +637,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 54, description = "Verify Territory creation when the Territory name is created using spaces")
     public void AddTerritoryWithSpacesInTerritoryName() {
         getExtentTest().log(Status.INFO, "Test: Verify Territory creation when the Territory name is created using spaces");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickaddTerritorybutton().enterterritoryname(" Territory ").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickaddTerritorybutton().enterterritoryname(" Territory ").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofusingspacesinterritorynamefieldsdisplayed = levelPage.isErrorMsgOfUsingSpacesInLevelNameDisplayed();
@@ -530,9 +655,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 55, description = "Verify Cluster creation when the Cluster name is created using spaces")
     public void AddClusterWithSpacesInClusterName() {
         getExtentTest().log(Status.INFO, "Test: Verify Cluster creation when the Cluster name is created using spaces");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickaddclusterbutton().enterclustername(" Cluster ").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickaddclusterbutton().enterclustername(" Cluster ").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofusingspacesinclusternamefieldsdisplayed = levelPage.isErrorMsgOfUsingSpacesInLevelNameDisplayed();
@@ -542,9 +673,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 56, description = "Verify location creation when the location name is created using spaces")
     public void AddLocationWithSpacesInLocationName() {
         getExtentTest().log(Status.INFO, "Test: Verify location creation when the location name is created using spaces");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clickaddlocationbutton().enterlocationname(" Location ").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clickaddlocationbutton().enterlocationname(" Location ").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean iserrormsgofusingspacesinlocationnamefieldsdisplayed = levelPage.isErrorMsgOfUsingSpacesInLevelNameDisplayed();
@@ -554,9 +691,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 57, description = "Verify the duplicate region creation")
     public void AddDuplicateRegion() {
         getExtentTest().log(Status.INFO, "Test: Verify the duplicate region creation");
-        levelPage.navigateToLevelPage().clickaddregion().enterregionname("South1").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickaddregion().enterregionname("South1").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean submitbuttonDisplayed = levelPage.isSubmitbuttonDisplayed();
@@ -566,9 +709,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 58, description = "Verify the duplicate state creation")
     public void AddDuplicateState() {
         getExtentTest().log(Status.INFO, "Test: Verify the duplicate state creation");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickaddstatebutton().enterstatename("kerala").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickaddstatebutton().enterstatename("kerala").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean submitbuttonDisplayed = levelPage.isSubmitbuttonDisplayed();
@@ -578,9 +727,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 59, description = "Verify the duplicate territory creation")
     public void AddDuplicateTerritory() {
         getExtentTest().log(Status.INFO, "Test: Verify the duplicate territory creation");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickaddTerritorybutton().enterterritoryname("Coimbatore").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickaddTerritorybutton().enterterritoryname("Coimbatore").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean submitbuttonDisplayed = levelPage.isSubmitbuttonDisplayed();
@@ -590,9 +745,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 60, description = "Verify the duplicate cluster creation")
     public void AddDuplicateCluster() {
         getExtentTest().log(Status.INFO, "Test: Verify the duplicate cluster creation");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickaddclusterbutton().enterclustername("RS puram").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickaddclusterbutton().enterclustername("RS puram").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean submitbuttonDisplayed = levelPage.isSubmitbuttonDisplayed();
@@ -602,9 +763,15 @@ public class LevelTest extends BaseTest {
     @Test(priority = 61, description = "Verify the duplicate location creation")
     public void AddDuplicateLocation() {
         getExtentTest().log(Status.INFO, "Test: Verify the duplicate location creation");
-        levelPage.navigateToLevelPage().clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clickaddlocationbutton().enterlocationname("RO1").clicksubmitbutton();
+        levelPage.navigateToLevelPage();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        levelPage.clickFirstRegion().clickFirstState().clickFirstTerritory().clickFirstCluster().clickaddlocationbutton().enterlocationname("RO1").clicksubmitbutton();
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean submitbuttonDisplayed = levelPage.isSubmitbuttonDisplayed();

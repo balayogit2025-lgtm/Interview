@@ -19,11 +19,6 @@ public class ActivitiyPageElements {
         logger.info("Activity Page Elements initialized");
     }
 
-    // --- Main Activity Page Elements ---
-
-/*    @FindBy(xpath = "//h1[text()='Activity']")
-    public WebElement pageHeader; */
-
     public By pageHeader = By.xpath("//h1[text()='Activity']");
 
     @FindBy(xpath = "//p[text()='Manage and monitor all scheduled access activities']")
@@ -47,7 +42,7 @@ public class ActivitiyPageElements {
     @FindBy(xpath = "//thead/tr/th")
     public List<WebElement> tableHeaders;
 
-    @FindBy(xpath = "//tbody/tr")
+    @FindBy(xpath = "//tr[@class='border-y border-transparent border-b-slate-100 ']")
     public List<WebElement> tableRows;
 
     @FindBy(xpath = "//div[contains(text(), 'Showing From')]")
@@ -64,9 +59,16 @@ public class ActivitiyPageElements {
 
     @FindBy(xpath = "//a[@aria-label='Go to last page']")
     public WebElement lastPageButton;
-    
+
     @FindBy(xpath = "//td[8]//button")
     public List<WebElement> actionButtons;
+
+    @FindBy(xpath = "//label[text()='Frequency 1']")
+    public WebElement Frequency1checkbox;
+
+    @FindBy(xpath = "//label[text()='Frequency 2']")
+    public WebElement Frequency2checkbox;
+
 
     // --- Add/Edit Activity Modal Elements ---
 
@@ -496,4 +498,11 @@ public class ActivitiyPageElements {
     @FindBy(xpath = "//p[text()='name should start and end with an alphanumeric character']")
     public WebElement ErrormsgOfUsingSpacesInActivitryNamae;
 
+    @FindBy(xpath = "//th[@class='border border-primary-50 whitespace-nowrap bg-primary/80 px-4 py-1.5 uppercase text-primary-foreground text-xs+ lg:px-5']")
+    public List<WebElement> Listofheaders;
+
+    @FindBy(xpath = "//h2[text()='Add Activity']")
+    public WebElement AddActivityLabel;
+
 }
+

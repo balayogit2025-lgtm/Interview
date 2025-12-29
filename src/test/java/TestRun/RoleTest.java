@@ -128,6 +128,11 @@ public class RoleTest extends BaseTest {
     public void searchRoleWithValidName() {
         getExtentTest().log(Status.INFO, "Test: Verify search functionality with valid role name");
         rolePage.searchavalidvalue();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         int rowCount = rolePage.getRoleTableRowCount();
         Assert.assertTrue(rowCount > 0, "Search should return results or empty table");
         getExtentTest().log(Status.PASS, "Successfully Verified the search functionality with valid role name");
@@ -178,6 +183,11 @@ public class RoleTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify role table is displayed on Role page");
         rolePage.navigatetorolepage();
         boolean isTableDisplayed = rolePage.isroletableDisplayed();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Assert.assertTrue(isTableDisplayed, "Role table should be displayed on the Role page");
         getExtentTest().log(Status.PASS, "Verified the role table is displayed");
     }
@@ -185,7 +195,18 @@ public class RoleTest extends BaseTest {
     @Test(priority = 18, description = "Verify Add Role form elements are displayed")
     public void verifyAddRoleFormElements() {
         getExtentTest().log(Status.INFO, "Test: Verify Add Role form elements are displayed");
-        rolePage.navigatetorolepage().clickaddrole();
+        rolePage.navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        rolePage.clickaddrole();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         boolean isSubmitDisplayed = rolePage.isSubmitButtonDisplayed();
         Assert.assertTrue(isSubmitDisplayed, "Submit button should be displayed on Add Role form");
         getExtentTest().log(Status.PASS, "Verified the Add Role form elements are displayed");
@@ -194,7 +215,13 @@ public class RoleTest extends BaseTest {
     @Test(priority = 19, description = "Verify editing role with empty name is prevented")
     public void editRoleWithEmptyName() {
         getExtentTest().log(Status.INFO, "Test: Verify editing role with empty name is prevented");
-        rolePage.navigatetorolepage().clickmanagebutton().clickeditbutton().clearrolename();
+        rolePage.navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        rolePage.clickmanagebutton().clickeditbutton().clearrolename();
         try {
             Thread.sleep(300);
         } catch (InterruptedException e) {
@@ -210,7 +237,13 @@ public class RoleTest extends BaseTest {
     @Test(priority = 20, description = "Verify cancel button works on Edit Role form")
     public void cancelEditRoleForm() {
         getExtentTest().log(Status.INFO, "Test: Verify cancel button works on Edit Role form");
-        rolePage.navigatetorolepage().clickmanagebutton().clickeditbutton();
+        rolePage.navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        rolePage.clickmanagebutton().clickeditbutton();
         rolePage.clickcancelbutton();
         boolean addRoleButtonDisplayed = rolePage.isAddRoleButtonDisplayedAndEnabled();
         Assert.assertTrue(addRoleButtonDisplayed, "Add Role button should be displayed after canceling edit");
@@ -262,7 +295,13 @@ public class RoleTest extends BaseTest {
     @Test(priority = 25, description = "Verify the Presence of page checkbox under Pages section")
     public void verifyPagenames() {
         getExtentTest().log(Status.INFO, "Test: Verify the Presence of page checkbox under Pages section");
-        rolePage.navigatetorolepage().clickaddrole().clickwebusertype();
+        rolePage.navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        rolePage.clickaddrole().clickwebusertype();
 
         List<String> expected = Arrays.asList("All", "Dashboard", "Levels", "Role","User","KeySafe","Activity","Reports","Settings");
         try {
