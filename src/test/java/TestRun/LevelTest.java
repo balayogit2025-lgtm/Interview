@@ -3,6 +3,7 @@ package TestRun;
 import Base.BaseTest;
 import Pages.LevelPage;
 import Pages.LoginPage;
+import Utils.ConfigReader;
 import Utils.TestLogger;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
@@ -22,7 +23,7 @@ public class LevelTest extends BaseTest {
         navigateToApp();
         loginPage = new LoginPage(getDriver());
         levelPage = new LevelPage(getDriver());
-        loginPage.login("admin@gmail.com", "Sterna@123");
+        loginPage.login(ConfigReader.getLevelValidEmail(), ConfigReader.getValidPassword());
     }
 
     @Test(priority = 1, description = "Navigate to Level page")

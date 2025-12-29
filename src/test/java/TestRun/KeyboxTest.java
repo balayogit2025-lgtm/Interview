@@ -32,7 +32,7 @@ public class KeyboxTest extends BaseTest {
         keyboxPage = new KeyboxPage(getDriver());
 
         // Login before each test
-        loginPage.login(ConfigReader.getValidEmail(), ConfigReader.getValidPassword());
+        loginPage.login(ConfigReader.getkeyboxValidEmail(), ConfigReader.getValidPassword());
         keyboxPage.navigateToKeyboxPage();
         getExtentTest().log(Status.INFO, "Setup complete. Navigated to Key Box Page.");
     }

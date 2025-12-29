@@ -32,7 +32,7 @@ public class DeviceActivityTest extends BaseTest {
         deviceActivityPage = new DeviceActivityPage(getDriver());
 
         // Login before each test
-        loginPage.login(ConfigReader.getValidEmail(), ConfigReader.getValidPassword());
+        loginPage.login(ConfigReader.getDeviceActivityValidEmail(), ConfigReader.getValidPassword());
         deviceActivityPage.navigateToDeviceActivityPage();
         getExtentTest().log(Status.INFO, "Setup complete. Navigated to Device Activity Page.");
     }

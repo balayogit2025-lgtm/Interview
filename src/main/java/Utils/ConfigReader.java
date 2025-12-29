@@ -98,6 +98,32 @@ public class ConfigReader {
         return getProperty("uservalid.email");
     }
 
+    public static String getActivityValidEmail() {
+        return getProperty("activityvalid.email");
+    }
+
+    public static String getDeviceActivityValidEmail() {
+        return getProperty("devicevalid.email");
+    }
+
+    public static String getLevelValidEmail() {
+        return getProperty("levelvalid.email");
+    }
+
+    public static String getkeyboxValidEmail() {
+        return getProperty("keyboxvalid.email");
+    }
+
+    public static String getkeyPositionValidEmail() {
+        return getProperty("keyboxposition.email");
+    }
+
+
+
+
+
+
+
     /**
      * Get invalid email for testing
      */
