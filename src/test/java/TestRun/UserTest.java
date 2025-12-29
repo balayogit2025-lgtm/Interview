@@ -36,7 +36,7 @@ public class UserTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Navigate to User page");
         userPage.navigatetouserpage();
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         boolean Adduserbuttonenabledanddisplayed = userPage.isadduserbuttonanabledanddisplayed();
@@ -217,6 +217,11 @@ public class UserTest extends BaseTest {
     public void verifyThePresenceOfWebuserSection() {
         getExtentTest().log(Status.INFO, "Test: Verify the presence of Webuser section after selecting the role as Only Web user");
         userPage.selectthewebuserrole();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         boolean  webusersectiondisplayed= userPage.iswebusersectiondisplayed();
         Assert.assertTrue(webusersectiondisplayed, "Webuser section is not displayed");
         getExtentTest().log(Status.PASS, "Verfied the presence of web user section");
@@ -226,6 +231,11 @@ public class UserTest extends BaseTest {
     public void VerifyThePresenceOfKeysafeuserSection() {
         getExtentTest().log(Status.INFO, "Test: Verify the presence of Keysafeuser section after selecting the role as Only Keysafeuser");
         userPage.selectthekeyboxuserrole();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         boolean  keysafeusersectiondisplayed= userPage.iskeysafeusersectiondisplayed();
         Assert.assertTrue(keysafeusersectiondisplayed, "Keysafeuser section is not displayed");
         getExtentTest().log(Status.PASS, "Verfied the presence of keysafe user section");
@@ -234,6 +244,11 @@ public class UserTest extends BaseTest {
     public void VerifyThePresenceOfBothUsersSection() {
         getExtentTest().log(Status.INFO, "Test: Verify the presence of Webuser section after selecting the role as Only Web user");
         userPage.selectthebothuserrole();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         boolean bothsectionsdisplayed = userPage.iswebusersectiondisplayed() && userPage.iskeysafeusersectiondisplayed();
         Assert.assertTrue(bothsectionsdisplayed, "Both Keysafe and Web user section is not displayed");
         getExtentTest().log(Status.PASS, "Verfied the presence of web user & key box section");

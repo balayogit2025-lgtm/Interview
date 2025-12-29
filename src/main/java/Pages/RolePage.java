@@ -31,7 +31,7 @@ public class RolePage {
         try {
             WebElement role = elements.getRole();
             try {
-                Thread.sleep(300);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
             role.click();
@@ -112,7 +112,13 @@ public class RolePage {
         return this;
     }
     public RolePage Addnewwebusertype() {
-        navigatetorolepage().clickaddrole().clickwebusertype().enterrolename("TEST ROLE 2");
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().clickwebusertype().enterrolename("TEST ROLE 2");
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -122,11 +128,23 @@ public class RolePage {
         return this;
     }
     public RolePage Addnewkeyboxusertype() {
-        navigatetorolepage().clickaddrole().clickKeyboxusertype().enterrolename("TEST ROLE 2").clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().clickKeyboxusertype().enterrolename("TEST ROLE 2").clicksubmitbutton();
         return this;
     }
     public RolePage Addnewrolewithbothusertype() {
-        navigatetorolepage().clickaddrole().clickwebusertype().enterrolename("TEST ROLE 3").clickKeyboxusertype();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().clickwebusertype().enterrolename("TEST ROLE 3").clickKeyboxusertype();
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -158,7 +176,13 @@ public class RolePage {
         return this;
     }
     public RolePage editAnRole() {
-        navigatetorolepage().clickmanagebutton().clickeditbutton().clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickmanagebutton().clickeditbutton().clicksubmitbutton();
         return this;
     }
     public RolePage clickdeletebutton() {
@@ -185,7 +209,13 @@ public class RolePage {
     }
 
     public RolePage deleteAnRole() {
-        navigatetorolepage().clickmanagebutton().clickdeletebutton().clickdeleteconfirmbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickmanagebutton().clickdeletebutton().clickdeleteconfirmbutton();
         return this;
     }
 
@@ -235,7 +265,13 @@ public class RolePage {
         return this;
     }
     public RolePage searchavalidvalue() {
-        navigatetorolepage().clicksearchicon();
+        navigatetorolepage();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clicksearchicon();
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -374,22 +410,46 @@ public class RolePage {
     }
 
     public RolePage addRoleWithEmptyName() {
-        navigatetorolepage().clickaddrole().clickKeyboxusertype().clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().clickKeyboxusertype().clicksubmitbutton();
         return this;
     }
 
     public RolePage addRoleWithoutUserType() {
-        navigatetorolepage().clickaddrole().enterrolename("TEST Role 8").clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().enterrolename("TEST Role 8").clicksubmitbutton();
         return this;
     }
 
     public RolePage cancelinAddRole() {
-        navigatetorolepage().clickaddrole().enterrolename("ROLE 7").clickKeyboxusertype().clickcancelbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().enterrolename("ROLE 7").clickKeyboxusertype().clickcancelbutton();
         return this;
     }
 
     public RolePage cancelDeleteRole() {
-        navigatetorolepage().clickmanagebutton().clickdeletebutton().clickdeletecancelbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickmanagebutton().clickdeletebutton().clickdeletecancelbutton();
         return this;
     }
 
@@ -404,23 +464,47 @@ public class RolePage {
     }
 
     public RolePage addDuplicateRole() {
-        navigatetorolepage().clickaddrole().enterrolename("Test role").clickKeyboxusertype().clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().enterrolename("Test role").clickKeyboxusertype().clicksubmitbutton();
         return this;
     }
 
     public RolePage addRoleWithLongName() {
         String longRoleName = "THIS IS A VERY LONG ROLE NAME THAT EXCEEDS NORMAL LENGTH LIMITS FOR TESTING PURPOSES VERY LONG ROLE NAME THAT EXCEEDS NORMAL LENGTH LIMITS FOR TESTING PURPOSES";
-        navigatetorolepage().clickaddrole().enterrolename(longRoleName).clickKeyboxusertype().clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().enterrolename(longRoleName).clickKeyboxusertype().clicksubmitbutton();
         return this;
     }
     public RolePage addRoleWithonlynumeric(){
         String num = "1234567";
-        navigatetorolepage().clickaddrole().enterrolename(num).clickKeyboxusertype().clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().enterrolename(num).clickKeyboxusertype().clicksubmitbutton();
         return this;
     }
     public RolePage addRoleWithWhitespaceOnlyName() {
         String whitespaceName = " QA TEST ";
-        navigatetorolepage().clickaddrole().enterrolename(whitespaceName).clickKeyboxusertype().clicksubmitbutton();
+        navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        clickaddrole().enterrolename(whitespaceName).clickKeyboxusertype().clicksubmitbutton();
         return this;
     }
 
@@ -489,6 +573,11 @@ public class RolePage {
     public String totalresults()  {
         TestLogger.info("Getting total role count");
         navigatetorolepage();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         String text = driver.findElement(By.xpath("//div[contains(text(), 'Showing From')]")).getText();
         String value = text.split(" ")[6];
         return value;
