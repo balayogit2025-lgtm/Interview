@@ -5,21 +5,16 @@ import Utils.CommonUtil;
 import Utils.TestLogger;
 import Utils.WaitHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-/**
- * KeyboxPage - Page Object class for Key Box page
- * URL: /keySafes
- * Contains all business logic and user actions for the Key Box page
- *
- * @author Sterna QA Team
- * @version 1.0
- */
+
+
 public class KeyboxPage {
 
     private final WebDriver driver;
@@ -35,16 +30,12 @@ public class KeyboxPage {
         PageFactory.initElements(driver, this);
     }
 
-    // ==================== PAGE NAVIGATION & VERIFICATION ====================
-
-    /**
-     * Navigate to the Key Box page from the sidebar
-     */
-    public void navigateToKeyboxPage() {
+    public KeyboxPage navigateToKeyboxPage() {
         TestLogger.info("Navigating to Key Box page...");
         waitHelper.waitForElementClickable(keyboxElements.keyboxNavLinkLocator).click();
         waitHelper.waitForElementVisible(keyboxElements.pageHeaderLocator);
         TestLogger.success("Successfully navigated to Key Box page.");
+        return this;
     }
 
     /**
@@ -61,17 +52,11 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Get page header text
-     */
     public String getPageHeaderText() {
         WebElement pageHeader = waitHelper.waitForElementVisible(keyboxElements.pageHeaderLocator);
         return pageHeader.getText();
     }
 
-    /**
-     * Check if page sub-header is displayed
-     */
     public boolean isPageSubHeaderDisplayed() {
         TestLogger.info("Checking if page sub-header is displayed.");
         try {
@@ -82,18 +67,12 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Get page sub-header text
-     */
     public String getPageSubHeaderText() {
+
         return keyboxElements.pageSubHeader.getText();
     }
 
-    // ==================== STATISTICS CARDS ====================
 
-    /**
-     * Check if Total Key Box card is displayed
-     */
     public boolean isTotalKeyBoxCardDisplayed() {
         TestLogger.info("Checking if Total Key Box card is displayed.");
         try {
@@ -274,19 +253,50 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Get table headers
-     */
-    public List<String> getTableHeaders() {
-        TestLogger.info("Getting table headers...");
-        return keyboxElements.tableHeaders.stream()
-                .map(WebElement::getText)
-                .collect(Collectors.toList());
+    public List<String> getColumnHeaderTexts() {
+        List<String> headerTexts = new ArrayList<>();
+        List<WebElement> Columnheaders = driver.findElements(By.xpath("//th[@class='border border-primary-50 whitespace-nowrap bg-primary/80 px-4 py-1.5 uppercase text-primary-foreground text-xs+ lg:px-5']"));
+        for (WebElement header : Columnheaders) {
+            headerTexts.add(header.getText().trim());
+        }
+        return headerTexts;
     }
 
-    /**
-     * Check if table header row is displayed
-     */
+    public int getTableRowCount() {
+        TestLogger.info("Checking table row count");
+        try {
+            List<WebElement> KeyboxTableRows = driver.findElements(By.xpath("//tr[@class='border-y border-transparent border-b-slate-100 ']"));
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            return KeyboxTableRows.size();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public KeyboxPage SearchaValidValue() {
+        clickSearchButton();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        searchKeybox("AMS Activity");
+        return this;
+    }
+
+    public KeyboxPage SearchaInValidValue() {
+        clickSearchButton();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        searchKeybox("No activity");
+        return this;
+    }
+
     public boolean isTableHeaderRowDisplayed() {
         TestLogger.info("Checking if table header row is displayed.");
         try {
@@ -299,17 +309,7 @@ public class KeyboxPage {
     /**
      * Get table row count (excluding empty state row)
      */
-    public int getTableRowCount() {
-        try {
-            // Check if empty state is displayed
-            if (isNoResultsDisplayed()) {
-                return 0;
-            }
-            return keyboxElements.tableRows.size();
-        } catch (Exception e) {
-            return 0;
-        }
-    }
+
 
     /**
      * Check if "No results found" message is displayed
@@ -363,6 +363,7 @@ public class KeyboxPage {
      * Get serial number from specific row (column index 1)
      */
     public String getSerialNumberFromRow(int rowIndex) {
+
         return getCellText(rowIndex, 1);
     }
 
@@ -370,6 +371,7 @@ public class KeyboxPage {
      * Get location from specific row (column index 2)
      */
     public String getLocationFromRow(int rowIndex) {
+
         return getCellText(rowIndex, 2);
     }
 
@@ -377,29 +379,15 @@ public class KeyboxPage {
      * Get Ro Type from specific row (column index 3)
      */
     public String getRoTypeFromRow(int rowIndex) {
+
         return getCellText(rowIndex, 3);
     }
 
-    /**
-     * Get action buttons count
-     */
-    public int getActionButtonsCount() {
-        try {
-            return keyboxElements.actionButtons.size();
-        } catch (Exception e) {
-            return 0;
-        }
-    }
 
-    // ==================== SEARCH OPERATIONS ====================
-
-    /**
-     * Check if search button is displayed
-     */
-    public boolean isSearchButtonDisplayed() {
+    public boolean isSearchIconDisplayed() {
         TestLogger.info("Checking if Search button is displayed.");
         try {
-            return keyboxElements.searchButton.isDisplayed();
+            return keyboxElements.searchicon.isDisplayed();
         } catch (Exception e) {
             TestLogger.error("Search button not found: " + e.getMessage());
             return false;
@@ -409,9 +397,10 @@ public class KeyboxPage {
     /**
      * Click search button to expand search
      */
-    public void clickSearchButton() {
-        TestLogger.info("Clicking search button...");
-        keyboxElements.searchButton.click();
+    public KeyboxPage clickSearchButton() {
+        TestLogger.info("Clicking search button");
+        keyboxElements.searchicon.click();
+        return this;
     }
 
     /**
@@ -429,19 +418,17 @@ public class KeyboxPage {
     /**
      * Search for key box by text
      */
-    public void searchKeybox(String searchText) {
+    public KeyboxPage searchKeybox(String searchText) {
         TestLogger.info("Searching for key box: " + searchText);
-        clickSearchButton();
-        WebElement searchField = waitHelper.waitForElementVisible(keyboxElements.searchInputLocator);
-        searchField.clear();
-        searchField.sendKeys(searchText);
+        keyboxElements.searchInput.sendKeys(searchText);
         TestLogger.info("Search initiated for: " + searchText);
+        return this;
     }
 
     /**
      * Clear search input
      */
-    public void clearSearch() {
+    public KeyboxPage clearSearch() {
         TestLogger.info("Clearing search input...");
         try {
             WebElement searchField = driver.findElement(keyboxElements.searchInputLocator);
@@ -450,6 +437,7 @@ public class KeyboxPage {
         } catch (Exception e) {
             TestLogger.info("Search field not visible or already cleared.");
         }
+        return this;
     }
 
     // ==================== FILTER OPERATIONS ====================
@@ -467,17 +455,24 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Click filter button
-     */
-    public void clickFilterButton() {
+    public KeyboxPage clickFilterButton() {
         TestLogger.info("Clicking filter button...");
         keyboxElements.filterButton.click();
+        return this;
     }
 
-    /**
-     * Check if filter dialog is displayed
-     */
+    public KeyboxPage clickTypeDropdown() {
+        TestLogger.info("Clicking Type Dropdown Default value");
+        keyboxElements.TypeDropdown.click();
+        return this;
+    }
+
+    public KeyboxPage clickOptionInTypeDropdown() {
+        TestLogger.info("Clicking Option In Type Dropdown");
+        keyboxElements.OptionInTypeDropDown.click();
+        return this;
+    }
+
     public boolean isFilterDialogDisplayed() {
         TestLogger.info("Checking if filter dialog is displayed.");
         try {
@@ -488,9 +483,7 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Check if filter dialog title is displayed
-     */
+
     public boolean isFilterDialogTitleDisplayed() {
         TestLogger.info("Checking if filter dialog title is displayed.");
         try {
@@ -500,9 +493,7 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Get filter dialog title text
-     */
+
     public String getFilterDialogTitleText() {
         try {
             return keyboxElements.filterDialogTitle.getText();
@@ -511,9 +502,7 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Check if filter dialog description is displayed
-     */
+
     public boolean isFilterDialogDescriptionDisplayed() {
         TestLogger.info("Checking if filter dialog description is displayed.");
         try {
@@ -523,9 +512,6 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Get filter dialog description text
-     */
     public String getFilterDialogDescriptionText() {
         try {
             return keyboxElements.filterDialogDescription.getText();
@@ -534,9 +520,6 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Check if Status filter label is displayed
-     */
     public boolean isStatusFilterLabelDisplayed() {
         TestLogger.info("Checking if Status filter label is displayed.");
         try {
@@ -546,9 +529,6 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Check if Status filter dropdown is displayed
-     */
     public boolean isStatusFilterDropdownDisplayed() {
         TestLogger.info("Checking if Status filter dropdown is displayed.");
         try {
@@ -558,17 +538,12 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Click Status filter dropdown
-     */
-    public void clickStatusFilterDropdown() {
+    public KeyboxPage clickStatusFilterDropdown() {
         TestLogger.info("Clicking Status filter dropdown...");
         keyboxElements.statusFilterDropdown.click();
+        return this;
     }
 
-    /**
-     * Get Status filter selected value
-     */
     public String getStatusFilterSelectedValue() {
         try {
             return keyboxElements.statusFilterSelectedValue.getText();
@@ -577,9 +552,6 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Select Status filter option
-     */
     public void selectStatusFilterOption(String optionText) {
         TestLogger.info("Selecting Status filter option: " + optionText);
         clickStatusFilterDropdown();
@@ -592,9 +564,7 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Check if Type filter label is displayed
-     */
+
     public boolean isTypeFilterLabelDisplayed() {
         TestLogger.info("Checking if Type filter label is displayed.");
         try {
@@ -604,9 +574,6 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Check if Type filter dropdown is displayed
-     */
     public boolean isTypeFilterDropdownDisplayed() {
         TestLogger.info("Checking if Type filter dropdown is displayed.");
         try {
@@ -831,55 +798,12 @@ public class KeyboxPage {
         return allElementsDisplayed;
     }
 
-    // ==================== ACTION MENU OPERATIONS ====================
 
-    /**
-     * Click action menu for specific row
-     */
-    public void clickActionMenuForRow(int rowIndex) {
-        TestLogger.info("Clicking action menu for row " + rowIndex);
-        if (keyboxElements.actionButtons.size() > rowIndex) {
-            keyboxElements.actionButtons.get(rowIndex).click();
-            waitHelper.waitForElementVisible(keyboxElements.actionMenuLocator);
-        } else {
-            TestLogger.error("Action button not found for row " + rowIndex);
-        }
-    }
-
-    /**
-     * Select View from action menu
-     */
-    public void selectViewFromActionMenu() {
-        TestLogger.info("Selecting 'View' from action menu...");
-        waitHelper.waitForElementClickable(keyboxElements.viewActionLocator).click();
-    }
-
-    /**
-     * Select Edit from action menu
-     */
-    public void selectEditFromActionMenu() {
-        TestLogger.info("Selecting 'Edit' from action menu...");
-        waitHelper.waitForElementClickable(keyboxElements.editActionLocator).click();
-    }
-
-    /**
-     * Select Delete from action menu
-     */
-    public void selectDeleteFromActionMenu() {
-        TestLogger.info("Selecting 'Delete' from action menu...");
-        waitHelper.waitForElementClickable(keyboxElements.deleteActionLocator).click();
-    }
-
-    // ==================== MODAL OPERATIONS ====================
-
-    /**
-     * Check if modal is displayed
-     */
     public boolean isModalDisplayed() {
         TestLogger.info("Checking if modal is displayed.");
         try {
-            WebElement modal = waitHelper.waitForElementVisible(keyboxElements.modalContainerLocator);
-            return modal.isDisplayed();
+            WebElement Viewmodal = waitHelper.waitForElementVisible(keyboxElements.ModalLocator);
+            return Viewmodal.isDisplayed();
         } catch (Exception e) {
             return false;
         }
@@ -918,104 +842,33 @@ public class KeyboxPage {
         TestLogger.success("Clicked close button.");
     }
 
-    /**
-     * Check if modal is closed
-     */
-    public boolean isModalClosed() {
-        TestLogger.info("Checking if modal is closed.");
+    public boolean IsSerialNumberColumnDisplayedInViewModal() {
+        TestLogger.info("Checking Serial no column name is displayed in view modal");
         try {
-            Thread.sleep(500);
-            List<WebElement> modals = driver.findElements(keyboxElements.modalContainerLocator);
-            return modals.isEmpty() || !modals.get(0).isDisplayed();
-        } catch (Exception e) {
-            return true;
-        }
-    }
-
-    // ==================== VIEW MODAL OPERATIONS ====================
-
-    /**
-     * Get serial number from view modal
-     */
-    public String getViewModalSerialNumber() {
-        try {
-            return keyboxElements.viewSerialNumber.getText();
-        } catch (Exception e) {
-            return "";
-        }
-    }
-
-    /**
-     * Get location from view modal
-     */
-    public String getViewModalLocation() {
-        try {
-            return keyboxElements.viewLocation.getText();
-        } catch (Exception e) {
-            return "";
-        }
-    }
-
-    /**
-     * Get Ro Type from view modal
-     */
-    public String getViewModalRoType() {
-        try {
-            return keyboxElements.viewRoType.getText();
-        } catch (Exception e) {
-            return "";
-        }
-    }
-
-    /**
-     * Get status from view modal
-     */
-    public String getViewModalStatus() {
-        try {
-            return keyboxElements.viewStatus.getText();
-        } catch (Exception e) {
-            return "";
-        }
-    }
-
-    // ==================== DELETE OPERATIONS ====================
-
-    /**
-     * Check if delete confirmation is displayed
-     */
-    public boolean isDeleteConfirmationDisplayed() {
-        TestLogger.info("Checking if delete confirmation is displayed.");
-        try {
-            WebElement confirmDialog = waitHelper.waitForElementVisible(keyboxElements.deleteConfirmationLocator);
-            return confirmDialog.isDisplayed();
+            return keyboxElements.ViewSerialNumber.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    /**
-     * Confirm deletion
-     */
-    public void confirmDeletion() {
-        TestLogger.info("Confirming deletion...");
-        waitHelper.waitForElementClickable(keyboxElements.confirmDeleteButtonLocator).click();
-        TestLogger.success("Deletion confirmed.");
+    public boolean IsNameColumnDisplayedInViewModal() {
+        TestLogger.info("Checking Name column name is displayed in view modal");
+        try {
+            return keyboxElements.ViewName.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
-    /**
-     * Cancel deletion
-     */
-    public void cancelDeletion() {
-        TestLogger.info("Canceling deletion...");
-        waitHelper.waitForElementClickable(keyboxElements.cancelDeleteButtonLocator).click();
-        TestLogger.success("Deletion canceled.");
+    public boolean IsRoleColumnDisplayedInViewModal() {
+        TestLogger.info("Checking Role column name is displayed in view modal");
+        try {
+            return keyboxElements.ViewRole.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
-    // ==================== PAGINATION OPERATIONS ====================
-
-    /**
-     * Check if pagination info is displayed
-     */
     public boolean isPaginationInfoDisplayed() {
         TestLogger.info("Checking if pagination info is displayed.");
         try {
@@ -1133,6 +986,7 @@ public class KeyboxPage {
 
     /**
      * Get count of rows with specific status on current page
+     *
      * @param status The status to count (e.g., "Registered", "Unregistered")
      */
     public int getRowCountByStatusOnCurrentPage(String status) {
@@ -1163,6 +1017,7 @@ public class KeyboxPage {
 
     /**
      * Get total count of rows with specific status across all pages
+     *
      * @param status The status to count (e.g., "Registered", "Unregistered")
      */
     public int getTotalRowCountByStatus(String status) {
@@ -1258,17 +1113,21 @@ public class KeyboxPage {
      * Check if next page button is enabled
      */
     public boolean isNextPageButtonEnabled() {
-        try {
-            String buttonClass = keyboxElements.nextPageButton.getAttribute("class");
-            return buttonClass == null || !buttonClass.contains("pointer-events-none");
-        } catch (Exception e) {
-            return false;
+        WebElement nextButton = keyboxElements.nextPageButton;
+        String classes = nextButton.getAttribute("class");
+
+        boolean isEnabled = !classes.contains("pointer-events-none");
+
+        if (isEnabled) {
+            System.out.println("Next Page button is ENABLED");
+        } else {
+            System.out.println("Next Page button is DISABLED");
         }
+
+        return isEnabled;
     }
 
-    /**
-     * Check if previous page button is enabled
-     */
+
     public boolean isPreviousPageButtonEnabled() {
         try {
             String buttonClass = keyboxElements.previousPageButton.getAttribute("class");
@@ -1319,9 +1178,6 @@ public class KeyboxPage {
         }
     }
 
-    /**
-     * Wait for loading to complete
-     */
     public void waitForLoadingComplete() {
         TestLogger.info("Waiting for loading to complete...");
         try {
@@ -1331,125 +1187,142 @@ public class KeyboxPage {
         }
     }
 
-    // ==================== INDIVIDUAL HEADER VERIFICATION ====================
+    public KeyboxPage clickActionButton() {
+        TestLogger.info("Clicking Action button");
+        keyboxElements.ActionButton.click();
+        return this;
+    }
 
-    /**
-     * Check if S.No header is displayed
-     */
-    public boolean isSnoHeaderDisplayed() {
+    public KeyboxPage clickViewButton() {
+        TestLogger.info("Clicking View button");
+        keyboxElements.ViewButton.click();
+        return this;
+    }
+
+    public KeyboxPage clickEditButton() {
+        TestLogger.info("Clicking Edit button");
+        keyboxElements.EditButton.click();
+        return this;
+    }
+
+    public boolean isFirstPageButtonDisplayed() {
+        TestLogger.info("Checking the First page button displayed");
         try {
-            return keyboxElements.snoHeader.isDisplayed();
+            WebElement firstPageButton = keyboxElements.firstPageButton;
+            return firstPageButton.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    /**
-     * Check if Serial Number header is displayed
-     */
-    public boolean isSerialNumberHeaderDisplayed() {
+    public boolean isPreviousPageButtonDisplayed() {
+        TestLogger.info("Checking the previous page button displayed");
         try {
-            return keyboxElements.serialNumberHeader.isDisplayed();
+            WebElement PreviousPageButton = keyboxElements.previousPageButton;
+            return PreviousPageButton.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    /**
-     * Check if Location header is displayed
-     */
-    public boolean isLocationHeaderDisplayed() {
+    public boolean isNextPageButtonDisplayed() {
+        TestLogger.info("Checking the next page button displayed");
         try {
-            return keyboxElements.locationHeader.isDisplayed();
+            WebElement nextPageButton = keyboxElements.nextPageButton;
+            return nextPageButton.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    /**
-     * Check if Ro Type header is displayed
-     */
-    public boolean isRoTypeHeaderDisplayed() {
+    public boolean isLastPageButtonDisplayed() {
+        TestLogger.info("Checking the last page button displayed");
         try {
-            return keyboxElements.roTypeHeader.isDisplayed();
+            WebElement lastPageButton = keyboxElements.lastPageButton;
+            return lastPageButton.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    /**
-     * Check if Last Communicated Date header is displayed
-     */
-    public boolean isLastCommunicatedHeaderDisplayed() {
-        try {
-            return keyboxElements.lastCommunicatedHeader.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    /**
-     * Check if Registered By header is displayed
-     */
-    public boolean isRegisteredByHeaderDisplayed() {
-        try {
-            return keyboxElements.registeredByHeader.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    /**
-     * Check if Updated By header is displayed
-     */
-    public boolean isUpdatedByHeaderDisplayed() {
-        try {
-            return keyboxElements.updatedByHeader.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    /**
-     * Check if Status header is displayed
-     */
-    public boolean isStatusHeaderDisplayed() {
-        try {
-            return keyboxElements.statusHeader.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    /**
-     * Check if Action header is displayed
-     */
-    public boolean isActionHeaderDisplayed() {
-        try {
-            return keyboxElements.actionHeader.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    // ==================== COMPLEX WORKFLOW METHODS ====================
-
-    /**
-     * View key box details for specific row
-     */
-    public void viewKeyboxDetails(int rowIndex) {
-        TestLogger.info("Viewing key box details at row " + rowIndex);
-        clickActionMenuForRow(rowIndex);
-        selectViewFromActionMenu();
-    }
-
-    /**
-     * Close view modal if open
-     */
-    public void closeViewModal() {
+    public KeyboxPage closeViewModal() {
         TestLogger.info("Closing view modal...");
         if (isModalDisplayed()) {
             clickCloseButton();
         }
+        return this;
     }
+    public KeyboxPage clickOptionInStatusDropdown() {
+        TestLogger.info("Clicking Option In Status Dropdown");
+        keyboxElements.OptionInStatusDropdown.click();
+        return this;
+    }
+    public KeyboxPage clickRegisterButton() {
+        TestLogger.info("Clicking Register button");
+        keyboxElements.RegisterButton.click();
+        return this;
+    }
+    public KeyboxPage clickActionButtonOfUnregistered() {
+        TestLogger.info("Clicking the action button of UnRegister");
+        keyboxElements.ActionButtonofUnregistered.click();
+        return this;
+    }
+    public KeyboxPage clickRoTypeDropdown() {
+        TestLogger.info("Clicking the RO Type Dropdown");
+        keyboxElements.ROTypeDropdown.click();
+        return this;
+    }
+    public KeyboxPage clickOptionInRoTypeDropdown() {
+        TestLogger.info("Clicking the Option In Ro Type Dropdown");
+        keyboxElements.OptionInROTypeDropdown.click();
+        return this;
+    }
+    public KeyboxPage clickLocationDropdown() {
+        TestLogger.info("Clicking the location dropdown");
+        keyboxElements.LocationDropdown.click();
+        return this;
+    }
+    public KeyboxPage EnterLocationInSearchbox(String location) {
+        TestLogger.info("enter the location search box");
+        keyboxElements.LocationSearchBox.sendKeys(location);
+        return this;
+    }
+    public KeyboxPage clickOptionInLocationDropdown() {
+        TestLogger.info("Clicking the option in location dropdown");
+        keyboxElements.OptionInLocationDropdown.click();
+        return this;
+    }
+    public KeyboxPage clickTemplateDropdown() {
+        TestLogger.info("Clicking the template dropdown");
+        keyboxElements.TemplateDropdown.click();
+        return this;
+    }
+    public KeyboxPage clickOptionInTemplateDropdown() {
+        TestLogger.info("Clicking the option in Template Dropdown");
+        keyboxElements.OptionInTemplateDropdown.click();
+        return this;
+    }
+    public KeyboxPage clickCancelButton() {
+        TestLogger.info("Clicking the CANCEL Button");
+        keyboxElements.CancelButton.click();
+        return this;
+    }
+
+    public KeyboxPage clickSubmitButton() {
+        TestLogger.info("Clicking the Submit button");
+        keyboxElements.SubmitButton.click();
+        return this;
+    }
+    public KeyboxPage clickClearAllButton() {
+        TestLogger.info("Clicking the Clear All button");
+        keyboxElements.ClearAllButton.click();
+        return this;
+    }
+  /*  public KeyboxPage EnterSearchLocation() {
+        TestLogger.info("Clicking the Search location");
+        keyboxElements.SearchLocation.sendKeys("Chennai");
+        keyboxElements.SearchLocation.sendKeys(Keys.ENTER);
+        return this;
+    }*/
+
 }

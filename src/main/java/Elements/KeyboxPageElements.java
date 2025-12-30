@@ -10,14 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-/**
- * KeyboxPageElements - Contains all web element locators for the Key Box page
- * URL: /keySafes
- * Follows the Page Object Model pattern with separate element definitions
- *
- * @author Sterna QA Team
- * @version 1.0
- */
 public class KeyboxPageElements {
 
     private static final Logger logger = LogManager.getLogger(KeyboxPageElements.class);
@@ -26,8 +18,6 @@ public class KeyboxPageElements {
         PageFactory.initElements(driver, this);
         logger.info("Keybox Page Elements initialized");
     }
-
-    // ==================== PAGE HEADER ELEMENTS ====================
 
     @FindBy(xpath = "//h1[text()='Key Box']")
     public WebElement pageHeader;
@@ -39,24 +29,32 @@ public class KeyboxPageElements {
 
     public By pageSubHeaderLocator = By.xpath("//p[text()='Manage and configure all registered key box devices']");
 
-    // ==================== SEARCH ELEMENTS ====================
 
-    @FindBy(xpath = "//button[@aria-label='Expand search']")
-    public WebElement searchButton;
 
-    public By searchButtonLocator = By.xpath("//button[@aria-label='Expand search']");
+    @FindBy(xpath = "(//button[@data-slot='button']) [2]")
+    public WebElement searchicon;
 
-    @FindBy(xpath = "//input[@placeholder='Search...' or @type='search']")
+    public By searchIconLocator = By.xpath("(//button[@data-slot='button']) [2]");
+
+    @FindBy(xpath = "//input[@data-slot='input']")
     public WebElement searchInput;
 
-    public By searchInputLocator = By.xpath("//input[@placeholder='Search...' or @type='search']");
+    public By searchInputLocator = By.xpath("//input[@data-slot='input']");
 
-    // ==================== FILTER ELEMENTS ====================
-
-    @FindBy(xpath = "//button[contains(.,'Filter')]")
+    @FindBy(xpath = "//button[text()='Filter']")
     public WebElement filterButton;
 
     public By filterButtonLocator = By.xpath("//button[contains(.,'Filter')]");
+
+    @FindBy(xpath = "(//button[@role='combobox']) [2]")
+    public WebElement TypeDropdown;
+
+    public By TypeDropdownDefaultValueLocator = By.xpath("(//span[@data-slot='select-value']) [2]");
+
+    @FindBy(xpath = "//span[text()='Month Till Date']")
+    public WebElement OptionInTypeDropDown;
+
+    public By OptionInTypeDropDownLocator = By.xpath("//span[text()='Month Till Date']");
 
     @FindBy(xpath = "//div[@role='dialog']")
     public WebElement filterDialog;
@@ -80,12 +78,12 @@ public class KeyboxPageElements {
 
     public By statusFilterLabelLocator = By.xpath("//label[text()='Status']");
 
-    @FindBy(xpath = "//label[text()='Status']/following-sibling::button[@role='combobox']")
+    @FindBy(xpath = "(//button[@role='combobox']) [1]")
     public WebElement statusFilterDropdown;
 
-    public By statusFilterDropdownLocator = By.xpath("//label[text()='Status']/following-sibling::button[@role='combobox']");
+    public By statusFilterDropdownLocator = By.xpath("(//button[@role='combobox']) [1]");
 
-    @FindBy(xpath = "//label[text()='Status']/following-sibling::button[@role='combobox']//span[@data-slot='select-value']")
+    @FindBy(xpath = "(//span[@data-slot='select-value']) [1]")
     public WebElement statusFilterSelectedValue;
 
     // Type Filter Dropdown
@@ -94,10 +92,10 @@ public class KeyboxPageElements {
 
     public By typeFilterLabelLocator = By.xpath("//label[text()='Type']");
 
-    @FindBy(xpath = "//label[text()='Type']/following-sibling::button[@role='combobox']")
+    @FindBy(xpath = "(//button[@role='combobox']) [2]")
     public WebElement typeFilterDropdown;
 
-    public By typeFilterDropdownLocator = By.xpath("//label[text()='Type']/following-sibling::button[@role='combobox']");
+    public By typeFilterDropdownLocator = By.xpath("(//button[@role='combobox']) [2]");
 
     @FindBy(xpath = "//label[text()='Type']/following-sibling::button[@role='combobox']//span[@data-slot='select-value']")
     public WebElement typeFilterSelectedValue;
@@ -114,10 +112,10 @@ public class KeyboxPageElements {
     public By applyFilterButtonLocator = By.xpath("//button[text()='Apply Filter']");
 
     // Filter Dialog Close Button (X)
-    @FindBy(xpath = "//div[@role='dialog']//button[@data-slot='dialog-close' and .//svg[contains(@class,'lucide-x')]]")
+    @FindBy(xpath = "(//button[@data-slot='dialog-close']) [2]")
     public WebElement filterDialogCloseButton;
 
-    public By filterDialogCloseButtonLocator = By.xpath("//div[@role='dialog']//button[@data-slot='dialog-close' and .//svg[contains(@class,'lucide-x')]]");
+    public By filterDialogCloseButtonLocator = By.xpath("(//button[@data-slot='dialog-close']) [2]");
 
     // Filter Dropdown Options (generic locators)
     public By filterDropdownOptionLocator(String optionText) {
@@ -128,20 +126,20 @@ public class KeyboxPageElements {
 
     // ==================== STATISTICS CARDS ====================
 
-    @FindBy(xpath = "//div[contains(@class,'bg-card')]//div[text()='Total Key Box']/following::div[contains(@class,'text-3xl')][1]")
+    @FindBy(xpath = "(//div[@class='text-3xl font-bold']) [1]")
     public WebElement totalKeyBoxCount;
 
-    public By totalKeyBoxCountLocator = By.xpath("//div[contains(@class,'bg-card')]//div[text()='Total Key Box']/following::div[contains(@class,'text-3xl')][1]");
+    public By totalKeyBoxCountLocator = By.xpath("(//div[@class='text-3xl font-bold']) [1]");
 
-    @FindBy(xpath = "//div[contains(@class,'bg-card')]//div[text()='Registered']/following::div[contains(@class,'text-3xl')][1]")
+    @FindBy(xpath = "(//div[@class='text-3xl font-bold']) [2]")
     public WebElement registeredCount;
 
-    public By registeredCountLocator = By.xpath("//div[contains(@class,'bg-card')]//div[text()='Registered']/following::div[contains(@class,'text-3xl')][1]");
+    public By registeredCountLocator = By.xpath("(//div[@class='text-3xl font-bold']) [2]");
 
-    @FindBy(xpath = "//div[contains(@class,'bg-card')]//div[text()='Unregistered']/following::div[contains(@class,'text-3xl')][1]")
+    @FindBy(xpath = "(//div[@class='text-3xl font-bold']) [3]")
     public WebElement unregisteredCount;
 
-    public By unregisteredCountLocator = By.xpath("//div[contains(@class,'bg-card')]//div[text()='Unregistered']/following::div[contains(@class,'text-3xl')][1]");
+    public By unregisteredCountLocator = By.xpath("(//div[@class='text-3xl font-bold']) [3]");
 
     // Statistics Card Containers
     @FindBy(xpath = "//div[contains(@class,'bg-card') and .//div[text()='Total Key Box']]")
@@ -171,10 +169,10 @@ public class KeyboxPageElements {
 
     // ==================== TABLE ELEMENTS ====================
 
-    @FindBy(xpath = "//table")
+    @FindBy(xpath = "//table[@class='w-full text-left  border border-primary-50 rounded-lg table']")
     public WebElement keyboxTable;
 
-    public By keyboxTableLocator = By.xpath("//table");
+    public By keyboxTableLocator = By.xpath("//table[@class='w-full text-left  border border-primary-50 rounded-lg table']");
 
     @FindBy(xpath = "//thead/tr")
     public WebElement tableHeaderRow;
@@ -232,28 +230,107 @@ public class KeyboxPageElements {
     @FindBy(xpath = "//td[@colspan]")
     public WebElement emptyTableCell;
 
-    // ==================== ACTION BUTTONS IN TABLE ====================
+    @FindBy(xpath = "//button[@data-slot='popover-trigger']")
+    public WebElement ActionButtonofUnregistered;
 
-    @FindBy(xpath = "//tbody/tr//button[contains(@class,'dropdown') or @aria-haspopup='menu']")
-    public List<WebElement> actionButtons;
+    public By ActionButtonofUnregisteredLocator = By.xpath("//button[@data-slot='popover-trigger']");
 
-    public By actionButtonsLocator = By.xpath("//tbody/tr//button[contains(@class,'dropdown') or @aria-haspopup='menu']");
+    @FindBy(xpath = "(//button[@data-slot='popover-trigger']) [1]")
+    public WebElement ActionButton;
 
-    // Action Menu Items
+    public By ActionButtonLocator = By.xpath("(//button[@data-slot='popover-trigger']) [1]");
+
+    @FindBy(xpath = "(//button[@role='combobox']) [1]")
+    public WebElement ROTypeDropdown;
+
+    public By ROTypeDropdownLocator = By.xpath("(//button[@role='combobox']) [1]");
+
+    @FindBy(xpath = "//span[text()='Company Owned Company Operator']")
+    public WebElement OptionInROTypeDropdown;
+
+    public By OptionInROTypeDropdownLocator = By.xpath("//span[text()='Company Owned Company Operator']");
+
+    @FindBy(xpath = "(//button[@role='combobox']) [2]")
+    public WebElement LocationDropdown;
+
+    public By LocationDropdownLocator = By.xpath("(//button[@role='combobox']) [2]");
+
+    @FindBy(xpath = "//span[text()='Chennai']")
+    public WebElement OptionInLocationDropdown;
+
+    public By OptionInLocationDropdownLocator = By.xpath("//span[text()='Chennai']");
+
+    @FindBy(xpath = "(//button[@role='combobox']) [3]")
+    public WebElement TemplateDropdown;
+
+    public By TemplateDropdownLocator = By.xpath("(//button[@role='combobox']) [3]");
+
+    @FindBy(xpath = "//span[text()='Template 1']")
+    public WebElement OptionInTemplateDropdown;
+
+    public By OptionInTemplateDropdownLocator = By.xpath("//span[text()='Template 1']");
+
+    @FindBy(xpath = "//button[text()='Cancel']")
+    public WebElement CancelButton;
+
+    public By CancelButtonLocator = By.xpath("//button[text()='Cancel']");
+
+    @FindBy(xpath = "//button[text()='Submit']")
+    public WebElement SubmitButton;
+
+    public By SubmitButtonLocator = By.xpath("//button[text()='Submit']");
+
+    @FindBy(xpath = "//span[text()='Search Location']")
+    public WebElement SearchLocation;
+
+    public By SearchLocationLocator = By.xpath("//span[text()='Search Location']");
+
+    @FindBy(xpath = "//button[text()='Clear All']")
+    public WebElement ClearAllButton;
+
+    public By ClearAllButtonLocator = By.xpath("//button[text()='Clear All']");
+
+    @FindBy(xpath = "//input[@placeholder='Search Location']")
+    public WebElement LocationSearchBox;
+
+    public By LocationSearchBoxLocator = By.xpath("//input[@placeholder='Search Location']");
+
+   /* @FindBy(xpath = "")
+    public WebElement ;
+
+    public By  = By.xpath("");
+
+    @FindBy(xpath = "")
+    public WebElement ;
+
+    public By  = By.xpath("");
+
+    @FindBy(xpath = "")
+    public WebElement ;
+
+    public By  = By.xpath("");
+
+    @FindBy(xpath = "")
+    public WebElement ;
+
+    public By  = By.xpath("");
+
+    @FindBy(xpath = "")
+    public WebElement ;
+
+    public By  = By.xpath("");*/
+
+
     @FindBy(xpath = "//button[text()='View']")
-    public WebElement viewActionButton;
+    public WebElement ViewButton;
 
-    public By viewActionLocator = By.xpath("//button[text()='View']");
+    public By ViewButtonLocator = By.xpath("//button[text()='View']");
 
     @FindBy(xpath = "//button[text()='Edit']")
-    public WebElement editActionButton;
+    public WebElement EditButton;
 
-    public By editActionLocator = By.xpath("//button[text()='Edit']");
+    public By EditButtonLocator = By.xpath("//button[text()='Edit']");
 
-    @FindBy(xpath = "//button[text()='Delete']")
-    public WebElement deleteActionButton;
-
-    public By deleteActionLocator = By.xpath("//button[text()='Delete']");
 
     // Action Menu Container
     public By actionMenuLocator = By.xpath("//div[@role='menu' or contains(@class,'dropdown-menu')]");
@@ -277,64 +354,65 @@ public class KeyboxPageElements {
 
     public By pageNumberInfoLocator = By.xpath("//span[contains(text(),'Page')] | //div[contains(text(),'Page')]");
 
-    @FindBy(xpath = "//a[@aria-label='Go to first page'] | //button[@aria-label='Go to first page']")
+    @FindBy(xpath = "//a[@aria-label='Go to first page']")
     public WebElement firstPageButton;
 
-    @FindBy(xpath = "//a[@aria-label='Go to previous page'] | //button[@aria-label='Go to previous page']")
+    public By firstpagebuttonLocator = By.xpath("//a[@aria-label='Go to first page']");
+
+    @FindBy(xpath = "//a[@aria-label='Go to previous page']")
     public WebElement previousPageButton;
 
-    @FindBy(xpath = "//a[@aria-label='Go to next page'] | //button[@aria-label='Go to next page']")
+    public By previouspagebuttonLocator = By.xpath("//a[@aria-label='Go to previous page']");
+
+    @FindBy(xpath = "//a[@aria-label='Go to next page']")
     public WebElement nextPageButton;
 
-    @FindBy(xpath = "//a[@aria-label='Go to last page'] | //button[@aria-label='Go to last page']")
+    public By nextpagebuttonLocator = By.xpath("//a[@aria-label='Go to next page']");
+
+    @FindBy(xpath = "//a[@aria-label='Go to last page']")
     public WebElement lastPageButton;
 
-    // ==================== VIEW/DETAILS MODAL ELEMENTS ====================
+    public By lastpagebuttonLocator = By.xpath("//a[@aria-label='Go to last page']");
 
-    @FindBy(xpath = "//div[@role='dialog']")
-    public WebElement modalContainer;
+    @FindBy(xpath = "//div[@data-slot='dialog-content']")
+    public WebElement Modal;
 
-    public By modalContainerLocator = By.xpath("//div[@role='dialog']");
+    public By ModalLocator = By.xpath("//div[@data-slot='dialog-content']");
 
     @FindBy(xpath = "//div[@role='dialog']//h2")
     public WebElement modalHeader;
 
     public By modalHeaderLocator = By.xpath("//div[@role='dialog']//h2");
 
-    @FindBy(xpath = "//button[.//svg[contains(@class,'lucide-x')] or @aria-label='Close']")
+    @FindBy(xpath = "//button[@data-slot='dialog-close']")
     public WebElement closeButton;
 
-    public By closeButtonLocator = By.xpath("//button[.//svg[contains(@class,'lucide-x')] or @aria-label='Close']");
+    public By closeButtonLocator = By.xpath("//button[@data-slot='dialog-close']");
 
     // View Modal Detail Fields
-    @FindBy(xpath = "//div[@role='dialog']//p[text()='Serial Number']/following-sibling::p")
-    public WebElement viewSerialNumber;
+    @FindBy(xpath = "(//th[text()='S.No']) [2]")
+    public WebElement ViewSerialNumber;
 
-    @FindBy(xpath = "//div[@role='dialog']//p[text()='Location']/following-sibling::p")
-    public WebElement viewLocation;
+    @FindBy(xpath = "//th[text()='Name']")
+    public WebElement ViewName;
 
-    @FindBy(xpath = "//div[@role='dialog']//p[text()='Ro Type']/following-sibling::p")
-    public WebElement viewRoType;
+    @FindBy(xpath = "//th[text()='Role']")
+    public WebElement ViewRole;
 
     @FindBy(xpath = "//div[@role='dialog']//p[text()='Status']/following-sibling::p")
     public WebElement viewStatus;
 
-    // ==================== DELETE CONFIRMATION ELEMENTS ====================
 
-    @FindBy(xpath = "//h2[text()='Are you sure?']")
-    public WebElement deleteConfirmationHeader;
+    @FindBy(xpath = "(//span[text()='Unregistered']) [2]")
+    public WebElement OptionInStatusDropdown;
 
-    public By deleteConfirmationLocator = By.xpath("//h2[text()='Are you sure?']");
+    public By OptionInStatusDropdownLocator = By.xpath("(//span[text()='Unregistered']) [2]");
 
-    @FindBy(xpath = "//button[text()='Yes']")
-    public WebElement confirmDeleteButton;
 
-    public By confirmDeleteButtonLocator = By.xpath("//button[text()='Yes']");
+    @FindBy(xpath = "//button[text()='Register']")
+    public WebElement RegisterButton;
 
-    @FindBy(xpath = "//button[text()='No']")
-    public WebElement cancelDeleteButton;
-
-    public By cancelDeleteButtonLocator = By.xpath("//button[text()='No']");
+    public By RegisterButtonLocator = By.xpath("");
 
     // ==================== TOAST/NOTIFICATION ELEMENTS ====================
 
@@ -352,7 +430,7 @@ public class KeyboxPageElements {
     @FindBy(xpath = "//a[@href='/keySafes']")
     public WebElement keyboxNavLink;
 
-    public By keyboxNavLinkLocator = By.xpath("//a[@href='/keySafes']");
+    public By keyboxNavLinkLocator = By.xpath("//span[text()='Key Box']");
 
     // ==================== STATUS BADGES IN TABLE ====================
 
