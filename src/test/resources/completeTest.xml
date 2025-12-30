@@ -32,7 +32,6 @@
     <test name="User Tests" preserve-order="true">
         <classes>
             <class name="TestRun.UserTest"/>
-
         </classes>
     </test>
     <test name="Activity Tests" preserve-order="true">
@@ -48,10 +47,9 @@
 
         </classes>
     </test>
-    <!--
         <test name="Keybox Tests" preserve-order="true">
             <classes>
-                <class name="TestRun.LevelTest"/>
+                <class name="TestRun.KeyboxTest"/>
             </classes>
         </test>
 
@@ -60,11 +58,9 @@
                  <class name="TestRun.DeviceActivityTest"/>
               </classes>
            </test>
-
-           <test name="Key Position Tests" preserve-order="true">
-             <classes>
-                 <class name="TestRun.KeyPostionTest"/>
-              </classes>
-           </test>
-      -->
+    <test name="Key Position Template Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.KeyPositionTemplateTest"/>
+        </classes>
+    </test>
 </suite>
