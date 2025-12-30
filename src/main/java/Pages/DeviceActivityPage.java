@@ -1024,11 +1024,13 @@ Thread.sleep(2000);
             totalCount += getRowCountByStatusOnCurrentPage(status);
 
             // Navigate through all pages if pagination exists
-            while (isNextPageButtonEnabled()) {
+            try{
                 clickNextPageButton();
                 Thread.sleep(1000);
                 totalCount += getRowCountByStatusOnCurrentPage(status);
+            }catch (Exception e) {
             }
+
 
             // Go back to first page
             try {
@@ -1264,6 +1266,7 @@ Thread.sleep(2000);
             return false;
         }
     }
+
 
     /**
      * Wait for loading to complete
