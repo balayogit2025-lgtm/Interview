@@ -87,7 +87,7 @@ public class DeviceActivityPageElements {
     public By applyFilterButtonLocator = By.xpath("//button[text()='Apply Filter']");
 
     // Status Filter Dropdown
-    @FindBy(xpath = "//label[text()='Status']/following-sibling::button[@role='combobox']")
+    @FindBy(xpath = "//div [contains(@class,'flex flex-col')]/button[@role='combobox'][1]")
     public WebElement statusFilterDropdown;
 
     public By statusFilterDropdownLocator = By.xpath("//label[text()='Status']/following-sibling::button[@role='combobox']");
@@ -118,7 +118,8 @@ public class DeviceActivityPageElements {
 
     // Filter Dropdown Options
     public By filterDropdownOptionLocator(String optionText) {
-        return By.xpath("//div[@role='listbox']//div[@role='option' and contains(text(),'" + optionText + "')]");
+        return  By.xpath("//*[contains(@role,'listbox')]//*[normalize-space(text())='" + optionText + "']");
+        //return By.xpath("//div[@role='listbox']//div[@role='option' and contains(text(),'" + optionText + "')]");
     }
 
     // Status Filter Selected Value

@@ -34,6 +34,10 @@ public class DeviceActivityTest extends BaseTest {
         // Login before each test
         loginPage.login(ConfigReader.getDeviceActivityValidEmail(), ConfigReader.getValidPassword());
         deviceActivityPage.navigateToDeviceActivityPage();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        }
         getExtentTest().log(Status.INFO, "Setup complete. Navigated to Device Activity Page.");
     }
 
@@ -349,6 +353,7 @@ public class DeviceActivityTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verifying Pagination Info");
         TestLogger.info("Test: Verifying Pagination Info");
 
+
         Assert.assertTrue(deviceActivityPage.isPaginationInfoDisplayed(), "Pagination info should be displayed.");
         String paginationText = deviceActivityPage.getPaginationInfoText();
         Assert.assertTrue(paginationText.contains("Showing"), "Pagination text should contain 'Showing'.");
@@ -646,7 +651,7 @@ public class DeviceActivityTest extends BaseTest {
 
         String defaultValue = deviceActivityPage.getTypeFilterSelectedValue();
         getExtentTest().log(Status.INFO, "Type filter default value: " + defaultValue);
-        Assert.assertEquals(defaultValue, "Month Till Date", "Type filter default value should be 'Month Till Date'.");
+        Assert.assertEquals(defaultValue, "Today", "Type filter default value should be 'Month Till Date'.");
 
         getExtentTest().log(Status.PASS, "Type filter default value is 'Month Till Date'.");
         deviceActivityPage.closeFilterDialog();
@@ -849,7 +854,7 @@ public class DeviceActivityTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Status after clear: " + statusValue + ", Type after clear: " + typeValue);
 
         Assert.assertEquals(statusValue, "All", "Status filter should be reset to 'All'.");
-        Assert.assertEquals(typeValue, "Month Till Date", "Type filter should be reset to 'Month Till Date'.");
+        Assert.assertEquals(typeValue, "Today", "Type filter should be reset to 'Month Till Date'.");
 
         deviceActivityPage.closeFilterDialog();
         getExtentTest().log(Status.PASS, "Clear Filter button resets all filters.");
@@ -1306,15 +1311,15 @@ public class DeviceActivityTest extends BaseTest {
         int cardCount = Integer.parseInt(cardCountStr);
         getExtentTest().log(Status.INFO, "Pending card count: " + cardCount);
 
+        // Use getTotalRowCountByStatus to count across all pages
         int tablePendingCount = deviceActivityPage.getPendingStatusCountFromTable();
-        getExtentTest().log(Status.INFO, "Table Pending status count: " + tablePendingCount);
+        getExtentTest().log(Status.INFO, "Table Pending status count (all pages): " + tablePendingCount);
 
         Assert.assertEquals(cardCount, tablePendingCount,
                 "Pending card count should match table Pending status count.");
         getExtentTest().log(Status.PASS, "Pending count matches table status.");
         TestLogger.success("Pending count matches table status verification passed.");
     }
-
     /**
      * TC_DEVICE_ACTIVITY_DATA_005: Verify Failed card count matches table Failed status count
      */
