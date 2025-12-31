@@ -51,10 +51,10 @@ public class KeyPositionTemplatePageElements {
 
     // ==================== ADD TEMPLATE BUTTON ====================
 
-    @FindBy(xpath = "//button[contains(.,'Add Template')]")
+    @FindBy(xpath = "//button[text()='Add Template']")
     public WebElement addTemplateButton;
 
-    public By addTemplateButtonLocator = By.xpath("//button[contains(.,'Add Template')]");
+    public By addTemplateButtonLocator = By.xpath("//button[text()='Add Template']");
 
     // ==================== TABLE ELEMENTS ====================
 
@@ -132,11 +132,6 @@ public class KeyPositionTemplatePageElements {
 
     public By firstActionButtonLocator = By.xpath("(//button[@data-slot='popover-trigger'])[1]");
 
-    @FindBy(xpath = "//button[text()='View']")
-    public WebElement viewButton;
-
-    public By viewButtonLocator = By.xpath("//button[text()='View']");
-
     @FindBy(xpath = "//button[text()='Edit']")
     public WebElement editButton;
 
@@ -191,6 +186,11 @@ public class KeyPositionTemplatePageElements {
 
     public By modalHeaderLocator = By.xpath("//div[@role='dialog']//h2");
 
+    @FindBy(xpath = "//h2[text()='Edit Key Position Template']")
+    public WebElement EditmodalHeader;
+
+    public By EditmodalHeaderLocator = By.xpath("//h2[text()='Edit Key Position Template']");
+
     @FindBy(xpath = "//button[@data-slot='dialog-close']")
     public WebElement modalCloseButton;
 
@@ -198,10 +198,10 @@ public class KeyPositionTemplatePageElements {
 
     // ==================== ADD/EDIT TEMPLATE FORM ELEMENTS ====================
 
-    @FindBy(xpath = "//label[text()='Template Name']/following-sibling::input | //input[@placeholder='Enter template name']")
+    @FindBy(xpath = "//input[@placeholder='Enter Name']")
     public WebElement templateNameInput;
 
-    public By templateNameInputLocator = By.xpath("//label[text()='Template Name']/following-sibling::input | //input[@placeholder='Enter template name']");
+    public By templateNameInputLocator = By.xpath("//input[@placeholder='Enter Name']");
 
     @FindBy(xpath = "//button[text()='Cancel']")
     public WebElement cancelButton;
@@ -281,10 +281,10 @@ public class KeyPositionTemplatePageElements {
 
     // ==================== POSITION SELECTOR BUTTONS (1-24) ====================
 
-    @FindBy(xpath = "//div[@role='dialog']//tbody//tr//button[contains(@class,'rounded-full')]")
+    @FindBy(xpath = "//button[@class='w-5 h-5 rounded-full border-2 transition-all inline-flex items-center justify-center bg-background border-primary/50 hover:border-primary/50 cursor-pointer']")
     public List<WebElement> positionSelectorButtons;
 
-    public By positionSelectorButtonsLocator = By.xpath("//div[@role='dialog']//tbody//tr//button[contains(@class,'rounded-full')]");
+    public By positionSelectorButtonsLocator = By.xpath("//button[@class='w-5 h-5 rounded-full border-2 transition-all inline-flex items-center justify-center bg-background border-primary/50 hover:border-primary/50 cursor-pointer']");
 
     // ==================== MODAL FOOTER BUTTONS ====================
 
@@ -297,6 +297,13 @@ public class KeyPositionTemplatePageElements {
     public WebElement modalSubmitButton;
 
     public By modalSubmitButtonLocator = By.xpath("//div[@role='dialog']//button[text()='Submit']");
+
+    @FindBy(xpath = "//p[text()='At least 8 keys must be selected']")
+    public WebElement Errormsgofminimumkeyboxenabled;
+
+    public By ErrormsgofminimumkeyboxenabledLocator = By.xpath("//p[text()='At least 8 keys must be selected']");
+
+
 
     // ==================== SPECIFIC KEY POSITION NAMES ====================
 
@@ -385,10 +392,10 @@ public class KeyPositionTemplatePageElements {
 
     // ==================== SIDEBAR NAVIGATION ====================
 
-    @FindBy(xpath = "//a[@href='/key-position-template']")
+    @FindBy(xpath = "//span[text()='Key Position Template']")
     public WebElement keyPositionTemplateNavLink;
 
-    public By keyPositionTemplateNavLinkLocator = By.xpath("//a[@href='/key-position-template']");
+    public By keyPositionTemplateNavLinkLocator = By.xpath("//span[text()='Key Position Template']");
 
     @FindBy(xpath = "//span[text()='Key Position Template']")
     public WebElement keyPositionTemplateMenuText;
@@ -488,7 +495,7 @@ public class KeyPositionTemplatePageElements {
      * Get locator for enable checkbox in specific row (1-based index)
      */
     public By getEnableCheckboxLocator(int rowIndex) {
-        return By.xpath("(//div[@role='dialog']//tbody//tr//button[@role='checkbox'])[" + rowIndex + "]");
+        return By.xpath("(//td[@class='text-center px-2 py-2 border-b'])[" + rowIndex + "]");
     }
 
     /**
@@ -505,6 +512,13 @@ public class KeyPositionTemplatePageElements {
         return By.xpath("//div[@role='dialog']//tbody//tr[" + rowIndex + "]//td[" + (positionNumber + 2) + "]//button");
     }
 
+    public By getKeyPositionSelectorLocator(int rowIndex, int startPosition, int endPosition) {
+        return By.xpath(
+                "//div[@role='dialog']//tbody//tr[" + rowIndex + "]" +
+                        "//td[position() >= " + (startPosition + 2) +
+                        " and position() <= " + (endPosition + 2) + "]//button"
+        );
+    }
     /**
      * Get locator for specific key position row by name
      */
