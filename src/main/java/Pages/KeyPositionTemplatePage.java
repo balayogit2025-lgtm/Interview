@@ -1,6 +1,7 @@
 package Pages;
 
 import Elements.KeyPositionTemplatePageElements;
+import Elements.KeyboxPageElements;
 import Utils.CommonUtil;
 import Utils.TestLogger;
 import Utils.WaitHelper;
@@ -9,7 +10,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,14 +45,6 @@ public class KeyPositionTemplatePage {
      */
     public KeyPositionTemplatePage navigateToKeyPositionTemplatePage() {
         TestLogger.info("Navigating to Key Position Template page...");
-        try {
-            // Click Settings menu if not expanded
-            WebElement settingsMenu = waitHelper.waitForElementClickable(elements.settingsMenuLocator);
-            settingsMenu.click();
-            Thread.sleep(500);
-        } catch (Exception e) {
-            TestLogger.info("Settings menu might already be expanded");
-        }
         waitHelper.waitForElementClickable(elements.keyPositionTemplateNavLinkLocator).click();
         waitHelper.waitForElementVisible(elements.pageHeaderLocator);
         TestLogger.success("Successfully navigated to Key Position Template page.");
@@ -198,7 +194,7 @@ public class KeyPositionTemplatePage {
             Thread.sleep(500);
         } catch (InterruptedException e) {
         }
-        searchTemplate("NonExistentTemplate123456");
+        searchTemplate("NonExistentTemplate");
         return this;
     }
 
@@ -222,11 +218,11 @@ public class KeyPositionTemplatePage {
      */
     public KeyPositionTemplatePage clickAddTemplateButton() {
         TestLogger.info("Clicking Add Template button...");
-        elements.addTemplateButton.click();
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
+        elements.addTemplateButton.click();
         return this;
     }
 
@@ -397,10 +393,6 @@ public class KeyPositionTemplatePage {
     public KeyPositionTemplatePage clickFirstActionButton() {
         TestLogger.info("Clicking first action button...");
         elements.firstActionButton.click();
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-        }
         return this;
     }
 
@@ -418,14 +410,8 @@ public class KeyPositionTemplatePage {
         return this;
     }
 
-    /**
-     * Click View button
-     */
-    public KeyPositionTemplatePage clickViewButton() {
-        TestLogger.info("Clicking View button...");
-        waitHelper.waitForElementClickable(elements.viewButtonLocator).click();
-        return this;
-    }
+
+
 
     /**
      * Click Edit button
@@ -459,6 +445,16 @@ public class KeyPositionTemplatePage {
             return false;
         }
     }
+    public boolean isEditModalLabelDisplayed() {
+        TestLogger.info("Checking the edit modal label is displayed.");
+        try {
+            return elements.EditmodalHeader.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+
 
     /**
      * Get modal header text
@@ -492,10 +488,6 @@ public class KeyPositionTemplatePage {
     public KeyPositionTemplatePage clickModalCloseButton() {
         TestLogger.info("Clicking modal close button...");
         elements.modalCloseButton.click();
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-        }
         return this;
     }
 
@@ -564,10 +556,6 @@ public class KeyPositionTemplatePage {
     public KeyPositionTemplatePage clickCancelButton() {
         TestLogger.info("Clicking Cancel button...");
         elements.cancelButton.click();
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-        }
         return this;
     }
 
@@ -636,23 +624,7 @@ public class KeyPositionTemplatePage {
         }
     }
 
-    /**
-     * Click Confirm Delete button
-     */
-    public KeyPositionTemplatePage clickConfirmDeleteButton() {
-        TestLogger.info("Clicking Confirm Delete button...");
-        try {
-            elements.confirmDeleteButton.click();
-        } catch (Exception e) {
-            // Try Yes button if Confirm not found
-            elements.yesButton.click();
-        }
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-        }
-        return this;
-    }
+
 
     /**
      * Click No button in delete confirmation
@@ -941,15 +913,7 @@ public class KeyPositionTemplatePage {
         return this;
     }
 
-    /**
-     * View first template details
-     */
-    public KeyPositionTemplatePage viewFirstTemplate() {
-        TestLogger.info("Viewing first template...");
-        clickFirstActionButton();
-        clickViewButton();
-        return this;
-    }
+
 
     /**
      * Edit first template
@@ -1293,9 +1257,6 @@ public class KeyPositionTemplatePage {
         }
     }
 
-    /**
-     * Check if enable checkbox in specific row is checked
-     */
     public boolean isEnableCheckboxChecked(int rowIndex) {
         TestLogger.info("Checking if enable checkbox in row " + rowIndex + " is checked.");
         try {
@@ -1307,23 +1268,14 @@ public class KeyPositionTemplatePage {
         }
     }
 
-    /**
-     * Click enable checkbox in specific row (1-based index)
-     */
     public KeyPositionTemplatePage clickEnableCheckbox(int rowIndex) {
         TestLogger.info("Clicking enable checkbox in row: " + rowIndex);
         WebElement checkbox = driver.findElement(elements.getEnableCheckboxLocator(rowIndex));
         checkbox.click();
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-        }
+        TestLogger.info("Clicked the enabled checkbox in row: " + rowIndex);
         return this;
     }
 
-    /**
-     * Click enable checkbox by key position name
-     */
     public KeyPositionTemplatePage clickEnableCheckboxByName(String positionName) {
         TestLogger.info("Clicking enable checkbox for position: " + positionName);
         WebElement checkbox = driver.findElement(elements.getEnableCheckboxByPositionName(positionName));
@@ -1459,6 +1411,15 @@ public class KeyPositionTemplatePage {
             return disabled == null || !disabled.equals("true");
         } catch (Exception e) {
             return false;
+        }
+    }
+    public boolean isModalSubmitButtonDisabled() {
+        TestLogger.info("Checking if Modal Submit button is disabled.");
+        try {
+            String disabled = elements.modalSubmitButton.getAttribute("disabled");
+            return disabled != null && disabled.equals("true");
+        } catch (Exception e) {
+            return true; // assume disabled if an error occurs
         }
     }
 
@@ -1908,4 +1869,126 @@ public class KeyPositionTemplatePage {
         String newValue = getEditTemplateNameInputValue();
         return !originalValue.equals(newValue) && newName.equals(newValue);
     }
+
+    public KeyPositionTemplatePage addNewTemplate() {
+        TestLogger.info("Add a new key position template");
+        clickAddTemplateButton().enterTemplateName("Key Position Template 1");
+        for (int key = 1; key <= 24; key++) {
+            clickPositionSelector(key, key);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage addNewTemplatewithemptyname() {
+        TestLogger.info("Add a new key position template with empty name");
+        clickAddTemplateButton();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+
+        for (int key = 1; key <= 24; key++) {
+            clickPositionSelector(key, key);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage addNewTemplatewithemptyKeyposition() {
+        TestLogger.info("Add a new key position template with empty Keyposition");
+        clickAddTemplateButton().enterTemplateName("Key Position Template 2");
+        return this;
+    }
+    public KeyPositionTemplatePage addNewTemplateUsingSpacesInName() {
+        TestLogger.info("Add a new key position template using spaces in name");
+        clickAddTemplateButton().enterTemplateName("Key Position Template ");
+        for (int key = 1; key <= 24; key++) {
+            clickPositionSelector(key, key);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage addNewTemplateUsingSpecialCharactersInName() {
+        TestLogger.info("Add a new key position template using special characters in name");
+        clickAddTemplateButton().enterTemplateName("Template#$%^&*");
+        for (int key = 1; key <= 24; key++) {
+            clickPositionSelector(key, key);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage addDuplicateTemplate() {
+        TestLogger.info("create a duplicate key position template");
+        clickAddTemplateButton().enterTemplateName("new template");
+        for (int key = 1; key <= 24; key++) {
+            clickPositionSelector(key, key);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage selectallthekeypositions() {
+        TestLogger.info("select unique position for all the keyboxes");
+        clickAddTemplateButton().enterTemplateName("new template");
+        for (int key = 1; key <= 24; key++) {
+            clickPositionSelector(key, key);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage disablethekeyboxescheckbox() {
+        TestLogger.info("Disable 17 keyboxes checkbox");
+        for (int i = 1; i <= 17; i++) {
+            clickEnableCheckbox(i);
+        }
+        return this;
+    }
+    public boolean isErrorMessageOfLessKeyboxedEnabledDisplayed() {
+        TestLogger.info("Checking the error message of less key boxes enabled");
+        try {
+            return elements.Errormsgofminimumkeyboxenabled.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean isPositionSelectorButtonsDisplayed() {
+        TestLogger.info("Checking if position selector buttons are displayed");
+        try {
+            if (elements.positionSelectorButtons == null || elements.positionSelectorButtons.isEmpty()) {
+                return false;
+            }
+
+            for (WebElement button : elements.positionSelectorButtons) {
+                if (button.isDisplayed()) {
+                    return true;
+                }
+            }
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean isKeyboxesCheckboxesDisplayed() {
+        TestLogger.info("Checking if keyboxes checkbox are displayed");
+        try {
+            if (elements.enableCheckboxes == null || elements.enableCheckboxes.isEmpty()) {
+                return false;
+            }
+
+            for (WebElement button : elements.enableCheckboxes) {
+                if (button.isDisplayed()) {
+                    return true;
+                }
+            }
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean isKeyPositionSelectionDisabled(int row, int startPosition, int endPosition) {
+        TestLogger.info("Checking if position selector is disabled");
+        try {
+            WebElement selector = driver.findElement(
+                    elements.getKeyPositionSelectorLocator(row,startPosition ,endPosition ));
+            return !selector.isEnabled()
+                    || selector.getAttribute("disabled") != null;
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
+//keypositiontemplatepage
+
 }
