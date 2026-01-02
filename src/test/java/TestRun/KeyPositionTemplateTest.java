@@ -518,3 +518,4 @@ public class KeyPositionTemplateTest extends BaseTest {
         TestLogger.success("Enable checkboxes toggle in Edit modal verification passed.");
     }
 }
+//keypositiontemplatetest

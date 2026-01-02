@@ -584,3 +584,4 @@ public class KeyPositionTemplatePageElements {
 
     public By popoverEditButtonLocator = By.xpath("//div[@data-slot='popover-content']//button[text()='Edit']");
 }
+//keypositiontemplateelements
