@@ -7,6 +7,9 @@ import Utils.ConfigReader;
 import Utils.TestLogger;
 import com.aventstack.extentreports.Status;
 import com.github.javafaker.Faker;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -339,6 +342,10 @@ public class KeyPositionTemplateTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verifying multiple key boxes are disabled");
         TestLogger.info("Test: Verifying multiple key boxes are disabled");
         keyPositionTemplatePage.clickAddTemplateButton();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
         keyPositionTemplatePage.clickEnableCheckbox(1);
         try {
             Thread.sleep(3000);
@@ -354,10 +361,8 @@ public class KeyPositionTemplateTest extends BaseTest {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
         }
-        Assert.assertTrue(keyPositionTemplatePage.isEnableCheckboxChecked(1) ||
-                        keyPositionTemplatePage.isEnableCheckboxChecked(2) ||
-                        keyPositionTemplatePage.isEnableCheckboxChecked(3),
-                "All the checkboxes are enabled");
+        boolean Ischeckboxesdisabled = keyPositionTemplatePage.isKeyPositionSelectionDisabled(1,1,24) && keyPositionTemplatePage.isKeyPositionSelectionDisabled(2,1,24) && keyPositionTemplatePage.isKeyPositionSelectionDisabled(3,1,24);
+        Assert.assertTrue(Ischeckboxesdisabled,"Thementioned keyboxes are enabled");
         getExtentTest().log(Status.PASS, "Multiple key boxes can be disabled");
         TestLogger.success("Multiple key boxes disable verification passed.");
     }
@@ -431,7 +436,25 @@ public class KeyPositionTemplateTest extends BaseTest {
         getExtentTest().log(Status.INFO, "Test: Verify the error message when less than 8 keyboxes are enabled");
         TestLogger.info("Test: Verify the error message when less than 8 keyboxes are enabled");
         keyPositionTemplatePage.selectallthekeypositions();
-        keyPositionTemplatePage.disablethekeyboxescheckbox();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        keyPositionTemplatePage.disableKeyBoxesfrom24to15();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        keyPositionTemplatePage.disableKeyBoxesfrom15to7();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        }
+        keyPositionTemplatePage.disableKeyBoxesfrom7to2();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        }
         Assert.assertTrue(keyPositionTemplatePage.isErrorMessageOfLessKeyboxedEnabledDisplayed(), "No Error Message");
         getExtentTest().log(Status.PASS, "Error Message is displayed when less than eight keyboxes are enabled");
         TestLogger.success("Verification of error message when minimum key boxes enabled");

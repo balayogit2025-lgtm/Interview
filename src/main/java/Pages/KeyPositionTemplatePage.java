@@ -5,10 +5,8 @@ import Elements.KeyboxPageElements;
 import Utils.CommonUtil;
 import Utils.TestLogger;
 import Utils.WaitHelper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -1924,13 +1922,47 @@ public class KeyPositionTemplatePage {
         TestLogger.info("select unique position for all the keyboxes");
         clickAddTemplateButton().enterTemplateName("new template");
         for (int key = 1; key <= 24; key++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
             clickPositionSelector(key, key);
         }
         return this;
     }
-    public KeyPositionTemplatePage disablethekeyboxescheckbox() {
-        TestLogger.info("Disable 17 keyboxes checkbox");
-        for (int i = 1; i <= 17; i++) {
+    public KeyPositionTemplatePage disableKeyBoxesfrom24to15() {
+        TestLogger.info("Disable all keyboxes");
+        for (int i = 24; i >= 16; i--) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+         clickEnableCheckbox(i);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage disableKeyBoxesfrom15to7() {
+        TestLogger.info("Disable all keyboxes");
+        WebElement startElement = driver.findElement(By.xpath("(//button[@role='checkbox']) [16]"));
+        startElement.sendKeys(Keys.PAGE_UP);
+        for (int i = 15; i >= 7; i--) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            clickEnableCheckbox(i);
+        }
+        return this;
+    }
+    public KeyPositionTemplatePage disableKeyBoxesfrom7to2() {
+        TestLogger.info("Disable all keyboxes");
+        WebElement startElements = driver.findElement(By.xpath("(//button[@role='checkbox']) [7]"));
+        startElements.sendKeys(Keys.PAGE_UP);
+        for (int i = 6; i >= 1; i--) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
             clickEnableCheckbox(i);
         }
         return this;
