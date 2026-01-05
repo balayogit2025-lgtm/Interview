@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Error Response Schema",
+  "description": "Schema for validating error API responses",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": ["string", "object"],
+      "description": "Error message or error object"
+    },
+    "message": {
+      "type": "string",
+      "description": "Error message"
+    },
+    "errors": {
+      "type": "array",
+      "description": "List of validation errors",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {"type": "string"},
+          "message": {"type": "string"},
+          "code": {"type": "string"}
+        }
+      }
+    },
+    "status": {
+      "type": ["string", "integer"],
+      "description": "Error status code or status string"
+    },
+    "statusCode": {
+      "type": "integer",
+      "description": "HTTP status code"
+    },
+    "code": {
+      "type": "string",
+      "description": "Error code"
+    },
+    "path": {
+      "type": "string",
+      "description": "API path that caused the error"
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "Error timestamp"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Should be false for errors"
+    }
+  },
+  "anyOf": [
+    {"required": ["error"]},
+    {"required": ["message"]},
+    {"required": ["errors"]}
+  ]
+}

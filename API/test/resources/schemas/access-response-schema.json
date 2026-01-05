@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Access Response Schema",
+  "description": "Schema for validating single access API response",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "integer"],
+      "description": "Access unique identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Access name"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Access serial number"
+    },
+    "type": {
+      "type": "string",
+      "description": "Access type (Hardware, Software, etc.)"
+    },
+    "status": {
+      "type": "string",
+      "description": "Access status (Active, Inactive, Maintenance, Retired)"
+    },
+    "location": {
+      "type": "string",
+      "description": "Access location"
+    },
+    "purchaseDate": {
+      "type": "string",
+      "description": "Purchase date"
+    },
+    "value": {
+      "type": "number",
+      "description": "Access value"
+    },
+    "assignedTo": {
+      "type": ["string", "object", "null"],
+      "description": "User or department assigned to"
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Last update timestamp"
+    },
+    "data": {
+      "type": "object",
+      "description": "Wrapper object for access data"
+    },
+    "message": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    }
+  }
+}

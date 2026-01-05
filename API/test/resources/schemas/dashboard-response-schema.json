@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dashboard Response Schema",
+  "description": "Schema for validating dashboard API response",
+  "type": "object",
+  "properties": {
+    "stats": {
+      "type": "object",
+      "description": "Dashboard statistics",
+      "properties": {
+        "totalUsers": {"type": "integer"},
+        "totalAssets": {"type": "integer"},
+        "totalReports": {"type": "integer"},
+        "activeUsers": {"type": "integer"},
+        "activeAssets": {"type": "integer"}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "description": "Dashboard summary data"
+    },
+    "recentActivities": {
+      "type": "array",
+      "description": "Recent activities list",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": ["string", "integer"]},
+          "type": {"type": "string"},
+          "description": {"type": "string"},
+          "timestamp": {"type": "string"},
+          "user": {"type": ["string", "object"]}
+        }
+      }
+    },
+    "charts": {
+      "type": "object",
+      "description": "Chart data for visualization"
+    },
+    "data": {
+      "type": "object",
+      "description": "Wrapper object for dashboard data"
+    },
+    "totalUsers": {"type": "integer"},
+    "totalAssets": {"type": "integer"},
+    "totalReports": {"type": "integer"},
+    "message": {"type": "string"},
+    "success": {"type": "boolean"}
+  }
+}

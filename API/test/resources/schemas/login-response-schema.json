@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Login Response Schema",
+  "description": "Schema for validating login API response",
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string",
+      "description": "JWT authentication token"
+    },
+    "accessToken": {
+      "type": "string",
+      "description": "Alternative JWT token field name"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "accessToken": {
+          "type": "string"
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": ["string", "integer"]
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "name": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "message": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": ["string", "integer"]
+    }
+  },
+  "anyOf": [
+    {"required": ["token"]},
+    {"required": ["accessToken"]},
+    {"required": ["data"]}
+  ]
+}

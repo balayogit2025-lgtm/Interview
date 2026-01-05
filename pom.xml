@@ -12,6 +12,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <rest-assured.version>5.4.0</rest-assured.version>
         <selenium.version>4.15.0</selenium.version>
         <testng.version>7.8.0</testng.version>
         <webdrivermanager.version>5.6.2</webdrivermanager.version>
@@ -19,6 +20,11 @@
         <log4j.version>2.21.1</log4j.version>
         <commons-io.version>2.15.0</commons-io.version>
         <maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
+        <jackson.version>2.16.1</jackson.version>
+        <lombok.version>1.18.30</lombok.version>
+        <allure.version>2.25.0</allure.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <javafaker.version>1.0.2</javafaker.version>
     </properties>
 
     <dependencies>
@@ -89,6 +95,109 @@
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+        </dependency>
+        <!--  JSON Path  -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${rest-assured.version}</version>
+        </dependency>
+        <!--  JSON Schema Validator  -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${rest-assured.version}</version>
+        </dependency>
+        <!--  Jackson for JSON serialization/deserialization  -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!--  Jackson Annotations  -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!--  Jackson Core  -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!--  Lombok - Reduces boilerplate code  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--  Hamcrest - Expressive assertions  -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+        </dependency>
+        <!--  Allure TestNG - Test Reporting  -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+        <!--  Allure Rest Assured - API Request/Response Logging  -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-rest-assured</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+        <!--  Java Faker - Test Data Generation  -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${javafaker.version}</version>
+        </dependency>
+        <!--  Apache Commons IO - File utilities  -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.1</version>
+        </dependency>
+        <!--  Apache Commons Lang - String utilities  -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+        <!--  JSON Simple - Lightweight JSON processing  -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <!--  Gson - Google JSON library  -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <!--  Eclipse Angus Mail (Jakarta Mail implementation)  -->
+        <dependency>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>angus-mail</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <!--  Microsoft Authentication Library (MSAL) for OAuth2  -->
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>msal4j</artifactId>
+            <version>1.14.0</version>
         </dependency>
     </dependencies>
 
