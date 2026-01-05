@@ -465,7 +465,7 @@ public class LevelPage {
     public LevelPage EditRegion() {
         navigateToLevelPage();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(1500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

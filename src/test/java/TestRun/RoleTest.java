@@ -23,7 +23,6 @@ public class RoleTest extends BaseTest {
 
     @BeforeMethod
     public void setupRoleTest() {
-
         navigateToApp();
         loginPage = new LoginPage(getDriver());
         rolePage = new RolePage(getDriver());

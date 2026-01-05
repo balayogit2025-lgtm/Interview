@@ -282,7 +282,7 @@ public class KeyboxPage {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
-        searchKeybox("AMS Activity");
+        searchKeybox("J1.Test4");
         return this;
     }
 
@@ -293,7 +293,7 @@ public class KeyboxPage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        searchKeybox("No activity");
+        searchKeybox("J1.Test40");
         return this;
     }
 
@@ -1189,6 +1189,10 @@ public class KeyboxPage {
 
     public KeyboxPage clickActionButton() {
         TestLogger.info("Clicking Action button");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
         keyboxElements.ActionButton.click();
         return this;
     }
@@ -1318,11 +1322,34 @@ public class KeyboxPage {
         keyboxElements.ClearAllButton.click();
         return this;
     }
-  /*  public KeyboxPage EnterSearchLocation() {
-        TestLogger.info("Clicking the Search location");
-        keyboxElements.SearchLocation.sendKeys("Chennai");
-        keyboxElements.SearchLocation.sendKeys(Keys.ENTER);
+    public KeyboxPage clickDateRangeOptionInTypeDropdown() {
+        TestLogger.info("Clicking date range Option In Type Dropdown");
+        keyboxElements.DateRangeOptionInTypeDropDown.click();
         return this;
-    }*/
-
+    }
+    public KeyboxPage clickFromDate() {
+        TestLogger.info("Clicking FROM DATE");
+        keyboxElements.FromDate.click();
+        return this;
+    }
+    public KeyboxPage clickPreviousMonth() {
+        TestLogger.info("Clicking the  previous month");
+        keyboxElements.PreviousMonth.click();
+        return this;
+    }
+    public KeyboxPage clickTheExactFromDate() {
+        TestLogger.info("Clicking the from date in calendar");
+        keyboxElements.ExactFromDate.click();
+        return this;
+    }
+    public KeyboxPage clickToDate() {
+        TestLogger.info("Clicking the TO DATE");
+        keyboxElements.ToDate.click();
+        return this;
+    }
+    public KeyboxPage clickExactToDate() {
+        TestLogger.info("Clicking the Exsact To Date in calendar");
+        keyboxElements.ExactToDate.click();
+        return this;
+    }
 }

@@ -56,6 +56,37 @@ public class KeyboxPageElements {
 
     public By OptionInTypeDropDownLocator = By.xpath("//span[text()='Month Till Date']");
 
+    @FindBy(xpath = "//span[text()='Date Range']")
+    public WebElement DateRangeOptionInTypeDropDown;
+
+    public By DateRangeOptionInTypeDropDownLocator = By.xpath("//span[text()='Date Range']");
+
+    @FindBy(xpath = "//span[text()='From Date']")
+    public WebElement FromDate;
+
+    public By FromDateLocator = By.xpath("//span[text()='From Date']");
+
+    @FindBy(xpath = "//button[@aria-label='Go to the Previous Month']")
+    public WebElement PreviousMonth;
+
+    public By PreviousMonthLocator = By.xpath("//button[@aria-label='Go to the Previous Month']");
+
+    @FindBy(xpath = "//button[@aria-label='Monday, December 1st, 2025']")
+    public WebElement ExactFromDate;
+
+    public By ExactFromDateLocator = By.xpath("//button[@aria-label='Monday, December 1st, 2025']");
+
+    @FindBy(xpath = "//span[text()='To Date']")
+    public WebElement ToDate;
+
+    public By ToDateLocator = By.xpath("//span[text()='To Date']");
+
+    @FindBy(xpath = "//button[@aria-label='Today, Monday, January 5th, 2026']")
+    public WebElement ExactToDate;
+
+    public By ExactToDateLocator = By.xpath("//button[@aria-label='Today, Monday, January 5th, 2026']");
+
+
     @FindBy(xpath = "//div[@role='dialog']")
     public WebElement filterDialog;
 
