@@ -515,5 +515,6 @@ public class KeyboxPageElements {
      */
     public By getRowsByStatus(String status) {
         return By.xpath("//tbody/tr[.//span[contains(text(),'" + status + "')]]");
+
     }
 }
