@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Response Schema",
+  "description": "Schema for validating single user API response",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "integer"],
+      "description": "User unique identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "User's full name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "User's email address"
+    },
+    "role": {
+      "type": "string",
+      "description": "User's role"
+    },
+    "status": {
+      "type": "string",
+      "description": "User's account status"
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Account creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Last update timestamp"
+    },
+    "data": {
+      "type": "object",
+      "description": "Wrapper object for user data",
+      "properties": {
+        "id": {"type": ["string", "integer"]},
+        "name": {"type": "string"},
+        "email": {"type": "string"},
+        "role": {"type": "string"},
+        "status": {"type": "string"}
+      }
+    },
+    "message": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    }
+  }
+}

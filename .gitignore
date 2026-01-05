@@ -2,7 +2,10 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
+
 .kotlin
+
 
 ### Eclipse ###
 .apt_generated
@@ -15,6 +18,8 @@ out/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+!**/src/main/**/target/
+!**/src/test/**/target/
 
 ### NetBeans ###
 /nbproject/private/
