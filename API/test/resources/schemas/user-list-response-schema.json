@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User List Response Schema",
+  "description": "Schema for validating user list API response",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": ["string", "integer"]},
+          "name": {"type": "string"},
+          "email": {"type": "string"},
+          "role": {"type": "string"},
+          "status": {"type": "string"}
+        }
+      }
+    },
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": ["string", "integer"]},
+          "name": {"type": "string"},
+          "email": {"type": "string"},
+          "role": {"type": "string"}
+        }
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "properties": {
+        "page": {"type": "integer"},
+        "size": {"type": "integer"},
+        "totalPages": {"type": "integer"},
+        "totalElements": {"type": "integer"}
+      }
+    },
+    "total": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    }
+  }
+}

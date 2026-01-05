@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Asset Response Schema",
+  "description": "Schema for validating single asset API response",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "integer"],
+      "description": "Asset unique identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Asset name"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Asset serial number"
+    },
+    "type": {
+      "type": "string",
+      "description": "Asset type (Hardware, Software, etc.)"
+    },
+    "status": {
+      "type": "string",
+      "description": "Asset status (Active, Inactive, Maintenance, Retired)"
+    },
+    "location": {
+      "type": "string",
+      "description": "Asset location"
+    },
+    "purchaseDate": {
+      "type": "string",
+      "description": "Purchase date"
+    },
+    "value": {
+      "type": "number",
+      "description": "Asset value"
+    },
+    "assignedTo": {
+      "type": ["string", "object", "null"],
+      "description": "User or department assigned to"
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Last update timestamp"
+    },
+    "data": {
+      "type": "object",
+      "description": "Wrapper object for asset data"
+    },
+    "message": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    }
+  }
+}

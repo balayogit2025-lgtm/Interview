@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Report Response Schema",
+  "description": "Schema for validating single report API response",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "integer"],
+      "description": "Report unique identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Report name"
+    },
+    "type": {
+      "type": "string",
+      "description": "Report type (daily, weekly, monthly, etc.)"
+    },
+    "status": {
+      "type": "string",
+      "description": "Report generation status"
+    },
+    "startDate": {
+      "type": "string",
+      "description": "Report start date"
+    },
+    "endDate": {
+      "type": "string",
+      "description": "Report end date"
+    },
+    "format": {
+      "type": "string",
+      "description": "Report format (pdf, excel, csv)"
+    },
+    "generatedAt": {
+      "type": "string",
+      "description": "Generation timestamp"
+    },
+    "downloadUrl": {
+      "type": "string",
+      "description": "URL to download the report"
+    },
+    "createdBy": {
+      "type": ["string", "object"],
+      "description": "User who created the report"
+    },
+    "data": {
+      "type": "object",
+      "description": "Wrapper object for report data"
+    },
+    "message": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    }
+  }
+}

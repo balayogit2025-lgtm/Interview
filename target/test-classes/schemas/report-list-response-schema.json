@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Report List Response Schema",
+  "description": "Schema for validating report list API response",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": ["string", "integer"]},
+          "name": {"type": "string"},
+          "type": {"type": "string"},
+          "status": {"type": "string"},
+          "startDate": {"type": "string"},
+          "endDate": {"type": "string"},
+          "generatedAt": {"type": "string"}
+        }
+      }
+    },
+    "reports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": ["string", "integer"]},
+          "name": {"type": "string"},
+          "type": {"type": "string"},
+          "status": {"type": "string"}
+        }
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "properties": {
+        "page": {"type": "integer"},
+        "size": {"type": "integer"},
+        "totalPages": {"type": "integer"},
+        "totalElements": {"type": "integer"}
+      }
+    },
+    "total": {"type": "integer"},
+    "page": {"type": "integer"},
+    "size": {"type": "integer"},
+    "message": {"type": "string"},
+    "success": {"type": "boolean"}
+  }
+}
