@@ -42,33 +42,9 @@ public class DashboardApi extends BaseApi {
         return response;
     }
 
-    /**
-     * Get dashboard statistics
-     * @return API response with dashboard statistics
-     */
-    public Response getDashboardStats() {
-        System.out.println("Fetching dashboard statistics");
 
-        Response response = getRequestSpec()
-                .get(EndPoints.DASHBOARD_STATS);
 
-        logResponse(response);
-        return response;
-    }
 
-    /**
-     * Get dashboard summary
-     * @return API response with dashboard summary
-     */
-    public Response getDashboardSummary() {
-        System.out.println("Fetching dashboard summary");
-
-        Response response = getRequestSpec()
-                .get(EndPoints.DASHBOARD_SUMMARY);
-
-        logResponse(response);
-        return response;
-    }
 
     /**
      * Get dashboard with date range filter
@@ -88,57 +64,8 @@ public class DashboardApi extends BaseApi {
         return response;
     }
 
-    /**
-     * Get dashboard stats with specific parameters
-     * @param params query parameters for filtering stats
-     * @return API response with filtered statistics
-     */
-    public Response getDashboardStats(Map<String, String> params) {
-        System.out.println("Fetching dashboard statistics with parameters");
 
-        var requestSpec = getRequestSpec();
 
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            requestSpec.queryParam(entry.getKey(), entry.getValue());
-        }
-
-        Response response = requestSpec.get(EndPoints.DASHBOARD_STATS);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Get dashboard with specific stat type
-     * @param statType the type of statistic to retrieve
-     * @return API response with specific statistics
-     */
-    public Response getDashboardStatsByType(String statType) {
-        System.out.println("Fetching dashboard statistics for type: " + statType);
-
-        Response response = getRequestSpec()
-                .queryParam("type", statType)
-                .get(EndPoints.DASHBOARD_STATS);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Get dashboard summary with period filter
-     * @param period the time period (e.g., "day", "week", "month", "year")
-     * @return API response with period-based summary
-     */
-    public Response getDashboardSummaryByPeriod(String period) {
-        System.out.println("Fetching dashboard summary for period: " + period);
-
-        Response response = getRequestSpec()
-                .queryParam("period", period)
-                .get(EndPoints.DASHBOARD_SUMMARY);
-
-        logResponse(response);
-        return response;
-    }
 
     // ==================== Negative Test Methods ====================
 
@@ -186,33 +113,6 @@ public class DashboardApi extends BaseApi {
         return response;
     }
 
-    /**
-     * Get dashboard stats with invalid stat type for negative testing
-     * @return API response
-     */
-    public Response getDashboardStatsWithInvalidType() {
-        System.out.println("Fetching dashboard stats with invalid type (negative test)");
 
-        Response response = getRequestSpec()
-                .queryParam("type", "invalid_stat_type_xyz")
-                .get(EndPoints.DASHBOARD_STATS);
 
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Get dashboard summary with invalid period for negative testing
-     * @return API response
-     */
-    public Response getDashboardSummaryWithInvalidPeriod() {
-        System.out.println("Fetching dashboard summary with invalid period (negative test)");
-
-        Response response = getRequestSpec()
-                .queryParam("period", "invalid_period")
-                .get(EndPoints.DASHBOARD_SUMMARY);
-
-        logResponse(response);
-        return response;
-    }
 }

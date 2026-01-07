@@ -112,7 +112,7 @@ public class AccessApiTest extends BaseTest {
 
     // ==================== Additional Positive Test Cases - CREATE Operations ====================
 
-    @Test(priority = 12, description = "Test creating access with minimum required fields")
+    @Test(priority = 5, description = "Test creating access with minimum required fields")
     public void testCreateAccessWithMinimumRequiredFields() {
         System.out.println("Testing create access with minimum required fields");
 

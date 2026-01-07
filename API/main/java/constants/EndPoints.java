@@ -35,9 +35,8 @@ public final class EndPoints {
     public static final String REPORT_LIST = "/api/reports/list";
 
     // ==================== Dashboard Endpoints ====================
-    public static final String DASHBOARD = "/api/dashboard";
-    public static final String DASHBOARD_STATS = "/api/dashboard/stats";
-    public static final String DASHBOARD_SUMMARY = "/api/dashboard/summary";
+    public static final String DASHBOARD = "/api/dashboard/get";
+
 
     // ==================== Access Management Endpoints ====================
     public static final String ACCESS = "/api/access/get";
