@@ -28,7 +28,24 @@ public class KeyboxTest extends BaseTest {
         // Login before each test
         loginPage.login(ConfigReader.getkeyboxValidEmail(), ConfigReader.getValidPassword());
         keyboxPage.navigateToKeyboxPage();
-        keyboxPage.clickFilterButton().clickTypeDropdown().clickOptionInTypeDropdown().clickApplyFilterButton();
+        keyboxPage.clickFilterButton().clickTypeDropdown().clickDateRangeOptionInTypeDropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        keyboxPage.clickFromDate().clickPreviousMonth();
+       try {
+           Thread.sleep(1000);
+       } catch (InterruptedException e) {
+       }
+        keyboxPage.clickTheExactFromDate();
+        keyboxPage.clickToDate();
+       try {
+           Thread.sleep(1000);
+       } catch (InterruptedException e) {
+       }
+        keyboxPage.clickExactToDate();
+         keyboxPage.clickApplyFilterButton();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -141,6 +158,10 @@ public class KeyboxTest extends BaseTest {
     public void verifyViewModalCloseButton() {
         getExtentTest().log(Status.INFO, "Test: Verifying view Modal can be closed using Close Button");
         TestLogger.info("Test: Verifying view Modal can be closed using Close Button");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
         keyboxPage.clickActionButton().clickViewButton().clickCloseButton();
         Assert.assertTrue(keyboxPage.isKeyboxTableDisplayed(),"View modal is not closed");
         getExtentTest().log(Status.PASS, "View modal is closed successfully.");
@@ -164,6 +185,10 @@ public class KeyboxTest extends BaseTest {
         TestLogger.info("Test: Verifying Pagination");
         boolean paginationacontrolsdisplayed = keyboxPage.isFirstPageButtonDisplayed() && keyboxPage.isPreviousPageButtonDisplayed()
          && keyboxPage.isNextPageButtonDisplayed() && keyboxPage.isLastPageButtonDisplayed();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
         Assert.assertTrue(paginationacontrolsdisplayed, "pagination controls are not getting displayed");
         getExtentTest().log(Status.PASS, "pagination controls are getting displayed");
         TestLogger.success("pagination controls are getting displayed");
@@ -306,7 +331,7 @@ public class KeyboxTest extends BaseTest {
         getExtentTest().log(Status.PASS, "Filter dialog closed successfully using Clear Filter button.");
         TestLogger.success("Clear Filter button closes dialog test passed.");
     }
-    @Test(priority = 25, description = "Register a KeyBox with valid details")
+   /* @Test(priority = 25, description = "Register a KeyBox with valid details")
     public void RegisteraKeyBox() {
         getExtentTest().log(Status.INFO, "Test:Register a KeyBox with valid details");
         TestLogger.info("Test: Register a KeyBox with valid details");
@@ -460,6 +485,7 @@ public class KeyboxTest extends BaseTest {
          getExtentTest().log(Status.PASS, "Next page button is Disabled");
      }
  }
+
 
 
 

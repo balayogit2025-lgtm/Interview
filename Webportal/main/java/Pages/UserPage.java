@@ -153,6 +153,10 @@ public class UserPage {
     public UserPage clicklocationleveldropdown() {
         try {
             WebElement Locationlevel = elements.getLocationlevel();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
             Locationlevel.click();
             logger.info("Clicked the Location level dropdown");
         } catch (Exception e) {
@@ -464,7 +468,12 @@ public class UserPage {
     public UserPage CancelinAddUser() {
         navigatetouserpage().clickadduserbutton().enterfirstname("Demo user 10").enterlastname("10").enteremail("demouser10@gmail.com").entermobile("9999999999")
                 .clickroledropdown().Selectwebusertype().clicklocationleveldropdown().clicklocationlevelvalue();
-        clicklocationdropdown().clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clickcancelbutton();
+        clicklocationdropdown();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        clicklocationvalue().enterpassword("Sterna@123").enterconfirmpassword("Sterna@123").clickcancelbutton();
         return this;
     }
     public UserPage CancelInEditUser() {
@@ -883,6 +892,8 @@ public class UserPage {
         return value;
     }
 
-    //userpage
+
+
+
 
     }

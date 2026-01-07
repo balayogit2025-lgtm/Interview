@@ -140,7 +140,7 @@ public class RolePage {
     public RolePage Addnewrolewithbothusertype() {
         navigatetorolepage();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(1500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -586,5 +586,6 @@ public class RolePage {
 
 
 
-//rolepage
+
+
 }
