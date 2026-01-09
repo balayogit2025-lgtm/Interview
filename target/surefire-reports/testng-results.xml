@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="27" passed="27" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-09T15:55:06 IST" name="Surefire suite" finished-at="2026-01-09T15:56:25 IST" duration-ms="79628">
+    <groups>
+    </groups>
+    <test started-at="2026-01-09T15:55:06 IST" name="Surefire test" finished-at="2026-01-09T15:56:25 IST" duration-ms="79628">
+      <class name="TestRun.LoginTest">
+        <test-method is-config="true" signature="setupExtentReports()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:05 IST" name="setupExtentReports" finished-at="2026-01-09T15:55:06 IST" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupExtentReports -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:06 IST" name="setup" finished-at="2026-01-09T15:55:21 IST" duration-ms="15001" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:21 IST" name="createTest" finished-at="2026-01-09T15:55:21 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginPageElements()[pri:1, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:21 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:24 IST" duration-ms="2499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginPageElements()[pri:1, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:24 IST" name="verifyLoginPageElements" description="Verify login page elements are displayed" finished-at="2026-01-09T15:55:25 IST" duration-ms="1353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageElements -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:25 IST" name="logTestResult" finished-at="2026-01-09T15:55:25 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginPageElements status=SUCCESS method=LoginTest.verifyLoginPageElements()[pri:1, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:25 IST" name="createTest" finished-at="2026-01-09T15:55:25 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifySuccessfulLogin()[pri:2, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:25 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:26 IST" duration-ms="740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifySuccessfulLogin()[pri:2, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:26 IST" name="verifySuccessfulLogin" description="Verify successful login with valid credentials" finished-at="2026-01-09T15:55:27 IST" duration-ms="1249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfulLogin -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:27 IST" name="logTestResult" finished-at="2026-01-09T15:55:27 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySuccessfulLogin status=SUCCESS method=LoginTest.verifySuccessfulLogin()[pri:2, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:27 IST" name="createTest" finished-at="2026-01-09T15:55:27 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginPageTitle()[pri:3, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:27 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:28 IST" duration-ms="597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginPageTitle()[pri:3, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:28 IST" name="verifyLoginPageTitle" description="Verify login page title" finished-at="2026-01-09T15:55:28 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageTitle -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:28 IST" name="createTest" finished-at="2026-01-09T15:55:28 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginPageUrl()[pri:4, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:28 IST" name="logTestResult" finished-at="2026-01-09T15:55:28 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginPageTitle status=SUCCESS method=LoginTest.verifyLoginPageTitle()[pri:3, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:28 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:29 IST" duration-ms="650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginPageUrl()[pri:4, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:29 IST" name="verifyLoginPageUrl" description="Verify login page URL" finished-at="2026-01-09T15:55:29 IST" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageUrl -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:29 IST" name="logTestResult" finished-at="2026-01-09T15:55:29 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginPageUrl status=SUCCESS method=LoginTest.verifyLoginPageUrl()[pri:4, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:29 IST" name="createTest" finished-at="2026-01-09T15:55:29 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyEmailFieldAcceptsInput()[pri:5, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:29 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:29 IST" duration-ms="705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyEmailFieldAcceptsInput()[pri:5, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:29 IST" name="verifyEmailFieldAcceptsInput" description="Verify email field accepts input" finished-at="2026-01-09T15:55:30 IST" duration-ms="470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailFieldAcceptsInput -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:30 IST" name="logTestResult" finished-at="2026-01-09T15:55:30 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEmailFieldAcceptsInput status=SUCCESS method=LoginTest.verifyEmailFieldAcceptsInput()[pri:5, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:30 IST" name="createTest" finished-at="2026-01-09T15:55:30 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyPasswordFieldMasksInput()[pri:6, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:30 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:30 IST" duration-ms="549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyPasswordFieldMasksInput()[pri:6, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:30 IST" name="verifyPasswordFieldMasksInput" description="Verify password field masks input" finished-at="2026-01-09T15:55:31 IST" duration-ms="681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordFieldMasksInput -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:31 IST" name="logTestResult" finished-at="2026-01-09T15:55:31 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPasswordFieldMasksInput status=SUCCESS method=LoginTest.verifyPasswordFieldMasksInput()[pri:6, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:31 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:32 IST" duration-ms="526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:31 IST" name="createTest" finished-at="2026-01-09T15:55:31 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyFieldClearFunctionality()[pri:7, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method signature="verifyFieldClearFunctionality()[pri:7, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:32 IST" name="verifyFieldClearFunctionality" description="Verify field clear functionality" finished-at="2026-01-09T15:55:33 IST" duration-ms="1064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFieldClearFunctionality -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:33 IST" name="createTest" finished-at="2026-01-09T15:55:33 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginButtonIsClickable()[pri:8, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:33 IST" name="logTestResult" finished-at="2026-01-09T15:55:33 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFieldClearFunctionality status=SUCCESS method=LoginTest.verifyFieldClearFunctionality()[pri:7, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:33 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:33 IST" duration-ms="582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginButtonIsClickable()[pri:8, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:33 IST" name="verifyLoginButtonIsClickable" description="Verify login button is clickable" finished-at="2026-01-09T15:55:34 IST" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginButtonIsClickable -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:34 IST" name="logTestResult" finished-at="2026-01-09T15:55:34 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginButtonIsClickable status=SUCCESS method=LoginTest.verifyLoginButtonIsClickable()[pri:8, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:34 IST" name="createTest" finished-at="2026-01-09T15:55:34 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithInvalidEmail()[pri:9, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:34 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:34 IST" duration-ms="905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithInvalidEmail()[pri:9, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:35 IST" name="verifyLoginWithInvalidEmail" description="Verify login fails with invalid email" finished-at="2026-01-09T15:55:39 IST" duration-ms="4791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidEmail -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:39 IST" name="logTestResult" finished-at="2026-01-09T15:55:39 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidEmail status=SUCCESS method=LoginTest.verifyLoginWithInvalidEmail()[pri:9, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:39 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:40 IST" duration-ms="631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:39 IST" name="createTest" finished-at="2026-01-09T15:55:39 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithInvalidPassword()[pri:10, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method signature="verifyLoginWithInvalidPassword()[pri:10, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:40 IST" name="verifyLoginWithInvalidPassword" description="Verify login fails with invalid password" finished-at="2026-01-09T15:55:42 IST" duration-ms="1990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidPassword -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:42 IST" name="logTestResult" finished-at="2026-01-09T15:55:42 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidPassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidPassword()[pri:10, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:42 IST" name="createTest" finished-at="2026-01-09T15:55:42 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithEmptyCredentials()[pri:11, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:42 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:43 IST" duration-ms="781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithEmptyCredentials()[pri:11, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:43 IST" name="verifyLoginWithEmptyCredentials" description="Verify login fails with empty credentials" finished-at="2026-01-09T15:55:44 IST" duration-ms="1261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithEmptyCredentials -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:44 IST" name="logTestResult" finished-at="2026-01-09T15:55:44 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithEmptyCredentials status=SUCCESS method=LoginTest.verifyLoginWithEmptyCredentials()[pri:11, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:44 IST" name="createTest" finished-at="2026-01-09T15:55:44 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithEmptyEmail()[pri:12, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:44 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:45 IST" duration-ms="724" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithEmptyEmail()[pri:12, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:45 IST" name="verifyLoginWithEmptyEmail" description="Verify login with empty email" finished-at="2026-01-09T15:55:46 IST" duration-ms="1245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithEmptyEmail -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:46 IST" name="logTestResult" finished-at="2026-01-09T15:55:46 IST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithEmptyEmail status=SUCCESS method=LoginTest.verifyLoginWithEmptyEmail()[pri:12, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:46 IST" name="createTest" finished-at="2026-01-09T15:55:46 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithEmptyPassword()[pri:13, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:46 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:47 IST" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithEmptyPassword()[pri:13, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:47 IST" name="verifyLoginWithEmptyPassword" description="Verify login with empty password" finished-at="2026-01-09T15:55:48 IST" duration-ms="1005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithEmptyPassword -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:48 IST" name="createTest" finished-at="2026-01-09T15:55:48 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithSQLInjection()[pri:14, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:48 IST" name="logTestResult" finished-at="2026-01-09T15:55:48 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithEmptyPassword status=SUCCESS method=LoginTest.verifyLoginWithEmptyPassword()[pri:13, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:48 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:48 IST" duration-ms="530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithSQLInjection()[pri:14, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:48 IST" name="verifyLoginWithSQLInjection" description="Verify login handles SQL injection" finished-at="2026-01-09T15:55:52 IST" duration-ms="3725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithSQLInjection -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:52 IST" name="logTestResult" finished-at="2026-01-09T15:55:52 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithSQLInjection status=SUCCESS method=LoginTest.verifyLoginWithSQLInjection()[pri:14, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:52 IST" name="createTest" finished-at="2026-01-09T15:55:52 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithSpecialCharacters()[pri:15, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:52 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:53 IST" duration-ms="1118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithSpecialCharacters()[pri:15, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:53 IST" name="verifyLoginWithSpecialCharacters" description="Verify login with special characters" finished-at="2026-01-09T15:55:55 IST" duration-ms="1575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithSpecialCharacters -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:55 IST" name="createTest" finished-at="2026-01-09T15:55:55 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithXSSAttack()[pri:18, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:55 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:56 IST" duration-ms="1126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:55 IST" name="logTestResult" finished-at="2026-01-09T15:55:55 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithSpecialCharacters status=SUCCESS method=LoginTest.verifyLoginWithSpecialCharacters()[pri:15, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method signature="verifyLoginWithXSSAttack()[pri:18, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:56 IST" name="verifyLoginWithXSSAttack" description="Verify login handles XSS attack" finished-at="2026-01-09T15:55:58 IST" duration-ms="1899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithXSSAttack -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:58 IST" name="logTestResult" finished-at="2026-01-09T15:55:58 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithXSSAttack status=SUCCESS method=LoginTest.verifyLoginWithXSSAttack()[pri:18, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:58 IST" name="createTest" finished-at="2026-01-09T15:55:58 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVeryLongEmail()[pri:19, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:58 IST" name="setupLoginTest" finished-at="2026-01-09T15:55:59 IST" duration-ms="889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVeryLongEmail()[pri:19, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:55:59 IST" name="verifyLoginWithVeryLongEmail" description="Verify login with very long email" finished-at="2026-01-09T15:56:01 IST" duration-ms="2692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVeryLongEmail -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:01 IST" name="logTestResult" finished-at="2026-01-09T15:56:01 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVeryLongEmail status=SUCCESS method=LoginTest.verifyLoginWithVeryLongEmail()[pri:19, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:01 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:02 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:01 IST" name="createTest" finished-at="2026-01-09T15:56:01 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithInvalidEmailFormat()[pri:20, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method signature="verifyLoginWithInvalidEmailFormat()[pri:20, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:02 IST" name="verifyLoginWithInvalidEmailFormat" description="Verify login with invalid email format" finished-at="2026-01-09T15:56:05 IST" duration-ms="3116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidEmailFormat -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:05 IST" name="createTest" finished-at="2026-01-09T15:56:05 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithSpacesOnly()[pri:21, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:05 IST" name="logTestResult" finished-at="2026-01-09T15:56:05 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidEmailFormat status=SUCCESS method=LoginTest.verifyLoginWithInvalidEmailFormat()[pri:20, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:05 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:08 IST" duration-ms="3175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithSpacesOnly()[pri:21, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:08 IST" name="verifyLoginWithSpacesOnly" description="Verify login with spaces only in fields" finished-at="2026-01-09T15:56:09 IST" duration-ms="765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithSpacesOnly -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:09 IST" name="logTestResult" finished-at="2026-01-09T15:56:09 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithSpacesOnly status=SUCCESS method=LoginTest.verifyLoginWithSpacesOnly()[pri:21, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:09 IST" name="createTest" finished-at="2026-01-09T15:56:09 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithUppercaseEmail()[pri:22, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:09 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:11 IST" duration-ms="2293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithUppercaseEmail()[pri:22, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:11 IST" name="verifyLoginWithUppercaseEmail" description="Verify login with uppercase email" finished-at="2026-01-09T15:56:12 IST" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithUppercaseEmail -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:12 IST" name="logTestResult" finished-at="2026-01-09T15:56:12 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithUppercaseEmail status=SUCCESS method=LoginTest.verifyLoginWithUppercaseEmail()[pri:22, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:12 IST" name="createTest" finished-at="2026-01-09T15:56:12 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:12 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:15 IST" duration-ms="2843" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:15 IST" name="verifyLoginWithVariousInvalidCredentials" description="Verify login fails with various invalid credentials" data-provider="invalidCredentials" finished-at="2026-01-09T15:56:15 IST" duration-ms="760" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Empty email and password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVariousInvalidCredentials -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:16 IST" name="logTestResult" finished-at="2026-01-09T15:56:16 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVariousInvalidCredentials status=SUCCESS method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:16 IST" name="createTest" finished-at="2026-01-09T15:56:16 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:16 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:16 IST" duration-ms="787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:16 IST" name="verifyLoginWithVariousInvalidCredentials" description="Verify login fails with various invalid credentials" data-provider="invalidCredentials" finished-at="2026-01-09T15:56:17 IST" duration-ms="936" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test@]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid email format - no domain]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVariousInvalidCredentials -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:17 IST" name="createTest" finished-at="2026-01-09T15:56:17 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:17 IST" name="logTestResult" finished-at="2026-01-09T15:56:17 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVariousInvalidCredentials status=SUCCESS method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:17 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:18 IST" duration-ms="549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:18 IST" name="verifyLoginWithVariousInvalidCredentials" description="Verify login fails with various invalid credentials" data-provider="invalidCredentials" finished-at="2026-01-09T15:56:19 IST" duration-ms="835" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid email format - no local part]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVariousInvalidCredentials -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:19 IST" name="logTestResult" finished-at="2026-01-09T15:56:19 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVariousInvalidCredentials status=SUCCESS method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:19 IST" name="createTest" finished-at="2026-01-09T15:56:19 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:19 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:19 IST" duration-ms="536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:19 IST" name="verifyLoginWithVariousInvalidCredentials" description="Verify login fails with various invalid credentials" data-provider="invalidCredentials" finished-at="2026-01-09T15:56:20 IST" duration-ms="754" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test.test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid email format - no @ symbol]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVariousInvalidCredentials -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:20 IST" name="createTest" finished-at="2026-01-09T15:56:20 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:20 IST" name="logTestResult" finished-at="2026-01-09T15:56:20 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVariousInvalidCredentials status=SUCCESS method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:20 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:21 IST" duration-ms="981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:21 IST" name="verifyLoginWithVariousInvalidCredentials" description="Verify login fails with various invalid credentials" data-provider="invalidCredentials" finished-at="2026-01-09T15:56:22 IST" duration-ms="1058" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test@test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid email format - incomplete domain]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVariousInvalidCredentials -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:22 IST" name="createTest" finished-at="2026-01-09T15:56:22 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:22 IST" name="logTestResult" finished-at="2026-01-09T15:56:22 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVariousInvalidCredentials status=SUCCESS method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:22 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:22 IST" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:22 IST" name="verifyLoginWithVariousInvalidCredentials" description="Verify login fails with various invalid credentials" data-provider="invalidCredentials" finished-at="2026-01-09T15:56:23 IST" duration-ms="1278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[valid@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Empty password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVariousInvalidCredentials -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:23 IST" name="logTestResult" finished-at="2026-01-09T15:56:23 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVariousInvalidCredentials status=SUCCESS method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="createTest(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:23 IST" name="createTest" finished-at="2026-01-09T15:56:23 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTest -->
+        <test-method is-config="true" signature="setupLoginTest()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:23 IST" name="setupLoginTest" finished-at="2026-01-09T15:56:24 IST" duration-ms="599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupLoginTest -->
+        <test-method signature="verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:24 IST" name="verifyLoginWithVariousInvalidCredentials" description="Verify login fails with various invalid credentials" data-provider="invalidCredentials" finished-at="2026-01-09T15:56:25 IST" duration-ms="815" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ValidPass123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Empty email]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithVariousInvalidCredentials -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:25 IST" name="logTestResult" finished-at="2026-01-09T15:56:25 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithVariousInvalidCredentials status=SUCCESS method=LoginTest.verifyLoginWithVariousInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:23, instance:TestRun.LoginTest@7a7471ce] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:25 IST" name="teardown" finished-at="2026-01-09T15:56:25 IST" duration-ms="649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="tearDownExtentReports()[pri:0, instance:TestRun.LoginTest@7a7471ce]" started-at="2026-01-09T15:56:26 IST" name="tearDownExtentReports" finished-at="2026-01-09T15:56:26 IST" duration-ms="949" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownExtentReports -->
+      </class> <!-- TestRun.LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Device Activity Report Test Suite" parallel="tests" thread-count="3" verbose="1">
+
+    <parameter name="browser" value="chrome"/>
+
+    <listeners>
+        <!-- Add TestNG listeners here if needed -->
+    </listeners>
+
+    <!-- UI Verification Tests - Page Elements -->
+    <test name="Device Activity UI Tests - Page Elements" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifyPageHeaderDisplayed"/>
+                    <include name="verifyPageSubHeaderDisplayed"/>
+                    <include name="verifySearchButtonDisplayed"/>
+                    <include name="verifyFilterButtonDisplayed"/>
+                    <include name="verifyDeviceActivityTableDisplayed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- UI Verification Tests - Statistics Cards -->
+    <test name="Device Activity UI Tests - Statistics Cards" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifyTotalDeviceActivityCardDisplayed"/>
+                    <include name="verifySuccessCardDisplayed"/>
+                    <include name="verifyPendingCardDisplayed"/>
+                    <include name="verifyFailedCardDisplayed"/>
+                    <include name="verifyStatisticsSum"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- UI Verification Tests - Table Headers -->
+    <test name="Device Activity UI Tests - Table Headers" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifyTableHeaderRowDisplayed"/>
+                    <include name="verifyTableHeaders"/>
+                    <include name="verifySnoHeaderDisplayed"/>
+                    <include name="verifySerialNumberHeaderDisplayed"/>
+                    <include name="verifyCommandHeaderDisplayed"/>
+                    <include name="verifySyncDateHeaderDisplayed"/>
+                    <include name="verifyCreatedDateHeaderDisplayed"/>
+                    <include name="verifyStatusHeaderDisplayed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- UI Verification Tests - Pagination -->
+    <test name="Device Activity UI Tests - Pagination" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifyPaginationInfoDisplayed"/>
+                    <include name="verifyPaginationButtonsDisplayed"/>
+                    <include name="verifyPaginationInfoTextFormat"/>
+                    <include name="verifyPageNumberInfoDisplayed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Positive Workflow Tests -->
+    <test name="Device Activity Positive Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifySearchButtonClickable"/>
+                    <include name="verifySearchFunctionality"/>
+                    <include name="verifySearchWithCommandType"/>
+                    <include name="verifyFilterButtonClickable"/>
+                    <include name="verifyFilterDialogCanBeClosed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Negative Workflow Tests -->
+    <test name="Device Activity Negative Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifySearchWithNonExistentSerialNumber"/>
+                    <include name="verifySearchWithSpecialCharacters"/>
+                    <include name="verifySearchWithSQLInjection"/>
+                    <include name="verifySearchWithXSSAttack"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Data Verification Tests -->
+    <test name="Device Activity Data Verification Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifyTableDataStructure"/>
+                    <include name="verifyTotalCountMatchesTableRecords"/>
+                    <include name="verifySuccessCountMatchesTableStatus"/>
+                    <include name="verifyPendingCountMatchesTableStatus"/>
+                    <include name="verifyFailedCountMatchesTableStatus"/>
+                    <include name="verifyStatusBadgesDisplayed"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Empty State and Page Load Tests -->
+    <test name="Device Activity Empty State and Page Load Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest">
+                <methods>
+                    <include name="verifyEmptyStateMessage"/>
+                    <include name="verifyPageLoadsWithoutErrors"/>
+                    <include name="verifyAllStatisticsCardsVisible"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Complete Device Activity Tests (All Tests) - Uncomment to run all -->
+    <!--
+    <test name="All Device Activity Tests" preserve-order="true">
+        <classes>
+            <class name="TestRun.DeviceActivityTest"/>
+        </classes>
+    </test>
+    -->
+
+</suite>

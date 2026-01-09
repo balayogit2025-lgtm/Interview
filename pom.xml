@@ -202,6 +202,24 @@
     </dependencies>
 
     <build>
+        <sourceDirectory>Webportal/main/java</sourceDirectory>
+        <testSourceDirectory>Webportal/test/java</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>Webportal/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>API/main/resources</directory>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>Webportal/test/resources</directory>
+            </testResource>
+            <testResource>
+                <directory>API/test/resources</directory>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -214,16 +232,114 @@
             </plugin>
 
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.4.0</version>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>Webportal/main/java</source>
+                                <source>API/main/java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>add-test-source</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>add-test-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>Webportal/test/java</source>
+                                <source>API/test/java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>add-resource</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>add-resource</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>Webportal/main/resources</directory>
+                                </resource>
+                                <resource>
+                                    <directory>API/main/resources</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>add-test-resource</id>
+                        <phase>generate-test-resources</phase>
+                        <goals>
+                            <goal>add-test-resource</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>Webportal/test/resources</directory>
+                                </resource>
+                                <resource>
+                                    <directory>API/test/resources</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/completeTest.xml</suiteXmlFile>
+                        <suiteXmlFile>${testSuite}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <!-- Maven Profiles for running different test suites -->
+    <profiles>
+        <!-- WebPortal UI Tests Profile -->
+        <profile>
+            <id>webportal</id>
+            <properties>
+                <testSuite>Webportal/test/resources/completeTest.xml</testSuite>
+            </properties>
+        </profile>
+
+        <!-- API Tests Profile -->
+        <profile>
+            <id>api</id>
+            <properties>
+                <testSuite>API/test/resources/apiTest.xml</testSuite>
+            </properties>
+        </profile>
+
+        <!-- All Tests Profile (Default) -->
+        <profile>
+            <id>all</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <testSuite>src/test/resources/allTests.xml</testSuite>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

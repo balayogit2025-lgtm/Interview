@@ -1,21 +1,49 @@
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\ActivitiyPageElements.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\KeyboxPageElements.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\LoginPageElements.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\KeyboxPage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\RolePageElements.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Utils\WaitHelper.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\RolePage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\DashboardPage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\UserPageElements.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Utils\CommonUtil.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Utils\ConfigReader.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\DeviceActivityPageElements.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\LevelPage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\LevelPageElements.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\DeviceActivityPage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Utils\ScreenshotUtil.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\ActivityPage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\UserPage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Pages\LoginPage.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Utils\TestLogger.java
-C:\Users\sandhiyar\IdeaProjects\ACS\ams-automation\src\main\java\Elements\DashboardPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\UserPage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\KeyPositionTemplatePageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\LoginPage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Utils\WaitHelper.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Utils\TestLogger.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\TestDataGenerator.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\ActivityPage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\DeviceActivityApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\OutlookOAuthHelper.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\ActivitiyPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\RoleApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\DeviceActivityPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\ReportApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\KeyPositionTemplatePage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\constants\EndPoints.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\ActivityApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\ResponseValidator.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\KeyboxPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\RolePage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\OTPReader.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\UserPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\KeyboxPage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\KeyPositionTemplateApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\DashboardPage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\OutlookEmailHelper.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\SchemaValidator.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\LoginApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\KeyboxApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pojo\Mailer.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Utils\CommonUtil.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\HealthCheckApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Utils\ScreenshotUtil.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pojo\LoginResponse.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\RolePageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Utils\ConfigReader.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\UserApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\LevelApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\DashboardApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\LevelPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\LevelPage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\DashboardPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pages\AccessApi.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\TokenManager.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Pages\DeviceActivityPage.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\Webportal\main\java\Elements\LoginPageElements.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\ConfigReader.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\pojo\LoginRequest.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\utils\GmailEmailHelper.java
+C:\Users\sandhiyar\IdeaProjects\Latest updates\API\main\java\api\base\BaseApi.java

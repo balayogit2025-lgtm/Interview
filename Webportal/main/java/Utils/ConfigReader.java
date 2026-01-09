@@ -18,7 +18,7 @@ public class ConfigReader {
 
     private static Properties properties;
     private static final Logger logger = LogManager.getLogger(ConfigReader.class);
-    private static final String CONFIG_FILE_PATH = "src/test/resources/config.properties";
+    private static final String CONFIG_FILE_PATH = "Webportal/test/resources/config.properties";
 
     static {
         loadProperties();
