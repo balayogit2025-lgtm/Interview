@@ -20,12 +20,12 @@ public final class EndPoints {
     public static final String REQUEST_OTP= "/api/auth/requestOtp";
 
     // ==================== User Management Endpoints ====================
-    public static final String USERS = "/api/users";
-    public static final String USER_BY_ID = "/api/users/{id}";
-    public static final String USER_PROFILE = "/api/users/profile";
-    public static final String USER_UPDATE = "/api/users/{id}";
-    public static final String USER_DELETE = "/api/users/{id}";
-    public static final String USER_LIST = "/api/users/list";
+    public static final String USERS = "/api/user/get";
+    public static final String USER_BY_Email = "/api/user/get?search=";
+    public static final String USER_CREATE = "/api/user/create";
+    public static final String USER_UPDATE = "/api/user/update";
+    public static final String USER_DELETE = "/api/user/delete";
+    public static final String USER_LIST = "/api/user/get?page=1&search=";
 
     // ==================== Report Endpoints ====================
     public static final String REPORTS = "/api/reports";
@@ -36,24 +36,24 @@ public final class EndPoints {
 
     // ==================== Dashboard Endpoints ====================
     public static final String DASHBOARD = "/api/dashboard/get";
-
+    public static final String DASHBOARD_STATS = "/api/dashboard/get";
+    public static final String DASHBOARD_SUMMARY = "/api/dashboard/get";
 
     // ==================== Access Management Endpoints ====================
     public static final String ACCESS = "/api/access/get";
     public static final String ACCESS_BY_ID = "/api/access/get";
     public static final String ACCESS_CREATE = "/api/access/create";
-        public static final String ACCESS_UPDATE = "/api/access/update";
+    public static final String ACCESS_UPDATE = "/api/access/update";
     public static final String ACCESS_DELETE = "/api/access/{id}";
     public static final String ACCESS_LIST = "/api/access/get";
 
 
     // ==================== Activity Endpoints ====================
-    public static final String ACTIVITIES = "/api/activities";
-    public static final String ACTIVITY_BY_ID = "/api/activities/{id}";
-    public static final String ACTIVITY_CREATE = "/api/activities";
-    public static final String ACTIVITY_UPDATE = "/api/activities/{id}";
-    public static final String ACTIVITY_DELETE = "/api/activities/{id}";
-    public static final String ACTIVITY_LIST = "/api/activities/list";
+    public static final String ACTIVITIES = "/api/access/get";
+    public static final String ACTIVITY_BY_NAME = "/api/access/get";
+    public static final String ACTIVITY_CREATE = "/api/access/create";
+    public static final String ACTIVITY_UPDATE = "/api/access/update";
+    public static final String ACTIVITY_LIST = "/api/access/get?page=1&search=";
 
     // ==================== Level Endpoints ====================
     public static final String LEVELS = "/api/levels";
@@ -64,12 +64,12 @@ public final class EndPoints {
     public static final String LEVEL_LIST = "/api/levels/list";
 
     // ==================== Role Endpoints ====================
-    public static final String ROLES = "/api/roles";
-    public static final String ROLE_BY_ID = "/api/roles/{id}";
-    public static final String ROLE_CREATE = "/api/roles";
-    public static final String ROLE_UPDATE = "/api/roles/{id}";
-    public static final String ROLE_DELETE = "/api/roles/{id}";
-    public static final String ROLE_LIST = "/api/roles/list";
+    public static final String ROLES = "/api/role/get";
+    public static final String ROLE_BY_NAME = "/api/role/get?search=";
+    public static final String ROLE_CREATE = "/api/role/create";
+    public static final String ROLE_UPDATE = "/api/role/update";
+    public static final String ROLE_DELETE = "/api/role/delete";
+    public static final String ROLE_LIST = "/api/role/get?page=1&search=";
 
     // ==================== Keybox Endpoints ====================
     public static final String KEYBOXES = "/api/keyboxes";
@@ -81,12 +81,11 @@ public final class EndPoints {
     public static final String KEYBOX_REGISTER = "/api/keyboxes/register";
 
     // ==================== Key Position Template Endpoints ====================
-    public static final String KEY_POSITION_TEMPLATES = "/api/key-position-templates";
-    public static final String KEY_POSITION_TEMPLATE_BY_ID = "/api/key-position-templates/{id}";
-    public static final String KEY_POSITION_TEMPLATE_CREATE = "/api/key-position-templates";
-    public static final String KEY_POSITION_TEMPLATE_UPDATE = "/api/key-position-templates/{id}";
-    public static final String KEY_POSITION_TEMPLATE_DELETE = "/api/key-position-templates/{id}";
-    public static final String KEY_POSITION_TEMPLATE_LIST = "/api/key-position-templates/list";
+    public static final String KEY_POSITION_TEMPLATES = "/api/keyPattern";
+    public static final String KEY_POSITION_TEMPLATE_BY_NAME = "/api/keyPattern";
+    public static final String KEY_POSITION_TEMPLATE_CREATE = "/api/keyPattern";
+    public static final String KEY_POSITION_TEMPLATE_UPDATE = "/api/keyPattern";
+
 
     // ==================== Device Activity Endpoints ====================
     public static final String DEVICE_ACTIVITIES = "/api/device-activities";
