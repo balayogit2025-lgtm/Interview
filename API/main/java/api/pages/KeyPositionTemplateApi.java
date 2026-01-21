@@ -2,6 +2,7 @@ package api.pages;
 
 import api.base.BaseApi;
 import api.constants.EndPoints;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import java.util.HashMap;
@@ -23,6 +24,7 @@ public class KeyPositionTemplateApi extends BaseApi {
 
     /**
      * Constructor with authentication option
+     *
      * @param requiresAuth whether authentication is required
      */
     public KeyPositionTemplateApi(boolean requiresAuth) {
@@ -31,12 +33,14 @@ public class KeyPositionTemplateApi extends BaseApi {
 
     /**
      * Get all key position templates
+     *
      * @return API response with list of templates
      */
-    public Response getAllTemplates() {
+    public Response getAllTemplates(String page) {
         System.out.println("Fetching all key position templates");
 
         Response response = getRequestSpec()
+                .queryParam("page", page)
                 .get(EndPoints.KEY_POSITION_TEMPLATES);
 
         logResponse(response);
@@ -45,6 +49,7 @@ public class KeyPositionTemplateApi extends BaseApi {
 
     /**
      * Get templates with pagination
+     *
      * @param page page number
      * @param size page size
      * @return API response with paginated templates
@@ -55,156 +60,62 @@ public class KeyPositionTemplateApi extends BaseApi {
         Response response = getRequestSpec()
                 .queryParam("page", page)
                 .queryParam("size", size)
-                .get(EndPoints.KEY_POSITION_TEMPLATE_LIST);
+                .get(EndPoints.KEY_POSITION_TEMPLATES);
 
         logResponse(response);
         return response;
     }
 
-    /**
-     * Get template by ID
-     * @param templateId the template ID
-     * @return API response with template details
-     */
-    public Response getTemplateById(String templateId) {
-        System.out.println("Fetching template with ID: " + templateId);
+
+    public Response getTemplateByName(String search) {
+        System.out.println("Fetching template with ID: " + search);
 
         Response response = getRequestSpec()
-                .pathParam("id", templateId)
-                .get(EndPoints.KEY_POSITION_TEMPLATE_BY_ID);
+                .queryParam("search", search)
+                .get(EndPoints.KEY_POSITION_TEMPLATE_BY_NAME);
 
         logResponse(response);
         return response;
     }
-
-    /**
-     * Get template by ID (integer)
-     * @param templateId the template ID
-     * @return API response with template details
-     */
-    public Response getTemplateById(int templateId) {
-        return getTemplateById(String.valueOf(templateId));
-    }
-
-    /**
-     * Create a new key position template
-     * @param name template name
-     * @param description template description
-     * @param positions number of key positions
-     * @return API response
-     */
-    public Response createTemplate(String name, String description, int positions) {
-        System.out.println("Creating new template: " + name);
-
-        Map<String, Object> templateDetails = new HashMap<>();
-        templateDetails.put("name", name);
-        templateDetails.put("description", description);
-        templateDetails.put("positions", positions);
+    public Response createkeypositiontemplate(String name,List<Map<String, Object>> patterns) {
+        System.out.println("Creating a new key position template");
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("name", name);
+        requestBody.put("patterns", patterns);
 
         Response response = getRequestSpec()
-                .body(templateDetails)
+                .contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body(requestBody)
                 .post(EndPoints.KEY_POSITION_TEMPLATE_CREATE);
 
         logResponse(response);
         return response;
     }
 
-    /**
-     * Create a new template with position details
-     * @param name template name
-     * @param description template description
-     * @param positionDetails list of position details
-     * @return API response
-     */
-    public Response createTemplate(String name, String description, List<Map<String, Object>> positionDetails) {
-        System.out.println("Creating new template: " + name + " with position details");
+    public Response updatekeypositiontemplate(int id, String name,List<Map<String, Object>> patterns) {
+        System.out.println("Update a key positio template details");
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("id", id);
+        requestBody.put("name", name);
+        requestBody.put("patterns", patterns);
 
-        Map<String, Object> templateDetails = new HashMap<>();
-        templateDetails.put("name", name);
-        templateDetails.put("description", description);
-        templateDetails.put("positions", positionDetails);
 
         Response response = getRequestSpec()
-                .body(templateDetails)
-                .post(EndPoints.KEY_POSITION_TEMPLATE_CREATE);
+                .contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body(requestBody)
+                .patch(EndPoints.KEY_POSITION_TEMPLATE_UPDATE);
 
         logResponse(response);
         return response;
     }
 
-    /**
-     * Create a new template with custom body
-     * @param templateBody map containing template details
-     * @return API response
-     */
-    public Response createTemplate(Map<String, Object> templateBody) {
-        System.out.println("Creating new template with custom body");
 
-        Response response = getRequestSpec()
-                .body(templateBody)
-                .post(EndPoints.KEY_POSITION_TEMPLATE_CREATE);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Update template by ID
-     * @param templateId the template ID
-     * @param updateData map containing fields to update
-     * @return API response
-     */
-    public Response updateTemplate(String templateId, Map<String, Object> updateData) {
-        System.out.println("Updating template with ID: " + templateId);
-
-        Response response = getRequestSpec()
-                .pathParam("id", templateId)
-                .body(updateData)
-                .put(EndPoints.KEY_POSITION_TEMPLATE_UPDATE);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Update template name
-     * @param templateId the template ID
-     * @param newName the new name
-     * @return API response
-     */
-    public Response updateTemplateName(String templateId, String newName) {
-        Map<String, Object> updateData = new HashMap<>();
-        updateData.put("name", newName);
-        return updateTemplate(templateId, updateData);
-    }
-
-    /**
-     * Delete template by ID
-     * @param templateId the template ID
-     * @return API response
-     */
-    public Response deleteTemplate(String templateId) {
-        System.out.println("Deleting template with ID: " + templateId);
-
-        Response response = getRequestSpec()
-                .pathParam("id", templateId)
-                .delete(EndPoints.KEY_POSITION_TEMPLATE_DELETE);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Delete template by ID (integer)
-     * @param templateId the template ID
-     * @return API response
-     */
-    public Response deleteTemplate(int templateId) {
-        return deleteTemplate(String.valueOf(templateId));
-    }
 
     /**
      * Search templates by name
+     *
      * @param searchQuery the search query
      * @return API response with matching templates
      */
@@ -219,11 +130,5 @@ public class KeyPositionTemplateApi extends BaseApi {
         return response;
     }
 
-    /**
-     * Get template with invalid/non-existent ID for negative testing
-     * @return API response
-     */
-    public Response getTemplateWithInvalidId() {
-        return getTemplateById("invalid-id-12345");
-    }
+
 }

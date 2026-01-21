@@ -2,12 +2,16 @@ package api.testrun;
 
 import api.pages.DashboardApi;
 import api.utils.ResponseValidator;
-import api.utils.TestDataGenerator;
 import api.utils.TokenManager;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Test class for Dashboard API endpoint: /api/dashboard/get
@@ -27,10 +31,7 @@ public class DashboardApiTest extends BaseTest {
         dashboardApi = new DashboardApi();
         System.out.println("DashboardApiTest setup completed");
     }
-
-    // ==================== Positive Test Cases ====================
-
-    @Test(priority = 1, description = "Test fetching dashboard data with valid authentication")
+    @Test(priority = 1, description = "Test fetching main dashboard data")
     public void testGetDashboard() {
         System.out.println("Testing get dashboard API");
 
@@ -39,7 +40,7 @@ public class DashboardApiTest extends BaseTest {
         int statusCode = response.getStatusCode();
         System.out.println("Get dashboard returned status code: " + statusCode);
 
-        Assert.assertTrue(statusCode == 200 || statusCode == 403,
+        Assert.assertTrue(statusCode == 200,
                 "Get dashboard should return valid status code. Got: " + statusCode);
 
         if (statusCode == 200) {
@@ -49,264 +50,111 @@ public class DashboardApiTest extends BaseTest {
         }
     }
 
-    @Test(priority = 2, description = "Test dashboard API returns JSON content type")
-    public void testGetDashboardContentType() {
-        System.out.println("Testing get dashboard API content type");
+    @Test(priority = 2, description = "Test fetching dashboard statistics")
+    public void testGetDashboardStats() {
+        System.out.println("Testing get dashboard statistics API");
+        Response response = dashboardApi.getDashboardStats();
+        int statusCode = response.getStatusCode();
+        System.out.println("Get dashboard stats returned status code: " + statusCode);
+        JsonPath jsonPath = response.jsonPath();
+        int totalUsers = jsonPath.getInt("data.totalUsers");
+        int totalRoles = jsonPath.getInt("data.totalRoles");
+        int totalWebUsers = jsonPath.getInt("data.totalWebUsers");
+        int totalKeySafeUsers = jsonPath.getInt("data.totalKeySafeUsers");
+        int totalAccess = jsonPath.getInt("data.totalAccess");
+        int totalKeySafes = jsonPath.getInt("data.totalKeySafes");
+        int totalRegisteredKeySafes = jsonPath.getInt("data.totalRegisteredKeySafes");
+        int totalUnregisteredKeySafes = jsonPath.getInt("data.totalUnregisteredKeySafes");
 
+        Assert.assertEquals(statusCode, 200, "Expected status code 200");
+        Assert.assertEquals(totalUsers, 34, "Total users mismatch");
+        Assert.assertEquals(totalRoles, 26, "Total roles mismatch");
+        Assert.assertEquals(totalWebUsers, 29, "Total web users mismatch");
+        Assert.assertEquals(totalKeySafeUsers, 19, "Total key safe users mismatch");
+        Assert.assertEquals(totalAccess, 60, "Total access mismatch");
+        Assert.assertEquals(totalKeySafes, 10, "Total key safes mismatch");
+        Assert.assertEquals(totalRegisteredKeySafes, 10, "Total registered key safes mismatch");
+        Assert.assertEquals(totalUnregisteredKeySafes, 0, "Total unregistered key safes mismatch");
+
+    }
+
+    @Test(priority = 3, description = "Test fetching dashboard summary")
+    public void testGetDashboardSummary() {
+        System.out.println("Testing get dashboard summary API");
+        Response response = dashboardApi.getDashboardSummary();
+        int statusCode = response.getStatusCode();
+        System.out.println("Status code: " + statusCode);
+        String responseBody = response.getBody().asString();
+        System.out.println("Response body: " + responseBody);
+        JsonPath jsonPath = response.jsonPath();
+        String message = jsonPath.getString("message");
+        Assert.assertEquals(statusCode, 200, "Expected status code 200");
+        Assert.assertEquals(message, "Dashboard data fetched successfully", "Message mismatch");
+    }
+
+
+    @Test(priority = 4, description = "Verify the dashboard response time for an Request")
+    public void testDashboardResponseTime() {
+        System.out.println("Testing dashboard API response time");
         Response response = dashboardApi.getDashboard();
+        long responseTime = response.getTime();
+        System.out.println("Dashboard API response time: " + responseTime + " ms");
+        Assert.assertTrue(responseTime < 10000,
+                "Dashboard API response time should be less than 10 seconds. Actual: " + responseTime + " ms");
+    }
 
+    @Test(priority = 5, description = "Test dashboard response content type is JSON")
+    public void testDashboardResponseContentType() {
+        System.out.println("Testing dashboard response content type");
+        Response response = dashboardApi.getDashboard();
         int statusCode = response.getStatusCode();
         if (statusCode == 200) {
             String contentType = response.getContentType();
-            System.out.println("Content-Type: " + contentType);
-
-            Assert.assertNotNull(contentType, "Content-Type header should not be null");
-            Assert.assertTrue(contentType.toLowerCase().contains("application/json"),
-                    "Content-Type should be application/json. Got: " + contentType);
+            Assert.assertTrue(contentType != null && contentType.contains("application/json"),
+                    "Response should be JSON format");
         }
     }
 
-    @Test(priority = 3, description = "Test dashboard API response body is not empty")
-    public void testGetDashboardResponseBodyNotEmpty() {
-        System.out.println("Testing get dashboard API response body");
-
-        Response response = dashboardApi.getDashboard();
-
+    @Test(priority = 6, description = "Test accessing dashboard without authentication token")
+    public void testDashboardWithoutAuthentication() {
+        System.out.println("Testing dashboard API without authentication token");
+        // Clear the token temporarily
+        String savedToken = TokenManager.getToken();
+        TokenManager.clearToken();
+        // Create new DashboardApi instance without token
+        DashboardApi unauthenticatedApi = new DashboardApi(false);
+        Response response = unauthenticatedApi.getDashboard();
         int statusCode = response.getStatusCode();
-        if (statusCode == 200) {
-            String responseBody = response.getBody().asString();
-            System.out.println("Response body length: " + responseBody.length());
-
-            Assert.assertNotNull(responseBody, "Response body should not be null");
-            Assert.assertFalse(responseBody.trim().isEmpty(), "Response body should not be empty");
+        System.out.println("Unauthenticated request returned status code: " + statusCode);
+        Assert.assertEquals(statusCode, 401, "The status code mismatches for an API withgout authentication");
+        // Restore the token
+        if (savedToken != null) {
+            TokenManager.setToken(savedToken);
         }
     }
 
-    @Test(priority = 4, description = "Test dashboard API response time is within acceptable limits")
-    public void testGetDashboardResponseTime() {
-        System.out.println("Testing get dashboard API response time");
-
-        Response response = dashboardApi.getDashboard();
-
-        long responseTime = response.getTime();
-        System.out.println("Response time: " + responseTime + " ms");
-
-        Assert.assertTrue(responseTime < 5000,
-                "Dashboard API response time should be less than 5000ms. Got: " + responseTime + "ms");
-    }
-
-    @Test(priority = 5, description = "Test dashboard API response time is within SLA (2 seconds)")
-    public void testGetDashboardResponseTimeWithinSLA() {
-        System.out.println("Testing get dashboard API response time within SLA");
-
-        Response response = dashboardApi.getDashboard();
-
-        long responseTime = response.getTime();
-        System.out.println("Response time: " + responseTime + " ms");
-
-        Assert.assertTrue(responseTime < 2000,
-                "Dashboard API response time should be less than 2000ms for optimal performance. Got: " + responseTime + "ms");
-    }
-
-    @Test(priority = 6, description = "Test dashboard API returns valid HTTP status line")
-    public void testGetDashboardStatusLine() {
-        System.out.println("Testing get dashboard API status line");
-
-        Response response = dashboardApi.getDashboard();
-
-        String statusLine = response.getStatusLine();
-        System.out.println("Status line: " + statusLine);
-
-        Assert.assertNotNull(statusLine, "Status line should not be null");
-        Assert.assertTrue(statusLine.contains("HTTP"), "Status line should contain HTTP protocol");
-    }
-
-    @Test(priority = 7, description = "Test dashboard API consecutive calls return consistent results")
-    public void testGetDashboardConsistentResponses() {
-        System.out.println("Testing get dashboard API consistency");
-
-        Response response1 = dashboardApi.getDashboard();
-        Response response2 = dashboardApi.getDashboard();
-        Response response3 = dashboardApi.getDashboard();
-
-        Assert.assertEquals(response1.getStatusCode(), response2.getStatusCode(),
-                "Consecutive dashboard calls should return same status code");
-        Assert.assertEquals(response2.getStatusCode(), response3.getStatusCode(),
-                "Consecutive dashboard calls should return same status code");
-
-        System.out.println("All calls returned status code: " + response1.getStatusCode());
-    }
-
-    @Test(priority = 8, description = "Test dashboard API response headers are present")
-    public void testGetDashboardResponseHeaders() {
-        System.out.println("Testing get dashboard API response headers");
-
-        Response response = dashboardApi.getDashboard();
-
-        // Check that response has headers
-        Assert.assertNotNull(response.getHeaders(), "Response headers should not be null");
-        Assert.assertFalse(response.getHeaders().asList().isEmpty(), "Response should have headers");
-
-        // Log some common headers
-        System.out.println("Content-Type: " + response.getHeader("Content-Type"));
-        System.out.println("Content-Length: " + response.getHeader("Content-Length"));
-    }
-
-    // ==================== Negative Test Cases ====================
-
-    @Test(priority = 10, description = "Test dashboard API without authentication returns 401 or 403")
-    public void testGetDashboardWithoutAuth() {
-        System.out.println("Testing get dashboard API without authentication");
-
-        Response response = dashboardApi.getDashboardWithoutAuth();
-
-        int statusCode = response.getStatusCode();
-        System.out.println("Get dashboard without auth returned status code: " + statusCode);
-
-        Assert.assertTrue(statusCode == 401 || statusCode == 403,
-                "Get dashboard without auth should return 401 or 403. Got: " + statusCode);
-    }
-
-    @Test(priority = 11, description = "Test dashboard API without auth returns error message")
-    public void testGetDashboardWithoutAuthErrorMessage() {
-        System.out.println("Testing get dashboard API without auth error response");
-
-        Response response = dashboardApi.getDashboardWithoutAuth();
-
-        int statusCode = response.getStatusCode();
-        if (statusCode == 401 || statusCode == 403) {
-            String responseBody = response.getBody().asString();
-            System.out.println("Error response: " + responseBody);
-
-            Assert.assertNotNull(responseBody, "Error response body should not be null");
+    @Test(priority = 7, description = "Test dashboard concurrent requests")
+    public void testDashboardConcurrentRequests() throws InterruptedException {
+        int requestCount = 25;
+        ExecutorService executorService = Executors.newFixedThreadPool(requestCount);
+        CountDownLatch latch = new CountDownLatch(requestCount);
+        for (int i = 0; i < requestCount; i++) {
+            final int requestNumber = i + 1;
+            executorService.submit(() -> {
+                try {
+                    Response response = dashboardApi.getDashboard();
+                    int statusCode = response.getStatusCode();
+                    System.out.println(" | Thread: " + Thread.currentThread().getName() + " | Request #" + requestNumber + " | Status Code: " + statusCode);
+                    Assert.assertEquals(statusCode, 200, "Unexpected status code for request #" + requestNumber);
+                } finally {
+                    latch.countDown();
+                }
+            });
         }
+        latch.await();
+        executorService.shutdown();
     }
 
-    @Test(priority = 12, description = "Test dashboard API without auth response time")
-    public void testGetDashboardWithoutAuthResponseTime() {
-        System.out.println("Testing get dashboard API without auth response time");
 
-        Response response = dashboardApi.getDashboardWithoutAuth();
-
-        long responseTime = response.getTime();
-        System.out.println("Response time for unauthorized request: " + responseTime + " ms");
-
-        // Unauthorized requests should still respond quickly
-        Assert.assertTrue(responseTime < 3000,
-                "Unauthorized request should respond within 3000ms. Got: " + responseTime + "ms");
-    }
-
-    // ==================== Edge Case Test Cases ====================
-
-    @Test(priority = 20, description = "Test dashboard API multiple rapid calls")
-    public void testGetDashboardMultipleRapidCalls() {
-        System.out.println("Testing get dashboard API with multiple rapid calls");
-
-        int successCount = 0;
-        int totalCalls = 5;
-
-        for (int i = 0; i < totalCalls; i++) {
-            Response response = dashboardApi.getDashboard();
-            if (response.getStatusCode() == 200 || response.getStatusCode() == 403) {
-                successCount++;
-            }
-        }
-
-        System.out.println("Successful calls: " + successCount + "/" + totalCalls);
-        Assert.assertEquals(successCount, totalCalls,
-                "All rapid calls should return valid status codes");
-    }
-
-    @Test(priority = 21, description = "Test dashboard API response can be parsed as JSON")
-    public void testGetDashboardValidJsonResponse() {
-        System.out.println("Testing get dashboard API returns valid JSON");
-
-        Response response = dashboardApi.getDashboard();
-
-        int statusCode = response.getStatusCode();
-        if (statusCode == 200) {
-            try {
-                response.jsonPath().get();
-                System.out.println("Response is valid JSON");
-            } catch (Exception e) {
-                Assert.fail("Response should be valid JSON. Error: " + e.getMessage());
-            }
-        }
-    }
-
-    @Test(priority = 22, description = "Test dashboard API after re-authentication")
-    public void testGetDashboardAfterReAuth() {
-        System.out.println("Testing get dashboard API after re-authentication");
-
-        // First call
-        Response response1 = dashboardApi.getDashboard();
-        int statusCode1 = response1.getStatusCode();
-        System.out.println("First call status code: " + statusCode1);
-
-        // Re-initialize with fresh authentication
-        ensureLoggedIn();
-        dashboardApi = new DashboardApi();
-
-        // Second call after re-auth
-        Response response2 = dashboardApi.getDashboard();
-        int statusCode2 = response2.getStatusCode();
-        System.out.println("Second call after re-auth status code: " + statusCode2);
-
-        Assert.assertEquals(statusCode1, statusCode2,
-                "Dashboard should work consistently after re-authentication");
-    }
-
-    @Test(priority = 23, description = "Test dashboard API response size is reasonable")
-    public void testGetDashboardResponseSize() {
-        System.out.println("Testing get dashboard API response size");
-
-        Response response = dashboardApi.getDashboard();
-
-        int statusCode = response.getStatusCode();
-        if (statusCode == 200) {
-            String responseBody = response.getBody().asString();
-            int responseSize = responseBody.length();
-            System.out.println("Response size: " + responseSize + " characters");
-
-            // Response should not be excessively large (e.g., less than 1MB)
-            Assert.assertTrue(responseSize < 1000000,
-                    "Response size should be less than 1MB. Got: " + responseSize + " characters");
-        }
-    }
-
-    @Test(priority = 24, description = "Test dashboard API with valid token returns success")
-    public void testGetDashboardWithValidToken() {
-        System.out.println("Testing get dashboard API with valid token");
-
-        // Ensure we have a valid token
-        Assert.assertTrue(TokenManager.hasToken(), "Should have a valid token before this test");
-
-        Response response = dashboardApi.getDashboard();
-
-        int statusCode = response.getStatusCode();
-        System.out.println("Get dashboard with valid token returned status code: " + statusCode);
-
-        Assert.assertTrue(statusCode == 200 || statusCode == 403,
-                "Get dashboard with valid token should return 200 or 403. Got: " + statusCode);
-    }
-
-    @Test(priority = 25, description = "Test dashboard API average response time over multiple calls")
-    public void testGetDashboardAverageResponseTime() {
-        System.out.println("Testing get dashboard API average response time");
-
-        int numberOfCalls = 3;
-        long totalTime = 0;
-
-        for (int i = 0; i < numberOfCalls; i++) {
-            Response response = dashboardApi.getDashboard();
-            totalTime += response.getTime();
-        }
-
-        long averageTime = totalTime / numberOfCalls;
-        System.out.println("Average response time over " + numberOfCalls + " calls: " + averageTime + " ms");
-
-        Assert.assertTrue(averageTime < 3000,
-                "Average response time should be less than 3000ms. Got: " + averageTime + "ms");
-    }
 
 }

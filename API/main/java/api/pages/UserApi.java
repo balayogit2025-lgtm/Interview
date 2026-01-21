@@ -2,6 +2,7 @@ package api.pages;
 
 import api.base.BaseApi;
 import api.constants.EndPoints;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import java.util.HashMap;
@@ -48,7 +49,7 @@ public class UserApi extends BaseApi {
      * @param size page size
      * @return API response with paginated users
      */
-    public Response getAllUsers(int page, int size) {
+    public Response getUsersInAPage(int page, int size) {
         System.out.println("Fetching users - page: " + page + ", size: " + size);
 
         Response response = getRequestSpec()
@@ -60,152 +61,79 @@ public class UserApi extends BaseApi {
         return response;
     }
 
-    /**
-     * Get user by ID
-     * @param userId the user ID
-     * @return API response with user details
-     */
-    public Response getUserById(String userId) {
-        System.out.println("Fetching user with ID: " + userId);
+
+    public Response getUserByEmail(String Emailid) {
+        System.out.println("Fetching user with EmailID: " + Emailid);
 
         Response response = getRequestSpec()
-                .pathParam("id", userId)
-                .get(EndPoints.USER_BY_ID);
+                .queryParam("search", Emailid)
+                .get(EndPoints.USER_BY_Email);
 
         logResponse(response);
         return response;
     }
 
-    /**
-     * Get user by ID (integer)
-     * @param userId the user ID
-     * @return API response with user details
-     */
-    public Response getUserById(int userId) {
-        return getUserById(String.valueOf(userId));
-    }
 
-    /**
-     * Get current user profile
-     * @return API response with current user profile
-     */
-    public Response getUserProfile() {
-        System.out.println("Fetching current user profile");
+    public Response createUser(String firstname, String lastname, String email,String mobile, int roleid, boolean isWebUser, int locationId, String code, boolean isKeySafeUser, String displayName, String cardNumber, String pin, String password) {
+        System.out.println("Creating a new user");
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("firstname", firstname);
+        requestBody.put("lastname", lastname);
+        requestBody.put("email", email);
+        requestBody.put("mobile", mobile);
+        requestBody.put("roleid", roleid);
+        requestBody.put("isWebUser", isWebUser);
+        requestBody.put("locationId", locationId);
+        requestBody.put("code", code);
+        requestBody.put("isKeySafeUser", isKeySafeUser);
+        requestBody.put("displayName", displayName);
+        requestBody.put("cardNumber", cardNumber);
+        requestBody.put("pin", pin);
+        requestBody.put("password", password);
+
 
         Response response = getRequestSpec()
-                .get(EndPoints.USER_PROFILE);
+                .contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body(requestBody)
+                .post(EndPoints.USER_CREATE);
 
         logResponse(response);
         return response;
     }
-
-    /**
-     * Create a new user
-     * @param name user's name
-     * @param email user's email
-     * @param password user's password
-     * @param role user's role
-     * @return API response
-     */
-    public Response createUser(String name, String email, String password, String role) {
-        System.out.println("Creating new user: " + email);
-
-        Map<String, Object> userDetails = new HashMap<>();
-        userDetails.put("name", name);
-        userDetails.put("email", email);
-        userDetails.put("password", password);
-        userDetails.put("role", role);
-
-        Response response = getRequestSpec()
-                .body(userDetails)
-                .post(EndPoints.USERS);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Create a new user with custom body
-     * @param userBody map containing user details
-     * @return API response
-     */
-    public Response createUser(Map<String, Object> userBody) {
-        System.out.println("Creating new user with custom body");
+    public Response updateUserInPut(String firstname, String lastname, String email,String mobile, int roleid, boolean isWebUser, int locationId, String code, boolean isKeySafeUser, String displayName, String cardNumber, String pin, String password, int id) {
+        System.out.println("Update a user details using PUT");
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("firstname", firstname);
+        requestBody.put("lastname", lastname);
+        requestBody.put("email", email);
+        requestBody.put("mobile", mobile);
+        requestBody.put("roleid", roleid);
+        requestBody.put("isWebUser", isWebUser);
+        requestBody.put("locationId", locationId);
+        requestBody.put("code", code);
+        requestBody.put("isKeySafeUser", isKeySafeUser);
+        requestBody.put("displayName", displayName);
+        requestBody.put("cardNumber", cardNumber);
+        requestBody.put("pin", pin);
+        requestBody.put("password", password);
+        requestBody.put("id", id);
 
         Response response = getRequestSpec()
-                .body(userBody)
-                .post(EndPoints.USERS);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Update user by ID
-     * @param userId the user ID
-     * @param updateData map containing fields to update
-     * @return API response
-     */
-    public Response updateUser(String userId, Map<String, Object> updateData) {
-        System.out.println("Updating user with ID: " + userId);
-
-        Response response = getRequestSpec()
-                .pathParam("id", userId)
-                .body(updateData)
+                .contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body(requestBody)
                 .put(EndPoints.USER_UPDATE);
 
         logResponse(response);
         return response;
     }
-
-    /**
-     * Update user name
-     * @param userId the user ID
-     * @param newName the new name
-     * @return API response
-     */
-    public Response updateUserName(String userId, String newName) {
-        Map<String, Object> updateData = new HashMap<>();
-        updateData.put("name", newName);
-        return updateUser(userId, updateData);
-    }
-
-    /**
-     * Delete user by ID
-     * @param userId the user ID
-     * @return API response
-     */
-    public Response deleteUser(String userId) {
-        System.out.println("Deleting user with ID: " + userId);
+    public Response deleteUser(int id) {
+        System.out.println("Deleting a user");
 
         Response response = getRequestSpec()
-                .pathParam("id", userId)
-                .delete(EndPoints.USER_DELETE);
-
-        logResponse(response);
-        return response;
-    }
-
-    /**
-     * Delete user by ID (integer)
-     * @param userId the user ID
-     * @return API response
-     */
-    public Response deleteUser(int userId) {
-        return deleteUser(String.valueOf(userId));
-    }
-
-    /**
-     * Search users by name or email
-     * @param searchQuery the search query
-     * @return API response with matching users
-     */
-    public Response searchUsers(String searchQuery) {
-        System.out.println("Searching users with query: " + searchQuery);
-
-        Response response = getRequestSpec()
-                .queryParam("search", searchQuery)
-                .get(EndPoints.USERS);
+                .accept(ContentType.JSON)
+                .delete(EndPoints.USER_DELETE + "/" + id);
 
         logResponse(response);
         return response;
@@ -225,13 +153,5 @@ public class UserApi extends BaseApi {
 
         logResponse(response);
         return response;
-    }
-
-    /**
-     * Get user with invalid/non-existent ID for negative testing
-     * @return API response
-     */
-    public Response getUserWithInvalidId() {
-        return getUserById("invalid-id-12345");
     }
 }
