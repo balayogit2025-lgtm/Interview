@@ -56,12 +56,15 @@ public final class EndPoints {
     public static final String ACTIVITY_LIST = "/api/access/get?page=1&search=";
 
     // ==================== Level Endpoints ====================
-    public static final String LEVELS = "/api/levels";
-    public static final String LEVEL_BY_ID = "/api/levels/{id}";
-    public static final String LEVEL_CREATE = "/api/levels";
-    public static final String LEVEL_UPDATE = "/api/levels/{id}";
-    public static final String LEVEL_DELETE = "/api/levels/{id}";
-    public static final String LEVEL_LIST = "/api/levels/list";
+    public static final String LEVELS_REGION = "/api/level/location?page=0&locationId=1";
+    public static final String LEVELS_STATE = "/api/level/location?page=0&locationId=39";
+    public static final String LEVELS_TERRITORY = "/api/level/location?page=0&locationId=40";
+    public static final String LEVELS_CLUSTER = "/api/level/location?page=0&locationId=41";
+    public static final String LEVELS_LOCATION="/api/level/location?page=0&locationId=42";
+    public static final String LEVEL_BY_NAME = "/api/level/location?page=1&search=&locationId=1";
+    public static final String LEVEL_CREATE = "/api/level";
+    public static final String LEVEL_UPDATE = "/api/level";
+    public static final String LEVEL_LIST = "/api/level/location?page=1&locationId=1";
 
     // ==================== Role Endpoints ====================
     public static final String ROLES = "/api/role/get";
