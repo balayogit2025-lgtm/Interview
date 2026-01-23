@@ -91,11 +91,9 @@ public final class EndPoints {
 
 
     // ==================== Device Activity Endpoints ====================
-    public static final String DEVICE_ACTIVITIES = "/api/device-activities";
-    public static final String DEVICE_ACTIVITY_BY_ID = "/api/device-activities/{id}";
-    public static final String DEVICE_ACTIVITY_LIST = "/api/device-activities/list";
-    public static final String DEVICE_ACTIVITY_BY_DEVICE = "/api/device-activities/device/{deviceId}";
-
+    public static final String DEVICE_ACTIVITIES = "/api/keySafe/syncMaster?page=0&syncStatus=3&dateFilter=MonthTillDate";
+    public static final String DEVICE_ACTIVITY_BY_SERIALNUMBER = "/api/keySafe/syncMaster?page=0&search=&syncStatus=3&dateFilter=MonthTillDate&startDate=&endDate=";
+    public static final String DEVICE_ACTIVITY_LIST = "/api/keySafe/syncMaster?page=1&syncStatus=3&dateFilter=MonthTillDate";
     // ==================== Common Endpoints ====================
     public static final String HEALTH_CHECK = "/api/health";
     public static final String VERSION = "/api/version";
