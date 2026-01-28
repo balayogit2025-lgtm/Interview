@@ -18,6 +18,7 @@ public class LevelsApiTest extends BaseTest {
         System.out.println("LevelApiTest setup completed");
     }
 
+
     @Test(priority = 1, description = "get all regions")
     public void getRegions() {
         System.out.println("get all region ");
@@ -191,7 +192,51 @@ public class LevelsApiTest extends BaseTest {
         String message = response.jsonPath().getString("message");
         Assert.assertEquals(message,"Level updated successfully","Message mismatches");
     }
-
+    @Test(priority = 22 , description = "Create a duplicate region")
+    public void createDuplicateRegion() {
+        System.out.println("Create a duplicate region");
+        Response response = levelApi.createDuplicateLevel(1,"South Indian Region");
+        String actualmessage = response.jsonPath().getString("message");
+         int statuscode = response.getStatusCode();
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualmessage);
+        Assert.assertEquals(actualmessage,"location level name already exist","Response Message mismatches");
+    }
+    @Test(priority = 23 , description = "Create a duplicate State")
+    public void createDuplicateState() {
+        System.out.println("Create a duplicate State");
+        Response response = levelApi.createDuplicateLevel(39,"kerala");
+        String actualmessage = response.jsonPath().getString("message");
+        int statuscode = response.getStatusCode();
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualmessage);
+        Assert.assertEquals(actualmessage,"location level name already exist","Response Message mismatches");
+    }
+    @Test(priority = 24 , description = "Create a duplicate Territory")
+    public void createDuplicateTerritory() {
+        System.out.println("Create a duplicate Territory");
+        Response response = levelApi.createDuplicateLevel(40,"Madurai");
+        String actualmessage = response.jsonPath().getString("message");
+        int statuscode = response.getStatusCode();
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualmessage);
+        Assert.assertEquals(actualmessage,"location level name already exist","Response Message mismatches");
+    }
+    @Test(priority = 25 , description = "Create a duplicate Cluster")
+    public void createDuplicateCluster() {
+        System.out.println("Create a duplicate Cluster");
+        Response response = levelApi.createDuplicateLevel(41,"RS puram");
+        String actualmessage = response.jsonPath().getString("message");
+        int statuscode = response.getStatusCode();
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualmessage);
+        Assert.assertEquals(actualmessage,"location level name already exist","Response Message mismatches");
+    }
+    @Test(priority = 26 , description = "Create a duplicate Location")
+    public void createDuplicateLocation() {
+        System.out.println("Create a duplicate Location");
+        Response response = levelApi.createDuplicateLevel(42,"Coastal side Ro");
+        String actualmessage = response.jsonPath().getString("message");
+        int statuscode = response.getStatusCode();
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualmessage);
+        Assert.assertEquals(actualmessage,"location level name already exist","Response Message mismatches");
+    }
 
 
 

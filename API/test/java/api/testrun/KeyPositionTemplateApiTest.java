@@ -141,5 +141,28 @@ public class KeyPositionTemplateApiTest extends BaseTest {
         String actualmessage =  response.jsonPath().getString("message");
         Assert.assertEquals(actualmessage,"Key position updated successfully","The response message mismatches");
     }
-
+    @Test(priority = 10, description = "Creating a duplicate key position template")
+    public void CreateDuplicateKeyPositionTemplate() {
+        System.out.println("creating a new key position template");
+        List<Map<String, Object>> patterns = new ArrayList<>();
+        for (int i = 1; i <= 8; i++) {
+            Map<String, Object> pattern = new HashMap<>();
+            pattern.put("keyId", i);
+            pattern.put("positionId", i);
+            pattern.put("isActive", true);
+            patterns.add(pattern);
+        }
+        for (int i = 9; i <= 24; i++) {
+            Map<String, Object> pattern = new HashMap<>();
+            pattern.put("keyId", i);
+            pattern.put("positionId", 0);
+            pattern.put("isActive", false);
+            patterns.add(pattern);
+        }
+        Response response = templateApi.createkeypositiontemplate("new template",patterns);
+        int statuscode = response.getStatusCode();
+        String actualcreatemessage =  response.jsonPath().getString("message");
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualcreatemessage);
+        Assert.assertEquals(actualcreatemessage,"key pattern with this name already exists","The response message mismatches");
+    }
 }

@@ -72,6 +72,7 @@ public final class EndPoints {
     public static final String ROLE_CREATE = "/api/role/create";
     public static final String ROLE_UPDATE = "/api/role/update";
     public static final String ROLE_DELETE = "/api/role/delete";
+    public static final String ROLE_DELETE_MAPPED_USER = "/api/role/delete";
     public static final String ROLE_LIST = "/api/role/get?page=1&search=";
 
     // ==================== Keybox Endpoints ====================

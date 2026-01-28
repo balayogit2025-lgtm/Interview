@@ -128,5 +128,19 @@ public class LevelApi extends BaseApi {
         logResponse(response);
         return response;
     }
+    public Response createDuplicateLevel(int locationId, String name) {
+        System.out.println("Creating a new level");
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("locationId", locationId );
+        requestBody.put("name", name );
 
+        Response response = getRequestSpec()
+                .contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body(requestBody)
+                .post(EndPoints.LEVEL_CREATE);
+
+        logResponse(response);
+        return response;
+    }
 }

@@ -115,7 +115,24 @@ public class ActivityApiTest extends BaseTest{
         String actualmessage =  response.jsonPath().getString("message");
         Assert.assertEquals(actualmessage,"Access updated successfully","The response message mismatches");
     }
-
+    @Test(priority = 10, description = "Creating a duplicate activity using activity name")
+    public void CreateDuplicateActivityUsingActivityName() {
+        System.out.println("creating a duplicate activity using activity name");
+        Response response = activityApi.createActivity("field Activity","715",1, List.of(59),List.of(1),1,"2026-01-01","2026-01-31","09:00","18:00","300",true,true,true,true,true,true,true);
+        int statuscode = response.getStatusCode();
+        String actualcreatemessage =  response.jsonPath().getString("message");
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualcreatemessage);
+        Assert.assertEquals(actualcreatemessage,"access name already exists","The response message mismatches");
+    }
+    @Test(priority = 11, description = "Creating a duplicate activity using activity code")
+    public void CreateDuplicateActivityUsingCode() {
+        System.out.println("creating a duplicate activity using activity code");
+        Response response = activityApi.createActivity("New Key Activity","208",1, List.of(59),List.of(1),1,"2026-01-01","2026-01-31","09:00","18:00","300",true,true,true,true,true,true,true);
+        int statuscode = response.getStatusCode();
+        String actualcreatemessage =  response.jsonPath().getString("message");
+        System.out.println("The status code is: " + statuscode + " and the Response message is" +actualcreatemessage);
+        Assert.assertEquals(actualcreatemessage,"access Code already exists","The response message mismatches");
+    }
 
 
 }

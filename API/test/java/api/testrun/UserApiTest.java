@@ -131,4 +131,26 @@ public class UserApiTest extends BaseTest {
         String actualcreatemessage =  response.jsonPath().getString("message");
         Assert.assertEquals(actualcreatemessage,"User deleted successfully ","Success message mismatch for deleting a user");
     }
+    @Test(priority = 11, description = "Create a user using duplicate email id ")
+    public void CreateDuplicateUserWithEmailid() {
+        System.out.println("creating a user with duplicate email id");
+        Response response = userApi.createUser("Automation","User","sandhiyar@sternadevices.in","8451206841",59,true,1,"5810",true,"5810","5810","5810","Sterna@123");
+        int statuscode = response.getStatusCode();
+        String actualcreatemessage =  response.jsonPath().getString("message");
+        System.out.println("The status code is: " + statuscode + "and the Response message is" +actualcreatemessage);
+        Assert.assertEquals(actualcreatemessage,"email already exists","The Response message mismatches");
+    }
+    @Test(priority = 11, description = "Create a user using duplicate mobile number ")
+    public void CreateDuplicateUserWithMobileNumber() {
+        System.out.println("creating a user with duplicate mobile number");
+        Response response = userApi.createUser("Automation","User","Automationuser@gmail.com","9043961404",59,true,1,"5810",true,"5810","5810","5810","Sterna@123");
+        int statuscode = response.getStatusCode();
+        String actualcreatemessage =  response.jsonPath().getString("message");
+        System.out.println("The status code is: " + statuscode + "and the Response message is" +actualcreatemessage);
+        Assert.assertEquals(actualcreatemessage,"mobile number already exists","Response message mismatches");
+    }
+
+
+
+
 }

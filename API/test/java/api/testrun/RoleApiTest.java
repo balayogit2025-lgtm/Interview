@@ -98,7 +98,7 @@ public class RoleApiTest extends BaseTest {
             TokenManager.setToken(savedToken);
         }
     }
-    @Test(priority = 7, description = "Create a new through valid details")
+    @Test(priority = 7, description = "Create a new role with valid details")
     public void CreateNewRoleThroughApi() {
         System.out.println("creating a role through API");
         String name = "Automation User" + System.currentTimeMillis();
@@ -122,4 +122,23 @@ public class RoleApiTest extends BaseTest {
         int statuscode = response.getStatusCode();
         Assert.assertEquals(statuscode, 200, "status code mismatches for creating a role");
     }
+    @Test(priority = 10, description = "Delete the role When user is mapped to role")
+    public void DeletetheRoleWhenUserIsMapped() {
+        System.out.println("Delete a role When an user is mapped");
+        Response response = roleApi.deleteRoleMappedWithUser(2);
+        int statuscode = response.getStatusCode();
+         String actualmessage = response.jsonPath().getString("message");
+         System.out.println("The response message is" +actualmessage);
+        Assert.assertEquals(actualmessage,"user is mapped, role cannot be deleted","The Response message mismatches");
+    }
+    @Test(priority = 11, description = "Create a duplicate role")
+    public void CreateDuplicateRole() {
+        System.out.println("creating a duplicate role");
+        Response response = roleApi.createRole("Only Web User",false,false,true, Collections.emptyList());
+        int statuscode = response.getStatusCode();
+        String actualmessage =  response.jsonPath().getString("message");
+        System.out.println("The status code is: " + statuscode + "and the Response message is" +actualmessage);
+        Assert.assertEquals(actualmessage,"role name already exists","The Response message mismatches");
+    }
+
 }

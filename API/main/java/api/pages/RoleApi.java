@@ -90,6 +90,26 @@ public class RoleApi extends BaseApi {
         logResponse(response);
         return response;
     }
+
+    public Response createDuplicateRole(String roleName, boolean hasWebAccess, boolean hasMobileAccess, boolean hasKeySafeAccess, List<Integer> pageIds) {
+        System.out.println("Creating a duplicate role");
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("name", roleName);
+        requestBody.put("hasWebAccess", hasWebAccess);
+        requestBody.put("hasMobileAccess", hasMobileAccess);
+        requestBody.put("hasKeySafeAccess", hasKeySafeAccess);
+        requestBody.put("pageIds", pageIds);
+
+        Response response = getRequestSpec()
+                .contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body(requestBody)
+                .post(EndPoints.ROLE_CREATE);
+
+        logResponse(response);
+        return response;
+    }
+
     public Response updateRoleInPut(String roleName, boolean hasWebAccess, boolean hasMobileAccess, boolean hasKeySafeAccess, List<Integer> pageIds, int id) {
         System.out.println("Updating role using PUT");
         Map<String, Object> requestBody = new HashMap<>();
@@ -129,13 +149,23 @@ public class RoleApi extends BaseApi {
 
         Response response = getRequestSpec()
                 .accept(ContentType.JSON)
-                .delete(EndPoints.ROLE_DELETE + "/" + id); // assuming ID is part of the URL
+                .delete(EndPoints.ROLE_DELETE + "/" + id);
 
         logResponse(response);
         return response;
-
-
     }
+    public Response deleteRoleMappedWithUser(int id) {
+        System.out.println("Deleting a role which is mappped with user");
+
+        Response response = getRequestSpec()
+                .accept(ContentType.JSON)
+                .delete(EndPoints.ROLE_DELETE + "/" + id);
+
+        logResponse(response);
+        return response;
+    }
+
+
     /**
      * Search roles by name
      * @param searchQuery the search query
