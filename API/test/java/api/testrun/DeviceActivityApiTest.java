@@ -7,8 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+
 
 /**
  * Test class for Device Activity API endpoints.
@@ -49,7 +48,7 @@ public class DeviceActivityApiTest extends BaseTest {
         System.out.println("Testing get device activity by serial number");
         Response response = deviceActivityApi.getDeviceActivityByserialnumber("Q1.A0001");
          int totalcount = response.jsonPath().getInt("data.totalCount");
-        System.out.println("The total number of device activity with the serial number is " +totalcount);
+        System.out.println("The total number of device activity with that serial number is " +totalcount);
         Assert.assertTrue(totalcount > 0, "The total count mismatches");
     }
 
@@ -58,7 +57,7 @@ public class DeviceActivityApiTest extends BaseTest {
         System.out.println("Testing get device activity with invalid serial number");
         Response response = deviceActivityApi.getDeviceActivityByserialnumber("12345");
         int totalcount = response.jsonPath().getInt("data.totalCount");
-        System.out.println("The total number of device activity with the serial number is " +totalcount);
+        System.out.println("The total number of device activity with that serial number is " +totalcount);
         Assert.assertTrue(totalcount ==0, "The total count mismatches");
     }
     @Test(priority = 5, description = "Test API returns JSON content type")
@@ -94,4 +93,44 @@ public class DeviceActivityApiTest extends BaseTest {
             TokenManager.setToken(savedToken);
         }
     }
+    @Test(priority = 8, description = "Verify the total device activity count")
+    public void VerifyTotalDeviceActivityCount() {
+        System.out.println("Verify the total device activity count");
+        Response response = deviceActivityApi.getDeviceActivitiesInAMonth();
+        int statusCode = response.getStatusCode();
+        String totalcount = response.jsonPath().getString("data.totalCount");
+        Assert.assertEquals(totalcount, "448", "The total count mismatches");
+
+    }
+    @Test(priority = 9, description = "Verify the Success Device Activity count")
+    public void VerifySuccessDeviceActivityCount() {
+        System.out.println("Verify the Success Device Activity count");
+        Response response = deviceActivityApi.getDeviceActivitiesInAMonth();
+        int statusCode = response.getStatusCode();
+         String successcount = response.jsonPath().getString("data.successCount");
+        Assert.assertEquals(successcount, "69", "The success count mismatches");
+
+    }
+    @Test(priority = 10, description = "Verify the Pending Device Activity count")
+    public void VerifyPendingDeviceActivityCount() {
+        System.out.println("Verify the Pending Device Activity count");
+        Response response = deviceActivityApi.getDeviceActivitiesInAMonth();
+        int statusCode = response.getStatusCode();
+         String pendingcount = response.jsonPath().getString("data.pendingCount");
+        Assert.assertEquals(pendingcount, "342", "The pending count mismatches");
+    }
+    @Test(priority = 11, description = "Verify the Failed Device Activity count")
+    public void VerifyFailedDeviceActivityCount() {
+        System.out.println("Verify the Failed Device Activity count");
+        Response response = deviceActivityApi.getDeviceActivitiesInAMonth();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.failureCount");
+        Assert.assertEquals(failureCount, "37", "The failed count mismatches");
+
+    }
+
+
+
+
+
 }

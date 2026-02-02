@@ -41,7 +41,15 @@ public class DeviceActivityApi extends BaseApi {
         logResponse(response);
         return response;
     }
+    public Response getDeviceActivitiesInAMonth() {
+        System.out.println("Fetching all device activities");
 
+        Response response = getRequestSpec()
+                .get(EndPoints.DEVICE_ACTIVITIES_MONTH);
+
+        logResponse(response);
+        return response;
+    }
     /**
      * Get device activities with pagination
      * @param page page number

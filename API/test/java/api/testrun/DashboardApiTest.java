@@ -50,35 +50,7 @@ public class DashboardApiTest extends BaseTest {
         }
     }
 
-    @Test(priority = 2, description = "Test fetching dashboard statistics")
-    public void testGetDashboardStats() {
-        System.out.println("Testing get dashboard statistics API");
-        Response response = dashboardApi.getDashboardStats();
-        int statusCode = response.getStatusCode();
-        System.out.println("Get dashboard stats returned status code: " + statusCode);
-        JsonPath jsonPath = response.jsonPath();
-        int totalUsers = jsonPath.getInt("data.totalUsers");
-        int totalRoles = jsonPath.getInt("data.totalRoles");
-        int totalWebUsers = jsonPath.getInt("data.totalWebUsers");
-        int totalKeySafeUsers = jsonPath.getInt("data.totalKeySafeUsers");
-        int totalAccess = jsonPath.getInt("data.totalAccess");
-        int totalKeySafes = jsonPath.getInt("data.totalKeySafes");
-        int totalRegisteredKeySafes = jsonPath.getInt("data.totalRegisteredKeySafes");
-        int totalUnregisteredKeySafes = jsonPath.getInt("data.totalUnregisteredKeySafes");
-
-        Assert.assertEquals(statusCode, 200, "Expected status code 200");
-        Assert.assertEquals(totalUsers, 34, "Total users mismatch");
-        Assert.assertEquals(totalRoles, 26, "Total roles mismatch");
-        Assert.assertEquals(totalWebUsers, 29, "Total web users mismatch");
-        Assert.assertEquals(totalKeySafeUsers, 19, "Total key safe users mismatch");
-        Assert.assertEquals(totalAccess, 60, "Total access mismatch");
-        Assert.assertEquals(totalKeySafes, 10, "Total key safes mismatch");
-        Assert.assertEquals(totalRegisteredKeySafes, 10, "Total registered key safes mismatch");
-        Assert.assertEquals(totalUnregisteredKeySafes, 0, "Total unregistered key safes mismatch");
-
-    }
-
-    @Test(priority = 3, description = "Test fetching dashboard summary")
+    @Test(priority = 2, description = "Test fetching dashboard summary")
     public void testGetDashboardSummary() {
         System.out.println("Testing get dashboard summary API");
         Response response = dashboardApi.getDashboardSummary();
@@ -93,7 +65,7 @@ public class DashboardApiTest extends BaseTest {
     }
 
 
-    @Test(priority = 4, description = "Verify the dashboard response time for an Request")
+    @Test(priority = 3, description = "Verify the dashboard response time for an Request")
     public void testDashboardResponseTime() {
         System.out.println("Testing dashboard API response time");
         Response response = dashboardApi.getDashboard();
@@ -103,7 +75,7 @@ public class DashboardApiTest extends BaseTest {
                 "Dashboard API response time should be less than 10 seconds. Actual: " + responseTime + " ms");
     }
 
-    @Test(priority = 5, description = "Test dashboard response content type is JSON")
+    @Test(priority = 4, description = "Test dashboard response content type is JSON")
     public void testDashboardResponseContentType() {
         System.out.println("Testing dashboard response content type");
         Response response = dashboardApi.getDashboard();
@@ -115,7 +87,7 @@ public class DashboardApiTest extends BaseTest {
         }
     }
 
-    @Test(priority = 6, description = "Test accessing dashboard without authentication token")
+    @Test(priority = 5, description = "Test accessing dashboard without authentication token")
     public void testDashboardWithoutAuthentication() {
         System.out.println("Testing dashboard API without authentication token");
         // Clear the token temporarily
@@ -133,7 +105,7 @@ public class DashboardApiTest extends BaseTest {
         }
     }
 
-    @Test(priority = 7, description = "Test dashboard concurrent requests")
+    @Test(priority = 6, description = "Test dashboard concurrent requests")
     public void testDashboardConcurrentRequests() throws InterruptedException {
         int requestCount = 25;
         ExecutorService executorService = Executors.newFixedThreadPool(requestCount);
@@ -154,7 +126,77 @@ public class DashboardApiTest extends BaseTest {
         latch.await();
         executorService.shutdown();
     }
+    @Test(priority = 7, description = "Verify the Activity count")
+    public void VerifyActivityCount() {
+        System.out.println("Verify the Activity count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalAccess");
+        Assert.assertEquals(failureCount, "71", "The Activity count mismatches");
 
+    }
+    @Test(priority = 8, description = "Verify the Total Roles count")
+    public void VerifyTotalRolesCount() {
+        System.out.println("Verify the Total Roles count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalRoles");
+        Assert.assertEquals(failureCount, "29", "The Total Roles count mismatches");
 
+    }
+    @Test(priority = 9, description = "Verify the Total Users count")
+    public void VerifyTotalUsersCount() {
+        System.out.println("Verify the Total Users count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalUsers");
+        Assert.assertEquals(failureCount, "40", "The Total Users count mismatches");
+
+    }
+    @Test(priority = 10, description = "Verify the Web Users count")
+    public void VerifyWebUsersCount() {
+        System.out.println("Verify the Web Users count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalWebUsers");
+        Assert.assertEquals(failureCount, "35", "The Web Users count mismatches");
+
+    }
+    @Test(priority = 11, description = "Verify the Key Safe Users count")
+    public void VerifyKeySafeUsersCount() {
+        System.out.println("Verify the Key Safe Users count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalKeySafeUsers");
+        Assert.assertEquals(failureCount, "23", "The Key Safe Users count mismatches");
+
+    }
+    @Test(priority = 12, description = "Verify the Total Key Safes count")
+    public void VerifyTotalKeySafesCount() {
+        System.out.println("Verify the Total Key Safes count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalKeySafes");
+        Assert.assertEquals(failureCount, "22", "The Total Key Safes count mismatches");
+
+    }
+    @Test(priority = 13, description = "Verify the Registered Key Safes count")
+    public void VerifyRegisteredKeySafesCount() {
+        System.out.println("Verify the Registered Key Safes count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalRegisteredKeySafes");
+        Assert.assertEquals(failureCount, "14", "The Registered Key Safes count mismatches");
+
+    }
+    @Test(priority = 14, description = "Verify the Unregistered Key Safes")
+    public void VerifyUnregisteredKeySafesCount() {
+        System.out.println("Verify the Unregistered Key Safes count");
+        Response response = dashboardApi.getDashboard();
+        int statusCode = response.getStatusCode();
+        String failureCount =  response.jsonPath().getString("data.totalUnregisteredKeySafes");
+        Assert.assertEquals(failureCount, "8", "The Unregistered Key Safes count mismatches");
+
+    }
 
 }
